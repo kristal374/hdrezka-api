@@ -16,35 +16,29 @@ class HDrezka:
                       "search": Search()
                       }
 
-    def films(self, *args) -> Films:
-        return self._data["films"].add(*args)
+    def films(self, genre) -> Films:
+        return self._data["films"].add_category(genre)
 
-    def cartoons(self, *args):
-        self._data["cartoons"].add(*args)
-        return self
+    def cartoons(self, genre) -> Cartoons:
+        return self._data["cartoons"].add_category(genre)
 
-    def series(self, *args):
-        self._data["series"].add(*args)
-        return self
+    def series(self, genre) -> Series:
+        return self._data["series"].add_category(genre)
 
-    def animation(self, *args):
-        self._data["animation"].add(*args)
-        return self
+    def animation(self, genre) -> Animation:
+        return self._data["animation"].add_category(genre)
 
-    def new(self, *args):
-        self._data["new"].add(*args)
-        return self
+    def new(self) -> New:
+        return self._data["new"]
 
-    def announce(self, *args):
-        self._data["announce"].add(*args)
-        return self
+    def announce(self) -> Announce:
+        return self._data["announce"]
 
-    def collections(self, *args):
-        self._data["collections"].add(*args)
-        return self
+    def collections(self) -> Collections:
+        return self._data["collections"]
 
-    def search(self, *args):
-        return self._data["search"].add(*args)
+    def search(self, text) -> Search:
+        return self._data["search"].query(text)
 
     def __str__(self):
         return

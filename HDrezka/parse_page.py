@@ -1,62 +1,84 @@
-class BaseExp:
+class BaseSingleCategory:
     name = None
 
-    def add(self, *args):
-        return self
-
-    def get_link(self):
-        raise NotImplementedError
-
-    def filter(self, *args):
+    def get(self):
         raise NotImplementedError
 
     def __str__(self):
         return f"{self.name}/"
 
 
+class BaseCategory(BaseSingleCategory):
+    def __init__(self):
+        self._params = None
+        self._filter_pattern = None
+
+    def add_category(self, genre):
+        self._params = genre
+        return self
+    def filter(self, pattern):
+        self._filter_pattern = f"?filter={pattern}"
+        return self
+
+    def __str__(self):
+        separator = "/"
+        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
 
 
-class Films(BaseExp):
+class Films(BaseCategory):
     name = "films"
 
-    def filter(self, *args):
-        ...
-class Cartoons(BaseExp):
+class Cartoons(BaseCategory):
     name = "cartoons"
-    ...
-class Series(BaseExp):
+
+
+class Series(BaseCategory):
     name = "series"
-    ...
-class Animation(BaseExp):
+
+
+class Animation(BaseCategory):
     name = "animation"
-    ...
-class New(BaseExp):
+
+class New(BaseSingleCategory):
     name = "new"
-    ...
-class Announce(BaseExp):
+    def __init__(self):
+        self._filter_pattern = None
+
+    def filter(self, pattern):
+        self._filter_pattern = f"?filter={pattern}"
+        return self
+    def __str__(self):
+        separator = "/"
+        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
+
+class Announce(BaseSingleCategory):
     name = "announce"
     ...
-class Collections(BaseExp):
+class Collections(BaseSingleCategory):
     name = "collections"
     ...
-class Search(BaseExp):
+class Search(BaseSingleCategory):
     name = "search"
     ...
+    "https://rezka.ag/search/?do=search&subaction=search&q=дракон&page=2"
 
-class PageInfo:
-    def __init__(self):
-        self.name = None
-        self.original_name = None
-        self.rates = None
-        self.on_the_lists = None
-        self.tagline = None
-        self.release = None
-        self.country = None
-        self.producer = None
-        self.genre = None
-        self.age = None
-        self.time = None
-        self.playlist = None
-        self.cast = None
-        self.title = None
+    def query(self, text):
+        pass
 
+# class PageInfo:
+#     def __init__(self):
+#         self.name = None
+#         self.original_name = None
+#         self.rates = None
+#         self.on_the_lists = None
+#         self.tagline = None
+#         self.release = None
+#         self.country = None
+#         self.producer = None
+#         self.genre = None
+#         self.age = None
+#         self.time = None
+#         self.playlist = None
+#         self.cast = None
+#         self.title = None
+#
