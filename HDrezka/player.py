@@ -1,4 +1,4 @@
-from constants import *
+from HDrezka.constants import *
 from abc import abstractmethod
 
 

@@ -1,4 +1,4 @@
-from filters import *
+from HDrezka.filters import *
 
 
 class BaseSingleCategory:

@@ -1,6 +1,7 @@
-from parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
-from player import Serial, Film
-from filters import *
+from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
+from HDrezka.player import Serial, Film
+from HDrezka.filters import *
+
 
 __version__ = '1.0'
 
