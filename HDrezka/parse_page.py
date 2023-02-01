@@ -1,3 +1,6 @@
+from filters import *
+
+
 class BaseSingleCategory:
     name = None
 
@@ -13,10 +16,11 @@ class BaseCategory(BaseSingleCategory):
         self._params = None
         self._filter_pattern = None
 
-    def add_category(self, genre):
+    def category(self, genre):
         self._params = genre
         return self
-    def filter(self, pattern):
+
+    def filter(self, pattern: Filters):
         self._filter_pattern = f"?filter={pattern}"
         return self
 
@@ -28,16 +32,30 @@ class BaseCategory(BaseSingleCategory):
 class Films(BaseCategory):
     name = "films"
 
+    def category(self, genre: GenreFilm):
+        return super(Films, self).category(genre)
+
+
 class Cartoons(BaseCategory):
     name = "cartoons"
+
+    def category(self, genre: GenreCartoons):
+        return super(Cartoons, self).category(genre)
 
 
 class Series(BaseCategory):
     name = "series"
 
+    def category(self, genre: GenreSeries):
+        return super(Series, self).category(genre)
+
 
 class Animation(BaseCategory):
     name = "animation"
+
+    def category(self, genre: GenreAnimation):
+        return super(Animation, self).category(genre)
+
 
 class New(BaseSingleCategory):
     name = "new"
