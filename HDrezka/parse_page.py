@@ -16,7 +16,7 @@ class BaseCategory(BaseSingleCategory):
         self._params = None
         self._filter_pattern = None
 
-    def category(self, genre):
+    def selected_category(self, genre):
         self._params = genre
         return self
 
@@ -32,29 +32,29 @@ class BaseCategory(BaseSingleCategory):
 class Films(BaseCategory):
     name = "films"
 
-    def category(self, genre: GenreFilm):
-        return super(Films, self).category(genre)
+    def selected_category(self, genre: GenreFilm):
+        return super(Films, self).selected_category(genre)
 
 
 class Cartoons(BaseCategory):
     name = "cartoons"
 
-    def category(self, genre: GenreCartoons):
-        return super(Cartoons, self).category(genre)
+    def selected_category(self, genre: GenreCartoons):
+        return super(Cartoons, self).selected_category(genre)
 
 
 class Series(BaseCategory):
     name = "series"
 
-    def category(self, genre: GenreSeries):
-        return super(Series, self).category(genre)
+    def selected_category(self, genre: GenreSeries):
+        return super(Series, self).selected_category(genre)
 
 
 class Animation(BaseCategory):
     name = "animation"
 
-    def category(self, genre: GenreAnimation):
-        return super(Animation, self).category(genre)
+    def selected_category(self, genre: GenreAnimation):
+        return super(Animation, self).selected_category(genre)
 
 
 class New(BaseSingleCategory):
