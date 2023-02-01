@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters']
+__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
 
 class BaseGenre:
     FANTASY = 'fantasy'
@@ -105,4 +105,9 @@ class Filters:
     WATCHING = "watching"  # Сейчас смотрят
 
 
-
+class ShowCategory:
+    ALL = 0
+    FILMS = 1
+    SERIES = 2
+    CARTOONS = 3
+    ANIMATION = 82

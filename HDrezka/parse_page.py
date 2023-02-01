@@ -59,22 +59,33 @@ class Animation(BaseCategory):
 
 class New(BaseSingleCategory):
     name = "new"
+
     def __init__(self):
         self._filter_pattern = None
+        self._reflect = None
 
-    def filter(self, pattern):
+    def filter(self, pattern:Filters = Filters.LAST):
         self._filter_pattern = f"?filter={pattern}"
         return self
+
+    def show_only(self, pattern: ShowCategory = ShowCategory.ALL):
+        self._reflect = f"&genre={pattern}"
+        return self
+
     def __str__(self):
-        separator = "/"
-        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
+        filters = self._filter_pattern if self._filter_pattern else ""
+        shows = self._reflect if self._reflect else ""
+        return f"{self.name}/{filters+shows}"
+
 
 class Announce(BaseSingleCategory):
     name = "announce"
-    ...
+
+
 class Collections(BaseSingleCategory):
     name = "collections"
-    ...
+
+
 class Search(BaseSingleCategory):
     name = "search"
     ...
