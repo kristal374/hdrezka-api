@@ -88,11 +88,17 @@ class Collections(BaseSingleCategory):
 
 class Search(BaseSingleCategory):
     name = "search"
-    ...
-    "https://rezka.ag/search/?do=search&subaction=search&q=дракон&page=2"
 
-    def query(self, text):
-        pass
+    def __init__(self):
+        self._search_text = None
+
+    def query(self, text: str):
+        self._search_text = f"?do=search&subaction=search&q={text.replace(' ', '+')}"
+        return self
+
+    def __str__(self):
+        separator = "/"
+        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
 
 # class PageInfo:
 #     def __init__(self):
