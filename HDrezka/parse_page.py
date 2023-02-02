@@ -1,95 +1,98 @@
+from abc import ABC
+
 from HDrezka.filters import *
 
 
 class BaseSingleCategory:
     name = None
 
+    def __init__(self):
+        self._path = {"genre": '', "page": ''}
+        self._modifier = {"filter": '', "display": ''}
+
     def get(self):
         raise NotImplementedError
 
+    def page(self, n):
+        self._path["page"] = n
+        return self
+
     def __str__(self):
-        return f"{self.name}/"
+        def separator(x, sep): return f"{x}{sep}" if x != '' and x is not None else ''
+
+        genre = separator(self._path.get("genre"), "/")
+        page = separator(self._path.get('page'), "/")
+
+        filters = separator(self._modifier.get('filter'), "&")
+        display = separator(self._modifier.get('display'), "&")
+        options = f"{filters}{display}"[:-1:]
+
+        return f"{self.name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
 
 
-class BaseCategory(BaseSingleCategory):
-    def __init__(self):
-        self._params = None
-        self._filter_pattern = None
-
+class BaseCategory(BaseSingleCategory, ABC):
     def selected_category(self, genre):
-        self._params = genre
+        self._path["genre"] = genre
         return self
 
-    def filter(self, pattern: Filters):
-        self._filter_pattern = f"?filter={pattern}"
+    def filter(self, pattern: Filters = Filters.LAST):
+        self._modifier["filter"] = f"?filter={pattern}"
         return self
 
-    def __str__(self):
-        separator = "/"
-        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
 
-
-class Films(BaseCategory):
+class Films(BaseCategory, ABC):
     name = "films"
 
     def selected_category(self, genre: GenreFilm):
         return super(Films, self).selected_category(genre)
 
 
-class Cartoons(BaseCategory):
+class Cartoons(BaseCategory, ABC):
     name = "cartoons"
 
     def selected_category(self, genre: GenreCartoons):
         return super(Cartoons, self).selected_category(genre)
 
 
-class Series(BaseCategory):
+class Series(BaseCategory, ABC):
     name = "series"
 
     def selected_category(self, genre: GenreSeries):
         return super(Series, self).selected_category(genre)
 
 
-class Animation(BaseCategory):
+class Animation(BaseCategory, ABC):
     name = "animation"
 
     def selected_category(self, genre: GenreAnimation):
         return super(Animation, self).selected_category(genre)
 
 
-class New(BaseSingleCategory):
+class New(BaseSingleCategory, ABC):
     name = "new"
 
-    def __init__(self):
-        self._filter_pattern = None
-        self._reflect = None
-
-    def filter(self, pattern:Filters = Filters.LAST):
-        self._filter_pattern = f"?filter={pattern}"
+    def filter(self, pattern: Filters = Filters.LAST):
+        self._modifier["filter"] = f"?filter={pattern}"
         return self
 
     def show_only(self, pattern: ShowCategory = ShowCategory.ALL):
-        self._reflect = f"&genre={pattern}"
+        self._modifier["display"] = f"genre={pattern}"
         return self
 
-    def __str__(self):
-        filters = self._filter_pattern if self._filter_pattern else ""
-        shows = self._reflect if self._reflect else ""
-        return f"{self.name}/{filters+shows}"
 
-
-class Announce(BaseSingleCategory):
+class Announce(BaseSingleCategory, ABC):
     name = "announce"
 
 
-class Collections(BaseSingleCategory):
+class Collections(BaseSingleCategory, ABC):
     name = "collections"
 
 
-class Search(BaseSingleCategory):
+class Search(BaseSingleCategory, ABC):
     name = "search"
 
     def __init__(self):
+        super().__init__()
         self._search_text = None
 
     def query(self, text: str):
@@ -97,8 +100,8 @@ class Search(BaseSingleCategory):
         return self
 
     def __str__(self):
-        separator = "/"
-        return f"{self.name}/" + separator.join([i for i in self.__dict__.values() if i is not None])
+        page = self._path.get('page')
+        return f"{self.name}/{self._search_text}&{f'page={page}&' if page is not None else ''}"[:-1:]
 
 # class PageInfo:
 #     def __init__(self):
