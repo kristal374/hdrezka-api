@@ -101,7 +101,7 @@ class Search(BaseSingleCategory, ABC):
 
     def __str__(self):
         page = self._path.get('page')
-        return f"{self.name}/{self._search_text}&{f'page={page}&' if page is not None else ''}"[:-1:]
+        return f"{self.name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
 
 # class PageInfo:
 #     def __init__(self):
