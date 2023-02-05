@@ -85,6 +85,22 @@ class HDrezkaTest(TestCase):
         self.assertEqual(str(HDrezka().search("How Train To You Dragon")),
                          f"search/?do=search&subaction=search&q=How+Train+To+You+Dragon")
 
+    def test_page_film(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().films(i).page(12)), f"films/{i}/page/12/")
+
+    def test_page_series(self):
+        for i in get_genre(GenreSeries):
+            self.assertEqual(str(HDrezka().series(i).page(13)), f"series/{i}/page/13/")
+
+    def test_page_cartoons(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().cartoons(i).page(14)), f"cartoons/{i}/page/14/")
+
+    def test_page_animation(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().animation(i).page(15)), f"animation/{i}/page/15/")
+
 
 if __name__ == '__main__':
     main()
