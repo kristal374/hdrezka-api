@@ -101,6 +101,35 @@ class HDrezkaTest(TestCase):
         for i in get_genre(GenreFilm):
             self.assertEqual(str(HDrezka().animation(i).page(15)), f"animation/{i}/page/15/")
 
+    def test_page_new(self):
+        self.assertEqual(str(HDrezka().new()), f"new/")
+        for i in [ShowCategory.ALL, ShowCategory.FILMS, ShowCategory.SERIES,
+                  ShowCategory.CARTOONS, ShowCategory.ANIMATION]:
+            self.assertEqual(str(HDrezka().new().filter().show_only(i).page(3)), f"new/page/3/?filter=last&genre={i}")
+
+    def test_page_filter(self):
+        self.assertEqual(str(HDrezka().films().filter().page(1)), f"films/page/1/?filter=last")
+        self.assertEqual(str(HDrezka().series().filter().page(2)), f"series/page/2/?filter=last")
+        self.assertEqual(str(HDrezka().cartoons().filter().page(3)), f"cartoons/page/3/?filter=last")
+        self.assertEqual(str(HDrezka().animation().filter().page(4)), f"animation/page/4/?filter=last")
+
+        for j in [Filters.LAST, Filters.POPULAR, Filters.SOON, Filters.WATCHING]:
+            self.assertEqual(str(HDrezka().films().filter(j).page(5)), f"films/page/5/?filter={j}")
+            self.assertEqual(str(HDrezka().series().filter(j).page(6)), f"series/page/6/?filter={j}")
+            self.assertEqual(str(HDrezka().cartoons().filter(j).page(7)), f"cartoons/page/7/?filter={j}")
+            self.assertEqual(str(HDrezka().animation().filter(j).page(8)), f"animation/page/8/?filter={j}")
+            self.assertEqual(str(HDrezka().new().filter(j).page(9)), f"new/page/9/?filter={j}")
+
+    def test_page_announce(self):
+        self.assertEqual(str(HDrezka().announce().page(4)), f"announce/page/4/")
+
+    def test_page_collections(self):
+        self.assertEqual(str(HDrezka().collections().page(5)), f"collections/page/5/")
+
+    def test_page_search(self):
+        self.assertEqual(str(HDrezka().search("How Train To You Dragon").page(6)),
+                         f"search/?do=search&subaction=search&q=How+Train+To+You+Dragon&page=6")
+
 
 if __name__ == '__main__':
     main()
