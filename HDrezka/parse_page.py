@@ -4,7 +4,7 @@ from HDrezka.filters import *
 
 
 class BaseSingleCategory:
-    name = None
+    _name = None
 
     def __init__(self):
         self._path = {"genre": '', "page": ''}
@@ -20,7 +20,7 @@ class BaseSingleCategory:
     @abstractmethod
     def find_best(self, *, genre=None, year: int = None):
         select_genre = genre if genre is not None else self._path.get("genre")
-        return Best(self.name).select(genre=select_genre, year=year)
+        return Best(self._name).select(genre=select_genre, year=year)
 
     def __str__(self):
         def separator(x, sep): return f"{x}{sep}" if x != '' and x is not None else ''
@@ -32,7 +32,7 @@ class BaseSingleCategory:
         display = separator(self._modifier.get('display'), "&")
         options = f"{filters}{display}"[:-1:]
 
-        return f"{self.name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
+        return f"{self._name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
 
 
 class BaseCategory(BaseSingleCategory, ABC):
@@ -47,7 +47,7 @@ class BaseCategory(BaseSingleCategory, ABC):
 
 
 class Films(BaseCategory, ABC):
-    name = "films"
+    _name = "films"
 
     def selected_category(self, genre: GenreFilm):
         return super(Films, self).selected_category(genre)
@@ -57,7 +57,7 @@ class Films(BaseCategory, ABC):
 
 
 class Cartoons(BaseCategory, ABC):
-    name = "cartoons"
+    _name = "cartoons"
 
     def selected_category(self, genre: GenreCartoons):
         return super(Cartoons, self).selected_category(genre)
@@ -67,7 +67,7 @@ class Cartoons(BaseCategory, ABC):
 
 
 class Series(BaseCategory, ABC):
-    name = "series"
+    _name = "series"
 
     def selected_category(self, genre: GenreSeries):
         return super(Series, self).selected_category(genre)
@@ -77,7 +77,7 @@ class Series(BaseCategory, ABC):
 
 
 class Animation(BaseCategory, ABC):
-    name = "animation"
+    _name = "animation"
 
     def selected_category(self, genre: GenreAnimation):
         return super(Animation, self).selected_category(genre)
@@ -87,7 +87,7 @@ class Animation(BaseCategory, ABC):
 
 
 class New(BaseSingleCategory, ABC):
-    name = "new"
+    _name = "new"
 
     def filter(self, pattern: Filters = Filters.LAST):
         self._modifier["filter"] = f"?filter={pattern}"
@@ -99,15 +99,15 @@ class New(BaseSingleCategory, ABC):
 
 
 class Announce(BaseSingleCategory, ABC):
-    name = "announce"
+    _name = "announce"
 
 
 class Collections(BaseSingleCategory, ABC):
-    name = "collections"
+    _name = "collections"
 
 
 class Search(BaseSingleCategory, ABC):
-    name = "search"
+    _name = "search"
 
     def __init__(self):
         super().__init__()
@@ -119,7 +119,7 @@ class Search(BaseSingleCategory, ABC):
 
     def __str__(self):
         page = self._path.get('page')
-        return f"{self.name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
+        return f"{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
 
 
 class Best(BaseSingleCategory, ABC):
@@ -128,19 +128,18 @@ class Best(BaseSingleCategory, ABC):
         self._best_params = [name, "best"]
 
     def select(self, *, genre=None, year: int = None):
+        self._best_params = self._best_params[:2]
         if genre is not None and genre != '':
             self._best_params.append(genre)
-        elif year is not None and year != '':
+        if year is not None and year != '':
             self._best_params.append(year)
-        else:
-            raise AttributeError('Either "genre" or "year" must always be specified.')
         return self
 
     def __str__(self):
         page = self._path.get("page")
-        page = f"/page/{page}/" if page is not None and page != "" else ""
+        page = f"page/{page}/" if page is not None and page != "" else ""
         separator = "/"
-        return separator.join(map(str, self._best_params)) + page
+        return separator.join(map(str, self._best_params)) + "/" + page
 
 # class PageInfo:
 #     def __init__(self):
