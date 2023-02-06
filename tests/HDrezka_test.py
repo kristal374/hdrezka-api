@@ -130,6 +130,42 @@ class HDrezkaTest(TestCase):
         self.assertEqual(str(HDrezka().search("How Train To You Dragon").page(6)),
                          f"search/?do=search&subaction=search&q=How+Train+To+You+Dragon&page=6")
 
+    def test_best_film(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().films(i).find_best()), f"films/best/{i}/")
+            self.assertEqual(str(HDrezka().films().find_best(genre=i, year=2021)), f"films/best/{i}/2021/")
+
+    def test_best_series(self):
+        for i in get_genre(GenreSeries):
+            self.assertEqual(str(HDrezka().series(i).find_best()), f"series/best/{i}/")
+            self.assertEqual(str(HDrezka().series().find_best(genre=i, year=2022)), f"series/best/{i}/2022/")
+
+    def test_best_cartoon(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().cartoons(i).find_best()), f"cartoons/best/{i}/")
+            self.assertEqual(str(HDrezka().cartoons().find_best(genre=i, year=2023)), f"cartoons/best/{i}/2023/")
+
+    def test_best_animation(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().animation(i).find_best()), f"animation/best/{i}/")
+            self.assertEqual(str(HDrezka().animation().find_best(genre=i, year=2024)), f"animation/best/{i}/2024/")
+
+    def test_best_page_film(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().films(i).find_best().page(7)), f"films/best/{i}/page/7/")
+
+    def test_best_page_series(self):
+        for i in get_genre(GenreSeries):
+            self.assertEqual(str(HDrezka().series(i).find_best().page(8)), f"series/best/{i}/page/8/")
+
+    def test_best_page_cartoon(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().cartoons(i).find_best().page(9)), f"cartoons/best/{i}/page/9/")
+
+    def test_best_page_animation(self):
+        for i in get_genre(GenreFilm):
+            self.assertEqual(str(HDrezka().animation(i).find_best().page(10)), f"animation/best/{i}/page/10/")
+
 
 if __name__ == '__main__':
     main()
