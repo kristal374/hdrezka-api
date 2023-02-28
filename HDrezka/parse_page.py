@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
 
+from HDrezka.connector import SiteConnector
 from HDrezka.filters import *
+from page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
 
 
 class BaseSingleCategory:
@@ -10,8 +12,11 @@ class BaseSingleCategory:
         self._path = {"genre": '', "page": ''}
         self._modifier = {"filter": '', "display": ''}
 
+    @abstractmethod
     def get(self):
-        raise NotImplementedError
+        connector = SiteConnector()
+        response = connector.session.get(f"{connector.url}{self}")
+        return response.text
 
     def page(self, n):
         self._path["page"] = n
@@ -55,6 +60,9 @@ class Films(BaseCategory, ABC):
     def find_best(self, *, genre: GenreFilm = None, year: int = None):
         return super(Films, self).find_best(genre=genre, year=year)
 
+    def get(self):
+        return MovieForm(super(Films, self).get()).extract_content()
+
 
 class Cartoons(BaseCategory, ABC):
     _name = "cartoons"
@@ -64,6 +72,9 @@ class Cartoons(BaseCategory, ABC):
 
     def find_best(self, *, genre: GenreCartoons = None, year: int = None):
         return super(Cartoons, self).find_best(genre=genre, year=year)
+
+    def get(self):
+        return MovieForm(super(Cartoons, self).get()).extract_content()
 
 
 class Series(BaseCategory, ABC):
@@ -75,6 +86,9 @@ class Series(BaseCategory, ABC):
     def find_best(self, *, genre: GenreSeries = None, year: int = None):
         return super(Series, self).find_best(genre=genre, year=year)
 
+    def get(self):
+        return MovieForm(super(Series, self).get()).extract_content()
+
 
 class Animation(BaseCategory, ABC):
     _name = "animation"
@@ -84,6 +98,9 @@ class Animation(BaseCategory, ABC):
 
     def find_best(self, *, genre: GenreAnimation = None, year: int = None):
         return super(Animation, self).find_best(genre=genre, year=year)
+
+    def get(self):
+        return MovieForm(super(Animation, self).get()).extract_content()
 
 
 class New(BaseSingleCategory, ABC):
@@ -97,13 +114,22 @@ class New(BaseSingleCategory, ABC):
         self._modifier["display"] = f"genre={pattern}"
         return self
 
+    def get(self):
+        return NewForm(super(New, self).get()).extract_content()
+
 
 class Announce(BaseSingleCategory, ABC):
     _name = "announce"
 
+    def get(self):
+        return AnnounceForm(super(Announce, self).get()).extract_content()
+
 
 class Collections(BaseSingleCategory, ABC):
     _name = "collections"
+
+    def get(self):
+        return CollectionsForm(super(Collections, self).get()).extract_content()
 
 
 class Search(BaseSingleCategory, ABC):
@@ -116,6 +142,9 @@ class Search(BaseSingleCategory, ABC):
     def query(self, text: str):
         self._search_text = f"?do=search&subaction=search&q={text.replace(' ', '+')}"
         return self
+
+    def get(self):
+        return SearchForm(super(Search, self).get()).extract_content()
 
     def __str__(self):
         page = self._path.get('page')
@@ -134,6 +163,9 @@ class Best(BaseSingleCategory, ABC):
         if year is not None and year != '':
             self._best_params.append(year)
         return self
+
+    def get(self):
+        return MovieForm(super(Best, self).get()).extract_content()
 
     def __str__(self):
         page = self._path.get("page")
