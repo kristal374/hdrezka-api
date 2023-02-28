@@ -1,5 +1,5 @@
 import requests
-from constants import USER_AGENT, DOMAIN
+from HDrezka.constants import USER_AGENT, DOMAIN
 
 
 class SiteConnector:
