@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 __all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
 
+
 class BaseGenre:
     FANTASY = 'fantasy'
     SPORT = 'sport'
