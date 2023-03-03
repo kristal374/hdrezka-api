@@ -1,12 +1,18 @@
 from abc import ABC, abstractmethod
+from requests import exceptions
 
 from HDrezka.connector import SiteConnector
 from HDrezka.filters import *
-from page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
+from HDrezka.page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
 
 
 class BaseSingleCategory:
     _name = None
+
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, "connector"):
+            cls.connector = SiteConnector()
+        return super(BaseSingleCategory, cls).__new__(cls)
 
     def __init__(self):
         self._path = {"genre": '', "page": ''}
@@ -14,8 +20,11 @@ class BaseSingleCategory:
 
     @abstractmethod
     def get(self):
-        connector = SiteConnector()
-        response = connector.session.get(f"{connector.url}{self}")
+        try:
+            response = self.connector.session.get(self.__str__())
+        except exceptions.ConnectionError:
+            raise exceptions.ConnectionError(
+                f"Failed to establish a new connection. Max retries exceeded with url: {self}") from None
         return response.text
 
     def page(self, n):
@@ -37,7 +46,7 @@ class BaseSingleCategory:
         display = separator(self._modifier.get('display'), "&")
         options = f"{filters}{display}"[:-1:]
 
-        return f"{self._name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
+        return f"{self.connector.url}/{self._name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
 
 
 class BaseCategory(BaseSingleCategory, ABC):
@@ -140,7 +149,7 @@ class Search(BaseSingleCategory, ABC):
         self._search_text = None
 
     def query(self, text: str):
-        self._search_text = f"?do=search&subaction=search&q={text.replace(' ', '+')}"
+        self._search_text = f"?do=search&subaction=search&q={text.replace(' ', '+')}"  # noqa
         return self
 
     def get(self):
@@ -148,7 +157,7 @@ class Search(BaseSingleCategory, ABC):
 
     def __str__(self):
         page = self._path.get('page')
-        return f"{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
+        return f"{self.connector.url}/{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
 
 
 class Best(BaseSingleCategory, ABC):
@@ -171,7 +180,7 @@ class Best(BaseSingleCategory, ABC):
         page = self._path.get("page")
         page = f"page/{page}/" if page is not None and page != "" else ""
         separator = "/"
-        return separator.join(map(str, self._best_params)) + "/" + page
+        return f"{self.connector.url}/{separator.join(map(str, self._best_params))}/{page}"
 
 # class PageInfo:
 #     def __init__(self):
