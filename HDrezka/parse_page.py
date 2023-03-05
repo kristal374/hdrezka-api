@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from requests import exceptions
+from urllib.parse import quote
 
 from HDrezka.connector import SiteConnector
 from HDrezka.filters import *
@@ -149,7 +150,8 @@ class Search(BaseSingleCategory, ABC):
         self._search_text = None
 
     def query(self, text: str):
-        self._search_text = f"?do=search&subaction=search&q={text.replace(' ', '+')}"  # noqa
+        quote_text = quote(text)
+        self._search_text = f"?do=search&subaction=search&q={quote_text}"  # noqa
         return self
 
     def get(self):
