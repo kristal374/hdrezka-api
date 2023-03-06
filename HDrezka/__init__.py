@@ -1,3 +1,6 @@
+from urllib.parse import urlsplit
+
+from HDrezka.connector import SiteConnector
 from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
 from HDrezka.player import Serial, Film
 from HDrezka.filters import *
@@ -7,7 +10,7 @@ __version__ = '1.0'
 
 
 class HDrezka:
-    def __init__(self):
+    def __init__(self, mirror="https://rezka.ag"):
         self._data = {"films": Films(),
                       "cartoons": Cartoons(),
                       "series": Series(),
@@ -17,6 +20,7 @@ class HDrezka:
                       "collections": Collections(),
                       "search": Search()
                       }
+        self.connector = SiteConnector(domain=urlsplit(str(mirror))[1])
 
     def films(self, genre=None) -> Films:
         return self._data["films"].selected_category(genre)

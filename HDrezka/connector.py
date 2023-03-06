@@ -1,6 +1,6 @@
-import re
 import requests
 from typing import Dict, Union
+from urllib.parse import urlsplit
 
 from HDrezka.constants import USER_AGENT, DOMAIN
 
@@ -50,7 +50,7 @@ class SiteConnector:
     @url.setter
     def url(self, value: str) -> None:
         self.__shared_state["url"] = value
-        self.__shared_state["domain"] = re.search(r"(?<=://)[^\n/]*", value).group(0)
+        self.__shared_state["domain"] = urlsplit(value)[1]
         self._create_session()
 
     @property
@@ -94,9 +94,7 @@ class SiteConnector:
 
     def _create_session(self) -> None:
         if self.__shared_state.get("session") is not None:
-            print("close session")
             self.__shared_state.get("session").close()
         self.__shared_state["session"] = requests.Session()
-        print("create session")
         self.__shared_state.get("session").headers = self.header()
         self.__shared_state.get("session").proxies = self.__shared_state.get("proxy")
