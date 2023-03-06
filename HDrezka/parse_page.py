@@ -7,7 +7,7 @@ from HDrezka.filters import *
 from HDrezka.page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
 
 
-class BaseSingleCategory:
+class BaseSingleCategory(ABC):
     _name = None
 
     def __new__(cls, *args, **kwargs):
@@ -61,7 +61,7 @@ class BaseCategory(BaseSingleCategory, ABC):
         return self
 
 
-class Films(BaseCategory, ABC):
+class Films(BaseCategory):
     _name = "films"
 
     def selected_category(self, genre: GenreFilm):
@@ -74,7 +74,7 @@ class Films(BaseCategory, ABC):
         return MovieForm(super(Films, self).get()).extract_content()
 
 
-class Cartoons(BaseCategory, ABC):
+class Cartoons(BaseCategory):
     _name = "cartoons"
 
     def selected_category(self, genre: GenreCartoons):
@@ -87,7 +87,7 @@ class Cartoons(BaseCategory, ABC):
         return MovieForm(super(Cartoons, self).get()).extract_content()
 
 
-class Series(BaseCategory, ABC):
+class Series(BaseCategory):
     _name = "series"
 
     def selected_category(self, genre: GenreSeries):
@@ -100,7 +100,7 @@ class Series(BaseCategory, ABC):
         return MovieForm(super(Series, self).get()).extract_content()
 
 
-class Animation(BaseCategory, ABC):
+class Animation(BaseCategory):
     _name = "animation"
 
     def selected_category(self, genre: GenreAnimation):
@@ -113,7 +113,7 @@ class Animation(BaseCategory, ABC):
         return MovieForm(super(Animation, self).get()).extract_content()
 
 
-class New(BaseSingleCategory, ABC):
+class New(BaseSingleCategory):
     _name = "new"
 
     def filter(self, pattern: Filters = Filters.LAST):
@@ -128,21 +128,21 @@ class New(BaseSingleCategory, ABC):
         return NewForm(super(New, self).get()).extract_content()
 
 
-class Announce(BaseSingleCategory, ABC):
+class Announce(BaseSingleCategory):
     _name = "announce"
 
     def get(self):
         return AnnounceForm(super(Announce, self).get()).extract_content()
 
 
-class Collections(BaseSingleCategory, ABC):
+class Collections(BaseSingleCategory):
     _name = "collections"
 
     def get(self):
         return CollectionsForm(super(Collections, self).get()).extract_content()
 
 
-class Search(BaseSingleCategory, ABC):
+class Search(BaseSingleCategory):
     _name = "search"
 
     def __init__(self):
@@ -162,7 +162,7 @@ class Search(BaseSingleCategory, ABC):
         return f"{self.connector.url}/{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
 
 
-class Best(BaseSingleCategory, ABC):
+class Best(BaseSingleCategory):
     def __init__(self, name):
         super().__init__()
         self._best_params = [name, "best"]
