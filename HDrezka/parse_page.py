@@ -32,11 +32,6 @@ class BaseSingleCategory(ABC):
         self._path["page"] = n
         return self
 
-    @abstractmethod
-    def find_best(self, *, genre=None, year: int = None):
-        select_genre = genre if genre is not None else self._path.get("genre")
-        return Best(self._name).select(genre=select_genre, year=year)
-
     def __str__(self):
         def separator(x, sep): return f"{x}{sep}" if x != '' and x is not None else ''
 
@@ -59,6 +54,11 @@ class BaseCategory(BaseSingleCategory, ABC):
     def filter(self, pattern: Filters = Filters.LAST):
         self._modifier["filter"] = f"?filter={pattern}"
         return self
+
+    @abstractmethod
+    def find_best(self, *, genre=None, year: int = None):
+        select_genre = genre if genre is not None else self._path.get("genre")
+        return Best(self._name).select(genre=select_genre, year=year)
 
 
 class Films(BaseCategory):
@@ -113,7 +113,7 @@ class Animation(BaseCategory):
         return MovieForm(super(Animation, self).get()).extract_content()
 
 
-class New(BaseSingleCategory):
+class New(BaseSingleCategory):  # noqa
     _name = "new"
 
     def filter(self, pattern: Filters = Filters.LAST):
@@ -128,21 +128,21 @@ class New(BaseSingleCategory):
         return NewForm(super(New, self).get()).extract_content()
 
 
-class Announce(BaseSingleCategory):
+class Announce(BaseSingleCategory):  # noqa
     _name = "announce"
 
     def get(self):
         return AnnounceForm(super(Announce, self).get()).extract_content()
 
 
-class Collections(BaseSingleCategory):
+class Collections(BaseSingleCategory):  # noqa
     _name = "collections"
 
     def get(self):
         return CollectionsForm(super(Collections, self).get()).extract_content()
 
 
-class Search(BaseSingleCategory):
+class Search(BaseSingleCategory):  # noqa
     _name = "search"
 
     def __init__(self):
@@ -162,7 +162,7 @@ class Search(BaseSingleCategory):
         return f"{self.connector.url}/{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
 
 
-class Best(BaseSingleCategory):
+class Best(BaseSingleCategory):  # noqa
     def __init__(self, name):
         super().__init__()
         self._best_params = [name, "best"]
