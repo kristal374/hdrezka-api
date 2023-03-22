@@ -3,7 +3,7 @@ from dataclasses import dataclass
 __all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
 
 
-class BaseGenre:
+class MediaGenres:
     FANTASY = 'fantasy'
     SPORT = 'sport'
     DETECTIVE = 'detective'
@@ -20,7 +20,7 @@ class BaseGenre:
     THRILLER = 'thriller'
 
 
-class GenreFilm(BaseGenre):
+class GenreFilm(MediaGenres):
     FAMILY = 'family'
     FOREIGN = 'foreign'
     SOYZMYLTFILM = 'soyzmyltfilm'
@@ -41,7 +41,7 @@ class GenreFilm(BaseGenre):
     UKRAINIAN = 'ukrainian'
 
 
-class GenreCartoons(BaseGenre):
+class GenreCartoons(MediaGenres):
     FAMILY = 'family'
     STANDUP = 'standup'
     FOREIGN = 'foreign'
@@ -61,7 +61,7 @@ class GenreCartoons(BaseGenre):
     THEATRE = 'theatre'
 
 
-class GenreSeries(BaseGenre):
+class GenreSeries(MediaGenres):
     STANDUP = 'standup'
     FAMILY = 'family'
     FOREIGN = 'foreign'
@@ -77,7 +77,7 @@ class GenreSeries(BaseGenre):
     UKRAINIAN = 'ukrainian'
 
 
-class GenreAnimation(BaseGenre):
+class GenreAnimation(MediaGenres):
     MECHA = 'mecha'
     SAMURAI = 'samurai'
     FIGHTING = 'fighting'
