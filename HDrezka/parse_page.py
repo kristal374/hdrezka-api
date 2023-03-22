@@ -47,6 +47,7 @@ class BaseSingleCategory(ABC):
         filters = separator(self._modifier.get('filter'), "&")
         display = separator(self._modifier.get('display'), "&")
         options = f"{filters}{display}"[:-1:]
+        options = f"?{options}" if len(options) > 0 and options[0] != "?" else options
 
         return f"{self.connector.url}/{self._name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
 
@@ -140,11 +141,16 @@ class New(BaseSingleCategory):  # noqa
         self._modifier["filter"] = f"?filter={pattern}"
         return self
 
-    def show_only(self, pattern: Optional[Union[ShowCategory, str, int]] = ShowCategory.ALL):
-        if not (isinstance(pattern, str) or isinstance(pattern, int)):
-            raise AttributeError("Attribute \"pattern\" must be of type \"str\" or \"int\". "
+    def show_only(self, pattern: Optional[Union[ShowCategory, int]] = ShowCategory.ALL):
+        if pattern is None or pattern == ShowCategory.ALL and not isinstance(pattern, bool):
+            self._modifier["display"] = ""
+        elif isinstance(pattern, bool) or not isinstance(pattern, int) or pattern < 0:
+            raise AttributeError("Attribute \"pattern\" must be of type \"int\". "
                                  "Use ready-made pattern in filters.ShowCategory")
-        self._modifier["display"] = f"genre={pattern}"
+        else:
+            self._modifier["display"] = f"genre={pattern}"
+        if not self._modifier.get("filter") and pattern is not None:
+            self.filter()
         return self
 
     def get(self):
