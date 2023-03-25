@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from dataclasses import dataclass
 import re
+from HDrezka.filters import convert_genres
 
 __all__ = ["Poster", "CollectionFilm", "MovieForm", "NewForm", "AnnounceForm", "CollectionsForm", "SearchForm"]
 
@@ -49,7 +50,16 @@ class FormPage:
             if info:
                 poster.info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
             misc = item.find("div", class_="b-content__inline_item-link").find('div').text.split(", ")
-            poster.year, poster.country, poster.genre = misc
+            year = [y for y in misc if re.search(r"\d\d\d\d[^,]*", y)]
+            if len(year):
+                poster.year = year[0]
+                misc.remove(poster.year)
+            genre = [g for g in misc if convert_genres(g)]
+            if len(genre):
+                poster.genre = genre[0]
+                misc.remove(poster.genre)
+            if len(misc):
+                poster.country = misc[0]
             poster.img_url = item.find('img').get("src")
             poster.url = item.get("data-url")
 
