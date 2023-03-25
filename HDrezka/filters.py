@@ -1,6 +1,72 @@
 from dataclasses import dataclass
 
-__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
+__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory', 'convert_genres']
+
+all_genres = {'военные': 'military',
+              'семейные': 'family',
+              'театр': 'theatre',
+              'реальное тв': 'realtv',
+              'сёнэн-ай': 'shounenai',
+              'пародия': 'parody',
+              'сёдзё': 'shoujo',
+              'исторические': 'historical',
+              'фэнтези': 'fantasy',
+              'детские': 'kids',
+              'концерт': 'concert',
+              'мультсериалы': 'multseries',
+              'драмы': 'drama',
+              'боевики': 'action',
+              'биографические': 'biographical',
+              'романтические': 'romance',
+              'зарубежные': 'foreign',
+              'кодомо': 'kodomo',
+              'криминал': 'crime',
+              'путешествия': 'travel',
+              'спортивные': 'sport',
+              'арт-хаус': 'arthouse',
+              'мистические': 'mystery',
+              'короткометражные': 'short',
+              'украинские': 'ukrainian',
+              'стендап': 'standup',
+              'ужасы': 'horror',
+              'телепередачи': 'telecasts',
+              'сказки': 'fairytale',
+              'приключения': 'adventures',
+              'познавательные': 'cognitive',
+              'сёнэн': 'shounen',
+              'для взрослых': 'adult',
+              'полнометражные': 'full-length',
+              'советские': 'soyzmyltfilm',
+              'этти': 'ecchi',
+              'мелодрамы': 'melodrama',
+              'сёдзё-ай': 'shoujoai',
+              'образовательные': 'educational',
+              'документальные': 'documentary',
+              'школа': 'school',
+              'триллеры': 'thriller',
+              'самурайский боевик': 'samurai',
+              'вестерны': 'western',
+              'махо-сёдзё': 'mahoushoujo',
+              'эротика': 'erotic',
+              'комедии': 'comedy',
+              'боевые искусства': 'fighting',
+              'детективы': 'detective',
+              'мюзиклы': 'musical',
+              'музыкальные': 'musical',
+              'фантастика': 'fiction',
+              'повседневность': 'everyday',
+              'меха': 'mecha',
+              'русские': 'russian',
+              'аниме': 'anime',
+              
+              'реалити-шоу': 'reality-shows',
+              'юмористические': 'humor',
+              'конкурсы': 'contests',
+              'охота и рыбалка': 'hunting'}
+
+
+def convert_genres(genre: str):
+    return all_genres.get(genre.lower())
 
 
 class MediaGenres:
