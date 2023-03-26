@@ -2,7 +2,7 @@ from random import randint
 import re
 from unittest import TestCase, skip
 
-from HDrezka.filters import GenreCartoons, Filters, ShowCategory
+from HDrezka.filters import Filters, ShowCategory
 from HDrezka.parse_page import New
 
 
@@ -47,7 +47,7 @@ class TestNew(TestCase):
             data=(0, 6, -4, 4.48, -58.1, 13 - 12j,
                   [1, 2, 8], (1, 2, 3), {1, 2, 3},
                   {"a": 1, "b": 14, "c": 3}, True, False,
-                  GenreCartoons, range(10), b"hello world"))
+                  Filters, range(10), b"hello world"))
 
     def test_positive_show_only(self):
         self.assertEqual("https://rezka.ag/new/", self.movie.show_only(None).__str__())
@@ -64,7 +64,7 @@ class TestNew(TestCase):
         self.enter_bad_args(
             fun=self.movie.show_only,
             data=(-5, "1", 4.458, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
-                  True, False, GenreCartoons, range(10), "hello world", b"hello world"))
+                  True, False, Filters, range(10), "hello world", b"hello world"))
 
     def test_filter_show_only(self):
         for filter_obj in self.get_filters():
@@ -87,7 +87,7 @@ class TestNew(TestCase):
         self.enter_bad_args(
             fun=self.movie.page,
             data=(0, -4, 4.458, -5.2, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
-                  None, True, False, GenreCartoons, range(10), "hello world", b"hello world"))
+                  None, True, False, Filters, range(10), "hello world", b"hello world"))
 
     @skip
     def test_get(self):
