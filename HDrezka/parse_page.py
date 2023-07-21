@@ -179,12 +179,9 @@ class Search(BaseSingleCategory):  # noqa
         self._search_text = None
 
     def query(self, text: str):
-        if text is None:
-            self._search_text = None
-            return self
-        elif not isinstance(text, str):
-            raise AttributeError("Attribute \"text\" must be of type \"str\".")
-        quote_text = quote(text)
+        if not isinstance(text, str):
+            raise AttributeError("Attribute \"text\" must only be of type \"str\".")
+        quote_text = "+".join(quote(t) for t in text.split())
         self._search_text = f"?do=search&subaction=search&q={quote_text}"  # noqa
         return self
 
@@ -193,7 +190,9 @@ class Search(BaseSingleCategory):  # noqa
 
     def __str__(self):
         page = self._path.get('page')
-        return f"{self.connector.url}/{self._name}/{self._search_text}&{f'page={page}&' if page else ''}"[:-1:]
+        page = f'&page={page}' if page else ''
+        text = f"{self._search_text}" if self._search_text else ''
+        return f"{self.connector.url}/{self._name}/{text}{page}"
 
 
 class Best(BaseSingleCategory):  # noqa
