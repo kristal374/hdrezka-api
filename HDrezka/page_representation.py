@@ -46,25 +46,31 @@ class FormPage:
             poster.id = int(item.get("data-id"))
             poster.title = item.find("div", class_="b-content__inline_item-link").find('a').text
             poster.entity = item.find('i', class_="entity").text
-            info = item.find('span', class_="info")
-            if info:
-                poster.info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
-            misc = item.find("div", class_="b-content__inline_item-link").find('div').text.split(", ")
-            year = [y for y in misc if re.search(r"\d\d\d\d[^,]*", y)]
-            if len(year):
-                poster.year = year[0]
-                misc.remove(poster.year)
-            genre = [g for g in misc if convert_genres(g)]
-            if len(genre):
-                poster.genre = genre[0]
-                misc.remove(poster.genre)
-            if len(misc):
-                poster.country = misc[0]
+            poster.info = self.extract_info(item)
+            poster.year, poster.country, poster.genre = self.extract_misc(item)
             poster.img_url = item.find('img').get("src")
             poster.url = item.get("data-url")
 
             page_info.append(poster)
         return page_info
+
+    @staticmethod
+    def extract_info(item):
+        info = item.find('span', class_="info")
+        if not info:
+            return
+        if "<br/>" in info.contents:
+            print(info.contents)
+        info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
+        return info
+
+    @staticmethod
+    def extract_misc(item):
+        misc = item.find("div", class_="b-content__inline_item-link").find('div').text
+        parsed_info = re.match(r"(\d{4}\s?-\s?[.\d]*|\d{4}),?\s?([^,]*),?\s?([^,]*)", misc)
+        if not parsed_info:
+            return (None,) * 3
+        return tuple((None, i)[i != ""] for i in parsed_info.groups())
 
 
 class MovieForm(FormPage):
