@@ -64,11 +64,14 @@ class FormPage:
 
     @staticmethod
     def extract_misc(item):
-        misc = item.find("div", class_="b-content__inline_item-link").find('div').text
-        parsed_info = re.match(r"(\d{4}\s?-\s?[.\d]*|\d{4}),?\s?([^,]*),?\s?([^,]*)", misc)
+        raw_data = item.find("div", class_="b-content__inline_item-link").find('div').text
+        parsed_info = re.match(r"(\d{4}\s?-\s?[.\d]*|\d{4}),?\s?([^,]*),?\s?([^,]*)", raw_data)
         if not parsed_info:
             return (None,) * 3
-        return tuple((None, i)[i != ""] for i in parsed_info.groups())
+        misc = tuple((None, i)[i != ""] for i in parsed_info.groups())
+        if convert_genres(misc[1]):
+            return misc[0:1] + misc[:0:-1]
+        return misc
 
 
 class MovieForm(FormPage):
