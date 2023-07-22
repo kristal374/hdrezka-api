@@ -59,8 +59,6 @@ class FormPage:
         info = item.find('span', class_="info")
         if not info:
             return
-        if "<br/>" in info.contents:
-            print(info.contents)
         info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
         return info
 
