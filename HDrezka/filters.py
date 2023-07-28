@@ -86,7 +86,7 @@ class MediaGenres:
     THRILLER = 'thriller'
 
 
-class GenreFilm(MediaGenres):
+class GenreCartoons(MediaGenres):
     FAMILY = 'family'
     FOREIGN = 'foreign'
     SOYZMYLTFILM = 'soyzmyltfilm'
@@ -107,7 +107,7 @@ class GenreFilm(MediaGenres):
     UKRAINIAN = 'ukrainian'
 
 
-class GenreCartoons(MediaGenres):
+class GenreFilm(MediaGenres):
     FAMILY = 'family'
     STANDUP = 'standup'
     FOREIGN = 'foreign'
