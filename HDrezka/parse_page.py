@@ -182,6 +182,7 @@ class Search(BaseSingleCategory):  # noqa
         if not isinstance(text, str):
             raise AttributeError("Attribute \"text\" must only be of type \"str\".")
         quote_text = "+".join(quote(t) for t in text.split())
+        quote_text = quote_text.replace("%2A", "*").replace("/", "%2F").replace("~", "%7E")
         self._search_text = f"?do=search&subaction=search&q={quote_text}"  # noqa
         return self
 
