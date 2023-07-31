@@ -91,9 +91,9 @@ class CollectionsForm(FormPage):
         collection_info = []
         for item in self.soup.find_all('div', class_="b-content__collections_item"):
             collection = CollectionFilm()
-            collection.id = re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0)
+            collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0))
             collection.title = item.find("a", class_="title").text
-            collection.amount_film = item.find("div", class_="num").text
+            collection.amount_film = int(item.find("div", class_="num").text)
             collection.img_url = item.find("img").get("src")
             collection.url = item.get("data-url")
 
