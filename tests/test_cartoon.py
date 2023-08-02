@@ -71,6 +71,9 @@ class TestCartoons(TestCase):
                 correct_url = f"https://rezka.ag/cartoons/{genre}/page/{page}/?filter={filter_obj}"
                 self.assertEqual(correct_url, response)
 
+                response = self.movie.selected_category(genre).filter(filter_obj).page(str(page)).__str__()
+                self.assertEqual(correct_url, response)
+
     def test_negative_page(self):
         self.enter_bad_args(
             fun=self.movie.page,
