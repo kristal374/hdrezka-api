@@ -74,8 +74,6 @@ class TestFilms(TestCase):
                 response = self.movie.selected_category(genre).filter(filter_obj).page(str(page)).__str__()
                 self.assertEqual(correct_url, response)
 
-
-
     def test_negative_page(self):
         self.enter_bad_args(
             fun=self.movie.page,
@@ -94,7 +92,7 @@ class TestFilms(TestCase):
             self.assertEqual(correct_url, response)
 
     def test_negative_find_best(self):
-        lst_year = (0, -8, 14, 4.48, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
+        lst_year = (1895, 0, -8, 14, 4.48, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
                     True, False, GenreFilm, range(10), "hello world", b"hello world")
         lst_genre = (0, -8, 14, 4.48, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
                      True, False, GenreFilm, range(10), b"hello world")

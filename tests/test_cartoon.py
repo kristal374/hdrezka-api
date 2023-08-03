@@ -92,7 +92,7 @@ class TestCartoons(TestCase):
             self.assertEqual(correct_url, response)
 
     def test_negative_find_best(self):
-        lst_year = (0, -8, 14, 4.48, -5.12, 12 - 10j, [1, 2, 3], (12, 2, 3), {1, 2, 3}, {"a": 41, "b": 2, "c": 3},
+        lst_year = (1895, 0, -8, 14, 4.48, -5.12, 12 - 10j, [1, 2, 3], (12, 2, 3), {1, 2, 3}, {"a": 41, "b": 2, "c": 3},
                     True, False, GenreCartoons, range(10), "hello world", b"hello world")
         lst_genre = (0, -8, 14, 4.48, -5.1, 12 - 10j, [1, 82, 3], (1, 2, 63), {1, 2, 43}, {"a": 1, "b": 2, "c": 3},
                      True, False, GenreCartoons, range(10), b"hello world")
