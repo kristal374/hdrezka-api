@@ -16,7 +16,7 @@ class TestAnnounce(TestCase):
             correct_url = f"https://rezka.ag/announce/page/{page}/"
             self.assertEqual(correct_url, response)
 
-            response = self.movie.page(str(page)).__str__() # noqa
+            response = self.movie.page(str(page)).__str__()  # noqa
             self.assertEqual(correct_url, response)
 
     def test_negative_page(self):

@@ -19,9 +19,8 @@ class TestSearch(TestCase):
             correct_url = f"https://rezka.ag/search/?do=search&subaction=search&q=Blob&page={page}"
             self.assertEqual(correct_url, response)
 
-            response = self.movie.page(str(page)).__str__() # noqa
+            response = self.movie.page(str(page)).__str__()  # noqa
             self.assertEqual(correct_url, response)
-
 
     def test_negative_page(self):
         self.movie.query("Blob")
@@ -81,7 +80,7 @@ class TestSearch(TestCase):
     def test_negative_query(self):
         for element in self.data:
             with self.assertRaises(AttributeError):
-                self.movie.query(element) # noqa
+                self.movie.query(element)  # noqa
                 print(element)
 
     @skip
