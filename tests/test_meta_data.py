@@ -15,7 +15,3 @@ class TestMetaData(TestCase):
         is_non_empty_string(HDrezka.__contact__)
         is_non_empty_string(HDrezka.__url__)
         is_non_empty_string(HDrezka.__description__)
-
-
-if __name__ == '__main__':
-    main()
