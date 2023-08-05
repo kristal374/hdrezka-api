@@ -5,6 +5,8 @@ from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce
 from HDrezka.player import Serial, Film
 from HDrezka.filters import *
 
+from . import __version__
+globals().update(dict((k, v) for k, v in __version__.__dict__.items()))
 
 __version__ = '1.0'
 
