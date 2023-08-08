@@ -25,9 +25,8 @@ class TestSearch(TestCase):
     def test_negative_page(self):
         self.movie.query("Blob")
         for element in self.data:
-            with self.assertRaises(AttributeError):
+            with self.assertRaises(AttributeError, msg=element):
                 self.movie.page(element)
-                print(element)
 
     def test_positive_query(self):
         data = (
@@ -79,9 +78,9 @@ class TestSearch(TestCase):
 
     def test_negative_query(self):
         for element in self.data:
-            with self.assertRaises(AttributeError):
+            with self.assertRaises(AttributeError, msg=element):
                 self.movie.query(element)  # noqa
-                print(element)
+
 
     @skip
     def test_get(self):

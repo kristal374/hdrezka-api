@@ -29,9 +29,8 @@ class TestAnimations(TestCase):
 
     def enter_bad_args(self, fun, data):
         for element in data:
-            with self.assertRaises(AttributeError):
+            with self.assertRaises(AttributeError, msg=element):
                 fun(element)
-                print(element)
 
     def test_positive_selected_category(self):
         self.assertEqual("https://rezka.ag/animation/", self.movie.selected_category(None).__str__())
@@ -99,9 +98,8 @@ class TestAnimations(TestCase):
 
         for y in lst_year:
             for g in lst_genre:
-                with self.assertRaises(AttributeError):
+                with self.assertRaises(AttributeError, msg=(y, g)):
                     self.movie.find_best(year=y, genre=g)  # noqa
-                    print(y, g)
 
     def test_positive_find_best_page(self):
         self.assertEqual("https://rezka.ag/animation/best/2021/page/8/",

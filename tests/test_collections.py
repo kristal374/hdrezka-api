@@ -23,9 +23,9 @@ class TestCollections(TestCase):
         data = (0, -1, 4.458, -5.2, 6 - 10j, [5, 2, 3], (1, 2, 6), {1, 32, 3}, {"a": 1, "b": 2, "c": 3}, None,
                 True, False, object, range(10), "hello world", b"hello world")
         for element in data:
-            with self.assertRaises(AttributeError):
+            with self.assertRaises(AttributeError, msg=element):
                 self.movie.page(element)
-                print(element)
+
 
     @skip
     def test_get(self):

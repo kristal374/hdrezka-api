@@ -29,9 +29,8 @@ class TestNew(TestCase):
 
     def enter_bad_args(self, fun, data):
         for element in data:
-            with self.assertRaises(AttributeError):
+            with self.assertRaises(AttributeError, msg=element):
                 fun(element)
-                print(element)
 
     def test_positive_filter(self):
         self.assertEqual("https://rezka.ag/new/", self.movie.filter(None).__str__())
