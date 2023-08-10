@@ -1,9 +1,13 @@
-from random import randint
 import re
-from unittest import TestCase, skip
+import json
+import requests
+import requests_mock
 
-from HDrezka.filters import GenreFilm, Filters
+from random import randint
+from unittest import TestCase
+
 from HDrezka.parse_page import Films
+from HDrezka.filters import GenreFilm, Filters
 
 
 class TestFilms(TestCase):
@@ -113,6 +117,33 @@ class TestFilms(TestCase):
             correct_url = f"https://rezka.ag/films/best/{genre}/{year}/page/{page}/"
             self.assertEqual(correct_url, response)
 
-    @skip
-    def test_get(self):
-        self.fail()
+    @requests_mock.Mocker()
+    def test_positive_get(self, m):
+        with open("mock_html/films_3.html", encoding="utf-8") as file:
+            text = file.read()
+
+        with open("mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
+            reference_data = json.loads(json_file.read())
+
+        correct_url = "https://rezka.ag/films/page/3/"
+        m.register_uri('GET', correct_url, text=text)
+        site = self.movie.page(3)
+
+        self.assertEqual(correct_url, site.__str__())
+
+        response = [i.__dict__ for i in site.get()]
+        self.assertListEqual(reference_data["films"], response)
+
+        site = self.movie.find_best(year=2018)
+        m.register_uri('GET', site.__str__(), text="Success")
+        self.assertEqual(0, len(site.get()))
+
+    @requests_mock.Mocker()
+    def test_negative_get(self, m):
+        correct_url = "https://rezka.ag/films/page/3/"
+        site = self.movie.page(3)
+        self.assertEqual(correct_url, site.__str__())
+
+        m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
+        with self.assertRaises(requests.exceptions.ConnectionError):
+            site.get()
