@@ -1,4 +1,8 @@
-from unittest import TestCase, skip
+import json
+import requests
+import requests_mock
+
+from unittest import TestCase
 
 from HDrezka.parse_page import Announce
 
@@ -27,6 +31,31 @@ class TestAnnounce(TestCase):
                 self.movie.page(element)
 
 
-    @skip
-    def test_get(self):
-        self.fail()
+
+
+    @requests_mock.Mocker()
+    def test_positive_get(self, m):
+        with open("mock_html/announce_2.html", encoding="utf-8") as file:
+            text = file.read()
+
+        with open("mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
+            reference_data = json.loads(json_file.read())
+
+        correct_url = "https://rezka.ag/announce/page/2/"
+        m.register_uri('GET', correct_url, text=text)
+        site = self.movie.page(2)
+
+        self.assertEqual(correct_url, site.__str__())
+
+        response = [i.__dict__ for i in site.get()]
+        self.assertListEqual(reference_data["announce"], response)
+
+    @requests_mock.Mocker()
+    def test_negative_get(self, m):
+        correct_url = "https://rezka.ag/announce/page/2/"
+        site = self.movie.page(2)
+        self.assertEqual(correct_url, site.__str__())
+
+        m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
+        with self.assertRaises(requests.exceptions.ConnectionError):
+            site.get()
