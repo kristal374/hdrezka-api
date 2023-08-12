@@ -1,3 +1,6 @@
+import tests
+
+from test_HDrezka import TestHDrezka
 from test_film import TestFilms
 from test_cartoon import TestCartoons
 from test_series import TestSeries
