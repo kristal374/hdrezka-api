@@ -2,13 +2,14 @@ from urllib.parse import urlsplit
 
 from HDrezka.connector import SiteConnector
 from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
-from HDrezka.player import Serial, Film
 from HDrezka.filters import *
 
 from . import __version__
 globals().update(dict((k, v) for k, v in __version__.__dict__.items()))
 
-__version__ = '1.0'
+
+__all__ = ["HDrezka", "Films", "Cartoons", "Series", "Animation", "New", "Announce", "Collections", "Search",
+           'GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
 
 
 class HDrezka:
@@ -49,7 +50,7 @@ class HDrezka:
         return self._data["search"].query(text)
 
     def __str__(self):
-        return
+        return self.connector.url
 
 
 if __name__ == '__main__':
