@@ -1,6 +1,7 @@
-import requests
 from typing import Dict, Union
 from urllib.parse import urlsplit
+
+import requests
 
 from HDrezka.constants import USER_AGENT, DOMAIN
 

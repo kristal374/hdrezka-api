@@ -1,6 +1,8 @@
-from bs4 import BeautifulSoup
-from dataclasses import dataclass
 import re
+from dataclasses import dataclass
+
+from bs4 import BeautifulSoup
+
 from HDrezka.filters import convert_genres
 
 __all__ = ["Poster", "CollectionFilm", "MovieForm", "NewForm", "AnnounceForm", "CollectionsForm", "SearchForm"]
@@ -58,7 +60,7 @@ class FormPage:
     def extract_info(item):
         info = item.find('span', class_="info")
         if not info:
-            return
+            return None
         info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
         return info
 
