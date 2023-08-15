@@ -6,6 +6,8 @@ disable=
     C0115, # Missing class docstring
     C0116, # Missing function or method docstring
     W0511, # Outstanding TODOs
+    R0902, # Too many instance attributes
+    R0903, # Too few public methods
 
 
 ignore = venv, tests
