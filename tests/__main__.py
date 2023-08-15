@@ -1,6 +1,4 @@
-from tests import *
-
 from unittest import main
 
 if __name__ == '__main__':
-    main()
+    main(module="__init__")
