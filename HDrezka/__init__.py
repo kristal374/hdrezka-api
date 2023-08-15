@@ -4,10 +4,6 @@ from HDrezka.connector import SiteConnector
 from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
 from HDrezka.filters import *
 
-from . import __version__
-globals().update(dict((k, v) for k, v in __version__.__dict__.items()))
-
-
 __all__ = ["HDrezka", "Films", "Cartoons", "Series", "Animation", "New", "Announce", "Collections", "Search",
            'GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory']
 
