@@ -1,17 +1,18 @@
 from abc import ABC, abstractmethod
-from requests import exceptions
 from typing import Optional, Union, Dict
 from urllib.parse import quote
 
+from requests import exceptions
+
 from HDrezka.connector import SiteConnector
-from HDrezka.filters import *
+from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
 from HDrezka.page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
 
 
 class BaseSingleCategory(ABC):
     _name = None
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs):  # pylint: disable= W0613
         if not hasattr(cls, "connector"):
             cls.connector = SiteConnector()
         return super(BaseSingleCategory, cls).__new__(cls)
@@ -39,7 +40,8 @@ class BaseSingleCategory(ABC):
         return self
 
     def __str__(self):
-        def separator(x, sep): return f"{x}{sep}" if x != '' and x is not None else ''
+        def separator(x, sep):
+            return f"{x}{sep}" if x != '' and x is not None else ''
 
         genre = separator(self._path.get("genre"), "/")
         page = separator(self._path.get('page'), "/")
@@ -64,7 +66,7 @@ class BaseCategory(BaseSingleCategory, ABC):
         if pattern is None:
             self._modifier["filter"] = ""
             return self
-        elif not isinstance(pattern, str):
+        if not isinstance(pattern, str):
             raise AttributeError(
                 "Attribute \"pattern\" must be of type \"str\". Use ready-made genres in filters.Filters")
         self._modifier["filter"] = f"?filter={pattern}"
@@ -80,52 +82,52 @@ class Films(BaseCategory):
     _name = "films"
 
     def selected_category(self, genre: Optional[Union[GenreFilm, str]]):
-        return super(Films, self).selected_category(genre)
+        return super().selected_category(genre)
 
     def find_best(self, genre: Optional[Union[GenreFilm, str]] = None, year: Optional[int] = None):
-        return super(Films, self).find_best(genre=genre, year=year)
+        return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super(Films, self).get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class Cartoons(BaseCategory):
     _name = "cartoons"
 
     def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):
-        return super(Cartoons, self).selected_category(genre)
+        return super().selected_category(genre)
 
     def find_best(self, genre: Optional[Union[GenreCartoons, str]] = None, year: int = None):
-        return super(Cartoons, self).find_best(genre=genre, year=year)
+        return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super(Cartoons, self).get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class Series(BaseCategory):
     _name = "series"
 
     def selected_category(self, genre: Optional[Union[GenreSeries, str]]):
-        return super(Series, self).selected_category(genre)
+        return super().selected_category(genre)
 
     def find_best(self, genre: Optional[Union[GenreSeries, str]] = None, year: int = None):
-        return super(Series, self).find_best(genre=genre, year=year)
+        return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super(Series, self).get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class Animation(BaseCategory):
     _name = "animation"
 
     def selected_category(self, genre: Optional[Union[GenreAnimation, str]]):
-        return super(Animation, self).selected_category(genre)
+        return super().selected_category(genre)
 
     def find_best(self, genre: Optional[Union[GenreAnimation, str]] = None, year: int = None):
-        return super(Animation, self).find_best(genre=genre, year=year)
+        return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super(Animation, self).get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class New(BaseSingleCategory):  # noqa
@@ -154,21 +156,21 @@ class New(BaseSingleCategory):  # noqa
         return self
 
     def get(self):
-        return NewForm(super(New, self).get()).extract_content()
+        return NewForm(super().get()).extract_content()
 
 
 class Announce(BaseSingleCategory):  # noqa
     _name = "announce"
 
     def get(self):
-        return AnnounceForm(super(Announce, self).get()).extract_content()
+        return AnnounceForm(super().get()).extract_content()
 
 
 class Collections(BaseSingleCategory):  # noqa
     _name = "collections"
 
     def get(self):
-        return CollectionsForm(super(Collections, self).get()).extract_content()
+        return CollectionsForm(super().get()).extract_content()
 
 
 class Search(BaseSingleCategory):  # noqa
@@ -187,7 +189,7 @@ class Search(BaseSingleCategory):  # noqa
         return self
 
     def get(self):
-        return SearchForm(super(Search, self).get()).extract_content()
+        return SearchForm(super().get()).extract_content()
 
     def __str__(self):
         page = self._path.get('page')
@@ -204,7 +206,7 @@ class Best(BaseSingleCategory):  # noqa
     def select(self, genre: Optional[str] = None, year: int = None):
         if year is not None and (isinstance(year, bool) or not isinstance(year, int) or year < 1895):
             raise AttributeError("Attribute \"year\" must be of type \"int\" and greater than or equal to 1895")
-        elif genre is not None and not isinstance(genre, str):
+        if genre is not None and not isinstance(genre, str):
             raise AttributeError("Attribute \"genre\" must be of type \"str\". Use ready-made genres in filters.Genre*")
         self._best_params = self._best_params[:2]
         if genre is not None and genre != '':
@@ -214,7 +216,7 @@ class Best(BaseSingleCategory):  # noqa
         return self
 
     def get(self):
-        return MovieForm(super(Best, self).get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
     def __str__(self):
         page = self._path.get("page")
