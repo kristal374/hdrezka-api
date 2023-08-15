@@ -1,8 +1,8 @@
 import json
+from unittest import TestCase
+
 import requests
 import requests_mock
-
-from unittest import TestCase
 
 from HDrezka.parse_page import Search
 
@@ -85,9 +85,6 @@ class TestSearch(TestCase):
         for element in self.data:
             with self.assertRaises(AttributeError, msg=element):
                 self.movie.query(element)  # noqa
-
-
-
 
     @requests_mock.Mocker()
     def test_positive_get(self, m):

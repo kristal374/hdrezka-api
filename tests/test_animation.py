@@ -1,10 +1,10 @@
 import re
 import json
+from unittest import TestCase
+from random import randint
+
 import requests
 import requests_mock
-
-from random import randint
-from unittest import TestCase
 
 from HDrezka.parse_page import Animation
 from HDrezka.filters import GenreAnimation, Filters
@@ -111,7 +111,7 @@ class TestAnimations(TestCase):
         self.assertEqual("https://rezka.ag/animation/best/fiction/page/8/",
                          self.movie.find_best(genre=GenreAnimation.FICTION).page(8).__str__())
         for genre in self.get_genre():
-            year = randint(1895, 2100)
+            year = randint(1895, 2114)
             page = randint(1, 9)
             response = self.movie.find_best(genre=genre, year=year).page(page).__str__()
             correct_url = f"https://rezka.ag/animation/best/{genre}/{year}/page/{page}/"

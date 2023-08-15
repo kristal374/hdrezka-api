@@ -1,8 +1,8 @@
 import json
+from unittest import TestCase
+
 import requests
 import requests_mock
-
-from unittest import TestCase
 
 from HDrezka.parse_page import Collections
 

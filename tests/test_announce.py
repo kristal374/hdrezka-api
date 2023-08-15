@@ -1,8 +1,8 @@
 import json
+from unittest import TestCase
+
 import requests
 import requests_mock
-
-from unittest import TestCase
 
 from HDrezka.parse_page import Announce
 
@@ -29,9 +29,6 @@ class TestAnnounce(TestCase):
         for element in data:
             with self.assertRaises(AttributeError, msg=element):
                 self.movie.page(element)
-
-
-
 
     @requests_mock.Mocker()
     def test_positive_get(self, m):

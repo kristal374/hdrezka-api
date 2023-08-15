@@ -1,10 +1,10 @@
 import re
 import json
-import requests
-import requests_mock
-
 from random import randint
 from unittest import TestCase
+
+import requests
+import requests_mock
 
 from HDrezka.parse_page import New
 from HDrezka.filters import Filters, ShowCategory
@@ -60,7 +60,7 @@ class TestNew(TestCase):
             if category_obj != 0:
                 correct_url = f"https://rezka.ag/new/?filter=last&genre={category_obj}"
             else:
-                correct_url = f"https://rezka.ag/new/?filter=last"
+                correct_url = "https://rezka.ag/new/?filter=last"
             self.assertEqual(correct_url, response)
 
     def test_negative_show_only(self):

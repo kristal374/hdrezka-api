@@ -1,10 +1,10 @@
 import re
 import json
-import requests
-import requests_mock
-
 from random import randint
 from unittest import TestCase
+
+import requests
+import requests_mock
 
 from HDrezka.parse_page import Films
 from HDrezka.filters import GenreFilm, Filters

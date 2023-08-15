@@ -1,10 +1,10 @@
 import re
 import json
-import requests
-import requests_mock
-
 from random import randint
 from unittest import TestCase
+
+import requests
+import requests_mock
 
 from HDrezka.parse_page import Cartoons
 from HDrezka.filters import GenreCartoons, Filters
@@ -13,6 +13,8 @@ from HDrezka.filters import GenreCartoons, Filters
 class TestCartoons(TestCase):
     def setUp(self) -> None:
         self.movie = Cartoons()
+        self.data = [0, 8, -9, 45.48, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3},
+                     {"a": 1, "b": 2, "c": 3}, True, False, GenreCartoons, range(10), b"hello world"]
 
     def tearDown(self) -> None:
         del self.movie
@@ -46,8 +48,7 @@ class TestCartoons(TestCase):
     def test_negative_selected_category(self):
         self.enter_bad_args(
             fun=self.movie.selected_category,
-            data=(0, 8, -14, 45.48, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3},
-                  {"a": 1, "b": 2, "c": 3}, True, False, GenreCartoons, range(10), b"hello world"))
+            data=self.data)
 
     def test_positive_filter(self):
         self.assertEqual("https://rezka.ag/cartoons/", self.movie.filter(None).__str__())
@@ -61,27 +62,27 @@ class TestCartoons(TestCase):
     def test_negative_filter(self):
         self.enter_bad_args(
             fun=self.movie.filter,
-            data=(0, 12, -4, 4.48, -58.1, 162 - 12j,
-                  [1, 2, 3], (1, 2, 3), {1, 2, 3},
-                  {"a": 1, "b": 2, "c": 3}, True, False,
-                  GenreCartoons, range(10), b"hello world"))
+            data=self.data)
 
     def test_positive_page(self):
         for genre in self.get_genre():
             for filter_obj in self.get_filters():
                 page = randint(1, 99)
-                response = self.movie.selected_category(genre).filter(filter_obj).page(page).__str__()
+                response = str(self.movie.selected_category(genre).filter(filter_obj).page(page))
                 correct_url = f"https://rezka.ag/cartoons/{genre}/page/{page}/?filter={filter_obj}"
                 self.assertEqual(correct_url, response)
 
-                response = self.movie.selected_category(genre).filter(filter_obj).page(str(page)).__str__()
+                response = str(self.movie.selected_category(genre).filter(filter_obj).page(str(page)))
                 self.assertEqual(correct_url, response)
 
     def test_negative_page(self):
+        data = self.data.copy()
+        data.remove(8)
+        data.append(None)
+        data.append("hello world")
         self.enter_bad_args(
             fun=self.movie.page,
-            data=(0, -5, 4.458, -5.1, 12 - 10j, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c": 3},
-                  None, True, False, GenreCartoons, range(10), "hello world", b"hello world"))
+            data=data)
 
     def test_positive_find_best(self):
         self.assertEqual("https://rezka.ag/cartoons/best/2021/",
@@ -95,10 +96,10 @@ class TestCartoons(TestCase):
             self.assertEqual(correct_url, response)
 
     def test_negative_find_best(self):
-        lst_year = (1895, 0, -8, 14, 4.48, -5.12, 12 - 10j, [1, 2, 3], (12, 2, 3), {1, 2, 3}, {"a": 41, "b": 2, "c": 3},
-                    True, False, GenreCartoons, range(10), "hello world", b"hello world")
-        lst_genre = (0, -8, 14, 4.48, -5.1, 12 - 10j, [1, 82, 3], (1, 2, 63), {1, 2, 43}, {"a": 1, "b": 2, "c": 3},
-                     True, False, GenreCartoons, range(10), b"hello world")
+        lst_year = self.data.copy()
+        lst_genre = self.data
+        lst_year.append(1895)
+        lst_year.append("Hello world!")
 
         for y in lst_year:
             for g in lst_genre:
@@ -111,7 +112,7 @@ class TestCartoons(TestCase):
         self.assertEqual("https://rezka.ag/cartoons/best/fiction/page/8/",
                          self.movie.find_best(genre=GenreCartoons.FICTION).page(8).__str__())
         for genre in self.get_genre():
-            year = randint(1895, 2100)
+            year = randint(1895, 2121)
             page = randint(1, 9)
             response = self.movie.find_best(genre=genre, year=year).page(page).__str__()
             correct_url = f"https://rezka.ag/cartoons/best/{genre}/{year}/page/{page}/"
