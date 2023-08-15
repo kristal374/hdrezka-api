@@ -1,0 +1,11 @@
+[MASTER]
+max-line-length=120
+disable=
+    C0103, # Module name doesn't conform to snake_case naming style
+    C0114, # Missing module docstring
+    C0115, # Missing class docstring
+    C0116, # Missing function or method docstring
+    W0511, # Outstanding TODOs
+
+
+ignore = venv, tests
