@@ -119,10 +119,10 @@ class TestFilms(TestCase):
 
     @requests_mock.Mocker()
     def test_positive_get(self, m):
-        with open("mock_html/films_3.html", encoding="utf-8") as file:
+        with open("tests/mock_html/films_3.html", encoding="utf-8") as file:
             text = file.read()
 
-        with open("mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
+        with open("tests/mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
             reference_data = json.loads(json_file.read())
 
         correct_url = "https://rezka.ag/films/page/3/"

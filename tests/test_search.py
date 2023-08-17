@@ -88,10 +88,10 @@ class TestSearch(TestCase):
 
     @requests_mock.Mocker()
     def test_positive_get(self, m):
-        with open("mock_html/search_Драконы.html", encoding="utf-8") as file:
+        with open("tests/mock_html/search_Драконы.html", encoding="utf-8") as file:
             text = file.read()
 
-        with open("mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
+        with open("tests/mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
             reference_data = json.loads(json_file.read())
 
         correct_url = "https://rezka.ag/search/?do=search&subaction=search&q=%D0%94%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D1%8B"
