@@ -4,7 +4,7 @@ from urllib.parse import quote
 
 from requests import exceptions
 
-from HDrezka.connector import SiteConnector
+from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
 from HDrezka.page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
 
@@ -14,7 +14,7 @@ class BaseSingleCategory(ABC):
 
     def __new__(cls, *args, **kwargs):  # pylint: disable= W0613
         if not hasattr(cls, "connector"):
-            cls.connector = SiteConnector()
+            cls.connector = NetworkClient()
         return super(BaseSingleCategory, cls).__new__(cls)
 
     def __init__(self):
@@ -24,7 +24,7 @@ class BaseSingleCategory(ABC):
     @abstractmethod
     def get(self):
         try:
-            response = self.connector.session.get(self.__str__())
+            response = self.connector.get(str(self))
         except exceptions.ConnectionError:
             raise exceptions.ConnectionError(
                 f"Failed to establish a new connection. Max retries exceeded with url: {self}") from None
@@ -130,7 +130,7 @@ class Animation(BaseCategory):
         return MovieForm(super().get()).extract_content()
 
 
-class New(BaseSingleCategory):  # noqa
+class New(BaseSingleCategory):
     _name = "new"
 
     def filter(self, pattern: Optional[Union[Filters, str]] = Filters.LAST):
@@ -159,21 +159,21 @@ class New(BaseSingleCategory):  # noqa
         return NewForm(super().get()).extract_content()
 
 
-class Announce(BaseSingleCategory):  # noqa
+class Announce(BaseSingleCategory):
     _name = "announce"
 
     def get(self):
         return AnnounceForm(super().get()).extract_content()
 
 
-class Collections(BaseSingleCategory):  # noqa
+class Collections(BaseSingleCategory):
     _name = "collections"
 
     def get(self):
         return CollectionsForm(super().get()).extract_content()
 
 
-class Search(BaseSingleCategory):  # noqa
+class Search(BaseSingleCategory):
     _name = "search"
 
     def __init__(self):
@@ -198,7 +198,7 @@ class Search(BaseSingleCategory):  # noqa
         return f"{self.connector.url}/{self._name}/{text}{page}"
 
 
-class Best(BaseSingleCategory):  # noqa
+class Best(BaseSingleCategory):
     def __init__(self, name):
         super().__init__()
         self._best_params = [name, "best"]
@@ -223,21 +223,3 @@ class Best(BaseSingleCategory):  # noqa
         page = f"page/{page}/" if page is not None and page != "" else ""
         separator = "/"
         return f"{self.connector.url}/{separator.join(map(str, self._best_params))}/{page}"
-
-# class PageInfo:
-#     def __init__(self):
-#         self.name = None
-#         self.original_name = None
-#         self.rates = None
-#         self.on_the_lists = None
-#         self.tagline = None
-#         self.release = None
-#         self.country = None
-#         self.producer = None
-#         self.genre = None
-#         self.age = None
-#         self.time = None
-#         self.playlist = None
-#         self.cast = None
-#         self.title = None
-#

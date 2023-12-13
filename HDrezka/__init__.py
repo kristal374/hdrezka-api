@@ -1,6 +1,6 @@
 from urllib.parse import urlsplit
 
-from HDrezka.connector import SiteConnector
+from HDrezka.connector import NetworkClient
 from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
 from HDrezka.filters import *
 
@@ -19,7 +19,7 @@ class HDrezka:
                       "collections": Collections(),
                       "search": Search()
                       }
-        self.connector = SiteConnector(domain=urlsplit(str(mirror))[1])
+        self.connector = NetworkClient(domain=urlsplit(str(mirror))[1])
 
     def films(self, genre=None) -> Films:
         return self._data["films"].selected_category(genre)
