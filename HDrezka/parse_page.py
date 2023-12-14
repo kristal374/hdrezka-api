@@ -6,7 +6,7 @@ from requests import exceptions
 
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
-from HDrezka.page_representation import MovieForm, NewForm, AnnounceForm, CollectionsForm, SearchForm
+from HDrezka.page_representation import MovieForm, CollectionsForm
 
 
 class BaseSingleCategory(ABC):
@@ -156,14 +156,14 @@ class New(BaseSingleCategory):
         return self
 
     def get(self):
-        return NewForm(super().get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class Announce(BaseSingleCategory):
     _name = "announce"
 
     def get(self):
-        return AnnounceForm(super().get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
 
 class Collections(BaseSingleCategory):
@@ -189,7 +189,7 @@ class Search(BaseSingleCategory):
         return self
 
     def get(self):
-        return SearchForm(super().get()).extract_content()
+        return MovieForm(super().get()).extract_content()
 
     def __str__(self):
         page = self._path.get('page')

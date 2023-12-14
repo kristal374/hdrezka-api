@@ -1,11 +1,13 @@
 import re
 from dataclasses import dataclass
 
-from bs4 import BeautifulSoup
-
 from HDrezka.filters import convert_genres
+from HDrezka.connector import NetworkClient
+from HDrezka.media_page import FormContentPage
 
-__all__ = ["Poster", "CollectionFilm", "MovieForm", "NewForm", "AnnounceForm", "CollectionsForm", "SearchForm"]
+from HDrezka.html_representation import FormPage
+
+__all__ = ["MovieForm", "CollectionsForm", "CollectionFilm", "Poster"]
 
 
 @dataclass
@@ -36,14 +38,10 @@ class CollectionFilm:
         return f"CollectionFilm(\"{self.title}\")"
 
 
-class FormPage:
-    def __init__(self, requests_response):
-        self._page = requests_response
-        self.soup = BeautifulSoup(self._page, "lxml")
-
+class MovieForm(FormPage):
     def extract_content(self):
         page_info = []
-        for item in self.soup.find_all('div', class_="b-content__inline_item"):
+        for item in self.page.soup.find_all('div', class_="b-content__inline_item"):
             poster = Poster()
             poster.id = int(item.get("data-id"))
             poster.title = item.find("div", class_="b-content__inline_item-link").find('a').text
@@ -76,22 +74,10 @@ class FormPage:
         return misc
 
 
-class MovieForm(FormPage):
-    pass
-
-
-class NewForm(FormPage):
-    pass
-
-
-class AnnounceForm(FormPage):
-    pass
-
-
 class CollectionsForm(FormPage):
     def extract_content(self):
         collection_info = []
-        for item in self.soup.find_all('div', class_="b-content__collections_item"):
+        for item in self.page.soup.find_all('div', class_="b-content__collections_item"):
             collection = CollectionFilm()
             collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0))
             collection.title = item.find("a", class_="title").text
@@ -101,7 +87,3 @@ class CollectionsForm(FormPage):
 
             collection_info.append(collection)
         return collection_info
-
-
-class SearchForm(FormPage):
-    pass
