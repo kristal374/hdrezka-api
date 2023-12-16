@@ -1,11 +1,12 @@
 import re
 from dataclasses import dataclass
+from typing import Union
 
 from HDrezka.filters import convert_genres
 from HDrezka.connector import NetworkClient
 from HDrezka.media_page import FormContentPage
-
 from HDrezka.html_representation import FormPage
+from HDrezka.player import Trailer
 
 __all__ = ["MovieForm", "CollectionsForm", "CollectionFilm", "Poster"]
 
@@ -19,6 +20,7 @@ class Poster:
     year: str = None  # Дата выхода
     country: str = None  # Страна производитель
     genre: str = None  # Жанр фильма
+    trailer: Trailer = None  # объект трейлера
     img_url: str = None  # Ссылка на обложку фильма
     url: str = None  # Ссылка на страницу фильма
 
@@ -48,6 +50,7 @@ class MovieForm(FormPage):
             poster.entity = item.find('i', class_="entity").text
             poster.info = self.extract_info(item)
             poster.year, poster.country, poster.genre = self.extract_misc(item)
+            poster.trailer = self.extract_trailer(item)
             poster.img_url = item.find('img').get("src")
             poster.url = item.get("data-url")
 
@@ -61,6 +64,11 @@ class MovieForm(FormPage):
             return None
         info = "".join(i if str(i) != "<br/>" else " " for i in info.contents).replace(",", "")
         return info
+
+    @staticmethod
+    def extract_trailer(item) -> Union[Trailer, None]:
+        trailer = item.find("i", class_="trailer")
+        return Trailer(trailer.get("data-id")) if trailer else None
 
     @staticmethod
     def extract_misc(item):
