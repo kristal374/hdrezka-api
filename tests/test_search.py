@@ -19,14 +19,14 @@ class TestSearch(TestCase):
         del self.movie
 
     def test_positive_page(self):
-        self.assertEqual("https://rezka.ag/search/", self.movie.__str__())
+        self.assertEqual("https://rezka.ag/search/", str(self.movie))
         self.movie.query("Blob")
         for page in range(1, 100):
-            response = self.movie.page(page).__str__()
+            response = str(self.movie.page(page))
             correct_url = f"https://rezka.ag/search/?do=search&subaction=search&q=Blob&page={page}"
             self.assertEqual(correct_url, response)
 
-            response = self.movie.page(str(page)).__str__()  # noqa
+            response = str(self.movie.page(str(page)))  # noqa
             self.assertEqual(correct_url, response)
 
     def test_negative_page(self):
@@ -80,7 +80,7 @@ class TestSearch(TestCase):
             (""" \"\"\"""", "https://rezka.ag/search/?do=search&subaction=search&q=%22%22%22"),
         )
         for text_query, correct_url in data:
-            response = self.movie.query(text_query).__str__()
+            response = str(self.movie.query(text_query))
             self.assertEqual(correct_url, response, msg=text_query)
 
     def test_negative_query(self):
@@ -96,7 +96,7 @@ class TestSearch(TestCase):
         m.register_uri('GET', correct_url, text=text)
         site = self.movie.query("Драконы")
 
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         response = []
         for item in site.get():
@@ -110,7 +110,7 @@ class TestSearch(TestCase):
     def test_negative_get(self, m):
         correct_url = "https://rezka.ag/search/?do=search&subaction=search&q=%D0%94%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D1%8B"
         site = self.movie.query("Драконы")
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
         with self.assertRaises(requests.exceptions.ConnectionError):

@@ -39,10 +39,10 @@ class TestNew(TestCase):
                 fun(element)
 
     def test_positive_filter(self):
-        self.assertEqual("https://rezka.ag/new/", self.movie.filter(None).__str__())
-        self.assertEqual("https://rezka.ag/new/?filter=last", self.movie.filter().__str__())
+        self.assertEqual("https://rezka.ag/new/", str(self.movie.filter(None)))
+        self.assertEqual("https://rezka.ag/new/?filter=last", str(self.movie.filter()))
         for filter_obj in self.get_filters():
-            response = self.movie.filter(filter_obj).__str__()
+            response = str(self.movie.filter(filter_obj))
             correct_url = f"https://rezka.ag/new/?filter={filter_obj}"
             self.assertEqual(correct_url, response)
 
@@ -55,10 +55,10 @@ class TestNew(TestCase):
                   Filters, range(10), b"hello world"))
 
     def test_positive_show_only(self):
-        self.assertEqual("https://rezka.ag/new/", self.movie.show_only(None).__str__())
-        self.assertEqual("https://rezka.ag/new/?filter=last", self.movie.show_only().__str__())
+        self.assertEqual("https://rezka.ag/new/", str(self.movie.show_only(None)))
+        self.assertEqual("https://rezka.ag/new/?filter=last", str(self.movie.show_only()))
         for category_obj in self.get_category():
-            response = self.movie.show_only(category_obj).__str__()
+            response = str(self.movie.show_only(category_obj))
             if category_obj != 0:
                 correct_url = f"https://rezka.ag/new/?filter=last&genre={category_obj}"
             else:
@@ -74,7 +74,7 @@ class TestNew(TestCase):
     def test_filter_show_only(self):
         for filter_obj in self.get_filters():
             for category_obj in self.get_category():
-                response = self.movie.filter(filter_obj).show_only(category_obj).__str__()
+                response = str(self.movie.filter(filter_obj).show_only(category_obj))
                 if category_obj != 0:
                     correct_url = f"https://rezka.ag/new/?filter={filter_obj}&genre={category_obj}"
                 else:
@@ -84,11 +84,11 @@ class TestNew(TestCase):
     def test_positive_page(self):
         for filter_obj in self.get_filters():
             page = randint(1, 99)
-            response = self.movie.filter(filter_obj).page(page).__str__()
+            response = str(self.movie.filter(filter_obj).page(page))
             correct_url = f"https://rezka.ag/new/page/{page}/?filter={filter_obj}"
             self.assertEqual(correct_url, response)
 
-            response = self.movie.filter(filter_obj).page(str(page)).__str__()
+            response = str(self.movie.filter(filter_obj).page(str(page)))
             self.assertEqual(correct_url, response)
 
     def test_negative_page(self):
@@ -105,7 +105,7 @@ class TestNew(TestCase):
         m.register_uri('GET', correct_url, text=text)
         site = self.movie.page(5)
 
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         response = []
         for item in site.get():
@@ -118,7 +118,7 @@ class TestNew(TestCase):
     def test_negative_get(self, m):
         correct_url = "https://rezka.ag/new/page/5/"
         site = self.movie.page(5)
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
         with self.assertRaises(requests.exceptions.ConnectionError):

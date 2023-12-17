@@ -17,11 +17,11 @@ class TestCollections(TestCase):
 
     def test_positive_page(self):
         for page in range(1, 100):
-            response = self.movie.page(page).__str__()
+            response = str(self.movie.page(page))
             correct_url = f"https://rezka.ag/collections/page/{page}/"
             self.assertEqual(correct_url, response)
 
-            response = self.movie.page(str(page)).__str__()  # noqa
+            response = str(self.movie.page(str(page)))  # noqa
             self.assertEqual(correct_url, response)
 
     def test_negative_page(self):
@@ -39,16 +39,16 @@ class TestCollections(TestCase):
         m.register_uri('GET', correct_url, text=text)
         site = self.movie.page(3)
 
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
-        response = [i.__dict__ for i in site.get() if i.__repr__()]
+        response = [i.__dict__ for i in site.get() if repr(i)]
         self.assertListEqual(reference_data["collections"], response)
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):
         correct_url = "https://rezka.ag/collections/page/3/"
         site = self.movie.page(3)
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
         with self.assertRaises(requests.exceptions.ConnectionError):

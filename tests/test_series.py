@@ -41,9 +41,9 @@ class TestSeries(TestCase):
                 fun(element)
 
     def test_positive_selected_category(self):
-        self.assertEqual("https://rezka.ag/series/", self.movie.selected_category(None).__str__())
+        self.assertEqual("https://rezka.ag/series/", str(self.movie.selected_category(None)))
         for genre in self.get_genre():
-            response = self.movie.selected_category(genre).__str__()
+            response = str(self.movie.selected_category(genre))
             correct_url = f"https://rezka.ag/series/{genre}/"
             self.assertEqual(correct_url, response)
 
@@ -54,11 +54,11 @@ class TestSeries(TestCase):
         )
 
     def test_positive_filter(self):
-        self.assertEqual("https://rezka.ag/series/", self.movie.filter(None).__str__())
-        self.assertEqual("https://rezka.ag/series/?filter=last", self.movie.filter().__str__())
+        self.assertEqual("https://rezka.ag/series/", str(self.movie.filter(None)))
+        self.assertEqual("https://rezka.ag/series/?filter=last", str(self.movie.filter()))
         for genre in self.get_genre():
             for filter_obj in self.get_filters():
-                response = self.movie.selected_category(genre).filter(filter_obj).__str__()
+                response = str(self.movie.selected_category(genre).filter(filter_obj))
                 correct_url = f"https://rezka.ag/series/{genre}/?filter={filter_obj}"
                 self.assertEqual(correct_url, response)
 
@@ -72,7 +72,7 @@ class TestSeries(TestCase):
         for genre in self.get_genre():
             for filter_obj in self.get_filters():
                 page = randint(1, 99)
-                response = self.movie.selected_category(genre).filter(filter_obj).page(page).__str__()
+                response = str(self.movie.selected_category(genre).filter(filter_obj).page(page))
                 correct_url = f"https://rezka.ag/series/{genre}/page/{page}/?filter={filter_obj}"
                 self.assertEqual(correct_url, response)
 
@@ -91,12 +91,12 @@ class TestSeries(TestCase):
 
     def test_positive_find_best(self):
         self.assertEqual("https://rezka.ag/series/best/2021/",
-                         self.movie.find_best(year=2021).__str__())
+                         str(self.movie.find_best(year=2021)))
         self.assertEqual("https://rezka.ag/series/best/fiction/",
-                         self.movie.find_best(genre=GenreSeries.FICTION).__str__())
+                         str(self.movie.find_best(genre=GenreSeries.FICTION)))
         for genre in self.get_genre():
             year = randint(1911, 2023)
-            response = self.movie.find_best(genre=genre, year=year).__str__()
+            response = str(self.movie.find_best(genre=genre, year=year))
             correct_url = f"https://rezka.ag/series/best/{genre}/{year}/"
             self.assertEqual(correct_url, response)
 
@@ -112,13 +112,13 @@ class TestSeries(TestCase):
 
     def test_positive_find_best_page(self):
         self.assertEqual("https://rezka.ag/series/best/2021/page/8/",
-                         self.movie.find_best(year=2021).page(8).__str__())
+                         str(self.movie.find_best(year=2021).page(8)))
         self.assertEqual("https://rezka.ag/series/best/fiction/page/8/",
-                         self.movie.find_best(genre=GenreSeries.FICTION).page(8).__str__())
+                         str(self.movie.find_best(genre=GenreSeries.FICTION).page(8)))
         for genre in self.get_genre():  # noqa
             year = randint(1895, 2100)
             page = randint(1, 9)
-            response = self.movie.find_best(genre=genre, year=year).page(page).__str__()
+            response = str(self.movie.find_best(genre=genre, year=year).page(page))
             correct_url = f"https://rezka.ag/series/best/{genre}/{year}/page/{page}/"
             self.assertEqual(correct_url, response)
 
@@ -130,7 +130,7 @@ class TestSeries(TestCase):
         m.register_uri('GET', correct_url, text=text)
         site = self.movie
 
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         response = []
         for item in site.get():
@@ -141,14 +141,14 @@ class TestSeries(TestCase):
         self.assertListEqual(reference_data["series"], response)
 
         site = self.movie.find_best(year=2018)
-        m.register_uri('GET', site.__str__(), text="Success")
+        m.register_uri('GET', str(site), text="Success")
         self.assertEqual(0, len(site.get()))
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):
         correct_url = "https://rezka.ag/series/"
         site = self.movie
-        self.assertEqual(correct_url, site.__str__())
+        self.assertEqual(correct_url, str(site))
 
         m.register_uri('GET', correct_url, exc=requests.exceptions.ConnectionError)
         with self.assertRaises(requests.exceptions.ConnectionError):
