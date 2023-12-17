@@ -1,5 +1,4 @@
 import re
-import json
 from unittest import TestCase
 from random import randint
 
@@ -9,6 +8,8 @@ import requests_mock
 from HDrezka.parse_page import Animation
 from HDrezka.filters import GenreAnimation, Filters
 from HDrezka.player import Trailer
+
+from tests.mock_html.html_construcror import generate_fake_html
 
 
 class TestAnimations(TestCase):
@@ -120,11 +121,7 @@ class TestAnimations(TestCase):
 
     @requests_mock.Mocker()
     def test_positive_get(self, m):
-        with open("tests/mock_html/animation_4.html", encoding="utf-8") as file:
-            text = file.read()
-
-        with open("tests/mock_html/reference_data.json", "r", encoding="utf-8") as json_file:
-            reference_data = json.loads(json_file.read())
+        reference_data, text = generate_fake_html("animation")
 
         correct_url = "https://rezka.ag/animation/page/4/"
         m.register_uri('GET', correct_url, text=text)
