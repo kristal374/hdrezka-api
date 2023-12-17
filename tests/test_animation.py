@@ -8,6 +8,7 @@ import requests_mock
 
 from HDrezka.parse_page import Animation
 from HDrezka.filters import GenreAnimation, Filters
+from HDrezka.player import Trailer
 
 
 class TestAnimations(TestCase):
@@ -131,7 +132,12 @@ class TestAnimations(TestCase):
 
         self.assertEqual(correct_url, site.__str__())
 
-        response = [i.__dict__ for i in site.get()]
+        response = []
+        for item in site.get():
+            if isinstance(item.trailer, Trailer):
+                item.trailer = item.trailer.__dict__
+            response.append(item.__dict__)
+
         self.assertListEqual(reference_data["animation"], response)
 
         site = self.movie.find_best(year=2018)

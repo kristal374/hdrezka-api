@@ -8,6 +8,7 @@ import requests_mock
 
 from HDrezka.parse_page import New
 from HDrezka.filters import Filters, ShowCategory
+from HDrezka.player import Trailer
 
 
 class TestNew(TestCase):
@@ -109,7 +110,11 @@ class TestNew(TestCase):
 
         self.assertEqual(correct_url, site.__str__())
 
-        response = [i.__dict__ for i in site.get()]
+        response = []
+        for item in site.get():
+            if isinstance(item.trailer, Trailer):
+                item.trailer = item.trailer.__dict__
+            response.append(item.__dict__)
         self.assertListEqual(reference_data["new"], response)
 
     @requests_mock.Mocker()
