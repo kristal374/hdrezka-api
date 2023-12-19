@@ -1,8 +1,8 @@
 import re
 from dataclasses import dataclass
-from typing import Union
+from typing import Union, Optional, List
 
-from HDrezka.filters import convert_genres
+from HDrezka.filters import convert_genres, Filters
 from HDrezka.connector import NetworkClient
 from HDrezka.media_page import FormContentPage
 from HDrezka.html_representation import FormPage
@@ -35,6 +35,10 @@ class CollectionFilm:
     amount_film: int = None  # Количество фильмов в коллекции
     img_url: str = None  # Ссылка на обложку коллекции
     url: str = None  # Ссылка на страницу коллекции
+
+    def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
+        filter_param = f"?filter={custom_filter}" if custom_filter else ""
+        return MovieForm(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
     def __repr__(self):
         return f"CollectionFilm(\"{self.title}\")"
