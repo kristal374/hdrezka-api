@@ -1,7 +1,7 @@
 from urllib.parse import urlsplit
 
 from HDrezka.connector import NetworkClient
-from HDrezka.parse_page import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
+from HDrezka.site_navigation import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
 from HDrezka.filters import *
 
 __all__ = ["HDrezka", "Films", "Cartoons", "Series", "Animation", "New", "Announce", "Collections", "Search",
