@@ -1,12 +1,14 @@
 import re
 from dataclasses import dataclass
-from typing import Union, Optional, List
+from typing import Union, Optional, List, TYPE_CHECKING
 
-from HDrezka.filters import convert_genres, Filters
 from HDrezka.connector import NetworkClient
-from HDrezka.media_page import FormContentPage
+from HDrezka.filters import convert_genres
 from HDrezka.html_representation import FormPage
 from HDrezka.player import Trailer
+
+if TYPE_CHECKING:
+    from HDrezka.filters import Filters
 
 __all__ = ["MovieForm", "CollectionsForm", "CollectionFilm", "Poster"]
 
@@ -16,9 +18,9 @@ class Poster:
     id: int = None  # ID фильма
     title: str = None  # Названия фильма
     entity: str = None  # Тип видео(Фильм, Сериал и тд)
-    info: str = None  # Если является сериалом, отображает информацию о вышедших сериях
+    info: Optional[str] = None  # Если является сериалом, отображает информацию о вышедших сериях
     year: str = None  # Дата выхода
-    country: str = None  # Страна производитель
+    country: Optional[str] = None  # Страна производитель
     genre: str = None  # Жанр фильма
     trailer: Trailer = None  # объект трейлера
     img_url: str = None  # Ссылка на обложку фильма
@@ -36,7 +38,7 @@ class CollectionFilm:
     img_url: str = None  # Ссылка на обложку коллекции
     url: str = None  # Ссылка на страницу коллекции
 
-    def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
+    def get(self, custom_filter: Optional[Union["Filters", str]] = None) -> List["Poster"]:
         filter_param = f"?filter={custom_filter}" if custom_filter else ""
         return MovieForm(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
