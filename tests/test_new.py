@@ -5,7 +5,7 @@ from unittest import TestCase
 import requests
 import requests_mock
 
-from HDrezka.parse_page import New
+from HDrezka.site_navigation import New
 from HDrezka.filters import Filters, ShowCategory
 from HDrezka.player import Trailer
 

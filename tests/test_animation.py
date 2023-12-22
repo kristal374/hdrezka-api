@@ -5,7 +5,7 @@ from random import randint
 import requests
 import requests_mock
 
-from HDrezka.parse_page import Animation
+from HDrezka.site_navigation import Animation
 from HDrezka.filters import GenreAnimation, Filters
 from HDrezka.player import Trailer
 

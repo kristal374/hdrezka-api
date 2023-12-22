@@ -3,7 +3,7 @@ from unittest import TestCase
 import requests
 import requests_mock
 
-from HDrezka.parse_page import Announce
+from HDrezka.site_navigation import Announce
 from HDrezka.player import Trailer
 
 from tests.mock_html.html_construcror import generate_fake_html
