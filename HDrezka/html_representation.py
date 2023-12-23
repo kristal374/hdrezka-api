@@ -21,6 +21,6 @@ class HTMLDocument:
         return html
 
 
-class FormPage:
+class PageRepresentation:
     def __init__(self, html_content: Union[str, bytes, IO, Response, HTMLDocument]):
         self.page = html_content if isinstance(html_content, HTMLDocument) else HTMLDocument(html_content)

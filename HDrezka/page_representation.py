@@ -4,7 +4,7 @@ from typing import Union, Optional, List, TYPE_CHECKING
 
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import convert_genres
-from HDrezka.html_representation import FormPage
+from HDrezka.html_representation import PageRepresentation
 from HDrezka.player import Trailer
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ class CollectionFilm:
         return f"CollectionFilm(\"{self.title}\")"
 
 
-class MovieForm(FormPage):
+class MovieForm(PageRepresentation):
     def extract_content(self):
         page_info = []
         for item in self.page.soup.find_all('div', class_="b-content__inline_item"):
@@ -88,7 +88,7 @@ class MovieForm(FormPage):
         return misc
 
 
-class CollectionsForm(FormPage):
+class CollectionsForm(PageRepresentation):
     def extract_content(self):
         collection_info = []
         for item in self.page.soup.find_all('div', class_="b-content__collections_item"):
