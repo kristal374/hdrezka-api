@@ -6,7 +6,7 @@ from HDrezka import NetworkClient
 
 
 @dataclasses.dataclass
-class TrailerInfo:
+class Trailer:
     id = None
     title = None
     original_title = None
@@ -35,7 +35,7 @@ class TrailerBuilder:
         if not response:
             return None
 
-        content = TrailerInfo()
+        content = Trailer()
         content.id = self.data_id
         content.title = self._regular_search('(?<=&laquo;)[^(&raquo;)]*', response.get('title'))
         content.original_title = self._regular_search('(?<=")[^",]*', response.get('title'))
