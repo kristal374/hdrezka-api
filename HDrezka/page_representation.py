@@ -10,7 +10,7 @@ from HDrezka.player import Trailer
 if TYPE_CHECKING:
     from HDrezka.filters import Filters
 
-__all__ = ["MovieForm", "MovieCollectionBuilder", "MovieCollection", "Poster"]
+__all__ = ["PosterBuilder", "MovieCollectionBuilder", "MovieCollection", "Poster"]
 
 
 @dataclass
@@ -40,13 +40,13 @@ class MovieCollection:
 
     def get(self, custom_filter: Optional[Union["Filters", str]] = None) -> List["Poster"]:
         filter_param = f"?filter={custom_filter}" if custom_filter else ""
-        return MovieForm(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
+        return PosterBuilder(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
     def __repr__(self):
         return f"CollectionFilm(\"{self.title}\")"
 
 
-class MovieForm(PageRepresentation):
+class PosterBuilder(PageRepresentation):
     def extract_content(self):
         page_info = []
         for item in self.page.soup.find_all('div', class_="b-content__inline_item"):

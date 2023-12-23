@@ -6,7 +6,7 @@ from requests import exceptions
 
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
-from HDrezka.page_representation import MovieForm, MovieCollectionBuilder
+from HDrezka.page_representation import PosterBuilder, MovieCollectionBuilder
 
 
 class BaseSingleCategory(ABC):
@@ -88,7 +88,7 @@ class Films(BaseCategory):
         return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class Cartoons(BaseCategory):
@@ -101,7 +101,7 @@ class Cartoons(BaseCategory):
         return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class Series(BaseCategory):
@@ -114,7 +114,7 @@ class Series(BaseCategory):
         return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class Animation(BaseCategory):
@@ -127,7 +127,7 @@ class Animation(BaseCategory):
         return super().find_best(genre=genre, year=year)
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class New(BaseSingleCategory):
@@ -156,14 +156,14 @@ class New(BaseSingleCategory):
         return self
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class Announce(BaseSingleCategory):
     _name = "announce"
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
 
 class Collections(BaseSingleCategory):
@@ -189,7 +189,7 @@ class Search(BaseSingleCategory):
         return self
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
     def __str__(self):
         page = self._path.get('page')
@@ -216,7 +216,7 @@ class Best(BaseSingleCategory):
         return self
 
     def get(self):
-        return MovieForm(super().get()).extract_content()
+        return PosterBuilder(super().get()).extract_content()
 
     def __str__(self):
         page = self._path.get("page")
