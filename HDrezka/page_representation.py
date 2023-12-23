@@ -10,7 +10,7 @@ from HDrezka.player import Trailer
 if TYPE_CHECKING:
     from HDrezka.filters import Filters
 
-__all__ = ["MovieForm", "CollectionsForm", "CollectionFilm", "Poster"]
+__all__ = ["MovieForm", "CollectionsForm", "MovieCollection", "Poster"]
 
 
 @dataclass
@@ -31,7 +31,7 @@ class Poster:
 
 
 @dataclass
-class CollectionFilm:
+class MovieCollection:
     id: int = None  # ID коллекции
     title: str = None  # Названия коллекции
     amount_film: int = None  # Количество фильмов в коллекции
@@ -92,7 +92,7 @@ class CollectionsForm(PageRepresentation):
     def extract_content(self):
         collection_info = []
         for item in self.page.soup.find_all('div', class_="b-content__collections_item"):
-            collection = CollectionFilm()
+            collection = MovieCollection()
             collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0))
             collection.title = item.find("a", class_="title").text
             collection.amount_film = int(item.find("div", class_="num").text)
