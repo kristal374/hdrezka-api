@@ -5,7 +5,7 @@ from typing import Union, Optional, List, TYPE_CHECKING
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import convert_genres
 from HDrezka.html_representation import PageRepresentation
-from HDrezka.player import Trailer
+from HDrezka.player import TrailerBuilder
 
 if TYPE_CHECKING:
     from HDrezka.filters import Filters
@@ -22,7 +22,7 @@ class Poster:
     year: str = None  # Дата выхода
     country: Optional[str] = None  # Страна производитель
     genre: str = None  # Жанр фильма
-    trailer: Trailer = None  # объект трейлера
+    trailer: TrailerBuilder = None  # объект трейлера
     img_url: str = None  # Ссылка на обложку фильма
     url: str = None  # Ссылка на страницу фильма
 
@@ -72,9 +72,9 @@ class PosterBuilder(PageRepresentation):
         return info
 
     @staticmethod
-    def extract_trailer(item) -> Union[Trailer, None]:
+    def extract_trailer(item) -> Union[TrailerBuilder, None]:
         trailer = item.find("i", class_="trailer")
-        return Trailer(trailer.get("data-id")) if trailer else None
+        return TrailerBuilder(trailer.get("data-id")) if trailer else None
 
     @staticmethod
     def extract_misc(item):

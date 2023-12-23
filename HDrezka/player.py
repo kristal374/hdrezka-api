@@ -16,7 +16,7 @@ class TrailerInfo:
     movie_link = None
 
 
-class Trailer:
+class TrailerBuilder:
     def __init__(self, id_):
         """id_: идентификатор фильма"""
         self.data_id = id_
