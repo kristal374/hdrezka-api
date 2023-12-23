@@ -6,7 +6,7 @@ from requests import exceptions
 
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
-from HDrezka.page_representation import MovieForm, CollectionsForm
+from HDrezka.page_representation import MovieForm, MovieCollectionBuilder
 
 
 class BaseSingleCategory(ABC):
@@ -170,7 +170,7 @@ class Collections(BaseSingleCategory):
     _name = "collections"
 
     def get(self):
-        return CollectionsForm(super().get()).extract_content()
+        return MovieCollectionBuilder(super().get()).extract_content()
 
 
 class Search(BaseSingleCategory):
