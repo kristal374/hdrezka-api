@@ -7,7 +7,7 @@ import requests_mock
 
 from HDrezka.site_navigation import Animation
 from HDrezka.filters import GenreAnimation, Filters
-from HDrezka.player import Trailer
+from HDrezka.player import TrailerBuilder
 
 from tests.mock_html.html_construcror import generate_fake_html
 
@@ -131,7 +131,7 @@ class TestAnimations(TestCase):
 
         response = []
         for item in site.get():
-            if isinstance(item.trailer, Trailer):
+            if isinstance(item.trailer, TrailerBuilder):
                 item.trailer = item.trailer.__dict__
             response.append(item.__dict__)
 
