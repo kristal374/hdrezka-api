@@ -18,6 +18,7 @@ class Poster:
     id: int = None  # ID фильма
     title: str = None  # Названия фильма
     entity: str = None  # Тип видео(Фильм, Сериал и тд)
+    rates: Optional[float] = None  # Рейтинг видео(присутствует в категории Best)
     info: Optional[str] = None  # Если является сериалом, отображает информацию о вышедших сериях
     year: str = None  # Дата выхода
     country: Optional[str] = None  # Страна производитель
@@ -53,7 +54,8 @@ class PosterBuilder(PageRepresentation):
             poster = Poster()
             poster.id = int(item.get("data-id"))
             poster.title = item.find("div", class_="b-content__inline_item-link").find('a').text
-            poster.entity = item.find('i', class_="entity").text
+            poster.entity = item.find("i", class_="entity").next.strip()
+            poster.rates = self.extract_rates(item)
             poster.info = self.extract_info(item)
             poster.year, poster.country, poster.genre = self.extract_misc(item)
             poster.trailer = self.extract_trailer(item)
@@ -62,6 +64,13 @@ class PosterBuilder(PageRepresentation):
 
             page_info.append(poster)
         return page_info
+
+    @staticmethod
+    def extract_rates(item):
+        rates = item.find("i", class_="b-category-bestrating")
+        if rates is None:
+            return rates
+        return float(rates.text[1:-1]) if rates.text != "(—)" else None
 
     @staticmethod
     def extract_info(item):
