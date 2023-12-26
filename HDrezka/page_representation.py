@@ -5,6 +5,7 @@ from typing import Union, Optional, List, TYPE_CHECKING
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import convert_genres
 from HDrezka.html_representation import PageRepresentation
+from HDrezka.movie_page_descriptor import MovieDetailsBuilder
 from HDrezka.player import TrailerBuilder
 
 if TYPE_CHECKING:
@@ -26,6 +27,9 @@ class Poster:
     trailer: TrailerBuilder = None  # объект трейлера
     img_url: str = None  # Ссылка на обложку фильма
     url: str = None  # Ссылка на страницу фильма
+
+    def get(self):
+        return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"Poster(\"{self.title}\")"

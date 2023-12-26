@@ -8,6 +8,8 @@ disable=
     W0511, # Outstanding TODOs
     R0902, # Too many instance attributes
     R0903, # Too few public methods
+    R0912, # Too many branches
+    C3002, # Lambda expression called directly
 
 
 ignore = venv, tests
