@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
 
 from HDrezka import page_representation
+from HDrezka.comments import CommentsIterator
 from HDrezka.connector import NetworkClient
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.person import PersonBriefInfo
@@ -114,7 +115,7 @@ class MovieDetails:
     part_content: Optional[List[PartContent]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List = None
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
-    comment = None  # Комментарии к данному фильму
+    comment: CommentsIterator = None  # Комментарии к данному фильму
 
 
 class InfoTableBuilder(PageRepresentation):
@@ -222,7 +223,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.part_content = self.extract_part_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
-        page.comment = None  # TODO
+        page.comment = CommentsIterator(page.id)
         return page
 
     def extract_original_name(self):

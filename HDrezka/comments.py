@@ -1,0 +1,152 @@
+import re
+import time
+from dataclasses import dataclass
+from typing import List
+
+import bs4
+
+from HDrezka.connector import NetworkClient
+
+
+@dataclass
+class User:
+    name: str = None  # Имя пользователя
+    image: str = None  # Ссылка на аватар-изображение пользователя
+
+    def __repr__(self):
+        return f"<User({self.name})>"
+
+
+@dataclass
+class Comment:
+    id: int = None  # идентификатор комментария
+    author: User = None  # автор комментария
+    date: str = None  # дата и время когда был оставлен комментарий
+    text: str = None  # текст комментария
+    replies: List["Comment"] = None  # комментарии-ответы на данный комментарий
+    likes_num: int = None  # количество отметок "нравиться"
+    edit: bool = None  # был ли комментарий отредактирован администрацией
+
+    def __repr__(self):
+        return f"Comment({self.author.name})"
+
+
+class CommentsIterator:
+    def __new__(cls, *args, **kwargs):  # pylint: disable= W0613
+        if not hasattr(cls, "connector"):
+            cls.connector = NetworkClient()
+        return super().__new__(cls)
+
+    def __init__(self, film_id):
+        self.film_id = film_id
+        self.page_number = 0
+        self.last_page = None
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.page_number += 1
+        list_comments = self.get_page(self.page_number)
+        if len(list_comments) == 0:
+            self.page_number = 0
+            raise StopIteration
+        return list_comments
+
+    def get_page(self, number=1):
+        if self.last_page is not None and number > self.last_page:
+            return []
+
+        response = self._get(page=number)
+        soup = bs4.BeautifulSoup(response["comments"], "lxml")
+
+        if self.last_page is None:
+            self.last_page = self._extract_last_page_number(response.get("navigation"))
+        return self.extreact_comments(soup)
+
+    @staticmethod
+    def _extract_last_page_number(navigation):
+        if navigation is None:
+            return 0
+        soup = bs4.BeautifulSoup(navigation, "lxml")
+        navigation_bar = soup.find_all("a")
+        if 0 < len(navigation_bar) < 11:
+            return len(navigation_bar)
+        if len(navigation_bar) >= 11:
+            return int(navigation_bar[-2].text)
+        return 0
+
+    def extreact_comments(self, comments):
+        child = comments.find(class_="comments-tree-list")
+        result_lst = []
+        if child is not None:
+            items = child.find_all(class_="comments-tree-item", recursive=False)
+
+            for comment_tree in items:
+                comment = Comment()
+                comment.id = int(comment_tree.get("data-id"))
+                comment.author = User()
+                comment.author.name = comment_tree.next.find("span", class_="name").text.strip()
+                comment.author.image = comment_tree.next.find("div", class_="ava").img.get("src").strip()
+                comment.date = comment_tree.next.find("span", class_="date").text.strip()[9:]
+                comment.text = self._extract_text(comment_tree.next.find("div", class_="text").next)
+                comment.replies = self.extreact_comments(comment_tree)
+                comment.likes_num = int(comment_tree.next.find("span", class_="b-comment__likes_count").i.text.strip())
+                comment.edit = bool(comment_tree.next.find("span", class_="edited"))
+                result_lst.append(comment)
+        return result_lst
+
+    def _extract_text(self, tag: bs4.element.Tag) -> str:
+        result_string = ""
+        for item in tag.contents:
+            if isinstance(item, bs4.element.Comment):
+                continue
+            if isinstance(item, bs4.element.NavigableString):
+                result_string += str(item)
+            elif isinstance(item, bs4.element.Tag):
+                result_string += self._process_tag(item)
+            else:
+                raise ValueError("Неизвестный элемент в тексте")
+        return result_string
+
+    def _process_tag(self, tag: bs4.element.Tag) -> str:
+        tag_classes = tag.get("class", [])
+
+        if "title_spoiler" in tag_classes:
+            return ""
+        if "text_spoiler" in tag_classes:
+            return f"<spoiler>{self._extract_text(tag)}</spoiler>"
+        if tag.name == "br":
+            return "\n"
+        if tag.name in ("b", "i", "u", "s", "a"):
+            return self._process_inline_tag(tag)
+        raise ValueError("Неизвестный элемент в тексте")
+
+    def _process_inline_tag(self, tag: bs4.element.Tag) -> str:
+        if tag.name == "a" and 'youtu-link' in tag.get("class", []):
+            return tag.get("href").strip()
+
+        text_from_tag = self._extract_text(tag)
+        if tag.name == "a" and (
+                tag.get("href") == text_from_tag or not re.search(r'https?://[^\s"]*', tag.get("href"))):
+            return text_from_tag
+
+        new_tag = bs4.BeautifulSoup().new_tag(tag.name)
+        new_tag.attrs = tag.attrs
+        new_tag.string = "{}"
+        return str(new_tag).format(text_from_tag)
+
+    def _get(self, page=None):
+        data = {
+            "t": int(time.time() * 1000),
+            "news_id": self.film_id,
+            "cstart": self.page_number if page is None else page,
+            "type": 0,
+            "comment_id": 0,
+            "skin": "hdrezka"
+        }
+        response = self.connector.get(f"{self.connector.url}/ajax/get_comments/", params=data)
+        return response.json()
+
+    def __repr__(self):
+        return f"<{CommentsIterator.__name__}(film_id=\"{self.film_id}\")>"
