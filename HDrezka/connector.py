@@ -26,10 +26,10 @@ class Connector(ABC):
         return CaseInsensitiveDict(header)
 
     @abstractmethod
-    def get(self, url: Union[str, bytes], params: Any = None, **kwargs: Any): ...
+    def get(self, url: Union[str, bytes], **kwargs: Any): ...
 
     @abstractmethod
-    def post(self, url: Union[str, bytes], params: Any = None, **kwargs: Any): ...
+    def post(self, url: Union[str, bytes], **kwargs: Any): ...
 
 
 class Singleton(type):
@@ -49,11 +49,11 @@ class RequestConnector(Connector):
                  proxies=None):
         super().__init__(domain, user_agent, proxies)
 
-    def get(self, url: Union[str, bytes], params: Any = None, **kwargs: Any) -> Response:
-        return requests.get(url, params, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
+    def get(self, url: Union[str, bytes], **kwargs: Any) -> Response:
+        return requests.get(url, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
 
-    def post(self, url: Union[str, bytes], params: Any = None, **kwargs: Any) -> Response:
-        return requests.post(url, params, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
+    def post(self, url: Union[str, bytes], **kwargs: Any) -> Response:
+        return requests.post(url, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
 
 
 class SessionConnector(requests.sessions.Session, Connector):
