@@ -7,7 +7,7 @@ from HDrezka.comments import CommentsIterator
 from HDrezka.connector import NetworkClient
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.person import PersonBriefInfo
-from HDrezka.player import TrailerBuilder
+from HDrezka.trailer import TrailerBuilder
 
 if TYPE_CHECKING:
     from HDrezka.page_representation import Poster

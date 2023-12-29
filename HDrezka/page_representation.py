@@ -6,7 +6,7 @@ from HDrezka.connector import NetworkClient
 from HDrezka.filters import convert_genres
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.movie_page_descriptor import MovieDetailsBuilder
-from HDrezka.player import TrailerBuilder
+from HDrezka.trailer import TrailerBuilder
 
 if TYPE_CHECKING:
     from HDrezka.filters import Filters
