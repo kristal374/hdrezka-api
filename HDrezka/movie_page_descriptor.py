@@ -7,6 +7,7 @@ from HDrezka.comments import CommentsIterator
 from HDrezka.connector import NetworkClient
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.person import PersonBriefInfo
+from HDrezka.player import PlayerBuilder, Serial, Film
 from HDrezka.trailer import TrailerBuilder
 
 if TYPE_CHECKING:
@@ -111,7 +112,7 @@ class MovieDetails:
     trailer: Optional[TrailerBuilder] = None  # наличие трейлера
     info_table: InfoTable = None  # Таблица с краткой информацией по фильму
     description: str = None  # Описание фильма
-    player = None  #
+    player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     part_content: Optional[List[PartContent]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List = None
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
@@ -218,7 +219,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.trailer = self.extract_trailer()
         page.info_table = InfoTableBuilder(self.page).extract_content()
         page.description = self.page.soup.find("div", class_="b-post__description_text").text.strip()
-        page.player = None  # TODO
+        page.player = PlayerBuilder(self.page).extract_content()
         (lambda x: page.info_table.rates.append(x) if x is not None else None)(self.extract_rates())
         page.part_content = self.extract_part_content()
         page.recommendations = self.extract_recommendations()

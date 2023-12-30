@@ -13,3 +13,4 @@ disable=
 
 
 ignore = venv, tests
+max-args = 6
