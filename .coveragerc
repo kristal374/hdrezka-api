@@ -1,0 +1,13 @@
+[run]
+source = HDrezka/
+
+[report]
+exclude_lines  =
+    pragma: NO COVER
+    def __repr__
+    if self.debug:
+    if settings.DEBUG
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    if TYPE_CHECKING:
+    @(abc\.)?abstractmethod
