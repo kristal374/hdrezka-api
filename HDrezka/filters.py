@@ -58,7 +58,6 @@ all_genres = {'военные': 'military',
               'меха': 'mecha',
               'русские': 'russian',
               'аниме': 'anime',
-              
               'реалити-шоу': 'reality-shows',
               'юмористические': 'humor',
               'конкурсы': 'contests',
