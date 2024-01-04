@@ -4,7 +4,6 @@ import requests
 import requests_mock
 
 from HDrezka.site_navigation import Collections
-
 from tests.mock_html.html_construcror import generate_fake_html
 
 

@@ -4,8 +4,7 @@ import requests
 import requests_mock
 
 from HDrezka.site_navigation import Search
-from HDrezka.player import TrailerBuilder
-
+from HDrezka.trailer import TrailerBuilder
 from tests.mock_html.html_construcror import generate_fake_html
 
 

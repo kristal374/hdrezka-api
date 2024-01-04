@@ -1,14 +1,13 @@
 import re
-from unittest import TestCase
 from random import randint
+from unittest import TestCase
 
 import requests
 import requests_mock
 
-from HDrezka.site_navigation import Animation
 from HDrezka.filters import GenreAnimation, Filters
-from HDrezka.player import TrailerBuilder
-
+from HDrezka.site_navigation import Animation
+from HDrezka.trailer import TrailerBuilder
 from tests.mock_html.html_construcror import generate_fake_html
 
 
