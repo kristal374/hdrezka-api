@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from HDrezka import __version__
+import HDrezka
 
 
 class TestMetaData(TestCase):
@@ -9,10 +9,10 @@ class TestMetaData(TestCase):
             self.assertIsInstance(s, (str, bytes))
             self.assertEqual(bool(s), True, msg="Element is empty")
 
-        is_non_empty_string(__version__.__title__)
-        is_non_empty_string(__version__.__version__)
-        is_non_empty_string(__version__.__license__)
-        is_non_empty_string(__version__.__author__)
-        is_non_empty_string(__version__.__contact__)
-        is_non_empty_string(__version__.__url__)
-        is_non_empty_string(__version__.__description__)
+        is_non_empty_string(HDrezka.__title__)
+        is_non_empty_string(HDrezka.__version__)
+        is_non_empty_string(HDrezka.__license__)
+        is_non_empty_string(HDrezka.__author__)
+        is_non_empty_string(HDrezka.__contact__)
+        is_non_empty_string(HDrezka.__url__)
+        is_non_empty_string(HDrezka.__description__)
