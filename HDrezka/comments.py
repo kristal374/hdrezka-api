@@ -106,7 +106,8 @@ class CommentsIterator:
             elif isinstance(item, bs4.element.Tag):
                 result_string += self._process_tag(item)
             else:
-                raise ValueError("Неизвестный элемент в тексте")
+                # In theory, this should never work; otherwise a raw string will be added
+                result_string += str(item)  # pragma: NO COVER
         return result_string
 
     def _process_tag(self, tag: bs4.element.Tag) -> str:
@@ -117,10 +118,11 @@ class CommentsIterator:
         if "text_spoiler" in tag_classes:
             return f"<spoiler>{self._extract_text(tag)}</spoiler>"
         if tag.name == "br":
-            return "\n"
+            return "<br>"
         if tag.name in ("b", "i", "u", "s", "a"):
             return self._process_inline_tag(tag)
-        raise ValueError("Неизвестный элемент в тексте")
+        # In theory, this should never work; otherwise a raw string will be added
+        return str(tag)  # pragma: NO COVER
 
     def _process_inline_tag(self, tag: bs4.element.Tag) -> str:
         if tag.name == "a" and 'youtu-link' in tag.get("class", []):
