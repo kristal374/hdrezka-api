@@ -66,15 +66,13 @@ class CommentsIterator:
 
     @staticmethod
     def _extract_last_page_number(navigation):
-        if navigation is None:
-            return 0
+        if not navigation:
+            return 1
         soup = bs4.BeautifulSoup(navigation, "lxml")
-        navigation_bar = soup.find_all("a")
-        if 0 < len(navigation_bar) < 11:
-            return len(navigation_bar)
-        if len(navigation_bar) >= 11:
-            return int(navigation_bar[-2].text)
-        return 0
+        preview_element = soup.find(class_="b-navigation__next")
+        if preview_element:
+            return int(preview_element.parent.find_previous("a").string)
+        return int(soup.find_all("span")[-1].text)
 
     def extreact_comments(self, comments):
         child = comments.find(class_="comments-tree-list")
