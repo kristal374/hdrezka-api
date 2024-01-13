@@ -53,6 +53,9 @@ class CommentsIterator:
             raise StopIteration
         return list_comments
 
+    def __count_elements(self, data):
+        return sum(self.__count_elements(item.replies) for item in data) + 1
+
     def get_page(self, number=1):
         if self.last_page is not None and number > self.last_page:
             return []
@@ -62,7 +65,14 @@ class CommentsIterator:
 
         if self.last_page is None:
             self.last_page = self._extract_last_page_number(response.get("navigation"))
-        return self.extreact_comments(soup)
+        result_list = self.extreact_comments(soup)
+
+        number_comments = response["comments"].count(">оставлен ")
+        if number_comments != self.__count_elements(result_list) - 1:
+            # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
+            soup = bs4.BeautifulSoup(response["comments"], "html5lib")
+            return self.extreact_comments(soup)
+        return result_list
 
     @staticmethod
     def _extract_last_page_number(navigation):

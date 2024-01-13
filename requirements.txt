@@ -2,3 +2,4 @@ requests>=2.31.0
 lxml>=4.9.3
 setuptools>=68.0.0
 beautifulsoup4>=4.12.2
+html5lib>=1.1
