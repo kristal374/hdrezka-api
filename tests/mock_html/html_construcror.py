@@ -16,7 +16,7 @@ COLLECTIONS = '<div class="b-content__main"><div class="b-content__collections_l
 SAMPLE_POSTERS = '<div class="b-content__inline_item" data-id="{id}" data-url="{url}"><div class=' \
                  '"b-content__inline_item-cover"><a href="{url}"> <img src="{img_url}" height="250" ' \
                  'width="166" alt="Смотреть {title} онлайн в HD качестве 720p"/><span class="cat animation">' \
-                 '<i class="entity">{entity}</i><i class="icon"></i></span> {info}<i class="i-sprt play"></i> ' \
+                 '<i class="entity">{entity}{rates}</i><i class="icon"></i></span> {info}<i class="i-sprt play"></i> ' \
                  '</a>{trailer}</div><div class="b-content__inline_item-link"><a href="{url}">{title}</a>' \
                  '<div>{metadata}</div></div></div>'
 
@@ -82,11 +82,13 @@ def generate_poster_html(content: List[Dict[str, Any]]) -> str:
     for item in content:
         info = re.sub(r'(\d+ сезон) (\d+ серия)', r'\1, \2', item["info"] if item["info"] else "")
         trailer = f'<i class="trailer show-trailer" data-id="{item["id"]}" data-full="1"><b>Смотреть трейлер</b></i>'
+        rates = f'<i class="b-category-bestrating rating-green-string" style="display: inline;">({item["rates"]})</i>'
         metadata = (item["year"], item["country"], item["genre"])
 
         item["info"] = f'<span class="info">{info}</span> ' if info else info
         item["trailer"] = trailer if item["trailer"] else ""
         item["metadata"] = ", ".join(filter(lambda x: x is not None, metadata))
+        item["rates"] = rates if item["rates"] else ""
         data += SAMPLE_POSTERS.format(**item)
     return HTML_BASE.format(type=POSTERS.format(data=data).replace("    ", "").replace("\n", ""))
 
