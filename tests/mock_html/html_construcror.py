@@ -101,12 +101,12 @@ def generate_collections_html(content: List[Dict[str, Any]]) -> str:
     return HTML_BASE.format(type=COLLECTIONS.format(data=data).replace("    ", "").replace("\n", ""))
 
 
-def generate_fake_html(reference_name: str) -> Tuple[Dict[str, Dict[str, Any]], str]:
+def generate_fake_html(reference_name: str) -> Tuple[List[Dict[str, Any]], str]:
     reference_data = read_reference_file("reference_data.json")
 
     if reference_name == "collections":
-        return copy.deepcopy(reference_data), generate_collections_html(reference_data[reference_name])
-    return copy.deepcopy(reference_data), generate_poster_html(reference_data[reference_name])
+        return copy.deepcopy(reference_data)[reference_name], generate_collections_html(reference_data[reference_name])
+    return copy.deepcopy(reference_data[reference_name]), generate_poster_html(reference_data[reference_name])
 
 
 def prepare_comment_text(comment_text: str) -> str:

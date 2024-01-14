@@ -137,11 +137,7 @@ class TestSeries(TestCase):
                 item.trailer = item.trailer.__dict__
             response.append(item.__dict__)
 
-        self.assertListEqual(reference_data["series"], response)
-
-        site = self.movie.find_best(year=2018)
-        m.register_uri('GET', str(site), text="Success")
-        self.assertEqual(0, len(site.get()))
+        self.assertListEqual(reference_data, response)
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):

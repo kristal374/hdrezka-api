@@ -41,7 +41,7 @@ class TestCollections(TestCase):
         self.assertEqual(correct_url, str(site))
 
         response = [i.__dict__ for i in site.get() if repr(i)]
-        self.assertListEqual(reference_data["collections"], response)
+        self.assertListEqual(reference_data, response)
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):

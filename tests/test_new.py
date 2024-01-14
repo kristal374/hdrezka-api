@@ -111,7 +111,7 @@ class TestNew(TestCase):
             if isinstance(item.trailer, TrailerBuilder):
                 item.trailer = item.trailer.__dict__
             response.append(item.__dict__)
-        self.assertListEqual(reference_data["new"], response)
+        self.assertListEqual(reference_data, response)
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):

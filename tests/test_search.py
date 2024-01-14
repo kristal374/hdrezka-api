@@ -103,7 +103,7 @@ class TestSearch(TestCase):
                 item.trailer = item.trailer.__dict__
             response.append(item.__dict__)
 
-        self.assertListEqual(reference_data["search"], response)
+        self.assertListEqual(reference_data, response)
 
     @requests_mock.Mocker()
     def test_negative_get(self, m):
