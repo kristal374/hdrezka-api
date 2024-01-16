@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Union, Optional, List, TYPE_CHECKING
 
 from HDrezka.connector import NetworkClient
+from HDrezka.exceptions import EmptyPage
 from HDrezka.filters import convert_genres
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.movie_page_descriptor import MovieDetailsBuilder
@@ -67,6 +68,8 @@ class PosterBuilder(PageRepresentation):
             poster.url = item.get("data-url")
 
             page_info.append(poster)
+        if not page_info:
+            raise EmptyPage("No Posters were found on the page")
         return page_info
 
     @staticmethod
@@ -113,4 +116,7 @@ class MovieCollectionBuilder(PageRepresentation):
             collection.url = item.get("data-url")
 
             collection_info.append(collection)
+
+        if not collection_info:
+            raise EmptyPage("No Collections found on the page")
         return collection_info

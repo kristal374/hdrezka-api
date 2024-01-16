@@ -6,6 +6,7 @@ from typing import List
 import bs4
 
 from HDrezka.connector import NetworkClient
+from HDrezka.exceptions import EmptyPage
 
 
 @dataclass
@@ -47,8 +48,9 @@ class CommentsIterator:
 
     def __next__(self):
         self.page_number += 1
-        list_comments = self.get_page(self.page_number)
-        if len(list_comments) == 0:
+        try:
+            list_comments = self.get_page(self.page_number)
+        except EmptyPage:
             self.page_number = 0
             raise StopIteration
         return list_comments
@@ -58,7 +60,7 @@ class CommentsIterator:
 
     def get_page(self, number=1):
         if self.last_page is not None and number > self.last_page:
-            return []
+            raise EmptyPage("No comments found on the page")
 
         response = self._get(page=number)
         soup = bs4.BeautifulSoup(response["comments"], "lxml")
@@ -72,6 +74,8 @@ class CommentsIterator:
             # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
             soup = bs4.BeautifulSoup(response["comments"], "html5lib")
             return self.extreact_comments(soup)
+        if not result_list:
+            raise EmptyPage("No comments found on the page")
         return result_list
 
     @staticmethod
