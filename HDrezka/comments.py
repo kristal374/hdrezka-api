@@ -6,7 +6,7 @@ from typing import List
 import bs4
 
 from HDrezka.connector import NetworkClient
-from HDrezka.exceptions import EmptyPage
+from HDrezka.exceptions import EmptyPage, ServiceUnavailable
 
 
 @dataclass
@@ -160,7 +160,9 @@ class CommentsIterator:
             "skin": "hdrezka"
         }
         response = self.connector.get(f"{self.connector.url}/ajax/get_comments/", params=data)
-        return response.json()
+        if response.status_code == 200:
+            return response.json()
+        raise ServiceUnavailable("Service is temporarily unavailable")
 
     def __repr__(self):
         return f"<{CommentsIterator.__name__}(film_id=\"{self.film_id}\")>"
