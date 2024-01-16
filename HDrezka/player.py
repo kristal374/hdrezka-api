@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from HDrezka import NetworkClient
 from HDrezka.html_representation import PageRepresentation
+from HDrezka.exceptions import AJAXFail
 
 
 @dataclass
@@ -84,7 +85,7 @@ class Film:
         params = {'t': int(time.time() * 1000)}
         response = connector.post(url=f"{connector.url}/{url}", params=params, data=data).json()
         if not response["success"]:
-            raise ConnectionError("Ответ пришёл пустым")  # TODO ошибка ErrorSuccessFalse()
+            raise AJAXFail(response.get("message", "field \"success\" is False"))
         return response
 
     def __repr__(self):
