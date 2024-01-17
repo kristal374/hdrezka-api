@@ -52,7 +52,7 @@ class CommentsIterator:
             list_comments = self.get_page(self.page_number)
         except EmptyPage:
             self.page_number = 0
-            raise StopIteration
+            raise StopIteration  # pylint: disable= W0707
         return list_comments
 
     def __count_elements(self, data):
@@ -70,11 +70,11 @@ class CommentsIterator:
         result_list = self.extreact_comments(soup)
 
         number_comments = response["comments"].count(">оставлен ")
-        if number_comments != self.__count_elements(result_list) - 1:
+        if number_comments != self.__count_elements(result_list) - 1:  # pragma: NO COVER
             # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
             soup = bs4.BeautifulSoup(response["comments"], "html5lib")
             return self.extreact_comments(soup)
-        if not result_list:
+        if not result_list:  # pragma: NO COVER
             raise EmptyPage("No comments found on the page")
         return result_list
 
