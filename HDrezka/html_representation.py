@@ -18,7 +18,9 @@ class HTMLDocument:
             return html.text
         if isinstance(html, bytes):
             return html.decode('utf-8')
-        return html
+        if isinstance(html, str):
+            return html
+        raise AttributeError(f"HTML document cannot be of type {type(html)}")
 
 
 class PageRepresentation:
