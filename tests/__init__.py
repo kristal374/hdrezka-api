@@ -6,6 +6,7 @@ from tests.test_cartoon import TestCartoons
 from tests.test_collections import TestCollections
 from tests.test_comments import TestCommentsIterator
 from tests.test_film import TestFilms
+from tests.test_html_representation import TestPageRepresentation
 from tests.test_meta_data import TestMetaData
 from tests.test_new import TestNew
 from tests.test_search import TestSearch
