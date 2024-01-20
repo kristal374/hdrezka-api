@@ -90,7 +90,7 @@ class PosterBuilder(PageRepresentation):
     @staticmethod
     def extract_trailer(item) -> Union[TrailerBuilder, None]:
         trailer = item.find("i", class_="trailer")
-        return TrailerBuilder(trailer.get("data-id")) if trailer else None
+        return TrailerBuilder(int(trailer.get("data-id"))) if trailer else None
 
     @staticmethod
     def extract_misc(item):

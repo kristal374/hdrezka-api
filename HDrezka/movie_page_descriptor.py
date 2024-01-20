@@ -243,7 +243,7 @@ class MovieDetailsBuilder(PageRepresentation):
         trailer = self.page.soup.find("a", class_="b-sidelinks__link")
         if trailer is None:
             return trailer
-        return TrailerBuilder(trailer.get("data-id"))
+        return TrailerBuilder(int(trailer.get("data-id")))
 
     def extract_rates(self):
         try:

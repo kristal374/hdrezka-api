@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Union
 
 from HDrezka import NetworkClient
+from HDrezka.exceptions import AJAXFail, ServiceUnavailable
 
 
 @dataclass
@@ -12,38 +13,36 @@ class Trailer:
     original_title = None
     description: str = None
     release_year = None
-    trailer_link = None
-    movie_link = None
+    trailer_url = None
+    url = None
 
 
 class TrailerBuilder:
-    def __init__(self, id_):
+    def __init__(self, film_id):
         """id_: идентификатор фильма"""
-        self.data_id = id_
+        self.id = film_id
 
     def _get_trailer(self) -> Union[dict, bool]:
         connector = NetworkClient()
         url = f"{connector.url}/engine/ajax/gettrailervideo.php"
-        response = connector.post(url, {'id': self.data_id})
+        response = connector.post(url, data={'id': self.id})
         if response.status_code == 200:
-            if response.json().get('success'):
-                return response.json()
-        return False
+            return response.json()
+        raise ServiceUnavailable("Service is temporarily unavailable")
 
     def extract_content(self):
         response = self._get_trailer()
-        if not response:
-            return None
-
+        if not response["success"]:
+            raise AJAXFail(response.get("message", "field \"success\" is False"))
         content = Trailer()
-        content.id = self.data_id
+        content.id = int(self.id)
         content.title = self._regular_search('(?<=&laquo;)[^(&raquo;)]*', response.get('title'))
         content.original_title = self._regular_search('(?<=")[^",]*', response.get('title'))
         content.release_year = self._regular_search('\\d\\d\\d\\d[^)]*', response.get('title'))
         content.release_year = int(content.release_year) if content.release_year else None
         content.description = response.get('description')
-        content.trailer_link = self._regular_search('(?<=src=")[^"]*', response.get('code'))
-        content.movie_link = response.get('link')
+        content.trailer_url = self._regular_search('(?<=src=")[^"]*', response.get('code'))
+        content.url = response.get('link')
         return content
 
     @staticmethod
@@ -52,4 +51,4 @@ class TrailerBuilder:
         return answer.group(0).strip() if answer else None
 
     def __repr__(self):
-        return f"<Trailer(\"{self.data_id}\")>"
+        return f"<Trailer(\"{self.id}\")>"
