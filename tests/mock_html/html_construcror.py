@@ -2,7 +2,7 @@ import copy
 import json
 import os
 import re
-from typing import Union, List, Dict, Tuple, Any
+from typing import Union, List, Dict, Tuple, Any, Optional
 
 HTML_BASE = '<!DOCTYPE html><html lang="ru-RU"><head><meta charset="utf-8"/></head><body ' \
             'class="has-brand active-brand pp fixed-header"><div id="wrapper"><div id="main"><div ' \
@@ -69,6 +69,11 @@ SAMPLE_PREVIEW_NAVIGATION_ITEM = '<span class="b-navigation__prev i-sprt">&nbsp;
 SAMPLE_NEXT_NAVIGATION_ITEM = '<span class="b-navigation__next i-sprt">&nbsp;</span>'
 SAMPLE_INTERMEDIATE_NAVIGATION_ITEM = '<span class="nav_ext">...</span>'
 
+SAMPLE_TRAILER = '<iframe width="640" height="360" src="{trailer_url}" frameborder="0" ' \
+                 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ' \
+                 'allowfullscreen style="background: transparent; position: relative;"></iframe>'
+SAMPLE_TITLE = '&laquo;{title}&raquo; <small>(оригинальное название: "{original_title}", {release_year})</small>'
+
 
 def read_reference_file(file_name: str) -> dict:
     current_file_path = os.path.abspath(__file__)
@@ -102,7 +107,7 @@ def generate_collections_html(content: List[Dict[str, Any]]) -> str:
 
 
 def generate_fake_html(reference_name: str) -> Tuple[List[Dict[str, Any]], str]:
-    reference_data = read_reference_file("reference_data.json")
+    reference_data = read_reference_file("reference_posters.json")
 
     if reference_name == "collections":
         return copy.deepcopy(reference_data)[reference_name], generate_collections_html(reference_data[reference_name])
@@ -215,4 +220,21 @@ def generate_comments_tree() -> List[Tuple[List[Dict[str, Any]], Dict[str, Union
                 "last_update_id": 0
             }
             result_lst.append((reference_data[film_id][page], response_obj))
+    return result_lst
+
+
+def generate_trailer_info() -> List[Tuple[Dict[str, Optional[Union[str, int]]], Dict[str, Union[bool, str]]]]:
+    reference_data = read_reference_file("reference_trailer.json")
+    result_lst = []
+    for film_id in reference_data:
+        item = reference_data[film_id]
+        response_obj = {'success': True,
+                        'message': 'Возникла неизвестная ошибка',
+                        'code': SAMPLE_TRAILER.format(trailer_url=item["trailer_url"]),
+                        'title': SAMPLE_TITLE.format(title=item["title"],
+                                                     original_title=item["original_title"],
+                                                     release_year=item["release_year"]),
+                        'description': item["description"],
+                        'link': item["url"]}
+        result_lst.append((item, response_obj))
     return result_lst
