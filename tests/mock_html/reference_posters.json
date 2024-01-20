@@ -10,7 +10,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57095"
+        "id": 57095
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/y77ca9c2123f8er28v95u.jpg",
       "url": "https://rezka.ag/animation/adventures/57095-naruto-ova-1-2002.html"
@@ -25,7 +25,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57093"
+        "id": 57093
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/ua1883b808d79wa95j56g.jpg",
       "url": "https://rezka.ag/animation/adventures/57093-naruto-ova-3-2004.html"
@@ -53,7 +53,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57089"
+        "id": 57089
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/r5fa5ca1d2778uh25m43b.jpg",
       "url": "https://rezka.ag/animation/adventures/57089-naruto-ova-4-2005.html"
@@ -68,7 +68,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57087"
+        "id": 57087
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/c69552b04cdc6sj27j31u.jpg",
       "url": "https://rezka.ag/animation/adventures/57087-naruto-ova-6-2010.html"
@@ -83,7 +83,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57085"
+        "id": 57085
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/x049c0849eea7eg69a98h.jpg",
       "url": "https://rezka.ag/animation/adventures/57085-naruto-ova-8-2011.html"
@@ -98,7 +98,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57083"
+        "id": 57083
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/29/b010d6a12f2ecet49p89f.jpg",
       "url": "https://rezka.ag/animation/adventures/57083-boruto-ova-2016.html"
@@ -139,7 +139,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "57047"
+        "id": 57047
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/28/scd880c1fd310xx10o60r.jpg",
       "url": "https://rezka.ag/animation/fantasy/57047-krov-s-2011.html"
@@ -154,7 +154,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "56974"
+        "id": 56974
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/25/lfa8ffde71d2awh37y42r.jpg",
       "url": "https://rezka.ag/animation/fantasy/56974-dlya-geniev-ne-problema-vyzhit-dazhe-v-inom-mire-2019.html"
@@ -169,7 +169,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "56912"
+        "id": 56912
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/23/o8bdbf2b40a56wu12h37o.jpg",
       "url": "https://rezka.ag/animation/action/56912-iskusstvennyy-otbor-2015.html"
@@ -184,7 +184,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56632"
+        "id": 56632
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/13/p2f00734b52c0rr99u47m.jpg",
       "url": "https://rezka.ag/animation/adventures/56632-zvezdnoe-ditya-2023.html"
@@ -199,7 +199,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56706"
+        "id": 56706
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/16/x5e3a383999f7nc71l70k.jpg",
       "url": "https://rezka.ag/animation/adventures/56706-volshebnik-voin-orfen-uchast-svyatilischa-tv-4-2023.html"
@@ -214,7 +214,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "56665"
+        "id": 56665
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/14/z4a154f19fd39wc58s38o.jpg",
       "url": "https://rezka.ag/animation/action/56665-marginalnaya-sluzhba-2023.html"
@@ -229,7 +229,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56459"
+        "id": 56459
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/7/t72cc98954094oj64t65r.jpg",
       "url": "https://rezka.ag/animation/comedy/56459-imba-sestra-2023.html"
@@ -244,7 +244,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "56646"
+        "id": 56646
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/14/v57e347972536rb89z64m.jpg",
       "url": "https://rezka.ag/animation/fantasy/56646-reyting-korolya-sunduk-hrabrosti-2023.html"
@@ -259,7 +259,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0420\u043e\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
       "trailer": {
-        "data_id": "56584"
+        "id": 56584
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/12/vac1a404dc952ys49i23i.jpg",
       "url": "https://rezka.ag/animation/romance/56584-bessonnica-posle-shkoly-2023.html"
@@ -274,7 +274,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56534"
+        "id": 56534
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/10/rf48c42f44c7brk77b18f.jpg",
       "url": "https://rezka.ag/animation/adventures/56534-smertelnaya-igra-mertvoy-gory-tv-1-2023.html"
@@ -289,7 +289,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0420\u043e\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
       "trailer": {
-        "data_id": "56531"
+        "id": 56531
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/10/v2aad05aaec85au65x63f.jpg",
       "url": "https://rezka.ag/animation/romance/56531-nevesta-gercoga-po-kontraktu-2023.html"
@@ -304,7 +304,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "56518"
+        "id": 56518
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/10/u181835cb2390gh90o66c.jpg",
       "url": "https://rezka.ag/animation/fiction/56518-mobilnyy-voin-gandam-vedma-s-merkuriya-tv-2-2023.html"
@@ -319,7 +319,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "56493"
+        "id": 56493
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/9/me0b9227085ffdq57k63m.jpg",
       "url": "https://rezka.ag/animation/action/56493-istrebitel-demonov-derevnya-kuznecov-tv-3-2023.html"
@@ -347,7 +347,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56490"
+        "id": 56490
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/9/r929c7393f0bbob92h83z.jpg",
       "url": "https://rezka.ag/animation/adventures/56490-menya-prizvali-v-drugoy-mir-snova-2023.html"
@@ -362,7 +362,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0420\u043e\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
       "trailer": {
-        "data_id": "56489"
+        "id": 56489
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/h9100c84b78bbki95n84q.jpg",
       "url": "https://rezka.ag/animation/romance/56489-galaktika-po-sosedstvu-2023.html"
@@ -377,7 +377,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56487"
+        "id": 56487
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/p380165c1a871qe83y35t.jpg",
       "url": "https://rezka.ag/animation/comedy/56487-elf-edomae-2023.html"
@@ -392,7 +392,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56486"
+        "id": 56486
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/ub6686655040edq35w33a.jpg",
       "url": "https://rezka.ag/animation/comedy/56486-gospozha-kaguya-v-lyubvi-kak-na-voyne-beskonechnyy-pervyy-poceluy-film-2022.html"
@@ -407,7 +407,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56488"
+        "id": 56488
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/c9e0e9de9138fys57i13b.jpg",
       "url": "https://rezka.ag/animation/comedy/56488-slishkom-milyy-krizis-2023.html"
@@ -422,7 +422,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56470"
+        "id": 56470
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/o0dfe92a548f7uu30g15d.jpg",
       "url": "https://rezka.ag/animation/adventures/56470-devochki-volshebnicy-volshebnye-razrushitelnicy-2023.html"
@@ -437,7 +437,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56466"
+        "id": 56466
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/gf503a193bc20so21v85i.jpg",
       "url": "https://rezka.ag/animation/comedy/56466-bogini-kafe-terrasy-2023.html"
@@ -452,7 +452,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56465"
+        "id": 56465
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/8/t8a2114e1327fpq99r19c.jpg",
       "url": "https://rezka.ag/animation/adventures/56465-huliganki-rokudo-2023.html"
@@ -467,7 +467,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56463"
+        "id": 56463
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/7/t5f270279110fts98a41s.jpg",
       "url": "https://rezka.ag/animation/comedy/56463-krasavica-unesi-menya-na-lunu-tv-2-2023.html"
@@ -482,7 +482,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56462"
+        "id": 56462
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/7/j3966f68c40b5sc65s22s.jpg",
       "url": "https://rezka.ag/animation/adventures/56462-magiya-i-muskuly-tv-1-2023.html"
@@ -497,7 +497,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "56428"
+        "id": 56428
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/6/e520d3cb7dab3yo28a89v.jpg",
       "url": "https://rezka.ag/animation/comedy/56428-geroy-mertv-2023.html"
@@ -512,7 +512,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "56427"
+        "id": 56427
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/6/a3de969ab9752ma85e81q.jpg",
       "url": "https://rezka.ag/animation/fantasy/56427-nevesta-charodeya-tv-2-2023.html"
@@ -527,7 +527,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "56426"
+        "id": 56426
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/6/v0288be6b016eep50o80y.jpg",
       "url": "https://rezka.ag/animation/adventures/56426-doktor-stoun-novyy-svet-tv-3-2023.html"
@@ -544,7 +544,7 @@
       "country": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59033"
+        "id": 59033
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/4/he496eb013fe7gd79g20s.jpg",
       "url": "https://rezka.ag/films/comedy/59033-hotya-by-v-kino-2022.html"
@@ -559,7 +559,7 @@
       "country": "\u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044f",
       "genre": "\u041a\u043e\u0440\u043e\u0442\u043a\u043e\u043c\u0435\u0442\u0440\u0430\u0436\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59364"
+        "id": 59364
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/he6946bac9b74yn61d33i.jpg",
       "url": "https://rezka.ag/cartoons/short/59364-denni-2010.html"
@@ -574,7 +574,7 @@
       "country": "\u0410\u0432\u0441\u0442\u0440\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59313"
+        "id": 59313
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/vc9305b365fb8zy21h44m.jpg",
       "url": "https://rezka.ag/films/documentary/59313-gvendolin-2017.html"
@@ -589,7 +589,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59309"
+        "id": 59309
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/f9f23c1e38265ml58d42h.jpg",
       "url": "https://rezka.ag/films/fantasy/59309-vonka-2023.html"
@@ -604,7 +604,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59284"
+        "id": 59284
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/10/c17413a3d4e39er35f78j.jpeg",
       "url": "https://rezka.ag/cartoons/comedy/59284-mister-bogus-1991.html"
@@ -619,7 +619,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59280"
+        "id": 59280
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/11/b274b25391b32wz53b43u.jpg",
       "url": "https://rezka.ag/films/melodrama/59280-statisticheskaya-veroyatnost-lyubvi-s-pervogo-vzglyada-2023.html"
@@ -634,7 +634,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "59273"
+        "id": 59273
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/10/f572bd3f4fd2eye91l90y.jpg",
       "url": "https://rezka.ag/films/action/59273-napoleon-2023.html"
@@ -649,7 +649,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59090"
+        "id": 59090
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/5/mbc223edc67e3my11t71u.jpg",
       "url": "https://rezka.ag/films/thriller/59090-zvuk-svobody-2022.html"
@@ -677,7 +677,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "58923"
+        "id": 58923
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/25/wc94052351ac5jd27k48n.jpg",
       "url": "https://rezka.ag/films/drama/58923-durnye-dengi-2023.html"
@@ -692,7 +692,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "58921"
+        "id": 58921
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/30/p2bfd8cb15a92an16b43p.jpg",
       "url": "https://rezka.ag/series/thriller/58921-hodyachie-mertvecy-deril-dikson-2023.html"
@@ -707,7 +707,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "58920"
+        "id": 58920
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/24/g3d1adfc2a001ph94q75y.jpg",
       "url": "https://rezka.ag/cartoons/fiction/58920-cherepashki-nindzya-pogrom-mutantov-2023.html"
@@ -722,7 +722,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "58919"
+        "id": 58919
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/2/yc43d6bc18430gt79a30i.jpg",
       "url": "https://rezka.ag/films/action/58919-zalozhniki-2023.html"
@@ -737,7 +737,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "58883"
+        "id": 58883
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/lee8bccaa0e9bbx26h47f.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/58883-beskonechnaya-istoriya-1995.html"
@@ -752,7 +752,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "58732"
+        "id": 58732
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/24/e27cee0e6bf93on22q20w.jpg",
       "url": "https://rezka.ag/films/action/58732-kreyven-ohotnik-2023.html"
@@ -767,7 +767,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "58724"
+        "id": 58724
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/24/x53d2fc586035jc27g75p.jpg",
       "url": "https://rezka.ag/films/drama/58724-zhanna-dyubarri-2023.html"
@@ -782,7 +782,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "58225"
+        "id": 58225
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/10/ve5c9a67bee51gk24g13c.jpg",
       "url": "https://rezka.ag/films/fiction/58225-bednye-neschastnye-2023.html"
@@ -797,7 +797,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "58190"
+        "id": 58190
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/9/bc1545eb74847ie29d57l.jpg",
       "url": "https://rezka.ag/films/action/58190-izluchina-reki-1952.html"
@@ -812,7 +812,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "58160"
+        "id": 58160
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/f9a26d2be9a07lg57j31c.jpg",
       "url": "https://rezka.ag/films/action/58160-neuderzhimye-4-2023.html"
@@ -827,7 +827,7 @@
       "country": "\u0424\u0438\u043b\u0438\u043f\u043f\u0438\u043d\u044b",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "57982"
+        "id": 57982
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/2/k8f793dbe2782if82m68a.jpg",
       "url": "https://rezka.ag/films/melodrama/57982-utrachennye-svyazi-2023.html"
@@ -842,7 +842,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "57803"
+        "id": 57803
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/27/pf30d6946d28fsy29e47c.jpg",
       "url": "https://rezka.ag/films/comedy/57803-zhenitba-po-oshibke-2023.html"
@@ -857,7 +857,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "57759"
+        "id": 57759
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/25/oa99c58ec71aaem15x59r.jpg",
       "url": "https://rezka.ag/films/drama/57759-polevoy-cvetok-2022.html"
@@ -872,7 +872,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "57660"
+        "id": 57660
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/21/j7337b0e520b3ma51h10v.jpg",
       "url": "https://rezka.ag/films/documentary/57660-smertelnyy-boy-dinozavrov-2015.html"
@@ -887,7 +887,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "57603"
+        "id": 57603
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/19/e52731ad5e68dxr71e67p.jpg",
       "url": "https://rezka.ag/films/thriller/57603-ubiycy-cvetochnoy-luny-2023.html"
@@ -902,7 +902,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "57581"
+        "id": 57581
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/18/l0cd469341010bv89y92w.jpg",
       "url": "https://rezka.ag/films/fiction/57581-sozdatel-2023.html"
@@ -917,7 +917,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0423\u0436\u0430\u0441\u044b",
       "trailer": {
-        "data_id": "57580"
+        "id": 57580
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/18/y7f17cb3422d7yy91u30e.jpg",
       "url": "https://rezka.ag/films/horror/57580-pyat-nochey-u-freddi-2023.html"
@@ -932,7 +932,7 @@
       "country": "\u0424\u0438\u043b\u0438\u043f\u043f\u0438\u043d\u044b",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "57498"
+        "id": 57498
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/15/ff4b89dfda63dem99r93n.jpg",
       "url": "https://rezka.ag/films/drama/57498-insiang-1976.html"
@@ -947,7 +947,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "57363"
+        "id": 57363
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/n50fd330c225fze95f47w.jpg",
       "url": "https://rezka.ag/films/fiction/57363-meg-2-vpadina-2023.html"
@@ -962,7 +962,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "57260"
+        "id": 57260
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/6/c495abdb1263bkj24j82n.jpg",
       "url": "https://rezka.ag/cartoons/fiction/57260-elementarno-2023.html"
@@ -977,7 +977,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "57233"
+        "id": 57233
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/4/zcc332110f037hw38w22m.jpg",
       "url": "https://rezka.ag/films/fiction/57233-dyuna-2-2023.html"
@@ -992,7 +992,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0423\u0436\u0430\u0441\u044b",
       "trailer": {
-        "data_id": "57220"
+        "id": 57220
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/4/gbf20e1bd95a3aq53w42q.jpg",
       "url": "https://rezka.ag/films/horror/57220-poslednee-puteshestvie-demetra-2023.html"
@@ -1007,7 +1007,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "57217"
+        "id": 57217
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/3/a35cdfd6f9470ee24m13g.jpg",
       "url": "https://rezka.ag/films/adventures/57217-gran-turizmo-2023.html"
@@ -1022,7 +1022,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "57213"
+        "id": 57213
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/3/i10f2d3d2953csl48x12s.jpg",
       "url": "https://rezka.ag/series/realtv/57213-ariesi-v-pomosch-2023.html"
@@ -1037,7 +1037,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0435\u0442\u0435\u043a\u0442\u0438\u0432\u044b",
       "trailer": {
-        "data_id": "57112"
+        "id": 57112
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/taae5e1202180tw86z58n.jpg",
       "url": "https://rezka.ag/films/detective/57112-prizraki-v-venecii-2023.html"
@@ -1052,7 +1052,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "57111"
+        "id": 57111
       },
       "img_url": "https://static.hdrezka.ac/i/2023/5/27/r4f063b6cb74ahj66h77e.jpg",
       "url": "https://rezka.ag/films/action/57111-missiya-nevypolnima-smertelnaya-rasplata-chast-1-2023.html"
@@ -1067,7 +1067,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "57110"
+        "id": 57110
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/21/m50844784ffecuz26f12g.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/57110-zavetnoe-zhelanie-2023.html"
@@ -1084,7 +1084,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59776"
+        "id": 59776
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/25/u65bc3839a758mm82q71v.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59776-bolshoy-druzhelyubnyy-velikan-1989.html"
@@ -1099,7 +1099,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59756"
+        "id": 59756
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/24/h487562a291b3ew32a78q.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59756-korol-i-ptica-1980.html"
@@ -1114,7 +1114,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "59723"
+        "id": 59723
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/24/ef2ac7fc1a9dfzg41w90m.jpg",
       "url": "https://rezka.ag/cartoons/action/59723-dzho-soldat-nastoyaschiy-amerikanskiy-geroy-1987.html"
@@ -1129,7 +1129,7 @@
       "country": "\u041d\u043e\u0440\u0432\u0435\u0433\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59714"
+        "id": 59714
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/25/x627ce1964124ww43c78s.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59714-dva-tovarischa-i-hitryy-barsuk-2015.html"
@@ -1144,7 +1144,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59715"
+        "id": 59715
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/24/m5547dff7209fns45u20h.jpg",
       "url": "https://rezka.ag/cartoons/comedy/59715-veselyy-parizh-1962.html"
@@ -1159,7 +1159,7 @@
       "country": "\u0423\u043a\u0440\u0430\u0438\u043d\u0430",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59659"
+        "id": 59659
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/21/udf1eae64cf90lj40l76n.jpg",
       "url": "https://rezka.ag/cartoons/comedy/59659-lis-mikita-2007.html"
@@ -1174,7 +1174,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59634"
+        "id": 59634
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/21/rd79f3c53e075aj93s20f.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59634-neotrazimaya-chetverka-2023.html"
@@ -1189,7 +1189,7 @@
       "country": "\u0411\u0435\u043b\u044c\u0433\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "59533"
+        "id": 59533
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/pd0291b352d8enc29j65t.jpg",
       "url": "https://rezka.ag/cartoons/adventures/59533-lyuk-i-lyusi-tehasskie-reyndzhery-2009.html"
@@ -1204,7 +1204,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59522"
+        "id": 59522
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/c279ed63995d2ht84j42f.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59522-pobeg-iz-strany-robotov-2023.html"
@@ -1219,7 +1219,7 @@
       "country": "\u041d\u043e\u0440\u0432\u0435\u0433\u0438\u044f",
       "genre": "\u041c\u044e\u0437\u0438\u043a\u043b\u044b",
       "trailer": {
-        "data_id": "59474"
+        "id": 59474
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/pbdeb26db433ctn48z93h.jpg",
       "url": "https://rezka.ag/cartoons/musical/59474-tri-razboynika-i-lev-2022.html"
@@ -1234,7 +1234,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "59457"
+        "id": 59457
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/ndd8432afeba7de18w83q.jpg",
       "url": "https://rezka.ag/cartoons/adventures/59457-agent-dzhi-dzhi-bond-dino-istorii-2019.html"
@@ -1249,7 +1249,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59431"
+        "id": 59431
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/w86268a0511bdcg50s24y.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59431-ne-sovsem-obychnyy-narval-2023.html"
@@ -1264,7 +1264,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59407"
+        "id": 59407
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/h9929d3176385nw12h51w.jpg",
       "url": "https://rezka.ag/cartoons/comedy/59407-marmadyuk-2022.html"
@@ -1305,7 +1305,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u0440\u043e\u0442\u043a\u043e\u043c\u0435\u0442\u0440\u0430\u0436\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59302"
+        "id": 59302
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/wf58d352b8d6bkc11d73a.jpg",
       "url": "https://rezka.ag/cartoons/short/59302-raketa-po-imeni-mak-1962.html"
@@ -1320,7 +1320,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59229"
+        "id": 59229
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/9/oe89bb63cb118mg67a12a.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59229-liga-spravedlivosti-i-rubi-supergeroi-i-ohotniki-chast-pervaya-2023.html"
@@ -1335,7 +1335,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60252"
+        "id": 60252
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/je3089464199fla28a20l.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/60252-vozvraschenie-s-olimpa-1969.html"
@@ -1350,7 +1350,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59165"
+        "id": 59165
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/7/c1f1dd2ddb629bm11x68w.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59165-moi-priklyucheniya-s-supermenom-2023.html"
@@ -1365,7 +1365,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59156"
+        "id": 59156
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/7/me66d0274a289qr37l93q.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59156-redakay-bitva-za-kayru-2011.html"
@@ -1380,7 +1380,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59085"
+        "id": 59085
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/5/s47fee4742196fh83s67e.jpg",
       "url": "https://rezka.ag/cartoons/comedy/59085-verner-holodnyy-kak-led-2011.html"
@@ -1395,7 +1395,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60164"
+        "id": 60164
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/6/cc20ead6f73f1lw46h79s.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/60164-shkatulka-s-sekretom-1976.html"
@@ -1410,7 +1410,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "58991"
+        "id": 58991
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/1/x4aeb4998b860zd11t38s.jpg",
       "url": "https://rezka.ag/cartoons/fiction/58991-kizazi-moto-pokolenie-ognya-2023.html"
@@ -1425,7 +1425,7 @@
       "country": "\u0423\u043a\u0440\u0430\u0438\u043d\u0430",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "55595"
+        "id": 55595
       },
       "img_url": "https://static.hdrezka.ac/i/2023/3/3/t80960b07cd6bsc12q93m.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/55595-mavka-lesnaya-pesnya-2023.html"
@@ -1466,7 +1466,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59029"
+        "id": 59029
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/baa4978342818jq29q42o.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59029-lego-priklyucheniya-ohotnikov-za-snami-2023.html"
@@ -1481,7 +1481,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59026"
+        "id": 59026
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/a8da6df98ad38il58w26f.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59026-tuber-2019.html"
@@ -1496,7 +1496,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59024"
+        "id": 59024
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/y34f645fa7137rf57f98u.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59024-tara-dunkan-2021.html"
@@ -1511,7 +1511,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "58941"
+        "id": 58941
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/30/dbb026a0442baks13w12p.jpg",
       "url": "https://rezka.ag/cartoons/comedy/58941-schenok-2023.html"
@@ -1526,7 +1526,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "58944"
+        "id": 58944
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/30/u12a1cc503de9pl28m49x.jpg",
       "url": "https://rezka.ag/cartoons/fiction/58944-nimona-netflix-2023.html"
@@ -1541,7 +1541,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "58886"
+        "id": 58886
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/28/r4e7bd2c418fenq75h62s.jpg",
       "url": "https://rezka.ag/cartoons/adventures/58886-petroniks-2022.html"
@@ -1556,7 +1556,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "58885"
+        "id": 58885
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/28/l766d082c98bcrp98e85x.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/58885-poymay-tinipin-korolevstvo-emociy-2020.html"
@@ -1571,7 +1571,7 @@
       "country": null,
       "genre": "\u0411\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
       "trailer": {
-        "data_id": "58881"
+        "id": 58881
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/c2054742ea0ecrj38i80t.jpg",
       "url": "https://rezka.ag/cartoons/biographical/58881-hristofor-kolumb-1991.html"
@@ -1586,7 +1586,7 @@
       "country": "\u0411\u0435\u043b\u044c\u0433\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "58878"
+        "id": 58878
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/3/of5e2b1cf1b89pd43d21r.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/58878-belosnezhka-brachnyy-sezon-2007.html"
@@ -1601,7 +1601,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "58867"
+        "id": 58867
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/28/z3c81604b6c13ua46z38g.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/58867-sharlotta-zemlyanichka-tanec-svetyaschihsya-yagodok-2010.html"
@@ -1872,7 +1872,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60294"
+        "id": 60294
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/v6f064b01570dkh46v19y.jpg",
       "url": "https://rezka.ag/films/drama/60294-sluchay-v-tihuane-1957.html"
@@ -1887,7 +1887,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60293"
+        "id": 60293
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/ofd283560fed8un95k91w.jpg",
       "url": "https://rezka.ag/films/comedy/60293-kazino-chayna-taun-36-2006.html"
@@ -1902,7 +1902,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0421\u0442\u0435\u043d\u0434\u0430\u043f",
       "trailer": {
-        "data_id": "60292"
+        "id": 60292
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/d628b358e0ce7rn83a63b.jpg",
       "url": "https://rezka.ag/films/standup/60292-azis-ansari-kak-obstoyat-dela-2019.html"
@@ -1917,7 +1917,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60291"
+        "id": 60291
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/z6a2c32f3f880ea62z23v.jpg",
       "url": "https://rezka.ag/films/comedy/60291-mamanya-byust-i-zhivchik-1976.html"
@@ -1932,7 +1932,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60290"
+        "id": 60290
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/hf48fe12bcbd9gr75z73i.jpg",
       "url": "https://rezka.ag/films/fantasy/60290-nemnogo-lyubvi-nemnogo-magii-2008.html"
@@ -1947,7 +1947,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60289"
+        "id": 60289
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/f5f390d89a6efek79z38g.jpg",
       "url": "https://rezka.ag/films/melodrama/60289-rozhdestvo-v-malenkom-gorode-2018.html"
@@ -1962,7 +1962,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60288"
+        "id": 60288
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/b5c60b5742b19co20z69u.jpg",
       "url": "https://rezka.ag/films/thriller/60288-skorost-u-posledney-cherty-2008.html"
@@ -1977,7 +1977,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60286"
+        "id": 60286
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/ocde5c789cad5pp58d20i.jpg",
       "url": "https://rezka.ag/films/fiction/60286-skorost-mysli-2011.html"
@@ -1992,7 +1992,7 @@
       "country": "\u041d\u043e\u0432\u0430\u044f \u0417\u0435\u043b\u0430\u043d\u0434\u0438\u044f",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60283"
+        "id": 60283
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/h1487a3fb22c8uj97q15u.jpg",
       "url": "https://rezka.ag/films/melodrama/60283-vsya-pravda-o-muzhchinah-2009.html"
@@ -2007,7 +2007,7 @@
       "country": null,
       "genre": null,
       "trailer": {
-        "data_id": "60282"
+        "id": 60282
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/aab53ab5835f7dj67t66i.jpg",
       "url": "https://rezka.ag/films/comedy/60282-amerikanskoe-leto-2009.html"
@@ -2022,7 +2022,7 @@
       "country": "\u0418\u0442\u0430\u043b\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60281"
+        "id": 60281
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/a4ee1891e419bsq56x52z.jpg",
       "url": "https://rezka.ag/films/thriller/60281-vkus-krovi-2004.html"
@@ -2037,7 +2037,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60280"
+        "id": 60280
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/b667da49ad30bqm74z70w.jpg",
       "url": "https://rezka.ag/films/action/60280-orki-2011.html"
@@ -2052,7 +2052,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60279"
+        "id": 60279
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/g73bfd04e0c35af53u16i.jpg",
       "url": "https://rezka.ag/films/thriller/60279-otzvuki-eha-2008.html"
@@ -2067,7 +2067,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60278"
+        "id": 60278
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/xd8ecfd5b2dd6hc73s93f.jpg",
       "url": "https://rezka.ag/films/comedy/60278-s-lyubovyu-k-obame-2010.html"
@@ -2082,7 +2082,7 @@
       "country": "\u0418\u0441\u043f\u0430\u043d\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60277"
+        "id": 60277
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/icc8ce5fd03favo66r67i.jpg",
       "url": "https://rezka.ag/films/thriller/60277-noch-palacha-1992.html"
@@ -2097,7 +2097,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60185"
+        "id": 60185
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/6/j6ea4aadb626far44q46z.jpg",
       "url": "https://rezka.ag/films/thriller/60185-tri-karty-2010.html"
@@ -2112,7 +2112,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60267"
+        "id": 60267
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/f4c3f8e2ce88dix23z94u.jpg",
       "url": "https://rezka.ag/films/action/60267-hladnokrovnyy-1995.html"
@@ -2127,7 +2127,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60272"
+        "id": 60272
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/o349ba20b462crh52o96t.jpg",
       "url": "https://rezka.ag/films/melodrama/60272-v-lovushke-2003.html"
@@ -2142,7 +2142,7 @@
       "country": "\u0413\u043e\u043d\u043a\u043e\u043d\u0433",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60225"
+        "id": 60225
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/ubd864ba1e541el66l78e.jpg",
       "url": "https://rezka.ag/films/comedy/60225-korol-pokera-2009.html"
@@ -2157,7 +2157,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60223"
+        "id": 60223
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/tcaf692872fb2jq83p28d.jpg",
       "url": "https://rezka.ag/films/comedy/60223-simon-proschaetsya-so-svoey-krayney-plotyu-2015.html"
@@ -2172,7 +2172,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60226"
+        "id": 60226
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/kea337368f5ablh70d67h.jpg",
       "url": "https://rezka.ag/films/fiction/60226-virtualnost-2009.html"
@@ -2187,7 +2187,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60222"
+        "id": 60222
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/a87041b18f3c2lt40f72c.jpg",
       "url": "https://rezka.ag/films/thriller/60222-mama-mozhno-2023.html"
@@ -2202,7 +2202,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60269"
+        "id": 60269
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/db861ad5541afvf20f23j.jpg",
       "url": "https://rezka.ag/films/fiction/60269-piton-2000.html"
@@ -2217,7 +2217,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60268"
+        "id": 60268
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/v7afa35e5dff3xe34h44o.jpg",
       "url": "https://rezka.ag/films/drama/60268-idi-2001.html"
@@ -2232,7 +2232,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60266"
+        "id": 60266
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/s3615218aac84zn52r72r.jpg",
       "url": "https://rezka.ag/films/action/60266-dzheyk-speed-1986.html"
@@ -2247,7 +2247,7 @@
       "country": "\u041b\u0438\u0442\u0432\u0430",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60264"
+        "id": 60264
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/y70d5e93baf4fly76l66w.jpg",
       "url": "https://rezka.ag/films/comedy/60264-muzhskie-mechty-2023.html"
@@ -2262,7 +2262,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60263"
+        "id": 60263
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/tcab51227339cdx18q64m.jpg",
       "url": "https://rezka.ag/films/fiction/60263-voiny-oborotni-2009.html"
@@ -2277,7 +2277,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60260"
+        "id": 60260
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/e4b036d2ce927le39d99n.jpg",
       "url": "https://rezka.ag/films/action/60260-potomok-2023.html"
@@ -2292,7 +2292,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "60259"
+        "id": 60259
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/yfc7e9e2fdf21gr77c30v.jpg",
       "url": "https://rezka.ag/films/comedy/60259-zlye-sosedi-2022.html"
@@ -2307,7 +2307,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60258"
+        "id": 60258
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/n94acefdd50decy60n29l.jpg",
       "url": "https://rezka.ag/films/action/60258-arena-smerti-2002.html"
@@ -2322,7 +2322,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60257"
+        "id": 60257
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/z2ac0ffe99595ah41d81o.jpg",
       "url": "https://rezka.ag/films/drama/60257-golovoy-ob-stenu-1959.html"
@@ -2337,7 +2337,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "60256"
+        "id": 60256
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/h4e13576c8630fz30y91g.jpg",
       "url": "https://rezka.ag/films/documentary/60256-bergdorf-gudman-bolshe-veka-na-vershine-modnogo-olimpa-2013.html"
@@ -2352,7 +2352,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60251"
+        "id": 60251
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/ob68d92b47918jd63n38o.jpg",
       "url": "https://rezka.ag/films/thriller/60251-ubiystvo-kitayskogo-bukmekera-1976.html"
@@ -2367,7 +2367,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60250"
+        "id": 60250
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/o654ae15b26ecaj42n74e.jpg",
       "url": "https://rezka.ag/films/fantasy/60250-bagdadskiy-vor-1940.html"
@@ -2382,7 +2382,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60228"
+        "id": 60228
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/kf1c3281a2489jx85i68b.jpg",
       "url": "https://rezka.ag/films/fantasy/60228-zhivaya-voda-2017.html"
@@ -2397,7 +2397,7 @@
       "country": "\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f",
       "genre": "\u0423\u0436\u0430\u0441\u044b",
       "trailer": {
-        "data_id": "60247"
+        "id": 60247
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/n2b17b60a4d2esh22n83c.jpg",
       "url": "https://rezka.ag/films/horror/60247-uzhas-istfilda-pervoe-izgnanie-2023.html"
@@ -2414,7 +2414,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59549"
+        "id": 59549
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/18/ged6f5eb3d619qh33p57w.jpg",
       "url": "https://rezka.ag/series/drama/59549-legenda-ob-anle-2023.html"
@@ -2429,7 +2429,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59546"
+        "id": 59546
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/18/x244557650cb8rf24j95x.jpg",
       "url": "https://rezka.ag/films/comedy/59546-zolotoy-slitok-2023.html"
@@ -2444,7 +2444,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59522"
+        "id": 59522
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/c279ed63995d2ht84j42f.jpg",
       "url": "https://rezka.ag/cartoons/fiction/59522-pobeg-iz-strany-robotov-2023.html"
@@ -2459,7 +2459,7 @@
       "country": "\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u044f",
       "genre": "\u0423\u0436\u0430\u0441\u044b",
       "trailer": {
-        "data_id": "59521"
+        "id": 59521
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/j14d373051061gl44v66p.jpg",
       "url": "https://rezka.ag/films/horror/59521-proklyatie-dom-s-prislugoy-2-2023.html"
@@ -2474,7 +2474,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59520"
+        "id": 59520
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/n5576a50c9ce0mp50g19e.jpg",
       "url": "https://rezka.ag/series/drama/59520-shestaya-zapoved-2023.html"
@@ -2489,7 +2489,7 @@
       "country": "\u0415\u0433\u0438\u043f\u0435\u0442",
       "genre": "\u0412\u043e\u0435\u043d\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59519"
+        "id": 59519
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/wc8722a324d0dhm82u91a.jpg",
       "url": "https://rezka.ag/series/military/59519-101yy-batalon-2023.html"
@@ -2504,7 +2504,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59518"
+        "id": 59518
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/17/z0aa08b2b7412fv19n58m.jpg",
       "url": "https://rezka.ag/films/documentary/59518-neizvedannoe-peschera-kostey-2023.html"
@@ -2519,7 +2519,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59516"
+        "id": 59516
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/d51bfeafc94f9cd44w76a.jpg",
       "url": "https://rezka.ag/films/thriller/59516-logovo-shpiona-2023.html"
@@ -2534,7 +2534,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "59498"
+        "id": 59498
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/g5faa5bc7f726vu13o43a.jpg",
       "url": "https://rezka.ag/series/realtv/59498-hitrosti-remonta-2023.html"
@@ -2549,7 +2549,7 @@
       "country": "\u0410\u0440\u0433\u0435\u043d\u0442\u0438\u043d\u0430",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59495"
+        "id": 59495
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/f67db84771eadfm88e31t.jpg",
       "url": "https://rezka.ag/series/drama/59495-kondor-odin-nol-pyat-2023.html"
@@ -2564,7 +2564,7 @@
       "country": "\u0418\u0442\u0430\u043b\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59486"
+        "id": 59486
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/pce8a5a6b726fxi57q38x.jpg",
       "url": "https://rezka.ag/films/drama/59486-proroki-2023.html"
@@ -2579,7 +2579,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59485"
+        "id": 59485
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/je88a338b3a34cn41v30m.jpg",
       "url": "https://rezka.ag/films/thriller/59485-ashkal-2022.html"
@@ -2594,7 +2594,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0423\u0436\u0430\u0441\u044b",
       "trailer": {
-        "data_id": "59484"
+        "id": 59484
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/g0d317f3c715bpx71t40y.jpg",
       "url": "https://rezka.ag/films/horror/59484-zhnec-2023.html"
@@ -2609,7 +2609,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59475"
+        "id": 59475
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/dcbb2b2b4114doz78l89k.jpg",
       "url": "https://rezka.ag/films/drama/59475-komnata-chudes-2023.html"
@@ -2624,7 +2624,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59471"
+        "id": 59471
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/16/pc32bbbc51c5arw80o36o.jpg",
       "url": "https://rezka.ag/films/thriller/59471-doch-2022.html"
@@ -2639,7 +2639,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "59427"
+        "id": 59427
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/cba849f40667bom29e39s.jpg",
       "url": "https://rezka.ag/films/action/59427-god-on-eto-pulya-2023.html"
@@ -2654,7 +2654,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "59459"
+        "id": 59459
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/v1d15edfc655ecx95g49c.jpg",
       "url": "https://rezka.ag/animation/adventures/59459-shpionskiy-klass-tv-2-2023.html"
@@ -2669,7 +2669,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59379"
+        "id": 59379
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/a07d2ed27f4f9ew22p22w.jpg",
       "url": "https://rezka.ag/films/thriller/59379-devushka-iz-hizhiny-2023.html"
@@ -2684,7 +2684,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59376"
+        "id": 59376
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/i3ca8e72a8bfdwm85u16i.jpg",
       "url": "https://rezka.ag/films/fiction/59376-seraya-materiya-2023.html"
@@ -2699,7 +2699,7 @@
       "country": "\u041a\u0443\u0432\u0435\u0439\u0442",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59458"
+        "id": 59458
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/ub796a6630631mf28p16s.jpg",
       "url": "https://rezka.ag/series/drama/59458-advokat-dyavola-2023.html"
@@ -2714,7 +2714,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59452"
+        "id": 59452
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/q48e27e490cffvs66r91p.jpg",
       "url": "https://rezka.ag/series/fantasy/59452-taaza-habar-2023.html"
@@ -2729,7 +2729,7 @@
       "country": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59447"
+        "id": 59447
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/v2b759b33d848io16e62h.jpg",
       "url": "https://rezka.ag/films/comedy/59447-hotya-by-v-kino-2-2023.html"
@@ -2744,7 +2744,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "59446"
+        "id": 59446
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/qb5062a9a2cb8hx45c94g.jpg",
       "url": "https://rezka.ag/films/adventures/59446-sokrovischa-toma-soyera-2023.html"
@@ -2759,7 +2759,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "59440"
+        "id": 59440
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/y0eebdd4f2497rh27s32i.jpg",
       "url": "https://rezka.ag/films/adventures/59440-pitomec-yurskogo-perioda-utrachennaya-tayna-2023.html"
@@ -2774,7 +2774,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59432"
+        "id": 59432
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/qd3cff5c4b7e7cl81x14g.jpg",
       "url": "https://rezka.ag/series/melodrama/59432-unesennye-dozhdem-2023.html"
@@ -2789,7 +2789,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59431"
+        "id": 59431
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/14/w86268a0511bdcg50s24y.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/59431-ne-sovsem-obychnyy-narval-2023.html"
@@ -2804,7 +2804,7 @@
       "country": "\u0418\u0441\u043f\u0430\u043d\u0438\u044f",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "58138"
+        "id": 58138
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/28/z883aae3735ecxi92a38f.jpg",
       "url": "https://rezka.ag/films/fiction/58138-ptichiy-korob-barselona-2023.html"
@@ -2819,7 +2819,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59337"
+        "id": 59337
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/12/vf0a6287bfee2sc55l32o.jpg",
       "url": "https://rezka.ag/films/drama/59337-devushka-po-familii-starling-2023.html"
@@ -2834,7 +2834,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "58989"
+        "id": 58989
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/2/r7c93677b5d51zx89z14z.jpg",
       "url": "https://rezka.ag/series/thriller/58989-dom-v-ogne-2023.html"
@@ -2849,7 +2849,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "59415"
+        "id": 59415
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/l186227b9bf99hq35z57k.jpg",
       "url": "https://rezka.ag/films/fiction/59415-biosfera-2022.html"
@@ -2864,7 +2864,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59407"
+        "id": 59407
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/h9929d3176385nw12h51w.jpg",
       "url": "https://rezka.ag/cartoons/comedy/59407-marmadyuk-2022.html"
@@ -2879,7 +2879,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59393"
+        "id": 59393
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/p5bdcc4be254fim40m41r.jpg",
       "url": "https://rezka.ag/films/documentary/59393-neizvedannoe-utrachennaya-piramida-2023.html"
@@ -2894,7 +2894,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59388"
+        "id": 59388
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/15/f773dc4a2a303ye75a34k.jpg",
       "url": "https://rezka.ag/films/drama/59388-vkus-schastya-2022.html"
@@ -2909,7 +2909,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "59385"
+        "id": 59385
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/cb970ad0a6735ks35c93p.jpg",
       "url": "https://rezka.ag/series/comedy/59385-smena-storon-2023.html"
@@ -2924,7 +2924,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "58973"
+        "id": 58973
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/1/v3a5093fafedbml51d43q.jpg",
       "url": "https://rezka.ag/series/drama/58973-zamknutyy-krug-2023.html"
@@ -2939,7 +2939,7 @@
       "country": "\u0421\u043b\u043e\u0432\u0430\u043a\u0438\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "59386"
+        "id": 59386
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/13/b68ba817650a1fz75t87n.jpg",
       "url": "https://rezka.ag/films/fantasy/59386-zakoldovannaya-peschera-2022.html"
@@ -2956,7 +2956,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "44739"
+        "id": 44739
       },
       "img_url": "https://static.hdrezka.ac/i/2022/2/10/h0498c50d8b84ef94h80s.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/44739-drakony-komanda-spaseniya-ohota-za-zolotym-drakonom-2020.html"
@@ -2971,7 +2971,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "44740"
+        "id": 44740
       },
       "img_url": "https://static.hdrezka.ac/i/2022/2/10/s7c620dd49923rc23q57o.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/44740-drakony-komanda-spaseniya-tayny-pesnekryla-2020.html"
@@ -2986,7 +2986,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "30073"
+        "id": 30073
       },
       "img_url": "https://static.hdrezka.ac/i/2021/11/2/bf5148d8ace88ll67j50i.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/30073-drakony-gonka-na-grani-2015.html"
@@ -3001,7 +3001,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "1997"
+        "id": 1997
       },
       "img_url": "https://static.hdrezka.ac/i/2014/8/27/rcfd47c348cfbgy43m17h.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/1997-drakony-podarok-nochnoy-furii-2011.html"
@@ -3016,7 +3016,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "2006"
+        "id": 2006
       },
       "img_url": "https://static.hdrezka.ac/i/2014/8/28/g9a9a2a9468e3wo68w47k.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/2006-drakony-i-vsadniki-oluha-2012.html"
@@ -3031,7 +3031,7 @@
       "country": "\u0413\u043e\u043d\u043a\u043e\u043d\u0433",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "8877"
+        "id": 8877
       },
       "img_url": "https://static.hdrezka.ac/i/2015/5/11/t4f0a4736ab34yb22l70s.jpg",
       "url": "https://rezka.ag/films/action/8877-drakony-navsegda-1988.html"
@@ -3046,7 +3046,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "10068"
+        "id": 10068
       },
       "img_url": "https://static.hdrezka.ac/i/2015/6/21/h1494f1234c96ms38m11q.jpg",
       "url": "https://rezka.ag/films/action/10068-drakony-nyu-yorka-2014.html"
@@ -3061,7 +3061,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "11988"
+        "id": 11988
       },
       "img_url": "https://static.hdrezka.ac/i/2016/2/29/c7077132b0144ss36d75c.jpg",
       "url": "https://rezka.ag/films/fantasy/11988-drakony-kamelota-2014.html"
@@ -3076,7 +3076,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "16319"
+        "id": 16319
       },
       "img_url": "https://static.hdrezka.ac/i/2016/7/2/sa66a2280c0d9ta89y68p.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/16319-drakony-gonki-besstrashnyh-nachalo-2014.html"
@@ -3091,7 +3091,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "40480"
+        "id": 40480
       },
       "img_url": "https://static.hdrezka.ac/i/2021/7/3/y2ac67fcda8f6zc11t16l.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/40480-drakony-spasateli-2019.html"
@@ -3106,7 +3106,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "44251"
+        "id": 44251
       },
       "img_url": "https://static.hdrezka.ac/i/2022/9/27/w75c0054f6587jw56z72k.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/44251-drakony-spasateli-geroi-neba-2021.html"
@@ -3121,7 +3121,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "44738"
+        "id": 44738
       },
       "img_url": "https://static.hdrezka.ac/i/2022/2/10/cda02d7534bf5io54t80y.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/44738-drakony-komanda-spaseniya-prazdnik-v-hattsgalore-2020.html"
@@ -3136,7 +3136,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "44993"
+        "id": 44993
       },
       "img_url": "https://static.hdrezka.ac/i/2023/6/11/o588a303b5affra57n25n.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/44993-drakony-devyat-mirov-2021.html"
@@ -3151,7 +3151,7 @@
       "country": "\u0413\u043e\u043d\u043a\u043e\u043d\u0433",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "2772"
+        "id": 2772
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/18/n74b0e8894a77cg57y91m.jpg",
       "url": "https://rezka.ag/films/action/2772-bliznecy-drakony-1992.html"
@@ -3166,7 +3166,7 @@
       "country": "\u0418\u0441\u043f\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "6426"
+        "id": 6426
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/x57686818d552nj41w75w.jpg",
       "url": "https://rezka.ag/films/drama/6426-tam-obitayut-drakony-2011.html"
@@ -3181,7 +3181,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "33065"
+        "id": 33065
       },
       "img_url": "https://static.hdrezka.ac/i/2020/12/26/mb3820fcb26dcya41l99j.jpg",
       "url": "https://rezka.ag/cartoons/fiction/33065-detstrouk-rycari-i-drakony-2020.html"
@@ -3196,7 +3196,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "36213"
+        "id": 36213
       },
       "img_url": "https://static.hdrezka.ac/i/2020/12/26/nca39d9d4136dxq59n10x.jpg",
       "url": "https://rezka.ag/cartoons/fiction/36213-detstrouk-rycari-i-drakony-film-2020.html"
@@ -3211,7 +3211,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "42194"
+        "id": 42194
       },
       "img_url": "https://static.hdrezka.ac/i/2021/10/8/z339a93709727ls47r43s.jpg",
       "url": "https://rezka.ag/series/fantasy/42194-polubogi-i-poludyavoly-2013.html"
@@ -3226,7 +3226,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "46973"
+        "id": 46973
       },
       "img_url": "https://static.hdrezka.ac/i/2022/7/14/qa4b39b7475d7gc86g98z.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/46973-dregonlens-drakony-osennih-sumerek-2008.html"
@@ -3241,7 +3241,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "51493"
+        "id": 51493
       },
       "img_url": "https://static.hdrezka.ac/i/2022/9/8/m71ea14910925mj76v29m.jpg",
       "url": "https://rezka.ag/series/documentary/51493-dom-kotoryy-postroili-drakony-2022.html"
@@ -3256,7 +3256,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "53553"
+        "id": 53553
       },
       "img_url": "https://static.hdrezka.ac/i/2023/3/29/r60c757e5acaaro37q68a.jpg",
       "url": "https://rezka.ag/films/fantasy/53553-podzemelya-i-drakony-chest-sredi-vorov-2023.html"
@@ -3271,7 +3271,7 @@
       "country": "\u0423\u043a\u0440\u0430\u0438\u043d\u0430",
       "genre": "\u041a\u043e\u043c\u0435\u0434\u0438\u0438",
       "trailer": {
-        "data_id": "32422"
+        "id": 32422
       },
       "img_url": "https://static.hdrezka.ac/i/2022/9/8/le169159a9e26sz52i86g.jpg",
       "url": "https://rezka.ag/cartoons/comedy/32422-klara-i-volshebnyy-drakon-2019.html"
@@ -3286,7 +3286,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "263"
+        "id": 263
       },
       "img_url": "https://static.hdrezka.ac/i/2013/7/30/rf3a009c1a5c7yu68e17d.jpg",
       "url": "https://rezka.ag/films/thriller/263-devushka-s-tatuirovkoy-drakona-2011.html"
@@ -3301,7 +3301,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "768"
+        "id": 768
       },
       "img_url": "https://static.hdrezka.ac/i/2021/1/15/m236e93228d15ux24d31s.jpeg",
       "url": "https://rezka.ag/cartoons/fantasy/768-kak-priruchit-drakona-2010.html"
@@ -3316,7 +3316,7 @@
       "country": "\u0422\u0430\u0438\u043b\u0430\u043d\u0434",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "1520"
+        "id": 1520
       },
       "img_url": "https://static.hdrezka.ac/i/2014/4/28/p074be40bddbemx12x49d.jpg",
       "url": "https://rezka.ag/films/action/1520-chest-drakona-2-2013.html"
@@ -3331,7 +3331,7 @@
       "country": "\u0422\u0430\u0438\u043b\u0430\u043d\u0434",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "1521"
+        "id": 1521
       },
       "img_url": "https://static.hdrezka.ac/i/2014/4/28/d07d0a2f18b04si87w46l.jpg",
       "url": "https://rezka.ag/films/action/1521-chest-drakona-2005.html"
@@ -3346,7 +3346,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "1531"
+        "id": 1531
       },
       "img_url": "https://static.hdrezka.ac/i/2014/4/28/ya7a4b375bd4btt33i42t.jpg",
       "url": "https://rezka.ag/films/fantasy/1531-korona-i-drakon-2013.html"
@@ -3361,7 +3361,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "1778"
+        "id": 1778
       },
       "img_url": "https://static.hdrezka.ac/i/2021/1/15/u6eac7eca4d37sh54f65q.jpeg",
       "url": "https://rezka.ag/cartoons/fantasy/1778-kak-priruchit-drakona-2-2014.html"
@@ -3376,7 +3376,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "1995"
+        "id": 1995
       },
       "img_url": "https://static.hdrezka.ac/i/2014/8/27/ie3d0660e1c2fka68x44r.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/1995-kniga-drakonov-2011.html"
@@ -3391,7 +3391,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "2950"
+        "id": 2950
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/oa66ac36c193foh15l31q.jpg",
       "url": "https://rezka.ag/cartoons/fantasy/2950-gnezdo-drakona-2014.html"
@@ -3406,7 +3406,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "3239"
+        "id": 3239
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/qd637f44dec0fmh80w11b.jpg",
       "url": "https://rezka.ag/films/action/3239-poceluy-drakona-2001.html"
@@ -3421,7 +3421,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "3757"
+        "id": 3757
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/r18dab21e451erw88t92b.jpg",
       "url": "https://rezka.ag/films/fantasy/3757-era-drakonov-2011.html"
@@ -3436,7 +3436,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "3914"
+        "id": 3914
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/n5a6419c09b8etd26k13c.jpg",
       "url": "https://rezka.ag/films/action/3914-glaza-drakona-2011.html"
@@ -3451,7 +3451,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "3990"
+        "id": 3990
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/m2d4ab5cac3dcme24h33r.jpg",
       "url": "https://rezka.ag/films/thriller/3990-krasnyy-drakon-2002.html"
@@ -3466,7 +3466,7 @@
       "country": "\u0413\u043e\u043d\u043a\u043e\u043d\u0433",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "4006"
+        "id": 4006
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/f231315e78faesh65j98b.jpg",
       "url": "https://rezka.ag/films/action/4006-vyhod-drakona-1973.html"
@@ -3481,7 +3481,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "4089"
+        "id": 4089
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/b4a314fafdacfmg15b75r.jpg",
       "url": "https://rezka.ag/films/action/4089-serdce-drakona-1996.html"
@@ -3498,7 +3498,7 @@
       "country": "\u041d\u043e\u0432\u0430\u044f \u0417\u0435\u043b\u0430\u043d\u0434\u0438\u044f",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "60398"
+        "id": 60398
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/w5f81bb841703gr52y74s.jpg",
       "url": "https://rezka.ag/series/realtv/60398-solnechnaya-lyubov-2022.html"
@@ -3513,7 +3513,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60368"
+        "id": 60368
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/ve57e68a639e6iz59g30x.jpg",
       "url": "https://rezka.ag/series/fiction/60368-peremeschenie-2023.html"
@@ -3528,7 +3528,7 @@
       "country": "\u0422\u0443\u0440\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60378"
+        "id": 60378
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/t4a8e67ae845fyr29f99k.jpg",
       "url": "https://rezka.ag/series/drama/60378-magarsus-2023.html"
@@ -3543,7 +3543,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u041a\u0440\u0438\u043c\u0438\u043d\u0430\u043b",
       "trailer": {
-        "data_id": "60364"
+        "id": 60364
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/la75b08b48f85eq76w30o.jpg",
       "url": "https://rezka.ag/series/crime/60364-po-tu-storonu-shprei-2021.html"
@@ -3558,7 +3558,7 @@
       "country": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430",
       "genre": "\u0411\u043e\u0435\u0432\u0438\u043a\u0438",
       "trailer": {
-        "data_id": "60350"
+        "id": 60350
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/10/u7627f10e5c0cka29c18n.jpg",
       "url": "https://rezka.ag/series/action/60350-pancho-vilya-severnyy-kentavr-2023.html"
@@ -3573,7 +3573,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59881"
+        "id": 59881
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/28/q343b8b92e697ar84w70b.jpg",
       "url": "https://rezka.ag/series/drama/59881-pobochnyy-effekt-smert-2023.html"
@@ -3588,7 +3588,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60353"
+        "id": 60353
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/10/m019d979fb155bb82p87o.jpg",
       "url": "https://rezka.ag/series/drama/60353-medicinskoe-mayami-2010.html"
@@ -3603,7 +3603,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60345"
+        "id": 60345
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/10/yf0b6eab98c01yb26p35g.jpg",
       "url": "https://rezka.ag/series/drama/60345-proisshestviya-2017.html"
@@ -3618,7 +3618,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "60343"
+        "id": 60343
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/11/zb81de550fa57yx67e54y.jpg",
       "url": "https://rezka.ag/series/realtv/60343-pomeste-lugovoy-sobachki-2019.html"
@@ -3633,7 +3633,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "60328"
+        "id": 60328
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/h93e8f1d0adf1gp51e39t.jpg",
       "url": "https://rezka.ag/series/documentary/60328-bolshe-chem-fokusy-s-di-em-si-2014.html"
@@ -3648,7 +3648,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "60327"
+        "id": 60327
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/d57c3920a1695ld37b50m.jpg",
       "url": "https://rezka.ag/series/realtv/60327-tayny-velikih-magov-po-tu-storonu-fokusov-1997.html"
@@ -3663,7 +3663,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60275"
+        "id": 60275
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/rb4ac2c6a2d56ag68r47g.jpg",
       "url": "https://rezka.ag/series/melodrama/60275-stazhery-v-otele-2020.html"
@@ -3678,7 +3678,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "60296"
+        "id": 60296
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/9/n4ed7e06b04a3ns98q96k.jpg",
       "url": "https://rezka.ag/series/realtv/60296-vselennaya-zombi-2023.html"
@@ -3693,7 +3693,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60274"
+        "id": 60274
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/ffc2071e5adddso34s32e.jpg",
       "url": "https://rezka.ag/series/melodrama/60274-lyubovniki-2023.html"
@@ -3708,7 +3708,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0424\u0430\u043d\u0442\u0430\u0441\u0442\u0438\u043a\u0430",
       "trailer": {
-        "data_id": "60224"
+        "id": 60224
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/7/pba9dccfaaa5evf33h79a.jpg",
       "url": "https://rezka.ag/series/fiction/60224-zak-i-sekretnye-materialy-2000.html"
@@ -3723,7 +3723,7 @@
       "country": "\u042f\u043f\u043e\u043d\u0438\u044f",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "60194"
+        "id": 60194
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/6/wd83ddfe068c7ss33u24q.jpg",
       "url": "https://rezka.ag/series/realtv/60194-zamok-takesi-2023.html"
@@ -3738,7 +3738,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "60141"
+        "id": 60141
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/6/i0a4f9f7c8e3bzw11s48v.jpg",
       "url": "https://rezka.ag/series/documentary/60141-evakuaciya-2023.html"
@@ -3753,7 +3753,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60170"
+        "id": 60170
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/5/c976db4d0f50fqz67e31m.jpg",
       "url": "https://rezka.ag/series/drama/60170-muzhchiny-v-bolshom-gorode-2007.html"
@@ -3768,7 +3768,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60146"
+        "id": 60146
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/8/p472d0a1c46d3wi99g97w.jpg",
       "url": "https://rezka.ag/series/drama/60146-lauhhammer-ubiystvo-v-luzhice-2022.html"
@@ -3783,7 +3783,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60140"
+        "id": 60140
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/5/z08bbbd9e0e12nw50d74c.jpg",
       "url": "https://rezka.ag/series/melodrama/60140-lyubov-babochki-2023.html"
@@ -3798,7 +3798,7 @@
       "country": "\u041a\u0438\u0442\u0430\u0439",
       "genre": "\u041c\u0435\u043b\u043e\u0434\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60129"
+        "id": 60129
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/f4482e00bba7dzt29d32w.jpg",
       "url": "https://rezka.ag/series/melodrama/60129-obedayte-s-lyubovyu-2022.html"
@@ -3813,7 +3813,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60124"
+        "id": 60124
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/x2419da9689ffbb61y92r.jpg",
       "url": "https://rezka.ag/series/drama/60124-ptashka-2023.html"
@@ -3828,7 +3828,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "60100"
+        "id": 60100
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/j315535e3635aou60s30q.jpg",
       "url": "https://rezka.ag/series/documentary/60100-kogda-akuly-napadayut-i-pochemu-2023.html"
@@ -3843,7 +3843,7 @@
       "country": null,
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "60101"
+        "id": 60101
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/nfd440390347czh12k34c.jpg",
       "url": "https://rezka.ag/series/documentary/60101-nastoyaschaya-korona-iznutri-doma-vindzorov-2023.html"
@@ -3858,7 +3858,7 @@
       "country": "\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59876"
+        "id": 59876
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/28/o97ba101c34efuw28c14s.jpg",
       "url": "https://rezka.ag/series/drama/59876-poteryannye-cvety-alisy-hart-2023.html"
@@ -3873,7 +3873,7 @@
       "country": "\u0418\u043d\u0434\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60099"
+        "id": 60099
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/4/w4194037d3830oa85z78r.jpg",
       "url": "https://rezka.ag/series/drama/60099-takaya-svadba-2017.html"
@@ -3888,7 +3888,7 @@
       "country": "\u0423\u043a\u0440\u0430\u0438\u043d\u0430",
       "genre": "\u0414\u0435\u0442\u0435\u043a\u0442\u0438\u0432\u044b",
       "trailer": {
-        "data_id": "60050"
+        "id": 60050
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/2/veac76cbd2d4akf73j18q.jpg",
       "url": "https://rezka.ag/series/detective/60050-goryachiy-2023.html"
@@ -3903,7 +3903,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "60044"
+        "id": 60044
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/2/b8fb9dcb8edd5zv26e61k.jpg",
       "url": "https://rezka.ag/series/drama/60044-ohota-na-raulya-moata-2023.html"
@@ -3918,7 +3918,7 @@
       "country": "\u041a\u043e\u0440\u0435\u044f \u042e\u0436\u043d\u0430\u044f",
       "genre": "\u0424\u044d\u043d\u0442\u0435\u0437\u0438",
       "trailer": {
-        "data_id": "60049"
+        "id": 60049
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/2/ue4bace5f0337vl50r18x.jpg",
       "url": "https://rezka.ag/series/fantasy/60049-bespoleznaya-lozh-2023.html"
@@ -3933,7 +3933,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60004"
+        "id": 60004
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/1/le4f591a3ddc9sk39h91h.jpg",
       "url": "https://rezka.ag/series/thriller/60004-volk-2023.html"
@@ -3948,7 +3948,7 @@
       "country": "\u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "60003"
+        "id": 60003
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/1/u3003a43f1773jd58t87m.jpg",
       "url": "https://rezka.ag/series/thriller/60003-mertvyy-sezon-2022.html"
@@ -3963,7 +3963,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59985"
+        "id": 59985
       },
       "img_url": "https://static.hdrezka.ac/i/2023/8/1/d340bf3965b45id90f98w.jpg",
       "url": "https://rezka.ag/series/documentary/59985-proishozhdenie-puteshestvie-chelovechestva-2017.html"
@@ -3978,7 +3978,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "59971"
+        "id": 59971
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/31/e02e72d91112bjh93b34l.jpg",
       "url": "https://rezka.ag/series/drama/59971-kristi-1994.html"
@@ -3993,7 +3993,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0420\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0422\u0412",
       "trailer": {
-        "data_id": "59948"
+        "id": 59948
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/31/b1c532132105ekh43j89j.jpg",
       "url": "https://rezka.ag/series/realtv/59948-starye-gryaznye-avtomobili-2023.html"
@@ -4008,7 +4008,7 @@
       "country": "\u041d\u0438\u0434\u0435\u0440\u043b\u0430\u043d\u0434\u044b",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59980"
+        "id": 59980
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/31/y4588b35b93caso65n64d.jpg",
       "url": "https://rezka.ag/series/thriller/59980-zolotoy-chas-2022.html"
@@ -4023,7 +4023,7 @@
       "country": "\u0418\u0441\u043f\u0430\u043d\u0438\u044f",
       "genre": "\u0422\u0440\u0438\u043b\u043b\u0435\u0440\u044b",
       "trailer": {
-        "data_id": "59968"
+        "id": 59968
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/31/e7ec71244a49cmn11x46w.jpg",
       "url": "https://rezka.ag/series/thriller/59968-chest-2023.html"
@@ -4040,7 +4040,7 @@
       "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "59250"
+        "id": 59250
       },
       "img_url": "https://static.hdrezka.ac/i/2023/7/11/db9bdb2bc3993rx95g34j.jpg",
       "url": "https://rezka.ag/films/documentary/59250-zhizn-cheloveka-poslednee-intervyu-2020.html"
@@ -4055,7 +4055,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "806"
+        "id": 806
       },
       "img_url": "https://static.hdrezka.ac/i/2021/3/6/f94a8d30ee89bsc62w90d.jpeg",
       "url": "https://rezka.ag/films/drama/806-pobeg-iz-shoushenka-1994.html"
@@ -4070,7 +4070,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043d\u0446\u0435\u0440\u0442",
       "trailer": {
-        "data_id": "65172"
+        "id": 65172
       },
       "img_url": "https://static.hdrezka.ac/i/2023/12/16/ze45c62e2c288am34k79i.jpg",
       "url": "https://rezka.ag/films/concert/65172-teylor-svift-the-eras-tour-2023.html"
@@ -4085,7 +4085,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "825"
+        "id": 825
       },
       "img_url": "https://static.hdrezka.ac/i/2022/6/26/s3682bb41b7b1lb63v26t.jpg",
       "url": "https://rezka.ag/films/drama/825-zelenaya-milya-1999.html"
@@ -4100,7 +4100,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "13567"
+        "id": 13567
       },
       "img_url": "https://static.hdrezka.ac/i/2016/5/1/sa4647f6ddfe4ft95q32q.jpg",
       "url": "https://rezka.ag/films/documentary/13567-mylne-farmer-stade-de-france-2009.html"
@@ -4115,7 +4115,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "56407"
+        "id": 56407
       },
       "img_url": "https://static.hdrezka.ac/i/2023/4/5/y56159479507byo60h41x.jpg",
       "url": "https://rezka.ag/films/documentary/56407-ubezhische-istorii-o-vyzhivanii-v-alpah-2019.html"
@@ -4130,7 +4130,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u041c\u0443\u0437\u044b\u043a\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "3153"
+        "id": 3153
       },
       "img_url": "https://static.hdrezka.ac/i/2014/12/19/r633520dbca39ws87o31f.jpg",
       "url": "https://rezka.ag/show/musical/3153-shestoy-koncertnyy-tur-milen-farmer-2013.html"
@@ -4145,7 +4145,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "763"
+        "id": 763
       },
       "img_url": "https://static.hdrezka.ac/i/2013/11/24/q8cfabd5b4fb8yw22e57w.jpg",
       "url": "https://rezka.ag/films/drama/763-forrest-gamp-1994.html"
@@ -4160,7 +4160,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0422\u0435\u0430\u0442\u0440",
       "trailer": {
-        "data_id": "48266"
+        "id": 48266
       },
       "img_url": "https://static.hdrezka.ac/i/2022/4/16/dfd2affd4afc0da46o68q.jpg",
       "url": "https://rezka.ag/films/theatre/48266-sobor-parizhskoy-bogomateri-1998.html"
@@ -4175,7 +4175,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "14598"
+        "id": 14598
       },
       "img_url": "https://static.hdrezka.ac/i/2016/5/26/m9742ec543f53ub88g49t.jpg",
       "url": "https://rezka.ag/films/documentary/14598-koncert-milen-farmer-v-bersi-1997.html"
@@ -4190,7 +4190,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "28774"
+        "id": 28774
       },
       "img_url": "https://static.hdrezka.ac/i/2020/12/26/h465fc4af9817vv72p20c.jpg",
       "url": "https://rezka.ag/films/documentary/28774-zemlya-odin-potryasayuschiy-den-2017.html"
@@ -4205,7 +4205,7 @@
       "country": "\u041d\u0438\u0434\u0435\u0440\u043b\u0430\u043d\u0434\u044b",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "18924"
+        "id": 18924
       },
       "img_url": "https://static.hdrezka.ac/i/2016/9/1/k408221aabb27md56i63o.jpg",
       "url": "https://rezka.ag/films/documentary/18924-koncert-armina-van-byurena-v-utrehte-2011.html"
@@ -4220,7 +4220,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "42229"
+        "id": 42229
       },
       "img_url": "https://static.hdrezka.ac/i/2021/10/9/na9c93f8d48dana89k83y.jpg",
       "url": "https://rezka.ag/films/drama/42229-krestnyy-otec-trilogiya-1901-1980-1992.html"
@@ -4248,7 +4248,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0411\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
       "trailer": {
-        "data_id": "823"
+        "id": 823
       },
       "img_url": "https://static.hdrezka.ac/i/2020/11/8/nf64d3e0488a3js48y26k.jpeg",
       "url": "https://rezka.ag/films/biographical/823-spisok-shindlera-1993.html"
@@ -4263,7 +4263,7 @@
       "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "35098"
+        "id": 35098
       },
       "img_url": "https://static.hdrezka.ac/i/2020/12/26/y2c3e0a80ccd8fw46s60d.jpg",
       "url": "https://rezka.ag/films/documentary/35098-medvedi-kamchatki-nachalo-zhizni-2018.html"
@@ -4278,7 +4278,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "289"
+        "id": 289
       },
       "img_url": "https://static.hdrezka.ac/i/2024/1/17/v48741a6bc3c8nq29d93m.jpeg",
       "url": "https://rezka.ag/films/drama/289-11-2011.html"
@@ -4293,7 +4293,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0422\u0435\u0430\u0442\u0440",
       "trailer": {
-        "data_id": "55463"
+        "id": 55463
       },
       "img_url": "https://static.hdrezka.ac/i/2023/2/26/j87e8f83585c5pd59j19a.jpg",
       "url": "https://rezka.ag/films/theatre/55463-dvenadcataya-noch-2013.html"
@@ -4308,7 +4308,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "29640"
+        "id": 29640
       },
       "img_url": "https://static.hdrezka.ac/i/2022/12/10/r75f2142318b5nq12e67t.jpg",
       "url": "https://rezka.ag/films/documentary/29640-vybor-schenka-2018.html"
@@ -4323,7 +4323,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
       "trailer": {
-        "data_id": "1333"
+        "id": 1333
       },
       "img_url": "https://static.hdrezka.ac/i/2014/4/3/h417e65ea9f13ef88c65g.jpg",
       "url": "https://rezka.ag/films/adventures/1333-ivan-vasilevich-menyaet-professiyu-1973.html"
@@ -4338,7 +4338,7 @@
       "country": "\u041a\u0430\u043d\u0430\u0434\u0430",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "31289"
+        "id": 31289
       },
       "img_url": "https://static.hdrezka.ac/i/2019/7/5/y5976e7870f77ej94d36a.jpg",
       "url": "https://rezka.ag/films/documentary/31289-russkaya-pyaterka-2018.html"
@@ -4353,7 +4353,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "25114"
+        "id": 25114
       },
       "img_url": "https://static.hdrezka.ac/i/2017/6/30/fee7ccce48956wy28p47r.jpg",
       "url": "https://rezka.ag/films/drama/25114-mat-1991.html"
@@ -4368,7 +4368,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "7946"
+        "id": 7946
       },
       "img_url": "https://static.hdrezka.ac/i/2015/3/12/l78c9ecca38f0zu75o37u.jpg",
       "url": "https://rezka.ag/films/documentary/7946-queen-dni-nashih-zhizney-2011.html"
@@ -4383,7 +4383,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "46275"
+        "id": 46275
       },
       "img_url": "https://static.hdrezka.ac/i/2022/10/15/d8192d8b97113rx66k63e.jpg",
       "url": "https://rezka.ag/films/drama/46275-krestnyy-otec-novella-dlya-televideniya-1977.html"
@@ -4398,7 +4398,7 @@
       "country": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "12137"
+        "id": 12137
       },
       "img_url": "https://static.hdrezka.ac/i/2022/11/14/l9e851cf0c540bk85w89p.jpg",
       "url": "https://rezka.ag/films/documentary/12137-chelovek-2015.html"
@@ -4413,7 +4413,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "12730"
+        "id": 12730
       },
       "img_url": "https://static.hdrezka.ac/i/2016/4/9/ld87d52ed1913vv81c89p.jpg",
       "url": "https://rezka.ag/films/documentary/12730-zemlyane-2005.html"
@@ -4441,7 +4441,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "19652"
+        "id": 19652
       },
       "img_url": "https://static.hdrezka.ac/i/2016/9/23/taca7570db98eng17k50e.jpg",
       "url": "https://rezka.ag/films/documentary/19652-pesnya-ostaetsya-vse-takoy-zhe-1976.html"
@@ -4456,7 +4456,7 @@
       "country": "\u0418\u0442\u0430\u043b\u0438\u044f",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "14605"
+        "id": 14605
       },
       "img_url": "https://static.hdrezka.ac/i/2016/5/26/l7c302da9f183xn24l85g.jpg",
       "url": "https://rezka.ag/films/drama/14605-dzhuzeppe-moskati-iscelyayuschaya-lyubov-2007.html"
@@ -4471,7 +4471,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u0412\u043e\u0435\u043d\u043d\u044b\u0435",
       "trailer": {
-        "data_id": "1295"
+        "id": 1295
       },
       "img_url": "https://static.hdrezka.ac/i/2014/3/31/bd237887ff5f5ze92t19d.jpg",
       "url": "https://rezka.ag/films/military/1295-v-boy-idut-odni-stariki-1973.html"
@@ -4486,7 +4486,7 @@
       "country": "\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f",
       "genre": "\u041c\u044e\u0437\u0438\u043a\u043b\u044b",
       "trailer": {
-        "data_id": "47040"
+        "id": 47040
       },
       "img_url": "https://static.hdrezka.ac/i/2022/7/9/nb3f6ed829affwi53z77f.jpg",
       "url": "https://rezka.ag/films/musical/47040-prizrak-opery-v-korolevskom-albert-holle-2011.html"
@@ -4501,7 +4501,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u041a\u0440\u0438\u043c\u0438\u043d\u0430\u043b",
       "trailer": {
-        "data_id": "1316"
+        "id": 1316
       },
       "img_url": "https://static.hdrezka.ac/i/2014/4/1/u87b1d6e74a10ci75u27k.jpg",
       "url": "https://rezka.ag/films/crime/1316-operaciya-y-i-drugie-priklyucheniya-shurika-1965.html"
@@ -4516,7 +4516,7 @@
       "country": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
       "genre": "\u041a\u043e\u043d\u0446\u0435\u0440\u0442",
       "trailer": {
-        "data_id": "40242"
+        "id": 40242
       },
       "img_url": "https://static.hdrezka.ac/i/2021/6/24/s03d6f32a7abctc21r56v.jpg",
       "url": "https://rezka.ag/films/concert/40242-rammstein-zhivoe-vystuplenie-na-madison-square-garden-2015.html"
@@ -4531,7 +4531,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u0414\u0440\u0430\u043c\u044b",
       "trailer": {
-        "data_id": "1167"
+        "id": 1167
       },
       "img_url": "https://static.hdrezka.ac/i/2014/3/4/d079d37789b07xw56m32j.jpg",
       "url": "https://rezka.ag/films/drama/1167-krestnyy-otec-1972.html"
@@ -4546,7 +4546,7 @@
       "country": "\u0421\u0421\u0421\u0420",
       "genre": "\u0422\u0435\u0430\u0442\u0440",
       "trailer": {
-        "data_id": "65120"
+        "id": 65120
       },
       "img_url": "https://static.hdrezka.ac/i/2023/12/15/e4cea8112a0e7my56t36k.jpg",
       "url": "https://rezka.ag/films/theatre/65120-dalshe-tishina-1978.html"
@@ -4561,7 +4561,7 @@
       "country": "\u0421\u0428\u0410",
       "genre": "\u041a\u043e\u043d\u0446\u0435\u0440\u0442",
       "trailer": {
-        "data_id": "10095"
+        "id": 10095
       },
       "img_url": "https://static.hdrezka.ac/i/2015/6/21/j1d0ae45c8e54nz33h92t.jpg",
       "url": "https://rezka.ag/films/concert/10095-madonna-zhivoy-koncert-v-londone-2006.html"
