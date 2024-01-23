@@ -8,6 +8,7 @@ from HDrezka.connector import NetworkClient
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.person import PersonBriefInfo
 from HDrezka.player import PlayerBuilder, Serial, Film
+from HDrezka.questions_asked import QuestionsBriefInfoBuilder, QuestionBriefInfo
 from HDrezka.trailer import TrailerBuilder
 
 if TYPE_CHECKING:
@@ -114,8 +115,9 @@ class MovieDetails:
     description: str = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     part_content: Optional[List[PartContent]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
-    recommendations: List = None
+    recommendations: List = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
+    questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
     comment: CommentsIterator = None  # Комментарии к данному фильму
 
 
@@ -224,6 +226,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.part_content = self.extract_part_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
+        page.questions_asked = self.extract_questions()
         page.comment = CommentsIterator(page.id)
         return page
 
@@ -290,3 +293,9 @@ class MovieDetailsBuilder(PageRepresentation):
                 except AttributeError:
                     continue
         return result_lst
+
+    def extract_questions(self) -> Optional[List[QuestionBriefInfo]]:
+        faq_block = self.page.soup.find("div", class_="b-post__qa_list_block")
+        if faq_block is None:
+            return None
+        return QuestionsBriefInfoBuilder(str(faq_block)).extract_content()

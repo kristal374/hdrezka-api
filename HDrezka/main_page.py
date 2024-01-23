@@ -2,7 +2,15 @@ from urllib.parse import urlsplit
 
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons
-from HDrezka.site_navigation import Films, Cartoons, Series, Animation, New, Announce, Collections, Search
+from HDrezka.site_navigation import Animation
+from HDrezka.site_navigation import Announce
+from HDrezka.site_navigation import Cartoons
+from HDrezka.site_navigation import Collections
+from HDrezka.site_navigation import Films
+from HDrezka.site_navigation import New
+from HDrezka.site_navigation import QuestionsAsked
+from HDrezka.site_navigation import Search
+from HDrezka.site_navigation import Series
 
 __all__ = ["HDrezka"]
 
@@ -42,6 +50,10 @@ class HDrezka:
     @staticmethod
     def search(text: str) -> Search:
         return Search().query(text)
+
+    @staticmethod
+    def questions_asked() -> QuestionsAsked:
+        return QuestionsAsked()
 
     def __str__(self):
         return self.connector.url

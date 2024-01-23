@@ -7,6 +7,7 @@ from requests import exceptions
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
 from HDrezka.page_representation import PosterBuilder, MovieCollectionBuilder
+from HDrezka.questions_asked import QuestionsBriefInfoBuilder
 
 
 class BaseSingleCategory(ABC):
@@ -223,3 +224,10 @@ class Best(BaseSingleCategory):
         page = f"page/{page}/" if page is not None and page != "" else ""
         separator = "/"
         return f"{self.connector.url}/{separator.join(map(str, self._best_params))}/{page}"
+
+
+class QuestionsAsked(BaseSingleCategory):
+    _name = "qa"
+
+    def get(self):
+        return QuestionsBriefInfoBuilder(super().get()).extract_content()

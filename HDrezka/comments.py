@@ -38,9 +38,10 @@ class CommentsIterator:
             cls.connector = NetworkClient()
         return super().__new__(cls)
 
-    def __init__(self, film_id):
+    def __init__(self, film_id, type_page=0):
         self.film_id = film_id
         self.page_number = 0
+        self.type_page = type_page  # 0 - film page or 1 - question page
         self.last_page = None
 
     def __iter__(self):
@@ -155,7 +156,7 @@ class CommentsIterator:
             "t": int(time.time() * 1000),
             "news_id": self.film_id,
             "cstart": self.page_number if page is None else page,
-            "type": 0,
+            "type": self.type_page,
             "comment_id": 0,
             "skin": "hdrezka"
         }
