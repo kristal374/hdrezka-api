@@ -187,13 +187,24 @@ class InfoTableBuilder(PageRepresentation):
     @staticmethod
     def extract_person(data):
         result_lst = []
-        persons = data.find_all("span", class_="person-name-item")
-        for p in persons:
-            person = PersonBriefInfo()
-            person.id = int(p.get("data-id").strip())
-            person.name = p.a.span.text.strip()
-            person.url = p.a.get("href").strip()
-            result_lst.append(person)
+        persons = data.find_all("span", class_="item")
+        for item in persons:
+            person_obj = item.find("span", class_="person-name-item")
+            if person_obj:
+                person = PersonBriefInfo()
+                person.id = int(person_obj.get("data-id").strip())
+                person.film_id = int(person_obj.get("data-pid").strip())
+                person.name = person_obj.a.span.text.strip()
+                person.url = person_obj.a.get("href").strip()
+                person.img_url = person_obj.get("data-photo").strip()
+                person.img_url = person.img_url if person.img_url != "null" else None
+                person.job = person_obj.get("data-job").strip()
+                result_lst.append(person)
+            else:
+                if item.text == "и другие":
+                    continue
+                person = PersonBriefInfo(name=item.text.replace(",", "").strip())
+                result_lst.append(person)
         return result_lst
 
     @staticmethod
