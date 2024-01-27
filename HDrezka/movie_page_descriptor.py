@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
@@ -82,20 +84,33 @@ class Episode:
         return f"<Episode({self.current_episode} - {name})>"
 
 
+class CustomString(str):
+    url: str
+
+    def __new__(cls, value, url):
+        instance = super().__new__(cls, value)
+        instance.url = url
+        instance.__dict__ = {"value": instance, "url": instance.url}
+        return instance
+
+    def get(self) -> List[Poster]:
+        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+
+
 @dataclass
 class InfoTable:
     rates: Optional[List[Rating]] = field(default_factory=list)  # Рейтинг
-    on_the_lists: Optional[List[PartContent]] = None  # Входит в списки
+    on_the_lists: Optional[List[TopLists]] = None  # Входит в списки
     tagline: Optional[str] = None  # Слоган фильма
-    release: str = None  # Дата выхода
-    country: str = None  # Страна производитель
-    producer: List[PersonBriefInfo] = None  # Режиссёры
-    genre: List[str] = None  # Жанры
+    release: CustomString = None  # Дата выхода
+    country: List[CustomString] = None  # Страна производитель
+    producer: Optional[List[PersonBriefInfo]] = None  # Режиссёры
+    genre: List[CustomString] = None  # Жанры
+    quality: str = None  # В качестве
+    translate: Optional[List[str]] = None  # В переводе
     age: Optional[str] = None  # Возрастное ограничение
     duration: str = None  # Продолжительность
     collections: List[CollectionBriefInfo] = None  # Из серии
-    quality: str = None  # В качестве
-    translate: Optional[str] = None  # В переводе
     cast: Optional[List[PersonBriefInfo]] = None  # В ролях
 
     def __repr__(self):
@@ -137,13 +152,13 @@ class InfoTableBuilder(PageRepresentation):
             elif key == 'Слоган:':
                 table_info.tagline = item[1].text.strip()
             elif key in ("Год:", 'Дата выхода:'):
-                table_info.release = item[1].a.text.strip()
+                table_info.release = self.extract_date_release(item[1])
             elif key == "Страна:":
-                table_info.country = item[1].a.text.strip()
+                table_info.country = self.extract_country(item[1])
             elif key == "Режиссер:":
                 table_info.producer = self.extract_person(item[1])
             elif key == "Жанр:":
-                table_info.genre = [i.text.strip() for i in item[1].find_all("span")]
+                table_info.genre = self.extract_genre(item[1])
             elif key == 'Возраст:':
                 table_info.age = item[1].span.text.strip()
             elif key == "Время:":
@@ -159,6 +174,30 @@ class InfoTableBuilder(PageRepresentation):
             else:
                 raise TypeError(item)
         return table_info
+
+    @staticmethod
+    def extract_date_release(data) -> Union[CustomString, str]:
+        release = data.text.strip()
+        url = data.find("a")
+        return CustomString(release, url.get("href")) if url else release
+
+    @staticmethod
+    def extract_country(data) -> List[Union[CustomString]]:
+        result_string = []
+        for item in data.find_all("a"):
+            country = item.string.strip()
+            url = item.get("href")
+            result_string.append(CustomString(country, url))
+        return result_string
+
+    @staticmethod
+    def extract_genre(data) -> List[CustomString]:
+        result_string = []
+        for item in data.find_all("a"):
+            genre = item.text.strip()
+            url = item.get("href")
+            result_string.append(CustomString(genre, url))
+        return result_string
 
     @staticmethod
     def extract_rates(data):
