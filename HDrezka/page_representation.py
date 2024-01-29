@@ -2,11 +2,14 @@ import re
 from dataclasses import dataclass
 from typing import Union, Optional, List, TYPE_CHECKING
 
+from bs4.element import NavigableString
+
 from HDrezka.connector import NetworkClient
 from HDrezka.exceptions import EmptyPage
 from HDrezka.filters import convert_genres
 from HDrezka.html_representation import PageRepresentation
-from HDrezka.movie_page_descriptor import MovieDetailsBuilder
+from HDrezka.movie_page_descriptor import MovieDetailsBuilder, Rating, CustomString, MovieDetails
+from HDrezka.person import PersonBriefInfo
 from HDrezka.trailer import TrailerBuilder
 
 if TYPE_CHECKING:
@@ -32,8 +35,109 @@ class Poster:
     def get(self):
         return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
+    def quick_content(self):
+        connector = NetworkClient()
+        url = f"{connector.url}/engine/ajax/quick_content.php"
+        extended_info = connector.post(url, data={'id': self.id, 'is_touch': "1"}).text
+        return PosterExtendedInfoBuilder(extended_info).extract_content()
+
     def __repr__(self):
         return f"Poster(\"{self.title}\")"
+
+
+@dataclass
+class PosterExtendedInfo:
+    id: int = None
+    title: str = None
+    entity: str = None
+    description: Optional[str] = None
+    age_restrictions: Optional[str] = None
+    genre: List[CustomString] = None
+    directors: List[PersonBriefInfo] = None
+    actors: List[PersonBriefInfo] = None
+    rates: List[Rating] = None
+    url: str = None
+
+    def get(self) -> MovieDetails:
+        return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
+
+
+class PosterExtendedInfoBuilder(PageRepresentation):
+    def extract_content(self) -> PosterExtendedInfo:
+        poster_info = PosterExtendedInfo()
+        poster_info.url = self.page.soup.find("div", class_="b-content__bubble_title").a.get("href").strip()
+        poster_info.id = int(re.search(r"/(\d*)-", poster_info.url).group(1))
+        poster_info.title = self.page.soup.find('div', class_='b-content__bubble_title').text.strip()
+        poster_info.entity = self.page.soup.find('i', class_='entity').text.strip()
+        poster_info.description = self.extract_description()
+        poster_info.age_restrictions = self.extract_age_restriction()
+        poster_info.genre = self.extract_genre()
+        poster_info.directors = self.extract_person(string='Режиссер:')
+        poster_info.actors = self.extract_person(string='В ролях:')
+        poster_info.rates = self.extract_ratings()
+
+        return poster_info
+
+    def extract_description(self) -> Optional[str]:
+        result_string = None
+        for item in self.page.soup.find_all('div', class_='b-content__bubble_text'):
+            if len(item.contents) == 1 and isinstance(item.contents[0], NavigableString):
+                result_string = item.contents[0].strip()
+        return result_string
+
+    def extract_age_restriction(self) -> Optional[str]:
+        age_restriction = self.page.soup.find('span', string='Возрастное ограничение:')
+        if age_restriction is None:
+            return age_restriction
+        return age_restriction.find_next_sibling().text.strip()
+
+    def extract_genre(self) -> List[CustomString]:
+        genres = self.page.soup.find('span', string='Жанр:')
+        result_string = []
+        for item in genres.parent.find_all("a"):
+            genre = item.text.strip()
+            url = item.get("href")
+            result_string.append(CustomString(genre, url))
+        return result_string
+
+    def extract_person(self, string) -> List[Union[PersonBriefInfo, str]]:
+        person = self.page.soup.find('span', string=string).parent
+        process_person = list(filter(lambda x: str(x) not in ("\n", " ", "", ", ", ",", " и "), person))
+        if isinstance(process_person[1], NavigableString):
+            iterable_obj = re.split(', | и ', process_person[1].strip())
+        else:
+            iterable_obj = process_person[1:]
+        result_list = []
+        for item in iterable_obj:
+            if isinstance(item, str):
+                result_list.append(item)
+                continue
+            person = PersonBriefInfo()
+            person.id = int(item.get("data-id").strip())
+            person.name = item.a.span.text.strip()
+            person.url = item.a.get("href").strip()
+            result_list.append(person)
+        return result_list
+
+    def extract_ratings(self) -> List[Rating]:
+        ratings = self.page.soup.find(class_='b-content__bubble_rates')
+        result_list = []
+        if ratings:
+            for item in ratings.find_all("span"):
+                rate = Rating()
+                rate.name = item.next.strip()[:-1]
+                rate.rates = float(item.find("b").text.strip())
+                rate.votes = int(item.find("i").text.strip()[1:-1].replace(" ", ""))
+                result_list.append(rate)
+
+        rating_rezka = self.page.soup.find('div', class_='b-content__bubble_rating')
+        if rating_rezka:
+            rate = Rating()
+            rate.name = 'HDrezka'
+            rate.rates = float(rating_rezka.b.text.strip())
+            rate.votes = int(re.search(r"\((.*?)\)", rating_rezka.text.strip()).group(1))
+            result_list.append(rate)
+        return result_list
 
 
 @dataclass
