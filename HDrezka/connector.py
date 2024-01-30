@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from abc import abstractmethod, ABC
-from typing import Union, Any
+from typing import Union, Any, Type, Dict
 from urllib.parse import urlsplit
 
 import requests
@@ -33,7 +35,7 @@ class Connector(ABC):
 
 
 class Singleton(type):
-    _instances = {}
+    _instances: Dict[Singleton, Any] = {}
 
     def __call__(cls, *args, **kwargs):
         if cls not in cls._instances:
@@ -71,8 +73,8 @@ class NetworkClient(metaclass=Singleton):
                  domain='rezka.ag',
                  user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0',
                  proxies=None,
-                 connector: Connector = RequestConnector):
-        self.session = connector(domain, user_agent, proxies)  # noqa
+                 connector: Type[Connector] = RequestConnector):
+        self.session = connector(domain, user_agent, proxies)
 
     def __setattr__(self, key, value):
         """Позволяет устанавливать атрибуты self.session как у NetworkClient"""

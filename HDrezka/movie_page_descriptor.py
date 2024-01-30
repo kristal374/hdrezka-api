@@ -37,7 +37,7 @@ class TopLists:
     place: str = None  # Занятое место в подборке
     url: str = None  # ссылка на подборку
 
-    def get(self) -> List["Poster"]:
+    def get(self) -> List[Poster]:
         return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
@@ -50,7 +50,7 @@ class CollectionBriefInfo:
     title: str = None  # название коллекции
     url: str = None  # ссылка на коллекцию
 
-    def get(self, custom_filter: Optional[Union["Filters", str]] = None) -> List["Poster"]:
+    def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
         filter_param = f"?filter={custom_filter}" if custom_filter else ""
         return page_representation.PosterBuilder(
             NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
@@ -67,7 +67,7 @@ class PartContent:
     rating: str = None  # рейтинг фильма
     url: str = None  # ссылка на фильм
 
-    def get(self) -> "MovieDetails":
+    def get(self) -> MovieDetails:
         return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
@@ -175,7 +175,7 @@ class InfoTableBuilder(PageRepresentation):
             elif item[0].find("div", class_="persons-list-holder"):
                 table_info.cast = self.extract_person(item[0])
             else:
-                raise TypeError(item)
+                raise TypeError(item)  # pragma: NO COVER
         return table_info
 
     @staticmethod
@@ -222,7 +222,7 @@ class InfoTableBuilder(PageRepresentation):
     def extract_lists(data):
         result_lst = []
         lists = [i for i in data if i.text != ""]
-        for link, place in zip(lists[::2], lists[1::2]):
+        for link, place in zip(lists[::2], lists[1::2]):  # split the list in pairs
             top = TopLists()
             top.title = link.text.strip()
             top.place = place.strip()[1:-1]
@@ -291,19 +291,19 @@ class MovieDetailsBuilder(PageRepresentation):
 
         return page
 
-    def extract_original_name(self):
+    def extract_original_name(self) -> Optional[str]:
         original_name = self.page.soup.find("div", class_="b-post__origtitle")
         if original_name is None:
             return original_name
         return original_name.text.strip()
 
-    def extract_status(self):
+    def extract_status(self) -> Optional[str]:
         status = self.page.soup.find("div", class_="b-post__infolast")
         if status is None:
             return status
         return status.text.strip()
 
-    def extract_trailer(self) -> Union[TrailerBuilder, None]:
+    def extract_trailer(self) -> Optional[TrailerBuilder]:
         trailer = self.page.soup.find("a", class_="b-sidelinks__link")
         if trailer is None:
             return trailer
@@ -326,7 +326,7 @@ class MovieDetailsBuilder(PageRepresentation):
         except AttributeError:
             return None
 
-    def extract_part_content(self):
+    def extract_part_content(self) -> Optional[List[PartContent]]:
         content = self.page.soup.find_all("div", class_="b-post__partcontent_item")
         result_lst = []
         for item in content:
@@ -340,11 +340,11 @@ class MovieDetailsBuilder(PageRepresentation):
             result_lst.append(p)
         return result_lst
 
-    def extract_recommendations(self):
+    def extract_recommendations(self) -> List[Poster]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
         return page_representation.PosterBuilder(str(recommendations)).extract_content()
 
-    def extract_schedule_block(self):
+    def extract_schedule_block(self) -> Optional[List[Episode]]:
         lst_seasons = self.page.soup.find_all("div", class_="b-post__schedule_list")
         result_lst = []
         for s in lst_seasons:

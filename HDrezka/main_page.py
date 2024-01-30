@@ -1,3 +1,4 @@
+from typing import Optional
 from urllib.parse import urlsplit
 
 from HDrezka.connector import NetworkClient
@@ -20,19 +21,19 @@ class HDrezka:
         self.connector = NetworkClient(domain=urlsplit(str(mirror))[1])
 
     @staticmethod
-    def films(genre: GenreFilm = None) -> Films:
+    def films(genre: Optional[GenreFilm] = None) -> Films:
         return Films().selected_category(genre)
 
     @staticmethod
-    def cartoons(genre: GenreCartoons = None) -> Cartoons:
+    def cartoons(genre: Optional[GenreCartoons] = None) -> Cartoons:
         return Cartoons().selected_category(genre)
 
     @staticmethod
-    def series(genre: GenreSeries = None) -> Series:
+    def series(genre: Optional[GenreSeries] = None) -> Series:
         return Series().selected_category(genre)
 
     @staticmethod
-    def animation(genre: GenreAnimation = None) -> Animation:
+    def animation(genre: Optional[GenreAnimation] = None) -> Animation:
         return Animation().selected_category(genre)
 
     @staticmethod

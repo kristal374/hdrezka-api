@@ -19,7 +19,7 @@ class Trailer:
 
 class TrailerBuilder:
     def __init__(self, film_id):
-        """id_: идентификатор фильма"""
+        """film_id: идентификатор фильма"""
         self.id = film_id
 
     def _get_trailer(self) -> Union[dict, bool]:

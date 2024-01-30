@@ -74,7 +74,7 @@ class BaseCategory(BaseSingleCategory, ABC):
         return self
 
     @abstractmethod
-    def find_best(self, genre: Optional[str] = None, year: int = None):
+    def find_best(self, genre: Optional[str] = None, year: Optional[int] = None):
         select_genre = genre if genre is not None else self._path.get("genre")
         return Best(self._name).select(genre=select_genre, year=year)
 
@@ -98,7 +98,7 @@ class Cartoons(BaseCategory):
     def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):
         return super().selected_category(genre)
 
-    def find_best(self, genre: Optional[Union[GenreCartoons, str]] = None, year: int = None):
+    def find_best(self, genre: Optional[Union[GenreCartoons, str]] = None, year: Optional[int] = None):
         return super().find_best(genre=genre, year=year)
 
     def get(self):
