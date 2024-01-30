@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import base64
 import re
 from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
+from urllib.parse import unquote
 
 from HDrezka import page_representation
 from HDrezka.comments import CommentsIterator
@@ -23,6 +25,7 @@ class Rating:
     name: str = None  # Имя сайта представляющего оценку
     rates: float = None  # Оценка от 1 до 10
     votes: int = None  # Количество голосовавших
+    source: Optional[str] = None
 
     def __repr__(self):
         return f"<Rating( {self.name}: {self.rates}({self.votes}) )>"
@@ -205,9 +208,13 @@ class InfoTableBuilder(PageRepresentation):
         rates_blanks = data.find_all("span", class_="b-post__info_rates")
         for blank in rates_blanks:
             rate = Rating()
-            rate.name = blank.a.text.strip()
+            if blank.a is not None:
+                rate.name = blank.a.text.strip()
+                rate.source = unquote(base64.b64decode(blank.a.get("href").split("/")[-2]).decode('utf-8'))
+            else:
+                rate.name = blank.next.strip()[:-1]
             rate.rates = float(blank.span.text.strip())
-            rate.votes = blank.i.text.strip()[1:-1]
+            rate.votes = int(blank.i.text.strip()[1:-1].replace(" ", ""))
             result_lst.append(rate)
         return result_lst
 
@@ -272,12 +279,16 @@ class MovieDetailsBuilder(PageRepresentation):
         page.info_table = InfoTableBuilder(self.page).extract_content()
         page.description = self.page.soup.find("div", class_="b-post__description_text").text.strip()
         page.player = PlayerBuilder(self.page).extract_content()
-        (lambda x: page.info_table.rates.append(x) if x is not None else None)(self.extract_rates())
         page.part_content = self.extract_part_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
         page.questions_asked = self.extract_questions()
         page.comment = CommentsIterator(page.id)
+
+        rezka_rates = self.extract_rates()
+        if rezka_rates:
+            page.info_table.rates.append(rezka_rates)
+
         return page
 
     def extract_original_name(self):
@@ -303,7 +314,8 @@ class MovieDetailsBuilder(PageRepresentation):
             rate = Rating()
             rate.name = "HDrezka"
             rate.rates = float(self.page.soup.find("span", class_="num").text.strip())
-            rate.votes = self.page.soup.find("span", class_="votes").span.text.strip()
+            rate.votes = int(self.page.soup.find("span", class_="votes").span.text.strip())
+            rate.source = self.page.soup.find('meta', property='og:video').get("content").strip()
             return rate
         except AttributeError:
             return None
@@ -316,7 +328,7 @@ class MovieDetailsBuilder(PageRepresentation):
             p.num = int(item.find("div", class_="num").text.strip())
             p.title = item.find("div", class_="title").text.strip()
             url = item.find("div", class_="title").a
-            p.url = url.get("href") if url else None
+            p.url = url.get("href") if url else self.page.soup.find('meta', property='og:video').get("content").strip()
             p.year = item.find("div", class_="year").text.strip()
             p.rating = item.find("div", class_="rating").text.strip()
             result_lst.append(p)
