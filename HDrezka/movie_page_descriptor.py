@@ -130,7 +130,7 @@ class MovieDetails:
     image: str = None  # Промо-постер
     trailer: Optional[TrailerBuilder] = None  # наличие трейлера
     info_table: InfoTable = None  # Таблица с краткой информацией по фильму
-    description: str = None  # Описание фильма
+    description: Optional[str] = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     part_content: Optional[List[PartContent]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List = None  # Список рекомендованных к просмотру фильмов
@@ -277,7 +277,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.image = self.page.soup.find("div", class_="b-sidecover").a.get("href")
         page.trailer = self.extract_trailer()
         page.info_table = InfoTableBuilder(self.page).extract_content()
-        page.description = self.page.soup.find("div", class_="b-post__description_text").text.strip()
+        page.description = self.extract_description()
         page.player = PlayerBuilder(self.page).extract_content()
         page.part_content = self.extract_part_content()
         page.recommendations = self.extract_recommendations()
@@ -309,7 +309,13 @@ class MovieDetailsBuilder(PageRepresentation):
             return trailer
         return TrailerBuilder(int(trailer.get("data-id")))
 
-    def extract_rates(self):
+    def extract_description(self) -> Optional[str]:
+        description = self.page.soup.find("div", class_="b-post__description_text")
+        if description is None:
+            return description
+        return description.text.strip()
+
+    def extract_rates(self) -> Optional[Rating]:
         try:
             rate = Rating()
             rate.name = "HDrezka"
