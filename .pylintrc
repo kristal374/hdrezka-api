@@ -9,8 +9,7 @@ disable=
     R0902, # Too many instance attributes
     R0903, # Too few public methods
     R0912, # Too many branches
-    C3002, # Lambda expression called directly
 
 
 ignore = venv, tests
-max-args = 6
+max-args = 7
