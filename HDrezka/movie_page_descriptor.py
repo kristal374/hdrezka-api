@@ -79,7 +79,7 @@ class Episode:
     current_episode: str = None  # Номер сезона и серии текущего эпизода
     localize_title: str = None  # Локализированное название эпизода
     original_title: str = None  # Название в оригинале
-    release_date: str = None  # Дата выхода эпизода
+    release_date: Optional[str] = None  # Дата выхода эпизода
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
     def __repr__(self):

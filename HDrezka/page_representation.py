@@ -144,7 +144,7 @@ class PosterExtendedInfoBuilder(PageRepresentation):
 class MovieCollection:
     id: int = None  # ID коллекции
     title: str = None  # Названия коллекции
-    amount_film: int = None  # Количество фильмов в коллекции
+    amount_film: Optional[int] = None  # Количество фильмов в коллекции
     img_url: str = None  # Ссылка на обложку коллекции
     url: str = None  # Ссылка на страницу коллекции
 

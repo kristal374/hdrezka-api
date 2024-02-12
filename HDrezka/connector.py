@@ -76,7 +76,7 @@ class NetworkClient(metaclass=Singleton):
                  connector: Type[Connector] = RequestConnector):
         self.session = connector(domain, user_agent, proxies)
 
-    def __setattr__(self, key, value):
+    def __setattr__(self, key: str, value: Any):
         """Позволяет устанавливать атрибуты self.session как у NetworkClient"""
         if key == "session":
             return super().__setattr__(key, value)
@@ -84,6 +84,6 @@ class NetworkClient(metaclass=Singleton):
             return self.session.__setattr__(key, value)
         return super().__setattr__(key, value)
 
-    def __getattr__(self, item):
+    def __getattr__(self, item: str):
         """Позволяет обращаться к self.session как к экземпляру NetworkClient"""
         return self.session.__getattribute__(item)

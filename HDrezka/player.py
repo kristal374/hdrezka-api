@@ -97,7 +97,7 @@ class Serial(Film):
                  episode_info_by_season: Dict[int, List[InfoByEpisode]],
                  subtitle_dict: Optional[Dict[str, str]] = None):
         super().__init__(metadata, url_dict, translators_dict, subtitle_dict)
-        self.episode_info_by_season = episode_info_by_season
+        self.episode_info_by_season: Dict[int, List] = episode_info_by_season
 
     def set_translate(self, translator_id: int):
         if translator_id not in self.translators_dict.values():
