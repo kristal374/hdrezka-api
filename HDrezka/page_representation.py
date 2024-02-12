@@ -61,6 +61,9 @@ class PosterExtendedInfo:
     def get(self) -> MovieDetails:
         return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
+    def __repr__(self):
+        return f"PosterExtendedInfo(\"{self.title}\")"
+
 
 class PosterExtendedInfoBuilder(PageRepresentation):
     def extract_content(self) -> PosterExtendedInfo:
@@ -153,7 +156,7 @@ class MovieCollection:
         return PosterBuilder(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
     def __repr__(self):
-        return f"CollectionFilm(\"{self.title}\")"
+        return f"MovieCollection(\"{self.title}\")"
 
 
 class PosterBuilder(PageRepresentation):

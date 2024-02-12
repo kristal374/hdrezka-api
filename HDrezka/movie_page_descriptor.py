@@ -83,8 +83,8 @@ class Episode:
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
     def __repr__(self):
-        name = self.original_title if not self.localize_title else self.localize_title
-        return f"<Episode({self.current_episode} - {name})>"
+        title = ' - ' + self.localize_title if isinstance(self.localize_title, str) else ''
+        return f"<Episode({self.current_episode}{title})>"
 
 
 class CustomString(str):
@@ -117,7 +117,7 @@ class InfoTable:
     cast: Optional[List[PersonBriefInfo]] = None  # В ролях
 
     def __repr__(self):
-        return "<PageInfo>"
+        return f"<InfoTable>"
 
 
 @dataclass
@@ -137,6 +137,9 @@ class MovieDetails:
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
     questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
     comment: CommentsIterator = None  # Комментарии к данному фильму
+
+    def __repr__(self):
+        return f"<MovieDetails({self.title})>"
 
 
 class InfoTableBuilder(PageRepresentation):

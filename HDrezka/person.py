@@ -65,6 +65,9 @@ class PersonExtendedInfo:
             raise PageNotFound("No correct URL was found for the request")
         return PersonBuilder(NetworkClient(self.url).text).extract_content()
 
+    def __repr__(self):
+        return f"<PersonExtendedInfo({self.name})>"
+
 
 class PersonExtendedInfoBuilder:
     def __init__(self, server_response: Dict[str, Union[str, int, None]]):
@@ -108,6 +111,9 @@ class Person:
     gallery: Optional[List[str]]  # Гелерия фото с этим человеком на сайте
     stats: Dict[str, List["Poster"]]  # Информация о должности и соответствующих ей фильмах
     url: str  # ссылка на основную страницу с информацией о человеке
+
+    def __repr__(self):
+        return f"<Person({self.name})>"
 
 
 class PersonBuilder(PageRepresentation):

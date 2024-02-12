@@ -30,6 +30,9 @@ class Question:
             raise PageNotFound("No correct URL was found for the request")
         return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
+    def __repr__(self):
+        return f"<Question({self.title})>"
+
 
 class QuestionsBuilder(PageRepresentation):
     def extract_content(self) -> Question:
@@ -83,6 +86,9 @@ class QuestionBriefInfo:
 
     def get(self):
         return QuestionsBuilder(NetworkClient().get(self.url).text).extract_content()
+
+    def __repr__(self):
+        return f"<QuestionBriefInfo({self.title})>"
 
 
 class QuestionsBriefInfoBuilder(PageRepresentation):

@@ -16,6 +16,9 @@ class Trailer:
     trailer_url = None
     url = None
 
+    def __repr__(self):
+        return f"<Question({self.title})>"
+
 
 class TrailerBuilder:
     def __init__(self, film_id):

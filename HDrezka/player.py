@@ -17,6 +17,9 @@ class InfoByEpisode:
     id: int
     title: str
 
+    def __repr__(self):
+        return f"InfoByEpisode(\"{self.title}\")"
+
 
 class Film:
     def __init__(self, metadata, url_dict, translators_dict: Dict[str, str],
