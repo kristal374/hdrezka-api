@@ -146,9 +146,11 @@ class Serial(Film):
             season_id = int(s["id"].split("-")[-1])
             episode_list = []
             for e in s.find_all("li"):
-                episode_list.append(InfoByEpisode(
-                    id=int(e["data-episode_id"]),
-                    title=re.search(r"(\d+(-\d+)?)", e.contents[0])[0])
+                episode_list.append(
+                    InfoByEpisode(
+                        id=int(e["data-episode_id"]),
+                        title=e.contents[0]
+                    )
                 )
                 seasons.setdefault(season_id, episode_list)
         return seasons
