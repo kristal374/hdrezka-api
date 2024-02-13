@@ -229,8 +229,8 @@ class PlayerBuilder(PageRepresentation):
     def get_all_translators(self, default_translator_id):
         voice_overs = {}
         for item in self.page.soup.find_all("li", class_="b-translator__item"):
-            # 376 is the translator ID of HDrezka Studio(ua)
-            title = item["title"].strip() + " (ua)" if item["data-translator_id"] == "376" else item["title"]
+            # 376 is the translator ID of "HDrezka Studio (ua)"
+            title = item["title"].strip() + " (ua)" if item["data-translator_id"] == "376" else item["title"].strip()
             voice_overs[title] = int(item["data-translator_id"])
 
         if not voice_overs:
