@@ -166,7 +166,7 @@ class PosterBuilder(PageRepresentation):
             poster = Poster()
             poster.id = int(item.get("data-id"))
             poster.title = item.find("div", class_="b-content__inline_item-link").find('a').text
-            poster.entity = item.find("i", class_="entity").next.strip()
+            poster.entity = item.find("i", class_="entity").next.text.strip() or None
             poster.rates = self.extract_rates(item)
             poster.info = self.extract_info(item)
             poster.year, poster.country, poster.genre = self.extract_misc(item)
