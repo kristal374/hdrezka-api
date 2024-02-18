@@ -1,6 +1,7 @@
 import json
 import urllib.parse
 from unittest import TestCase
+from datetime import datetime
 
 import bs4
 import requests_mock
@@ -8,6 +9,12 @@ import requests_mock
 from HDrezka.comments import CommentsIterator
 from HDrezka.exceptions import ServiceUnavailable
 from tests.mock_html.html_construcror import generate_comments_tree, generate_navigation_string
+
+
+def converter_into_json(value):
+    if not isinstance(value, datetime):
+        return value.__dict__
+    return value.__str__()
 
 
 class TestCommentsIterator(TestCase):
@@ -32,7 +39,7 @@ class TestCommentsIterator(TestCase):
         m.get('https://rezka.ag/ajax/get_comments/' + "?" + urllib.parse.urlencode(self.data),
               json=reference_data[0][1])
         server_response = self.iterator.get_page(1)
-        extracted_comment = json.loads(json.dumps(server_response, default=lambda x: x.__dict__))
+        extracted_comment = json.loads(json.dumps(server_response, default=converter_into_json))
         self.assertEqual(extracted_comment, reference_data[0][0])
 
     @requests_mock.Mocker()
@@ -57,7 +64,7 @@ class TestCommentsIterator(TestCase):
         m.get('https://rezka.ag/ajax/get_comments/' + "?" + urllib.parse.urlencode(self.data),
               json=reference_data[0][1])
         server_response = self.iterator._get(1)
-        extracted_comment = json.loads(json.dumps(server_response, default=lambda x: x.__dict__))
+        extracted_comment = json.loads(json.dumps(server_response, default=converter_into_json))
         self.assertEqual(extracted_comment, reference_data[0][1])
 
     @requests_mock.Mocker()
@@ -72,7 +79,7 @@ class TestCommentsIterator(TestCase):
         reference_data = generate_comments_tree()
         comments = bs4.BeautifulSoup(reference_data[0][1]["comments"], "lxml")
         comment_list = self.iterator.extreact_comments(comments)
-        extracted_comment = json.loads(json.dumps(comment_list, default=lambda x: x.__dict__))
+        extracted_comment = json.loads(json.dumps(comment_list, default=converter_into_json))
         self.assertEqual(extracted_comment, reference_data[0][0])
 
     @requests_mock.Mocker()
@@ -85,5 +92,5 @@ class TestCommentsIterator(TestCase):
 
         for page_number, comment in enumerate(self.iterator):
             for i, j in zip(comment, reference_data[page_number][0]):
-                extracted_comment, reference_comment = json.loads(json.dumps(i, default=lambda x: x.__dict__)), j
+                extracted_comment, reference_comment = json.loads(json.dumps(i, default=converter_into_json)), j
                 self.assertEqual(extracted_comment, reference_comment)

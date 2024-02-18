@@ -7,6 +7,7 @@ import bs4
 
 from HDrezka.connector import NetworkClient
 from HDrezka.exceptions import EmptyPage, ServiceUnavailable
+from HDrezka.utility import convert_string_into_datetime
 
 
 @dataclass
@@ -22,7 +23,7 @@ class User:
 class Comment:
     id: int = None  # идентификатор комментария
     author: User = None  # автор комментария
-    date: str = None  # дата и время когда был оставлен комментарий
+    timestamp: str = None  # дата и время когда был оставлен комментарий
     text: str = None  # текст комментария
     replies: List["Comment"] = None  # комментарии-ответы на данный комментарий
     likes_num: int = None  # количество отметок "нравиться"
@@ -38,10 +39,10 @@ class CommentsIterator:
             cls.connector = NetworkClient()
         return super().__new__(cls)
 
-    def __init__(self, film_id, type_page=0):
+    def __init__(self, film_id, page_type=0):
         self.film_id = film_id
+        self.page_type = page_type  # 0 - film page or 1 - question page
         self.page_number = 0
-        self.type_page = type_page  # 0 - film page or 1 - question page
         self.last_page = None
 
     def __iter__(self):
@@ -99,15 +100,26 @@ class CommentsIterator:
                 comment = Comment()
                 comment.id = int(comment_tree.get("data-id"))
                 comment.author = User()
-                comment.author.name = comment_tree.next.find("span", class_="name").text.strip()
-                comment.author.image = comment_tree.next.find("div", class_="ava").img.get("src").strip()
-                comment.date = comment_tree.next.find("span", class_="date").text.strip()[9:]
-                comment.text = self._extract_text(comment_tree.next.find("div", class_="text").next)
-                comment.replies = self.extreact_comments(comment_tree)
-                comment.likes_num = int(comment_tree.next.find("span", class_="b-comment__likes_count").i.text.strip())
-                comment.edit = bool(comment_tree.next.find("span", class_="edited"))
+                if comment_tree.next.get("class", [None])[0] == 'b-comment__removed':
+                    comment.author.name = "Администрация"
+                    comment.author.image = "https://static.hdrezka.ac/templates/hdrezka/images/avatar.png"
+                    comment.text = self._extract_text(comment_tree.find("div", class_="b-comment__removed"))
+                    comment.replies = self.extreact_comments(comment_tree)
+                else:
+                    comment.author.name = comment_tree.next.find("span", class_="name").text.strip()
+                    comment.author.image = comment_tree.next.find("div", class_="ava").img.get("src").strip()
+                    comment.timestamp = self._extract_timestamp(comment_tree)
+                    comment.text = self._extract_text(comment_tree.next.find("div", class_="text").next)
+                    comment.replies = self.extreact_comments(comment_tree)
+                    comment.likes_num = int(
+                        comment_tree.next.find("span", class_="b-comment__likes_count").i.text.strip())
+                    comment.edit = bool(comment_tree.next.find("span", class_="edited"))
                 result_lst.append(comment)
         return result_lst
+
+    @staticmethod
+    def _extract_timestamp(comment_tree):
+        return convert_string_into_datetime(comment_tree.next.find("span", class_="date").text.strip()[9:])
 
     def _extract_text(self, tag: bs4.element.Tag) -> str:
         result_string = ""
@@ -156,7 +168,7 @@ class CommentsIterator:
             "t": int(time.time() * 1000),
             "news_id": self.film_id,
             "cstart": self.page_number if page is None else page,
-            "type": self.type_page,
+            "type": self.page_type,
             "comment_id": 0,
             "skin": "hdrezka"
         }

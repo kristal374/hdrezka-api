@@ -2,6 +2,7 @@ import copy
 import json
 import os
 import re
+from datetime import datetime
 from typing import Union, List, Dict, Tuple, Any, Optional
 
 HTML_BASE = '<!DOCTYPE html><html lang="ru-RU"><head><meta charset="utf-8"/></head><body ' \
@@ -33,7 +34,7 @@ SAMPLE_COMMENT_ITEM = "<li id=\"comments-tree-item-{id}\" class=\"comments-tree-
                       "alt=\"{alt_name}\" />\r\n    </div>\r\n    <div class=\"message\">\r\n        <div " \
                       "class=\"info\">\r\n            <!-- <span class=\"b-comment__answers_ctrl\" data-show=" \
                       "\"1\">скрыть ответы</span> -->\r\n            {report}<span class=\"name\">{user_name}" \
-                      "</span>,\r\n            <span class=\"date\">{date}</span>{edited}\r\n            " \
+                      "</span>,\r\n            <span class=\"date\">{timestamp}</span>{edited}\r\n            " \
                       "<a class=\"share-link\" href=\"{url_postfix}\" data-id=\"{id}\">#</a>\r\n            " \
                       "\r\n        </div>\r\n        <div class=\"text\"><div id='comm-id-{id}'>{text}</div>" \
                       "</div>\r\n        <div class=\"actions\">\r\n            <ul class=\"edit\">" \
@@ -114,6 +115,13 @@ def generate_fake_html(reference_name: str) -> Tuple[List[Dict[str, Any]], str]:
     return copy.deepcopy(reference_data[reference_name]), generate_poster_html(reference_data[reference_name])
 
 
+def convert_datetime_into_string(datetime_string):
+    month_name = ("", "января", "февраля", "марта", "апреля", "мая", "июня", "июля",
+                  "августа", "сентября", "октября", "ноября", "декабря")
+    timestamp = datetime.strptime(datetime_string, "%Y-%m-%d %H:%M:%S")
+    return timestamp.strftime("%d {month} %Y %H:%M").format(month=month_name[timestamp.month])
+
+
 def prepare_comment_text(comment_text: str) -> str:
     def convert(pattern, new_pattern, text, fun=None):
         while re.search(pattern, text, flags=re.S):
@@ -141,7 +149,7 @@ def generate_comment(comments: List[Dict[str, Any]], indentation=0) -> str:
             "img_url": comment["author"]["image"],
             "alt_name": comment["author"]["name"] if comment["author"]["image"] != NO_AVATAR else "",
             "user_name": comment["author"]["name"],
-            "date": "оставлен " + comment["date"],
+            "timestamp": "оставлен " + convert_datetime_into_string(comment["timestamp"]),
             "url_postfix": "#comment" + str(comment["id"]),
             "text": prepare_comment_text(comment["text"]),
             "indentation": indentation,
