@@ -1,3 +1,4 @@
+from __future__ import annotations
 from io import IOBase
 from typing import Union, IO
 
@@ -26,5 +27,10 @@ class HTMLDocument:
 
 
 class PageRepresentation:
-    def __init__(self, html_content: Union[str, bytes, IO, Response, HTMLDocument, Tag]):
-        self.page = html_content if isinstance(html_content, HTMLDocument) else HTMLDocument(html_content)
+    def __init__(self, html_content: Union[str, bytes, IO, Response, PageRepresentation, HTMLDocument, Tag]):
+        if isinstance(html_content, HTMLDocument):
+            self.page = html_content
+        elif isinstance(html_content, PageRepresentation):
+            self.page = html_content.page
+        else:
+            self.page = HTMLDocument(html_content)
