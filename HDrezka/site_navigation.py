@@ -8,6 +8,7 @@ from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
 from HDrezka.page_representation import PosterBuilder, MovieCollectionBuilder
 from HDrezka.questions_asked import QuestionsBriefInfoBuilder
+from HDrezka.franchises import FranchisesBriefInfoBuilder
 
 
 class BaseSingleCategory(ABC):
