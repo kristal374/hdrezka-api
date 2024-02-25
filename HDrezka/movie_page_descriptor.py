@@ -233,9 +233,10 @@ class InfoTableBuilder(PageRepresentation):
                 person.film_id = int(person_obj.get("data-pid").strip())
                 person.name = person_obj.a.span.text.strip()
                 person.url = person_obj.a.get("href").strip()
-                person.img_url = person_obj.get("data-photo").strip()
-                person.img_url = person.img_url if person.img_url != "null" else None
-                person.job = person_obj.get("data-job").strip()
+                person.img_url = person_obj.get("data-photo", "null")
+                person.img_url = person.img_url.strip() if person.img_url != "null" else None
+                person.job = person_obj.get("data-job", "null")
+                person.job = person_obj.attrs.get("data-job").strip() if person.job != "null" else None
                 result_lst.append(person)
             else:
                 if item.text == "и другие":
