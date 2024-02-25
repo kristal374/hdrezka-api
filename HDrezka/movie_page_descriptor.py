@@ -261,9 +261,9 @@ class InfoTableBuilder(PageRepresentation):
 class MovieDetailsBuilder(PageRepresentation):
     def extract_content(self):
         page = MovieDetails()
-        page.id = int(re.search(r"/(\d*)-", self.page.soup.find('meta', property='og:video').get("content")).group(1))
+        page.id = int(re.search(r"/(\d*)-", self.page.soup.find('meta', property='og:url').get("content")).group(1))
         page.title = self.page.soup.find("div", class_="b-post__title").text.strip()
-        page.url = self.page.soup.find('meta', property='og:video').get("content").strip()
+        page.url = self.page.soup.find('meta', property='og:url').get("content").strip()
         page.original_name = self.extract_original_name()
         page.status = self.extract_status()
         page.image = self.page.soup.find("div", class_="b-sidecover").a.get("href")
