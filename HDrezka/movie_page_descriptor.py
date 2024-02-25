@@ -335,11 +335,13 @@ class MovieDetailsBuilder(PageRepresentation):
         for s in lst_seasons:
             for e in s.find_all("tr"):
                 try:
+                    original_title = e.find(class_="td-2").span.text.strip() or None
+                    localize_title = e.find(class_="td-2").b.text.strip() or None
                     episode = Episode()
                     episode.current_episode = e.find(class_="td-1").text.strip()
-                    episode.localize_title = e.find(class_="td-2").b.text.strip()
-                    episode.original_title = e.find(class_="td-2").span.text.strip()
-                    episode.release_date = e.find(class_="td-4").text.strip()
+                    episode.original_title = original_title if original_title else localize_title
+                    episode.localize_title = localize_title if original_title else None
+                    episode.release_date = e.find(class_="td-4").text.strip() or None
                     status = e.find(class_="td-5").text.strip()
                     episode.exists_episode = status if status not in ("&check;", "") else status == "&check;"
                     result_lst.append(episode)
