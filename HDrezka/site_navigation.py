@@ -231,3 +231,10 @@ class QuestionsAsked(BaseSingleCategory):
 
     def get(self):
         return QuestionsBriefInfoBuilder(super().get()).extract_content()
+
+
+class Franchises(BaseSingleCategory):
+    _name = "franchises"
+
+    def get(self):
+        return FranchisesBriefInfoBuilder(super().get()).extract_content()

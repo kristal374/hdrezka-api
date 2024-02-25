@@ -9,6 +9,7 @@ from urllib.parse import unquote
 from HDrezka import page_representation
 from HDrezka.comments import CommentsIterator
 from HDrezka.connector import NetworkClient
+from HDrezka.franchises import FranchisesBuilder
 from HDrezka.html_representation import PageRepresentation
 from HDrezka.person import PersonBriefInfo
 from HDrezka.player import PlayerBuilder, Serial, Film
@@ -18,6 +19,7 @@ from HDrezka.trailer import TrailerBuilder
 if TYPE_CHECKING:
     from HDrezka.page_representation import Poster
     from HDrezka.filters import Filters
+    from HDrezka.franchises import Franchise
 
 
 @dataclass
@@ -57,21 +59,6 @@ class CollectionBriefInfo:
 
     def __repr__(self):
         return f"<CollectionBriefInfo({self.title})>"
-
-
-@dataclass
-class PartContent:
-    num: int = None  # Номер фильма/сериала во франшизе
-    title: str = None  # Название фильма
-    year: str = None  # год выпуска фильма
-    rating: str = None  # рейтинг фильма
-    url: str = None  # ссылка на фильм
-
-    def get(self) -> MovieDetails:
-        return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
-
-    def __repr__(self):
-        return f"<PartContent({self.title})>"
 
 
 @dataclass
@@ -132,7 +119,8 @@ class MovieDetails:
     info_table: InfoTable = None  # Таблица с краткой информацией по фильму
     description: Optional[str] = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
-    part_content: Optional[List[PartContent]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
+    comments_count: Optional[int] = None
+    part_content: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
     questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
@@ -282,7 +270,8 @@ class MovieDetailsBuilder(PageRepresentation):
         page.info_table = InfoTableBuilder(self.page).extract_content()
         page.description = self.extract_description()
         page.player = PlayerBuilder(self.page).extract_content()
-        page.part_content = self.extract_part_content()
+        page.comments_count = self.extract_comments_count()
+        page.part_content = FranchisesBuilder(self.page).extract_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
         page.questions_asked = self.extract_questions()
@@ -329,23 +318,15 @@ class MovieDetailsBuilder(PageRepresentation):
         except AttributeError:
             return None
 
-    def extract_part_content(self) -> Optional[List[PartContent]]:
-        content = self.page.soup.find_all("div", class_="b-post__partcontent_item")
-        result_lst = []
-        for item in content:
-            p = PartContent()
-            p.num = int(item.find("div", class_="num").text.strip())
-            p.title = item.find("div", class_="title").text.strip()
-            url = item.find("div", class_="title").a
-            p.url = url.get("href") if url else self.page.soup.find('meta', property='og:video').get("content").strip()
-            p.year = item.find("div", class_="year").text.strip()
-            p.rating = item.find("div", class_="rating").text.strip()
-            result_lst.append(p)
-        return result_lst
-
     def extract_recommendations(self) -> List[Poster]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
         return page_representation.PosterBuilder(str(recommendations)).extract_content()
+
+    def extract_comments_count(self) -> Optional[int]:
+        comments_count = self.page.soup.find("button", id="comments-list-button").em
+        if comments_count is None:
+            return comments_count
+        return int(comments_count.string.strip())
 
     def extract_schedule_block(self) -> Optional[List[Episode]]:
         lst_seasons = self.page.soup.find_all("div", class_="b-post__schedule_list")
