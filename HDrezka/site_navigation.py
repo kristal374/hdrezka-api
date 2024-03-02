@@ -2,10 +2,9 @@ from abc import ABC, abstractmethod
 from typing import Optional, Union, Dict
 from urllib.parse import quote
 
-from requests import exceptions
-
 from HDrezka.connector import NetworkClient
 from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
+from HDrezka.html_representation import PageRepresentation
 from HDrezka.page_representation import PosterBuilder, MovieCollectionBuilder
 from HDrezka.questions_asked import QuestionsBriefInfoBuilder
 from HDrezka.franchises import FranchisesBriefInfoBuilder
@@ -20,40 +19,75 @@ class BaseSingleCategory(ABC):
         return super(BaseSingleCategory, cls).__new__(cls)
 
     def __init__(self):
-        self._path: Dict[str, Optional[Union[str, int]]] = {"genre": '', "page": ''}
+        self._path: Dict[str, Optional[Union[str, int]]] = {"genre": '', "page": None}
         self._modifier: Dict[str, Optional[str]] = {"filter": '', "display": ''}
+        self._last_page = None
+
+    @property
+    def current_page(self):
+        return self._path["page"] or 1
+
+    @current_page.setter
+    def current_page(self, value):
+        self.page(value)
+
+    @property
+    def last_page(self):
+        return self._last_page
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._path["page"] is None:
+            self._path["page"] = 0
+        self._path["page"] += 1
+        if self._last_page is not None and self._path["page"] > self.last_page:
+            raise StopIteration
+        return self.get()
 
     @abstractmethod
     def get(self):
-        try:
-            response = self.connector.get(str(self))
-        except exceptions.ConnectionError:
-            raise exceptions.ConnectionError(
-                f"Failed to establish a new connection. Max retries exceeded with url: {self}") from None
-        return response.text
+        response = PageRepresentation(self.connector.get(str(self)).text)
+        if self.last_page is None:
+            self._set_last_page_number(response)
+        return response.page
 
     def page(self, n: int):
         if isinstance(n, bool) or not isinstance(n, int) or n <= 0:
             if isinstance(n, str) and n.isdigit() and n != "0":
                 n = int(n)
             else:
-                raise AttributeError("Attribute \"n\" must be of type \"int\" and greater than 0")
+                raise AttributeError("Attribute \"n\" must be of type \"int\" and greater than 0. "
+                                     f"Received type \"{type(n).__name__}\", value: \"{n}\".")
         self._path["page"] = n
         return self
+
+    def _set_last_page_number(self, response):
+        navigation = response.page.soup.find("div", class_="b-navigation")
+        if not navigation:
+            self._last_page = 1
+        else:
+            next_page_element = navigation.find(class_="b-navigation__next")
+            if next_page_element:
+                self._last_page = int(next_page_element.parent.find_previous("a").string)
+            else:
+                self._last_page = int(navigation.find_all("span")[-1].text)
 
     def __str__(self):
         def separator(x, sep):
             return f"{x}{sep}" if x != '' and x is not None else ''
 
+        name = separator(self._name, "/")
         genre = separator(self._path.get("genre"), "/")
-        page = separator(self._path.get('page'), "/")
+        page = separator(self._path.get('page'), "/") if self._path.get('page') != 1 else ""
 
         filters = separator(self._modifier.get('filter'), "&")
         display = separator(self._modifier.get('display'), "&")
         options = f"{filters}{display}"[:-1:]
         options = f"?{options}" if len(options) > 0 and options[0] != "?" else options
 
-        return f"{self.connector.url}/{self._name}/{genre}{f'page/{page}' if page != '' else ''}{options}"
+        return f"{self.connector.url}/{name}{genre}{f'page/{page}' if page != '' else ''}{options}"
 
 
 class BaseCategory(BaseSingleCategory, ABC):
