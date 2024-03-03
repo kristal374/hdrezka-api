@@ -15,12 +15,12 @@ if TYPE_CHECKING:
 
 @dataclass
 class PersonBriefInfo:
+    name: str  # имя человека
     id: Optional[int] = None  # идентификатор человека
-    film_id: Optional[int] = None
-    name: str = None  # имя человека
+    film_id: Optional[int] = None  # идентификатор фильма
     url: Optional[str] = None  # ссылка на полную информацию о человеке
-    img_url: Optional[str] = None
-    job: Optional[str] = None
+    img_url: Optional[str] = None  # ссылка на изображение
+    job: Optional[str] = None  # роль в фильме
 
     def get(self) -> Person:
         if self.url is None:

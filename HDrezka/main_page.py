@@ -70,30 +70,29 @@ class HDrezka(BaseSingleCategory):
     def questions_asked() -> QuestionsAsked:
         return QuestionsAsked()
 
-    def get(self, url: str = None):
+    def get(self, url: Optional[str] = None):  # pylint: disable = R0911
         if url is not None:
             response = self.connector.get(url).text
             url_type = get_url_type(url)
             if url_type == URLsType.main:
                 return MainPageBuilder(response).extract_content()
-            elif url_type == URLsType.movie:
+            if url_type == URLsType.movie:
                 return movie_page_descriptor.MovieDetailsBuilder(response).extract_content()
-            elif url_type == URLsType.collections:
+            if url_type == URLsType.collections:
                 return page_representation.MovieCollectionBuilder(response).extract_content()
-            elif url_type == URLsType.qa_info:
+            if url_type == URLsType.qa_info:
                 return questions_asked.QuestionsBuilder(response).extract_content()
-            elif url_type == URLsType.qa:
+            if url_type == URLsType.qa:
                 return questions_asked.QuestionsBriefInfoBuilder(response).extract_content()
-            elif url_type == URLsType.franchises_info:
+            if url_type == URLsType.franchises_info:
                 return franchises.FranchisesBuilder(response).extract_content()
-            elif url_type == URLsType.franchises:
+            if url_type == URLsType.franchises:
                 return franchises.FranchisesBriefInfoBuilder(response).extract_content()
-            elif url_type == URLsType.person_info:
+            if url_type == URLsType.person_info:
                 return person.PersonBuilder(response).extract_content()
-            elif url_type == URLsType.poster:
+            if url_type == URLsType.poster:
                 return page_representation.PosterBuilder(response).extract_content()
-            else:
-                raise AttributeError("Incorrect url")
+            raise AttributeError("Incorrect url")
 
         if self.current_page == 1 and not any(self._modifier.values()):
             return MainPageBuilder(super().get()).extract_content()
@@ -135,7 +134,7 @@ class MainPage:
         return iter(self.posters)
 
     def __repr__(self):
-        return f"<MainPage>"
+        return "<MainPage>"
 
 
 class MainPageBuilder(html_representation.PageRepresentation):

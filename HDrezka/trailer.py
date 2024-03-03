@@ -8,13 +8,13 @@ from .exceptions import AJAXFail, ServiceUnavailable
 
 @dataclass
 class Trailer:
-    id = None
-    title = None
-    original_title = None
-    description: str = None
-    release_year = None
-    trailer_url = None
-    url = None
+    id: int  # Идентификатор фильма
+    title: str  # Название фильма
+    original_title: str  # Оригинальное название фильма
+    description: str  # Описание фильма
+    release_year: int  # Год выхода фильма
+    trailer_url: str  # Ссылка на трейлер
+    url: str  # Ссылка на фильм
 
     def __repr__(self):
         return f"<Question({self.title})>"
@@ -37,16 +37,21 @@ class TrailerBuilder:
         response = self._get_trailer()
         if not response["success"]:
             raise AJAXFail(response.get("message", "field \"success\" is False"))
-        content = Trailer()
-        content.id = int(self.id)
-        content.title = self._regular_search('(?<=&laquo;)[^(&raquo;)]*', response.get('title'))
-        content.original_title = self._regular_search('(?<=")[^",]*', response.get('title'))
-        content.release_year = self._regular_search('\\d\\d\\d\\d[^)]*', response.get('title'))
-        content.release_year = int(content.release_year) if content.release_year else None
-        content.description = response.get('description')
-        content.trailer_url = self._regular_search('(?<=src=")[^"]*', response.get('code'))
-        content.url = response.get('link')
-        return content
+        return Trailer(
+            id=int(self.id),
+            title=self._regular_search('(?<=&laquo;)[^(&raquo;)]*', response.get('title')),
+            original_title=self._regular_search('(?<=")[^",]*', response.get('title')),
+            release_year=self.extract_release_year(response),
+            description=response.get('description'),
+            trailer_url=self._regular_search('(?<=src=")[^"]*', response.get('code')),
+            url=response.get('link'),
+        )
+
+    def extract_release_year(self, response):
+        release_year = self._regular_search('\\d\\d\\d\\d[^)]*', response.get('title'))
+        if release_year is None:
+            return release_year
+        return int(release_year)
 
     @staticmethod
     def _regular_search(pattern, string):

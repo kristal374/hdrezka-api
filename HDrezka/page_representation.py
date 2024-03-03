@@ -119,11 +119,14 @@ class PosterExtendedInfoBuilder(PageRepresentation):
             if isinstance(item, str):
                 result_list.append(item)
                 continue
-            person = PersonBriefInfo()
-            person.id = int(item.get("data-id").strip())
-            person.name = item.a.span.text.strip()
-            person.url = item.a.get("href").strip()
-            result_list.append(person)
+            result_list.append(
+                PersonBriefInfo(
+                    id=int(item.get("data-id").strip()),
+                    film_id=int(item.get("data-pid").strip()),
+                    name=item.a.span.text.strip(),
+                    url=item.a.get("href").strip(),
+                )
+            )
         return result_list
 
     def extract_ratings(self) -> List[Rating]:

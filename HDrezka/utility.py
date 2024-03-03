@@ -82,7 +82,7 @@ def extract_date(datetime_string):
 
     if datetime_string == "сегодня":
         return datetime.now()
-    elif datetime_string == "вчера":
+    if datetime_string == "вчера":
         return datetime.now() - timedelta(days=1)
     return datetime(year=int(year), month=month, day=day)
 
@@ -90,6 +90,6 @@ def extract_date(datetime_string):
 def convert_string_into_datetime(datetime_string: str):
     if datetime_string is None or datetime_string == "":
         return None
-    elif re.search(r"(\d{2}:\d{2})", datetime_string):
+    if re.search(r"(\d{2}:\d{2})", datetime_string):
         return extract_datetime(datetime_string)
     return extract_date(datetime_string).date()

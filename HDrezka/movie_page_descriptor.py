@@ -65,8 +65,8 @@ class CollectionBriefInfo:
 @dataclass
 class Episode:
     current_episode: str = None  # Номер сезона и серии текущего эпизода
-    localize_title: str = None  # Локализированное название эпизода
-    original_title: str = None  # Название в оригинале
+    localize_title: Optional[str] = None  # Локализированное название эпизода
+    original_title: Optional[str] = None  # Название в оригинале
     release_date: Optional[str] = None  # Дата выхода эпизода
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
@@ -105,7 +105,7 @@ class InfoTable:
     cast: Optional[List[PersonBriefInfo]] = None  # В ролях
 
     def __repr__(self):
-        return f"<InfoTable>"
+        return "<InfoTable>"
 
 
 @dataclass
@@ -229,21 +229,26 @@ class InfoTableBuilder(PageRepresentation):
         for item in persons:
             person_obj = item.find("span", class_="person-name-item")
             if person_obj:
-                person = PersonBriefInfo()
-                person.id = int(person_obj.get("data-id").strip())
-                person.film_id = int(person_obj.get("data-pid").strip())
-                person.name = person_obj.a.span.text.strip()
-                person.url = person_obj.a.get("href").strip()
-                person.img_url = person_obj.get("data-photo", "null")
-                person.img_url = person.img_url.strip() if person.img_url != "null" else None
-                person.job = person_obj.get("data-job", "null")
-                person.job = person_obj.attrs.get("data-job").strip() if person.job != "null" else None
-                result_lst.append(person)
+                img_url = person_obj.get("data-photo", "null")
+                job = person_obj.get("data-job", "null")
+                result_lst.append(
+                    PersonBriefInfo(
+                        id=int(person_obj.get("data-id").strip()),
+                        film_id=int(person_obj.get("data-pid").strip()),
+                        name=person_obj.a.span.text.strip(),
+                        url=person_obj.a.get("href").strip(),
+                        img_url=img_url.strip() if img_url != "null" else None,
+                        job=person_obj.attrs.get("data-job").strip() if job != "null" else None
+                    )
+                )
             else:
                 if item.text == "и другие":
                     continue
-                person = PersonBriefInfo(name=item.text.replace(",", "").strip())
-                result_lst.append(person)
+                result_lst.append(
+                    PersonBriefInfo(
+                        name=item.text.replace(",", "").strip()
+                    )
+                )
         return result_lst
 
     @staticmethod
@@ -301,7 +306,7 @@ class MovieDetailsBuilder(PageRepresentation):
         trailer = self.page.soup.find("a", class_="b-sidelinks__link")
         if trailer is None:
             return trailer
-        return TrailerBuilder(int(trailer.get("data-id")))
+        return TrailerBuilder(film_id=int(trailer.get("data-id")))
 
     def extract_description(self) -> Optional[str]:
         description = self.page.soup.find("div", class_="b-post__description_text")

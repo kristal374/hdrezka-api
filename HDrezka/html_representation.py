@@ -13,7 +13,7 @@ class HTMLDocument:
         self.soup = BeautifulSoup(self.html, "lxml") if not isinstance(text, Tag) else text
 
     @staticmethod
-    def __extract_html(html: Union[str, bytes, IO, Response]) -> str:
+    def __extract_html(html: Union[str, bytes, IO, Response, Tag]) -> str:
         if isinstance(html, IOBase):
             html = html.read()
         if isinstance(html, Response):

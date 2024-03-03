@@ -37,12 +37,12 @@ class Film:
         self.update_inside_state()
         return self
 
-    def get_subtitle_url(self, code_lang: str = None) -> Optional[Union[dict, str]]:
+    def get_subtitle_url(self, code_lang: Optional[str] = None) -> Optional[Union[Dict[str, str], str]]:
         if code_lang is None or self.subtitle_dict is None:
             return self.subtitle_dict
         return self.subtitle_dict[code_lang]
 
-    def get_video_url(self, quality: str = None) -> Union[dict, str]:
+    def get_video_url(self, quality: Optional[str] = None) -> Union[Dict[str, str], str]:
         if quality is None:
             return self.url_dict
         return self.url_dict[quality]

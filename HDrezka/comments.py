@@ -27,7 +27,7 @@ class Comment:
     author: User = None  # автор комментария
     timestamp: str = None  # дата и время когда был оставлен комментарий
     text: str = None  # текст комментария
-    replies: List["Comment"] = None  # комментарии-ответы на данный комментарий
+    replies: List[Comment] = None  # комментарии-ответы на данный комментарий
     likes_num: int = None  # количество отметок "нравиться"
     edit: bool = None  # был ли комментарий отредактирован администрацией
 
