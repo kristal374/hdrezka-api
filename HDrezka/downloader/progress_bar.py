@@ -5,7 +5,7 @@ import math
 from collections import deque
 from typing import Dict, Union, List, Tuple, Optional
 
-from HDrezka.downloader import bufer
+from . import bufer
 
 
 class ProgressBar:

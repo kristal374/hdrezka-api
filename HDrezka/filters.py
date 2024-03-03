@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
-__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation', 'Filters', 'ShowCategory', 'convert_genres']
+__all__ = ['GenreFilm', 'GenreCartoons', 'GenreSeries', 'GenreAnimation',
+           'Filters', 'ShowCategory', 'convert_genres', "all_genres"]
 
 all_genres = {'военные': 'military',
               'семейные': 'family',

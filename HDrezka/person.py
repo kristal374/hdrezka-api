@@ -4,13 +4,13 @@ import re
 from dataclasses import dataclass
 from typing import Dict, Optional, List, TYPE_CHECKING, Union
 
-from HDrezka import page_representation
-from HDrezka.connector import NetworkClient
-from HDrezka.exceptions import ServiceUnavailable, PageNotFound
-from HDrezka.html_representation import PageRepresentation
+from . import page_representation
+from .connector import NetworkClient
+from .exceptions import ServiceUnavailable, PageNotFound
+from .html_representation import PageRepresentation
 
 if TYPE_CHECKING:
-    from HDrezka.page_representation import Poster
+    from .page_representation import Poster
 
 
 @dataclass

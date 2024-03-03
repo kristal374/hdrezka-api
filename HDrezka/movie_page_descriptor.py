@@ -6,20 +6,21 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
 from urllib.parse import unquote
 
-from HDrezka import page_representation
-from HDrezka.comments import CommentsIterator
-from HDrezka.connector import NetworkClient
-from HDrezka.franchises import FranchisesBuilder
-from HDrezka.html_representation import PageRepresentation
-from HDrezka.person import PersonBriefInfo
-from HDrezka.player import PlayerBuilder, Serial, Film
-from HDrezka.questions_asked import QuestionsBriefInfoBuilder, QuestionBriefInfo
-from HDrezka.trailer import TrailerBuilder
+from . import franchises
+from .comments import CommentsIterator
+from .connector import NetworkClient
+from .html_representation import PageRepresentation
+from .page_representation import PosterBuilder
+from .person import PersonBriefInfo
+from .player import PlayerBuilder, Serial, Film
+from .questions_asked import QuestionsBriefInfoBuilder
+from .trailer import TrailerBuilder
 
 if TYPE_CHECKING:
-    from HDrezka.page_representation import Poster
-    from HDrezka.filters import Filters
-    from HDrezka.franchises import Franchise
+    from .page_representation import Poster
+    from .filters import Filters
+    from .franchises import Franchise
+    from .questions_asked import QuestionBriefInfo
 
 
 @dataclass
@@ -40,7 +41,7 @@ class TopLists:
     url: str = None  # ссылка на подборку
 
     def get(self) -> List[Poster]:
-        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"<TopLists({self.title} - {self.place})>"
@@ -54,7 +55,7 @@ class CollectionBriefInfo:
 
     def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
         filter_param = f"?filter={custom_filter}" if custom_filter else ""
-        return page_representation.PosterBuilder(
+        return PosterBuilder(
             NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
     def __repr__(self):
@@ -84,7 +85,7 @@ class CustomString(str):
         return instance
 
     def get(self) -> List[Poster]:
-        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
 
 @dataclass
@@ -272,7 +273,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.description = self.extract_description()
         page.player = PlayerBuilder(self.page).extract_content()
         page.comments_count = self.extract_comments_count()
-        page.part_content = FranchisesBuilder(self.page).extract_content()
+        page.part_content = franchises.FranchisesBuilder(self.page).extract_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
         page.questions_asked = self.extract_questions()
@@ -321,7 +322,7 @@ class MovieDetailsBuilder(PageRepresentation):
 
     def extract_recommendations(self) -> List[Poster]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
-        return page_representation.PosterBuilder(str(recommendations)).extract_content()
+        return PosterBuilder(str(recommendations)).extract_content()
 
     def extract_comments_count(self) -> Optional[int]:
         comments_count = self.page.soup.find("button", id="comments-list-button").em

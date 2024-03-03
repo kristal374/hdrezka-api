@@ -7,9 +7,9 @@ from typing import Union, Optional, Dict, List
 
 from bs4 import BeautifulSoup
 
-from HDrezka import NetworkClient
-from HDrezka.html_representation import PageRepresentation
-from HDrezka.exceptions import AJAXFail
+from .connector import NetworkClient
+from .exceptions import AJAXFail
+from .html_representation import PageRepresentation
 
 
 @dataclass

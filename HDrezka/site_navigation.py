@@ -2,12 +2,12 @@ from abc import ABC, abstractmethod
 from typing import Optional, Union, Dict
 from urllib.parse import quote
 
-from HDrezka.connector import NetworkClient
-from HDrezka.filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
-from HDrezka.html_representation import PageRepresentation
-from HDrezka.page_representation import PosterBuilder, MovieCollectionBuilder
-from HDrezka.questions_asked import QuestionsBriefInfoBuilder
-from HDrezka.franchises import FranchisesBriefInfoBuilder
+from .connector import NetworkClient
+from .filters import Filters, GenreFilm, GenreCartoons, GenreAnimation, GenreSeries, ShowCategory
+from .franchises import FranchisesBriefInfoBuilder
+from .html_representation import PageRepresentation
+from .page_representation import PosterBuilder, MovieCollectionBuilder
+from .questions_asked import QuestionsBriefInfoBuilder
 
 
 class BaseSingleCategory(ABC):

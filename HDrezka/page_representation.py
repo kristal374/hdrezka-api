@@ -1,19 +1,23 @@
+from __future__ import annotations
+
 import re
 from dataclasses import dataclass
 from typing import Union, Optional, List, TYPE_CHECKING
 
 from bs4.element import NavigableString
 
-from HDrezka.connector import NetworkClient
-from HDrezka.exceptions import EmptyPage
-from HDrezka.filters import convert_genres
-from HDrezka.html_representation import PageRepresentation
-from HDrezka.movie_page_descriptor import MovieDetailsBuilder, Rating, CustomString, MovieDetails
-from HDrezka.person import PersonBriefInfo
-from HDrezka.trailer import TrailerBuilder
+from . import movie_page_descriptor
+from .connector import NetworkClient
+from .exceptions import EmptyPage
+from .filters import convert_genres
+from .html_representation import PageRepresentation
+from .person import PersonBriefInfo
+from .trailer import TrailerBuilder
 
 if TYPE_CHECKING:
-    from HDrezka.filters import Filters
+    from .filters import Filters
+    from .movie_page_descriptor import MovieDetails
+    from .movie_page_descriptor import CustomString, Rating
 
 __all__ = ["PosterBuilder", "MovieCollectionBuilder", "MovieCollection", "Poster"]
 
@@ -33,7 +37,7 @@ class Poster:
     url: str = None  # Ссылка на страницу фильма
 
     def get(self):
-        return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
+        return movie_page_descriptor.MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def quick_content(self):
         connector = NetworkClient()
@@ -59,7 +63,7 @@ class PosterExtendedInfo:
     url: str = None
 
     def get(self) -> MovieDetails:
-        return MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
+        return movie_page_descriptor.MovieDetailsBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"PosterExtendedInfo(\"{self.title}\")"
@@ -100,7 +104,7 @@ class PosterExtendedInfoBuilder(PageRepresentation):
         for item in genres.parent.find_all("a"):
             genre = item.text.strip()
             url = item.get("href")
-            result_string.append(CustomString(genre, url))
+            result_string.append(movie_page_descriptor.CustomString(genre, url))
         return result_string
 
     def extract_person(self, string) -> List[Union[PersonBriefInfo, str]]:
@@ -127,7 +131,7 @@ class PosterExtendedInfoBuilder(PageRepresentation):
         result_list = []
         if ratings:
             for item in ratings.find_all("span"):
-                rate = Rating()
+                rate = movie_page_descriptor.Rating()
                 rate.name = item.next.strip()[:-1]
                 rate.rates = float(item.find("b").text.strip())
                 rate.votes = int(item.find("i").text.strip()[1:-1].replace(" ", ""))
@@ -135,7 +139,7 @@ class PosterExtendedInfoBuilder(PageRepresentation):
 
         rating_rezka = self.page.soup.find('div', class_='b-content__bubble_rating')
         if rating_rezka:
-            rate = Rating()
+            rate = movie_page_descriptor.Rating()
             rate.name = 'HDrezka'
             rate.rates = float(rating_rezka.b.text.strip())
             rate.votes = int(re.search(r"\((.*?)\)", rating_rezka.text.strip()).group(1))

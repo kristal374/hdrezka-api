@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import re
 import time
 from dataclasses import dataclass
@@ -5,9 +7,9 @@ from typing import List
 
 import bs4
 
-from HDrezka.connector import NetworkClient
-from HDrezka.exceptions import EmptyPage, ServiceUnavailable
-from HDrezka.utility import convert_string_into_datetime
+from .connector import NetworkClient
+from .exceptions import EmptyPage, ServiceUnavailable
+from .utility import convert_string_into_datetime
 
 
 @dataclass

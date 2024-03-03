@@ -4,13 +4,14 @@ from typing import List, TYPE_CHECKING, Optional
 
 from bs4 import Tag
 
-from HDrezka import NetworkClient, page_representation
-from HDrezka.comments import CommentsIterator
-from HDrezka.exceptions import EmptyPage, PageNotFound
-from HDrezka.html_representation import PageRepresentation
+from .comments import CommentsIterator
+from .connector import NetworkClient
+from .exceptions import EmptyPage, PageNotFound
+from .html_representation import PageRepresentation
+from .page_representation import PosterBuilder
 
 if TYPE_CHECKING:
-    from HDrezka.page_representation import Poster
+    from .page_representation import Poster
 
 
 @dataclass
@@ -28,7 +29,7 @@ class Question:
     def get(self):
         if self.url is None:
             raise PageNotFound("No correct URL was found for the request")
-        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"<Question({self.title})>"
@@ -51,7 +52,7 @@ class QuestionsBuilder(PageRepresentation):
 
     def extract_recommendations(self) -> List["Poster"]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
-        return page_representation.PosterBuilder(str(recommendations)).extract_content()
+        return PosterBuilder(str(recommendations)).extract_content()
 
     def extract_image(self):
         image = self.page.soup.find("div", class_="b-qa__entity_text clearfix").find("img")

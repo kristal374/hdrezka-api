@@ -6,25 +6,25 @@ from datetime import datetime
 from typing import Optional, List, TYPE_CHECKING
 from urllib.parse import urlsplit, urljoin
 
-from HDrezka import html_representation, page_representation, movie_page_descriptor, questions_asked, person
-from HDrezka.connector import NetworkClient
-from HDrezka.filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons
-from HDrezka.site_navigation import Animation
-from HDrezka.site_navigation import Announce
-from HDrezka.site_navigation import BaseSingleCategory
-from HDrezka.site_navigation import Cartoons
-from HDrezka.site_navigation import Collections
-from HDrezka.site_navigation import Films
-from HDrezka.site_navigation import New
-from HDrezka.site_navigation import QuestionsAsked
-from HDrezka.site_navigation import Search
-from HDrezka.site_navigation import Series
-from HDrezka.utility import convert_string_into_datetime
-from HDrezka.utility import get_url_type, URLsType
-from HDrezka import franchises
+from . import franchises
+from . import html_representation, page_representation, movie_page_descriptor, questions_asked, person
+from .connector import NetworkClient
+from .filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons
+from .site_navigation import Animation
+from .site_navigation import Announce
+from .site_navigation import BaseSingleCategory
+from .site_navigation import Cartoons
+from .site_navigation import Collections
+from .site_navigation import Films
+from .site_navigation import New
+from .site_navigation import QuestionsAsked
+from .site_navigation import Search
+from .site_navigation import Series
+from .utility import convert_string_into_datetime
+from .utility import get_url_type, URLsType
 
 if TYPE_CHECKING:
-    from page_representation import Poster, MovieCollection
+    from .page_representation import Poster, MovieCollection
 
 __all__ = ["HDrezka", "MainPage"]
 

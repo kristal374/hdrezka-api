@@ -4,11 +4,12 @@ import re
 from dataclasses import dataclass
 from typing import List, TYPE_CHECKING
 
-from HDrezka import movie_page_descriptor, NetworkClient
-from HDrezka.html_representation import PageRepresentation
+from . import movie_page_descriptor
+from .connector import NetworkClient
+from .html_representation import PageRepresentation
 
 if TYPE_CHECKING:
-    from HDrezka.movie_page_descriptor import MovieDetails
+    from .movie_page_descriptor import MovieDetails
 
 
 @dataclass

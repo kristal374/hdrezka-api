@@ -2,8 +2,8 @@ import re
 from dataclasses import dataclass
 from typing import Union
 
-from HDrezka import NetworkClient
-from HDrezka.exceptions import AJAXFail, ServiceUnavailable
+from .connector import NetworkClient
+from .exceptions import AJAXFail, ServiceUnavailable
 
 
 @dataclass
