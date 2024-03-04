@@ -4,6 +4,7 @@ from HDrezka.__version__ import (
 )
 from . import comments
 from . import connector
+from . import core_navigation
 from . import filters
 from . import franchises
 from . import html_representation

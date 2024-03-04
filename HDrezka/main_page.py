@@ -3,21 +3,19 @@ from __future__ import annotations
 import dataclasses
 import re
 from datetime import datetime
-from typing import Optional, List, TYPE_CHECKING
+from typing import Optional, List, TYPE_CHECKING, Union
 from urllib.parse import urlsplit, urljoin
 
 from . import franchises
 from . import html_representation, page_representation, movie_page_descriptor, questions_asked, person
-from .connector import NetworkClient
-from .filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons
+from .core_navigation import BaseSiteNavigation, Query
+from .filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons, Filters, ShowCategory
 from .site_navigation import Animation
 from .site_navigation import Announce
-from .site_navigation import BaseSingleCategory
 from .site_navigation import Cartoons
 from .site_navigation import Collections
 from .site_navigation import Films
 from .site_navigation import New
-from .site_navigation import QuestionsAsked
 from .site_navigation import Search
 from .site_navigation import Series
 from .utility import convert_string_into_datetime
@@ -29,10 +27,12 @@ if TYPE_CHECKING:
 __all__ = ["HDrezka", "MainPage"]
 
 
-class HDrezka(BaseSingleCategory):
+class HDrezka(BaseSiteNavigation):
     def __init__(self, mirror="https://rezka.ag"):
         super().__init__()
-        self.connector = NetworkClient(domain=urlsplit(str(mirror))[1])
+        assert isinstance(mirror, str), "Attribute \"mirror\" must be of type \"str\"."
+        self._connector.domain = urlsplit(mirror)[1] or "rezka.ag"
+        self._query = Query()
 
     @staticmethod
     def films(genre: Optional[GenreFilm] = None) -> Films:
@@ -66,13 +66,17 @@ class HDrezka(BaseSingleCategory):
     def search(text: str) -> Search:
         return Search().query(text)
 
-    @staticmethod
-    def questions_asked() -> QuestionsAsked:
-        return QuestionsAsked()
+    def filter(self, pattern: Optional[Union[Filters, str]] = Filters.LAST):
+        self._query.filter(pattern)
+        return self
+
+    def show_only(self, pattern: Optional[Union[ShowCategory, int]] = ShowCategory.ALL):
+        self._query.show_only(pattern)
+        return self
 
     def get(self, url: Optional[str] = None):  # pylint: disable = R0911
         if url is not None:
-            response = self.connector.get(url).text
+            response = self._connector.get(url).text
             url_type = get_url_type(url)
             if url_type == URLsType.main:
                 return MainPageBuilder(response).extract_content()
@@ -93,8 +97,7 @@ class HDrezka(BaseSingleCategory):
             if url_type == URLsType.poster:
                 return page_representation.PosterBuilder(response).extract_content()
             raise AttributeError("Incorrect url")
-
-        if self.current_page == 1 and not any(self._modifier.values()):
+        if self.current_page == 1 and str(self._query) == "":
             return MainPageBuilder(super().get()).extract_content()
         return page_representation.PosterBuilder(super().get()).extract_content()
 
