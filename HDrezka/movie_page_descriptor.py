@@ -7,10 +7,10 @@ from typing import List, Optional, Union, TYPE_CHECKING
 from urllib.parse import unquote
 
 from . import franchises
+from . import page_representation
 from .comments import CommentsIterator
 from .connector import NetworkClient
 from .html_representation import PageRepresentation
-from .page_representation import PosterBuilder
 from .person import PersonBriefInfo
 from .player import PlayerBuilder, Serial, Film
 from .questions_asked import QuestionsBriefInfoBuilder
@@ -42,7 +42,7 @@ class TopLists:
     url: str = None  # ссылка на подборку
 
     def get(self) -> List[Poster]:
-        return PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"<TopLists({self.title} - {self.place})>"
@@ -56,7 +56,7 @@ class CollectionBriefInfo:
 
     def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
         filter_param = f"?filter={custom_filter}" if custom_filter else ""
-        return PosterBuilder(
+        return page_representation.PosterBuilder(
             NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
     def __repr__(self):
@@ -86,7 +86,7 @@ class CustomString(str):
         return instance
 
     def get(self) -> List[Poster]:
-        return PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
 
 @dataclass
@@ -328,7 +328,7 @@ class MovieDetailsBuilder(PageRepresentation):
 
     def extract_recommendations(self) -> List[Poster]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
-        return PosterBuilder(str(recommendations)).extract_content()
+        return page_representation.PosterBuilder(str(recommendations)).extract_content()
 
     def extract_comments_count(self) -> Optional[int]:
         comments_count = self.page.soup.find("button", id="comments-list-button").em
