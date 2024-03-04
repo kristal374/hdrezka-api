@@ -15,6 +15,7 @@ from .person import PersonBriefInfo
 from .player import PlayerBuilder, Serial, Film
 from .questions_asked import QuestionsBriefInfoBuilder
 from .trailer import TrailerBuilder
+from .utility import convert_string_into_datetime
 
 if TYPE_CHECKING:
     from .page_representation import Poster
@@ -347,7 +348,7 @@ class MovieDetailsBuilder(PageRepresentation):
                     episode.current_episode = e.find(class_="td-1").text.strip()
                     episode.original_title = original_title if original_title else localize_title
                     episode.localize_title = localize_title if original_title else None
-                    episode.release_date = e.find(class_="td-4").text.strip() or None
+                    episode.release_date = convert_string_into_datetime(e.find(class_="td-4").text.strip()) or None
                     status = e.find(class_="td-5").text.strip()
                     episode.exists_episode = status if status not in ("&check;", "") else status == "&check;"
                     result_lst.append(episode)
