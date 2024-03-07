@@ -16,3 +16,7 @@ class PageNotFound(HDRezkaError):
 
 class ServiceUnavailable(HDRezkaError):
     """Service is temporarily unavailable"""
+
+
+class LoadingError(HDRezkaError):
+    """The server response status code is not within the range of 200"""
