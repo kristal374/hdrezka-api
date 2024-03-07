@@ -8,6 +8,7 @@ from typing import Union, Optional, Dict, List
 from bs4 import BeautifulSoup
 
 from .connector import NetworkClient
+from .downloader import media_loader
 from .exceptions import AJAXFail
 from .html_representation import PageRepresentation
 
@@ -91,16 +92,22 @@ class Film:
             raise AJAXFail(response.get("message", "field \"success\" is False"))
         return response
 
+    def load_video(self, file_name, quality="1080p", create_dump_file=False, chunk_size=2 ** 10 * 512):
+        media_loader.load_from_player(self, file_name, quality, create_dump_file, chunk_size)
+
     def __repr__(self):
         return f"<{Film.__name__}(id=\"{self.metadata['id']}\")>"
 
 
 class Serial(Film):
-    def __init__(self, metadata, url_dict, translators_dict: Dict[str, str],
+    def __init__(self,
+                 metadata,
+                 url_dict,
+                 translators_dict: Dict[str, str],
                  episode_info_by_season: Dict[int, List[InfoByEpisode]],
                  subtitle_dict: Optional[Dict[str, str]] = None):
         super().__init__(metadata, url_dict, translators_dict, subtitle_dict)
-        self.episode_info_by_season: Dict[int, List] = episode_info_by_season
+        self.episode_info_by_season = episode_info_by_season
 
     def set_translate(self, translator_id: int):
         if translator_id not in self.translators_dict.values():
@@ -152,7 +159,7 @@ class Serial(Film):
                         title=e.contents[0]
                     )
                 )
-                seasons.setdefault(season_id, episode_list)
+            seasons.setdefault(season_id, episode_list)
         return seasons
 
     def update_inside_state(self):
@@ -167,6 +174,16 @@ class Serial(Film):
         self.subtitle_dict = self.extract_subtitle_urls(response)
         soup = BeautifulSoup(response["episodes"], "lxml")
         self.episode_info_by_season = self.extract_episode_info_by_season(soup)
+
+    def load_all_series(self, file_name, quality="1080p", create_dump_file=False, chunk_size=2 ** 10 * 512):
+        for season in self.episode_info_by_season:
+            self.set_season(season)
+            for episode in self.episode_info_by_season[season]:
+                self.set_episode(episode.id)
+                postfix = f"_T{self.metadata['translator_id']}_S{season}_E{episode.id}"
+                full_path = file_name.format(postfix)
+                print(f"Load start file: {full_path}")
+                media_loader.load_from_player(self, full_path, quality, create_dump_file, chunk_size)
 
     def __repr__(self):
         return f"<{Serial.__name__}(id=\"{self.metadata['id']}\")>"
