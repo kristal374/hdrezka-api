@@ -15,7 +15,7 @@ class ProgressBar:
 
     def __init__(self,
                  length_data: int,
-                 chunk_size: int = 2 ** 10 * 10,
+                 chunk_size: int = 2 ** 10 * 512,
                  unit: Optional[str] = None,
                  length_bar: int = 30,
                  processed_chunks_count: int = 0,
@@ -104,7 +104,7 @@ class ProgressBar:
         units_list = {'B': 1 << 0, 'KB': 1 << 10, 'MB': 1 << 20, 'GB': 1 << 30, 'TB': 1 << 40,
                       'PB': 1 << 50, 'EB': 1 << 60, 'ZB': 1 << 70, 'YB': 1 << 80}
         if custom_unit is not None:
-            return round(value / units_list[custom_unit], 2), custom_unit
+            return round(value / units_list[custom_unit.upper()], 2), custom_unit
         for unit in list(units_list.keys())[::-1]:
             size = units_list[unit]
             if value >= size:
@@ -115,9 +115,9 @@ class ProgressBar:
         return self
 
     def __exit__(self, exc_type, exc_value, traceback) -> None:
+        self._buffer.close()
         print()
 
     def __del__(self) -> None:
-        self._buffer.close()
         if self._processed_chunks_count != self._chunks_count:
             raise BufferError("The process was not completed!")
