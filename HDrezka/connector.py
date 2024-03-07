@@ -52,10 +52,14 @@ class RequestConnector(Connector):
         super().__init__(domain, user_agent, proxies)
 
     def get(self, url: Union[str, bytes], **kwargs: Any) -> Response:
-        return requests.get(url, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
+        timeout = 15 if kwargs.get("timeout") is None else kwargs.pop("timeout")
+        headers = self.get_headers(url) if kwargs.get("headers") is None else kwargs.pop("headers")
+        return requests.get(url, headers=headers, proxies=self.proxies, **kwargs, timeout=timeout)
 
     def post(self, url: Union[str, bytes], **kwargs: Any) -> Response:
-        return requests.post(url, headers=self.get_headers(url), proxies=self.proxies, **kwargs, timeout=15)
+        timeout = 15 if kwargs.get("timeout") is None else kwargs.pop("timeout")
+        headers = self.get_headers(url) if kwargs.get("headers") is None else kwargs.pop("headers")
+        return requests.post(url, headers=headers, proxies=self.proxies, **kwargs, timeout=timeout)
 
 
 class SessionConnector(requests.sessions.Session, Connector):
