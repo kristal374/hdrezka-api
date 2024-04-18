@@ -7,6 +7,7 @@ from typing import Union, Optional, List, TYPE_CHECKING
 from bs4.element import NavigableString
 
 from . import movie_page_descriptor
+from . import person
 from .connector import NetworkClient
 from .exceptions import EmptyPage
 from .filters import convert_genres
@@ -15,11 +16,10 @@ from .person import PersonBriefInfo
 from .trailer import TrailerBuilder
 
 if TYPE_CHECKING:
-    from .filters import Filters
     from .movie_page_descriptor import MovieDetails
     from .movie_page_descriptor import CustomString, Rating
 
-__all__ = ["PosterBuilder", "MovieCollectionBuilder", "MovieCollection", "Poster"]
+__all__ = ["PosterBuilder", "Poster"]
 
 
 @dataclass
@@ -108,25 +108,25 @@ class PosterExtendedInfoBuilder(PageRepresentation):
         return result_string
 
     def extract_person(self, string) -> List[Union[PersonBriefInfo, str]]:
-        person = self.page.soup.find('span', string=string).parent
-        process_person = list(filter(lambda x: str(x) not in ("\n", " ", "", ", ", ",", " и "), person))
+        person_obj = self.page.soup.find('span', string=string).parent
+        process_person = list(filter(lambda x: str(x) not in ("\n", " ", "", ", ", ",", " и "), person_obj))
         if isinstance(process_person[1], NavigableString):
             iterable_obj = re.split(', | и ', process_person[1].strip())
         else:
             iterable_obj = process_person[1:]
-        result_list = []
+        result_list: List[Union[PersonBriefInfo, str]] = []
         for item in iterable_obj:
-            if isinstance(item, str):
-                result_list.append(item)
-                continue
-            result_list.append(
-                PersonBriefInfo(
-                    id=int(item.get("data-id").strip()),
-                    film_id=int(item.get("data-pid").strip()),
-                    name=item.a.span.text.strip(),
-                    url=item.a.get("href").strip(),
+            if not isinstance(item, str):
+                result_list.append(
+                    person.PersonBriefInfo(
+                        id=int(item.get("data-id").strip()),
+                        film_id=int(item.get("data-pid").strip()),
+                        name=item.a.span.text.strip(),
+                        url=item.a.get("href").strip(),
+                    )
                 )
-            )
+            else:
+                result_list.append(item)
         return result_list
 
     def extract_ratings(self) -> List[Rating]:
@@ -148,22 +148,6 @@ class PosterExtendedInfoBuilder(PageRepresentation):
             rate.votes = int(re.search(r"\((.*?)\)", rating_rezka.text.strip()).group(1))
             result_list.append(rate)
         return result_list
-
-
-@dataclass
-class MovieCollection:
-    id: int = None  # ID коллекции
-    title: str = None  # Названия коллекции
-    amount_film: Optional[int] = None  # Количество фильмов в коллекции
-    img_url: str = None  # Ссылка на обложку коллекции
-    url: str = None  # Ссылка на страницу коллекции
-
-    def get(self, custom_filter: Optional[Union["Filters", str]] = None) -> List["Poster"]:
-        filter_param = f"?filter={custom_filter}" if custom_filter else ""
-        return PosterBuilder(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
-
-    def __repr__(self):
-        return f"MovieCollection(\"{self.title}\")"
 
 
 class PosterBuilder(PageRepresentation):
@@ -216,21 +200,3 @@ class PosterBuilder(PageRepresentation):
         if convert_genres(misc[1]):
             return misc[0:1] + misc[:0:-1]
         return misc
-
-
-class MovieCollectionBuilder(PageRepresentation):
-    def extract_content(self):
-        collection_info = []
-        for item in self.page.soup.find_all('div', class_="b-content__collections_item"):
-            collection = MovieCollection()
-            collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0))
-            collection.title = item.find("a", class_="title").text
-            collection.amount_film = int(item.find("div", class_="num").text)
-            collection.img_url = item.find("img").get("src")
-            collection.url = item.get("data-url")
-
-            collection_info.append(collection)
-
-        if not collection_info:
-            raise EmptyPage("No Collections found on the page")
-        return collection_info

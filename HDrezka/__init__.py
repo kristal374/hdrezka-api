@@ -5,12 +5,14 @@ from HDrezka.__version__ import (
 from . import comments
 from . import connector
 from . import core_navigation
+from . import downloader
 from . import filters
 from . import franchises
 from . import html_representation
 from . import main_page
+from . import movie_collections
 from . import movie_page_descriptor
-from . import page_representation
+from . import movie_posters
 from . import person
 from . import player
 from . import questions_asked

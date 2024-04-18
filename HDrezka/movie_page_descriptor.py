@@ -7,7 +7,8 @@ from typing import List, Optional, Union, TYPE_CHECKING
 from urllib.parse import unquote
 
 from . import franchises
-from . import page_representation
+from . import movie_collections
+from . import movie_posters
 from .comments import CommentsIterator
 from .connector import NetworkClient
 from .html_representation import PageRepresentation
@@ -18,10 +19,10 @@ from .trailer import TrailerBuilder
 from .utility import convert_string_into_datetime
 
 if TYPE_CHECKING:
-    from .page_representation import Poster
-    from .filters import Filters
+    from .movie_posters import Poster
     from .franchises import Franchise
     from .questions_asked import QuestionBriefInfo
+    from .movie_collections import CollectionBriefInfo
 
 
 @dataclass
@@ -42,25 +43,10 @@ class TopLists:
     url: str = None  # ссылка на подборку
 
     def get(self) -> List[Poster]:
-        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return movie_posters.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
     def __repr__(self):
         return f"<TopLists({self.title} - {self.place})>"
-
-
-@dataclass
-class CollectionBriefInfo:
-    id: int = None  # идентификатор коллекции
-    title: str = None  # название коллекции
-    url: str = None  # ссылка на коллекцию
-
-    def get(self, custom_filter: Optional[Union[Filters, str]] = None) -> List[Poster]:
-        filter_param = f"?filter={custom_filter}" if custom_filter else ""
-        return page_representation.PosterBuilder(
-            NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
-
-    def __repr__(self):
-        return f"<CollectionBriefInfo({self.title})>"
 
 
 @dataclass
@@ -86,12 +72,12 @@ class CustomString(str):
         return instance
 
     def get(self) -> List[Poster]:
-        return page_representation.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
+        return movie_posters.PosterBuilder(NetworkClient().get(self.url).text).extract_content()
 
 
 @dataclass
 class InfoTable:
-    rates: Optional[List[Rating]] = field(default_factory=list)  # Рейтинг
+    rates: List[Optional[Rating]] = field(default_factory=list)  # Рейтинг
     on_the_lists: Optional[List[TopLists]] = None  # Входит в списки
     tagline: Optional[str] = None  # Слоган фильма
     release: CustomString = None  # Дата выхода
@@ -257,7 +243,7 @@ class InfoTableBuilder(PageRepresentation):
         result_lst = []
         collections = data.find_all("a")
         for c in collections:
-            collection = CollectionBriefInfo()
+            collection = movie_collections.CollectionBriefInfo()
             collection.id = int(re.search(r"/(\d+)-", c.get("href")).group(1))
             collection.title = c.text.strip()
             collection.url = c.get("href").strip()
@@ -328,7 +314,7 @@ class MovieDetailsBuilder(PageRepresentation):
 
     def extract_recommendations(self) -> List[Poster]:
         recommendations = self.page.soup.find("div", class_="b-sidelist")
-        return page_representation.PosterBuilder(str(recommendations)).extract_content()
+        return movie_posters.PosterBuilder(str(recommendations)).extract_content()
 
     def extract_comments_count(self) -> Optional[int]:
         comments_count = self.page.soup.find("button", id="comments-list-button").em

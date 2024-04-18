@@ -4,13 +4,13 @@ import re
 from dataclasses import dataclass
 from typing import Dict, Optional, List, TYPE_CHECKING, Union
 
-from . import page_representation
+from . import movie_posters
 from .connector import NetworkClient
 from .exceptions import ServiceUnavailable, PageNotFound
 from .html_representation import PageRepresentation
 
 if TYPE_CHECKING:
-    from .page_representation import Poster
+    from .movie_posters import Poster
 
 
 @dataclass
@@ -157,7 +157,7 @@ class PersonBuilder(PageRepresentation):
         result = {}
         all_careers = self.page.soup.find_all("div", class_="b-person__career")
         for item in all_careers:
-            result[item.find("h2").text.strip().lower()] = page_representation.PosterBuilder(item).extract_content()
+            result[item.find("h2").text.strip().lower()] = movie_posters.PosterBuilder(item).extract_content()
         return result
 
     def extract_infotable(self):
