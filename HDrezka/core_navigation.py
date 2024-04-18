@@ -1,13 +1,16 @@
-from abc import ABC, abstractmethod
-from typing import Optional, Union
+from __future__ import annotations
 
-from . import html_representation
+from abc import ABC, abstractmethod
+from typing import Optional, Union, TypeVar, Generic
+
 from .connector import NetworkClient
 from .filters import Filters, ShowCategory, GenreFilm, GenreSeries, GenreCartoons, GenreAnimation
-from .page_representation import PosterBuilder
+from .html_representation import PageRepresentation
+
+IteratorResponse = TypeVar('IteratorResponse')
 
 
-class PageIterator(ABC):
+class PageIterator(ABC, Generic[IteratorResponse]):
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, "_connector"):
             cls._connector = NetworkClient()
@@ -61,7 +64,7 @@ class PageIterator(ABC):
     def __iter__(self):
         return self
 
-    def __next__(self):
+    def __next__(self) -> IteratorResponse:
         if self._last_page is not None and self.current_page > self.last_page:
             raise StopIteration
         result = self.get()
@@ -69,7 +72,7 @@ class PageIterator(ABC):
         return result
 
     @abstractmethod
-    def get(self):
+    def get(self) -> IteratorResponse:
         ...
 
     def __str__(self):
@@ -170,42 +173,16 @@ class Country:
         return f"country/{self._country}/" if self._country is not None else ""
 
 
-class BaseSiteNavigation(PageIterator):
+class BaseSiteNavigation(PageIterator[IteratorResponse]):
     _name: Optional[str] = None
 
     @abstractmethod
     def get(self):
-        response = html_representation.PageRepresentation(self._connector.get(str(self)).text)
-        if self.last_page is None:
-            self.current_page = self._get_last_page_number(response)
+        response = PageRepresentation(self._connector.get(str(self)).text)
+        if self.last_page == 1:
+            self.last_page = self._get_last_page_number(response)
         return response.page
 
     def __str__(self):
         name = f"{self._name}/" if self._name else ""
         return f"{self._connector.url}/{name}{PageIterator.__str__(self)}"
-
-
-class BaseFilmCategory(BaseSiteNavigation, ABC):
-    def __init__(self):
-        super().__init__()
-        self._genre = Genre()
-        self._query = Query()
-
-    @abstractmethod
-    def selected_category(self, genre: Optional[str]):
-        self._genre.genre = genre
-        return self
-
-    def filter(self, pattern: Optional[Union[Filters, str]] = Filters.LAST):
-        self._query.filter(pattern)
-        return self
-
-    @abstractmethod
-    def find_best(self): ...
-
-    def get(self):
-        return PosterBuilder(super().get()).extract_content()
-
-    def __str__(self):
-        name = f"{self._name}/" if self._name else ""
-        return f"{self._connector.url}/{name}{self._genre}{PageIterator.__str__(self)}{self._query}"

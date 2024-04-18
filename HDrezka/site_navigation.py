@@ -1,14 +1,50 @@
-from typing import Optional, Union
+from __future__ import annotations
+
+from abc import abstractmethod, ABC
+from typing import Optional, Union, List
 from urllib.parse import quote_plus
 
-from .core_navigation import PageIterator, Genre, Year, Query, BaseSiteNavigation, BaseFilmCategory
+from .core_navigation import PageIterator, Genre, Year, Query, BaseSiteNavigation
 from .filters import Filters, ShowCategory, GenreAnimation, GenreFilm, GenreCartoons, GenreSeries
-from .franchises import FranchisesBriefInfoBuilder
-from .page_representation import PosterBuilder, MovieCollectionBuilder
-from .questions_asked import QuestionsBriefInfoBuilder
+from .franchises import FranchisesExtendedInfoBuilder, FranchiseExtendedInfo
+from .movie_collections import MovieCollectionBuilder, MovieCollection
+from .movie_posters import PosterBuilder, Poster
+from .questions_asked import QuestionsBriefInfoBuilder, QuestionBriefInfo
 
 
-class Best(BaseSiteNavigation):
+class BaseMovieCategory(BaseSiteNavigation[List[Poster]], ABC):
+    """
+    :class: BaseMovieCategory
+
+    This class represents a base movie category for site navigation and search.
+    """
+
+    def __init__(self):
+        super().__init__()
+        self._genre = Genre()
+        self._query = Query()
+
+    @abstractmethod
+    def selected_category(self, genre: Optional[str]):
+        self._genre.genre = genre
+        return self
+
+    def filter(self, pattern: Optional[Union[Filters, str]] = Filters.LAST):
+        self._query.filter(pattern)
+        return self
+
+    @abstractmethod
+    def find_best(self): ...
+
+    def get(self) -> List[Poster]:
+        return PosterBuilder(super().get()).extract_content()
+
+    def __str__(self):
+        name = f"{self._name}/" if self._name else ""
+        return f"{self._connector.url}/{name}{self._genre}{PageIterator.__str__(self)}{self._query}"
+
+
+class Best(BaseSiteNavigation[List[Poster]]):
     _name = "best"
 
     def __init__(self, name: str):
@@ -27,7 +63,7 @@ class Best(BaseSiteNavigation):
         self._year.year = year
         return self
 
-    def get(self):
+    def get(self) -> List[Poster]:
         return PosterBuilder(super().get()).extract_content()
 
     def __str__(self):
@@ -35,7 +71,7 @@ class Best(BaseSiteNavigation):
         return f"{self._connector.url}/{self._category_name}/{self._name}/{self._genre}{self._year}{page}"
 
 
-class Films(BaseFilmCategory):
+class Films(BaseMovieCategory):
     _name = "films"
 
     def selected_category(self, genre: Optional[Union[GenreFilm, str]]):
@@ -45,7 +81,7 @@ class Films(BaseFilmCategory):
         return Best(self._name).select(genre=genre, year=year)
 
 
-class Cartoons(BaseFilmCategory):
+class Cartoons(BaseMovieCategory):
     _name = "cartoons"
 
     def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):
@@ -55,7 +91,7 @@ class Cartoons(BaseFilmCategory):
         return Best(self._name).select(genre=genre, year=year)
 
 
-class Series(BaseFilmCategory):
+class Series(BaseMovieCategory):
     _name = "series"
 
     def selected_category(self, genre: Optional[Union[GenreSeries, str]]):
@@ -65,7 +101,7 @@ class Series(BaseFilmCategory):
         return Best(self._name).select(genre=genre, year=year)
 
 
-class Animation(BaseFilmCategory):
+class Animation(BaseMovieCategory):
     _name = "animation"
 
     def selected_category(self, genre: Optional[Union[GenreAnimation, str]]):
@@ -75,7 +111,7 @@ class Animation(BaseFilmCategory):
         return Best(self._name).select(genre=genre, year=year)
 
 
-class New(BaseSiteNavigation):
+class New(BaseSiteNavigation[List[Poster]]):
     _name = "new"
 
     def __init__(self):
@@ -90,28 +126,28 @@ class New(BaseSiteNavigation):
         self._query.show_only(pattern)
         return self
 
-    def get(self):
+    def get(self) -> List[Poster]:
         return PosterBuilder(super().get()).extract_content()
 
     def __str__(self):
         return f"{super().__str__()}{self._query}"
 
 
-class Announce(BaseSiteNavigation):
+class Announce(BaseSiteNavigation[List[Poster]]):
     _name = "announce"
 
-    def get(self):
+    def get(self) -> List[Poster]:
         return PosterBuilder(super().get()).extract_content()
 
 
-class Collections(BaseSiteNavigation):
+class Collections(BaseSiteNavigation[List[MovieCollection]]):
     _name = "collections"
 
-    def get(self):
+    def get(self) -> List[MovieCollection]:
         return MovieCollectionBuilder(super().get()).extract_content()
 
 
-class Search(BaseSiteNavigation):
+class Search(BaseSiteNavigation[List[Poster]]):
     _name = "search"
 
     def __init__(self):
@@ -125,7 +161,7 @@ class Search(BaseSiteNavigation):
         self._search_text = f"?do=search&subaction=search&q={process_text}"
         return self
 
-    def get(self):
+    def get(self) -> List[Poster]:
         return PosterBuilder(super().get()).extract_content()
 
     def __str__(self):
@@ -134,15 +170,15 @@ class Search(BaseSiteNavigation):
         return f"{self._connector.url}/{self._name}/{text}{page}"
 
 
-class QuestionsAsked(BaseSiteNavigation):
+class QuestionsAsked(BaseSiteNavigation[List[QuestionBriefInfo]]):
     _name = "qa"
 
-    def get(self):
+    def get(self) -> List[QuestionBriefInfo]:
         return QuestionsBriefInfoBuilder(super().get()).extract_content()
 
 
-class Franchises(BaseSiteNavigation):
+class Franchises(BaseSiteNavigation[List[FranchiseExtendedInfo]]):
     _name = "franchises"
 
-    def get(self):
-        return FranchisesBriefInfoBuilder(super().get()).extract_content()
+    def get(self) -> List[FranchiseExtendedInfo]:
+        return FranchisesExtendedInfoBuilder(super().get()).extract_content()
