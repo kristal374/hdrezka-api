@@ -3,12 +3,13 @@ from __future__ import annotations
 import re
 import time
 from dataclasses import dataclass
-from typing import List
+from typing import List, Optional
 
 import bs4
 
-from .connector import NetworkClient
+from .core_navigation import PageIterator
 from .exceptions import EmptyPage, ServiceUnavailable
+from .html_representation import PageRepresentation
 from .utility import convert_string_into_datetime
 
 
@@ -35,42 +36,24 @@ class Comment:
         return f"Comment({self.author.name})"
 
 
-class CommentsIterator:
-    def __new__(cls, *args, **kwargs):  # pylint: disable= W0613
-        if not hasattr(cls, "connector"):
-            cls.connector = NetworkClient()
-        return super().__new__(cls)
-
+class CommentsIterator(PageIterator[List[Comment]]):
     def __init__(self, film_id, page_type=0):
+        super().__init__()
         self.film_id = film_id
         self.page_type = page_type  # 0 - film page or 1 - question page
-        self.page_number = 0
-        self.last_page = None
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        self.page_number += 1
-        try:
-            list_comments = self.get_page(self.page_number)
-        except EmptyPage:
-            self.page_number = 0
-            raise StopIteration  # pylint: disable= W0707
-        return list_comments
 
     def __count_elements(self, data):
         return sum(self.__count_elements(item.replies) for item in data) + 1
 
-    def get_page(self, number=1):
-        if self.last_page is not None and number > self.last_page:
+    def get(self, number: Optional[int] = None):
+        if self._last_page is not None and number is not None and number > self.last_page:
             raise EmptyPage("No comments found on the page")
 
-        response = self._get(page=number)
+        response = self._query(page=number if number is not None else self.current_page)
         soup = bs4.BeautifulSoup(response["comments"], "lxml")
 
-        if self.last_page is None:
-            self.last_page = self._extract_last_page_number(response.get("navigation"))
+        if self._last_page is None:
+            self._fetch_last_page(response)
         result_list = self.extreact_comments(soup)
 
         number_comments = response["comments"].count(">оставлен ")
@@ -82,15 +65,9 @@ class CommentsIterator:
             raise EmptyPage("No comments found on the page")
         return result_list
 
-    @staticmethod
-    def _extract_last_page_number(navigation):
-        if not navigation:
-            return 1
-        soup = bs4.BeautifulSoup(navigation, "lxml")
-        preview_element = soup.find(class_="b-navigation__next")
-        if preview_element:
-            return int(preview_element.parent.find_previous("a").string)
-        return int(soup.find_all("span")[-1].text)
+    def _fetch_last_page(self, response):
+        navigation_bar = PageRepresentation(response.get("navigation"))
+        self.last_page = self._get_last_page_number(navigation_bar)
 
     def extreact_comments(self, comments):
         child = comments.find(class_="comments-tree-list")
@@ -165,16 +142,16 @@ class CommentsIterator:
         new_tag.string = "{}"
         return str(new_tag).format(text_from_tag)
 
-    def _get(self, page=None):
+    def _query(self, page: Optional[int] = None):
         data = {
             "t": int(time.time() * 1000),
             "news_id": self.film_id,
-            "cstart": self.page_number if page is None else page,
+            "cstart": self.current_page if page is None else page,
             "type": self.page_type,
             "comment_id": 0,
             "skin": "hdrezka"
         }
-        response = self.connector.get(f"{self.connector.url}/ajax/get_comments/", params=data)
+        response = self._connector.get(f"{self._connector.url}/ajax/get_comments/", params=data)
         if response.status_code == 200:
             return response.json()
         raise ServiceUnavailable("Service is temporarily unavailable")
