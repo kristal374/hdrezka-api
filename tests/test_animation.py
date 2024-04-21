@@ -23,7 +23,7 @@ class TestAnimations(TestCase):
         genre_list = [i for i in dir(GenreAnimation) if not re.search(r"__.*__", i)]
         for name in genre_list:
             genre = getattr(GenreAnimation, name)
-            yield genre
+            yield genre.value
 
     @staticmethod
     def get_filters():
@@ -52,11 +52,12 @@ class TestAnimations(TestCase):
 
     def test_positive_filter(self):
         self.assertEqual("https://rezka.ag/animation/", str(self.movie.filter(None)))
-        self.assertEqual("https://rezka.ag/animation/?filter=last", str(self.movie.filter()))
+        self.assertEqual("https://rezka.ag/animation/?filter=soon", str(self.movie.filter(Filters.SOON)))
         for genre in self.get_genre():
             for filter_obj in self.get_filters():
                 response = str(self.movie.selected_category(genre).filter(filter_obj))
-                correct_url = f"https://rezka.ag/animation/{genre}/?filter={filter_obj}"
+                custom_filter = f"?filter={filter_obj.value}" if filter_obj.value != "last" else ""
+                correct_url = f"https://rezka.ag/animation/{genre}/{custom_filter}"
                 self.assertEqual(correct_url, response)
 
     def test_negative_filter(self):
@@ -72,7 +73,9 @@ class TestAnimations(TestCase):
             for filter_obj in self.get_filters():
                 page = randint(1, 99)
                 response = str(self.movie.selected_category(genre).filter(filter_obj).page(page))
-                correct_url = f"https://rezka.ag/animation/{genre}/page/{page}/?filter={filter_obj}"
+                page_path = f"/page/{page}" if page > 1 else ""
+                custom_filter = f"?filter={filter_obj.value}" if filter_obj.value != "last" else ""
+                correct_url = f"https://rezka.ag/animation/{genre}{page_path}/{custom_filter}"
                 self.assertEqual(correct_url, response)
 
                 response = str(self.movie.selected_category(genre).filter(filter_obj).page(str(page)))
@@ -113,7 +116,7 @@ class TestAnimations(TestCase):
                          str(self.movie.find_best(genre=GenreAnimation.FICTION).page(8)))
         for genre in self.get_genre():
             year = randint(1895, 2114)
-            page = randint(1, 9)
+            page = randint(2, 9)
             response = str(self.movie.find_best(genre=genre, year=year).page(page))
             correct_url = f"https://rezka.ag/animation/best/{genre}/{year}/page/{page}/"
             self.assertEqual(correct_url, response)

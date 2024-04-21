@@ -39,10 +39,11 @@ class TestNew(TestCase):
 
     def test_positive_filter(self):
         self.assertEqual("https://rezka.ag/new/", str(self.movie.filter(None)))
-        self.assertEqual("https://rezka.ag/new/?filter=last", str(self.movie.filter()))
+        self.assertEqual("https://rezka.ag/new/?filter=soon", str(self.movie.filter(Filters.SOON)))
         for filter_obj in self.get_filters():
             response = str(self.movie.filter(filter_obj))
-            correct_url = f"https://rezka.ag/new/?filter={filter_obj}"
+            custom_filter = f"?filter={filter_obj.value}" if filter_obj.value != "last" else ""
+            correct_url = f"https://rezka.ag/new/{custom_filter}"
             self.assertEqual(correct_url, response)
 
     def test_negative_filter(self):
@@ -54,14 +55,13 @@ class TestNew(TestCase):
                   Filters, range(10), b"hello world"))
 
     def test_positive_show_only(self):
-        self.assertEqual("https://rezka.ag/new/", str(self.movie.show_only(None)))
-        self.assertEqual("https://rezka.ag/new/?filter=last", str(self.movie.show_only()))
+        self.assertEqual("https://rezka.ag/new/", str(self.movie.show_only()))
         for category_obj in self.get_category():
             response = str(self.movie.show_only(category_obj))
-            if category_obj != 0:
-                correct_url = f"https://rezka.ag/new/?filter=last&genre={category_obj}"
+            if category_obj.value != 0:
+                correct_url = f"https://rezka.ag/new/?filter=last&genre={category_obj.value}"
             else:
-                correct_url = "https://rezka.ag/new/?filter=last"
+                correct_url = "https://rezka.ag/new/"
             self.assertEqual(correct_url, response)
 
     def test_negative_show_only(self):
@@ -74,17 +74,20 @@ class TestNew(TestCase):
         for filter_obj in self.get_filters():
             for category_obj in self.get_category():
                 response = str(self.movie.filter(filter_obj).show_only(category_obj))
-                if category_obj != 0:
-                    correct_url = f"https://rezka.ag/new/?filter={filter_obj}&genre={category_obj}"
+
+                if category_obj.value != 0:
+                    correct_url = f"https://rezka.ag/new/?filter={filter_obj.value}&genre={category_obj.value}"
                 else:
-                    correct_url = f"https://rezka.ag/new/?filter={filter_obj}"
+                    custom_filter = f"?filter={filter_obj.value}" if filter_obj.value != "last" else ""
+                    correct_url = f"https://rezka.ag/new/{custom_filter}"
                 self.assertEqual(correct_url, response)
 
     def test_positive_page(self):
         for filter_obj in self.get_filters():
-            page = randint(1, 99)
+            page = randint(2, 99)
             response = str(self.movie.filter(filter_obj).page(page))
-            correct_url = f"https://rezka.ag/new/page/{page}/?filter={filter_obj}"
+            custom_filter = f"?filter={filter_obj.value}" if filter_obj.value != "last" else ""
+            correct_url = f"https://rezka.ag/new/page/{page}/{custom_filter}"
             self.assertEqual(correct_url, response)
 
             response = str(self.movie.filter(filter_obj).page(str(page)))

@@ -21,11 +21,11 @@ class TestBest(TestCase):
         del self.movie
 
     @staticmethod
-    def get_genre():
+    def get_genre() -> str:
         genre_list = [i for i in dir(GenreFilm) if not re.search(r"__.*__", i)]
         for name in genre_list:
             genre = getattr(GenreFilm, name)
-            yield genre
+            yield genre.value
 
     def enter_bad_args(self, fun, data):
         for element in data:
@@ -57,10 +57,10 @@ class TestBest(TestCase):
                 self.movie.select(genre=g)  # noqa
 
     def test_positive_page(self):
-        self.assertEqual("https://rezka.ag/films/best/page/1/", str(self.movie.page(1)))
+        self.assertEqual("https://rezka.ag/films/best/", str(self.movie.page(1)))
         for genre in self.get_genre():
-            page = randint(1, 99)
-            response = str(self.movie.select(genre).page(page))
+            page = randint(2, 99)
+            response = str(self.movie.select(genre=genre).page(page))
             correct_url = f"https://rezka.ag/films/best/{genre}/page/{page}/"
             self.assertEqual(correct_url, response)
 

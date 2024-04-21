@@ -20,7 +20,7 @@ class TestSearch(TestCase):
     def test_positive_page(self):
         self.assertEqual("https://rezka.ag/search/", str(self.movie))
         self.movie.query("Blob")
-        for page in range(1, 100):
+        for page in range(2, 100):
             response = str(self.movie.page(page))
             correct_url = f"https://rezka.ag/search/?do=search&subaction=search&q=Blob&page={page}"
             self.assertEqual(correct_url, response)
@@ -76,7 +76,7 @@ class TestSearch(TestCase):
             ("разрез/порез", "https://rezka.ag/search/?do=search&subaction=search&q=%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D0"
                              "%B7%2F%D0%BF%D0%BE%D1%80%D0%B5%D0%B7"),
             ("черт`а", "https://rezka.ag/search/?do=search&subaction=search&q=%D1%87%D0%B5%D1%80%D1%82%60%D0%B0"),
-            (""" \"\"\"""", "https://rezka.ag/search/?do=search&subaction=search&q=%22%22%22"),
+            (""" \"\"\"""", "https://rezka.ag/search/?do=search&subaction=search&q=+%22%22%22"),
         )
         for text_query, correct_url in data:
             response = str(self.movie.query(text_query))

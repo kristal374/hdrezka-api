@@ -12,7 +12,7 @@ class TestHDrezka(TestCase):
         del self.rezka
 
     def test_url(self):
-        self.assertEqual("https://rezka.ag", str(self.rezka))
+        self.assertEqual("https://rezka.ag/", str(self.rezka))
 
     def test_film(self):
         self.assertEqual("https://rezka.ag/films/", str(self.rezka.films()))
@@ -29,7 +29,8 @@ class TestHDrezka(TestCase):
         for i in (ShowCategory.ALL, ShowCategory.FILMS, ShowCategory.SERIES,
                   ShowCategory.CARTOONS, ShowCategory.ANIMATION):
             response = str(self.rezka.new().filter().show_only(i))
-            correct_url = f"https://rezka.ag/new/?filter=last{'&genre=' + str(i) if i != 0 else ''}"
+
+            correct_url = f"https://rezka.ag/new/{f'?filter=last&genre={i.value}' if i.value != 0 else ''}"
             self.assertEqual(correct_url, response)
 
     def test_animation(self):

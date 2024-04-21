@@ -18,7 +18,8 @@ class TestAnnounce(TestCase):
     def test_positive_page(self):
         for page in range(1, 100):
             response = str(self.movie.page(page))
-            correct_url = f"https://rezka.ag/announce/page/{page}/"
+            page_path = f'/page/{page}' if page > 1 else ''
+            correct_url = f"https://rezka.ag/announce{page_path}/"
             self.assertEqual(correct_url, response)
 
             response = str(self.movie.page(str(page)))  # noqa
