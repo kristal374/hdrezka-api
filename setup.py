@@ -1,7 +1,7 @@
 import os
 import re
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
@@ -29,7 +29,7 @@ setup(
     author=about["__author__"],
     author_email=about["__contact__"],
     url=about["__url__"],
-    packages=["HDrezka"],
+    packages=find_packages(include=["HDrezka", "HDrezka.*"]),
     include_package_data=True,
     python_requires=">=3.7",
     install_requires=requires,
