@@ -200,7 +200,7 @@ class HDrezka(BaseSiteNavigation[List[Union[MainPage, movie_posters.Poster]]]):
             if url_type == URLsType.franchises_info:
                 return franchises.FranchisesBuilder(response).extract_content()
             if url_type == URLsType.franchises:
-                return franchises.FranchisesExtendedInfoBuilder(response).extract_content()
+                return franchises.FranchisesBriefInfoBuilder(response).extract_content()
             if url_type == URLsType.person_info:
                 return person.PersonBuilder(response).extract_content()
             if url_type == URLsType.poster:

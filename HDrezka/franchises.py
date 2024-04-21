@@ -44,7 +44,7 @@ class FranchisesBuilder(PageRepresentation):
 
 
 @dataclass
-class FranchiseExtendedInfo:
+class FranchiseBriefInfo:
     id: int
     title: str
     amount_film: int
@@ -58,14 +58,14 @@ class FranchiseExtendedInfo:
         return f"<FranchiseBriefInfo({self.title})>"
 
 
-class FranchisesExtendedInfoBuilder(PageRepresentation):
-    def extract_content(self) -> List[FranchiseExtendedInfo]:
+class FranchisesBriefInfoBuilder(PageRepresentation):
+    def extract_content(self) -> List[FranchiseBriefInfo]:
         result_list = []
         content = self.page.soup.find("div", class_="b-content__collections_list clearfix")
         for item in content.find_all("div", class_="b-content__collections_item"):
             url = item.find("div", class_="title-layer").a.get("href").strip()
             result_list.append(
-                FranchiseExtendedInfo(
+                FranchiseBriefInfo(
                     id=int(re.search(r"/(\d+)-", url)[1]),
                     title=item.find("div", class_="title-layer").text.strip(),
                     amount_film=int(item.find("div", class_="num").text),

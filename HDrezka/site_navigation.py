@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 
 from .core_navigation import PageIterator, Genre, Year, Query, BaseSiteNavigation
 from .filters import Filters, ShowCategory, GenreAnimation, GenreFilm, GenreCartoons, GenreSeries
-from .franchises import FranchisesExtendedInfoBuilder, FranchiseExtendedInfo
+from .franchises import FranchisesBriefInfoBuilder, FranchiseBriefInfo
 from .movie_collections import MovieCollectionBuilder, MovieCollection
 from .movie_posters import PosterBuilder, Poster
 from .questions_asked import QuestionsBriefInfoBuilder, QuestionBriefInfo
@@ -177,8 +177,8 @@ class QuestionsAsked(BaseSiteNavigation[List[QuestionBriefInfo]]):
         return QuestionsBriefInfoBuilder(super().get()).extract_content()
 
 
-class Franchises(BaseSiteNavigation[List[FranchiseExtendedInfo]]):
+class Franchises(BaseSiteNavigation[List[FranchiseBriefInfo]]):
     _name = "franchises"
 
-    def get(self) -> List[FranchiseExtendedInfo]:
-        return FranchisesExtendedInfoBuilder(super().get()).extract_content()
+    def get(self) -> List[FranchiseBriefInfo]:
+        return FranchisesBriefInfoBuilder(super().get()).extract_content()
