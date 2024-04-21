@@ -68,11 +68,10 @@ class MainPage:
 
 class MainPageBuilder(html_representation.PageRepresentation):
     def extract_content(self):
-        best_news_block = self.page.soup.find("div", id="newest-slider")
         poster_block = self.page.soup.find("div", class_="b-content__inline_items")
 
         main_page = MainPage()
-        main_page.best_news = movie_posters.PosterBuilder(best_news_block).extract_content()
+        main_page.best_news = self.extract_best_news()
         main_page.posters = movie_posters.PosterBuilder(poster_block).extract_content()
         main_page.recommended_collections = self.extract_collections()
         main_page.updates = self.extract_updates()
@@ -81,6 +80,14 @@ class MainPageBuilder(html_representation.PageRepresentation):
     def __extract_base_url(self):
         page_url = urlsplit(self.page.soup.find('meta', property='og:url').get("content"))
         return f"{page_url.scheme}://{page_url.netloc}/"
+
+    def extract_best_news(self):
+        best_news_block = self.page.soup.find("div", id="newest-slider")
+        base_url = self.__extract_base_url()
+        posters_list = movie_posters.PosterBuilder(best_news_block).extract_content()
+        for poster in posters_list:
+            poster.url = urljoin(base_url, poster.url)
+        return posters_list
 
     def extract_collections(self):
         result_list = []
