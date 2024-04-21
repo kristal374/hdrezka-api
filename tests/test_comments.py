@@ -1,20 +1,21 @@
 import json
 import urllib.parse
-from unittest import TestCase
 from datetime import datetime
+from unittest import TestCase
 
 import bs4
 import requests_mock
 
 from HDrezka.comments import CommentsIterator
 from HDrezka.exceptions import ServiceUnavailable
+from HDrezka.html_representation import PageRepresentation
 from tests.mock_html.html_construcror import generate_comments_tree, generate_navigation_string
 
 
 def converter_into_json(value):
     if not isinstance(value, datetime):
         return value.__dict__
-    return value.__str__()
+    return str(value)
 
 
 class TestCommentsIterator(TestCase):
@@ -38,7 +39,7 @@ class TestCommentsIterator(TestCase):
         reference_data = generate_comments_tree()
         m.get('https://rezka.ag/ajax/get_comments/' + "?" + urllib.parse.urlencode(self.data),
               json=reference_data[0][1])
-        server_response = self.iterator.get_page(1)
+        server_response = self.iterator.get(1)
         extracted_comment = json.loads(json.dumps(server_response, default=converter_into_json))
         self.assertEqual(extracted_comment, reference_data[0][0])
 
@@ -48,14 +49,14 @@ class TestCommentsIterator(TestCase):
 
         m.get(test_url.format(self.film_id), status_code=504, text="request fall")
         with self.assertRaises(ServiceUnavailable):
-            self.iterator.get_page(1)
+            self.iterator.get(1)
 
     def test_extract_last_page_number(self):
         for number_pages in range(50):
             page_list = list(range(1, number_pages + 1))
             for n in page_list:
                 navigation = generate_navigation_string(self.film_id, n, 1, len(page_list))
-                num_page = self.iterator._extract_last_page_number(navigation)
+                num_page = self.iterator._get_last_page_number(PageRepresentation(navigation))
                 self.assertEqual(num_page, len(page_list))
 
     @requests_mock.Mocker()
@@ -63,7 +64,7 @@ class TestCommentsIterator(TestCase):
         reference_data = generate_comments_tree()
         m.get('https://rezka.ag/ajax/get_comments/' + "?" + urllib.parse.urlencode(self.data),
               json=reference_data[0][1])
-        server_response = self.iterator._get(1)
+        server_response = self.iterator._query(1)
         extracted_comment = json.loads(json.dumps(server_response, default=converter_into_json))
         self.assertEqual(extracted_comment, reference_data[0][1])
 
@@ -73,7 +74,7 @@ class TestCommentsIterator(TestCase):
 
         m.get(test_url.format(self.film_id), status_code=504, text="request fall")
         with self.assertRaises(ServiceUnavailable):
-            self.iterator._get(1)
+            self.iterator._query(1)
 
     def test_positive_extreact_comments(self):
         reference_data = generate_comments_tree()
