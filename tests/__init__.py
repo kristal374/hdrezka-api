@@ -10,6 +10,7 @@ from tests.test_html_representation import TestPageRepresentation
 from tests.test_meta_data import TestMetaData
 from tests.test_movie_page_descriptor import *
 from tests.test_new import TestNew
+from tests.test_page_representation import *
 from tests.test_search import TestSearch
 from tests.test_series import TestSeries
 from tests.test_trailer import TestTrailerBuilder
