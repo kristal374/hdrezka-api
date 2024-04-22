@@ -5,7 +5,14 @@ from typing import Optional, Union, List
 from urllib.parse import quote_plus
 
 from .core_navigation import PageIterator, Genre, Year, Query, BaseSiteNavigation
-from .filters import Filters, ShowCategory, GenreAnimation, GenreFilm, GenreCartoons, GenreSeries
+from .filters import (
+    Filters,
+    ShowCategory,
+    GenreAnimation,
+    GenreFilm,
+    GenreCartoons,
+    GenreSeries,
+)
 from .franchises import FranchisesBriefInfoBuilder, FranchiseBriefInfo
 from .movie_collections import MovieCollectionBuilder, MovieCollection
 from .movie_posters import PosterBuilder, Poster
@@ -34,7 +41,8 @@ class BaseMovieCategory(BaseSiteNavigation[List[Poster]], ABC):
         return self
 
     @abstractmethod
-    def find_best(self): ...
+    def find_best(self):
+        ...
 
     def get(self) -> List[Poster]:
         return PosterBuilder(super().get()).extract_content()
@@ -54,10 +62,10 @@ class Best(BaseSiteNavigation[List[Poster]]):
         self._year = Year()
 
     def select(
-            self,
-            *,
-            genre: Optional[Union[GenreFilm, GenreSeries, GenreCartoons, GenreAnimation, str]] = None,
-            year: Optional[int] = None
+        self,
+        *,
+        genre: Optional[Union[GenreFilm, GenreSeries, GenreCartoons, GenreAnimation, str]] = None,
+        year: Optional[int] = None,
     ):
         self._genre.genre = genre
         self._year.year = year
@@ -77,7 +85,12 @@ class Films(BaseMovieCategory):
     def selected_category(self, genre: Optional[Union[GenreFilm, str]]):
         return super().selected_category(genre)
 
-    def find_best(self, *, genre: Optional[Union[GenreFilm, str]] = None, year: Optional[int] = None):
+    def find_best(
+        self,
+        *,
+        genre: Optional[Union[GenreFilm, str]] = None,
+        year: Optional[int] = None,
+    ):
         return Best(self._name).select(genre=genre, year=year)
 
 
@@ -87,7 +100,12 @@ class Cartoons(BaseMovieCategory):
     def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):
         return super().selected_category(genre)
 
-    def find_best(self, *, genre: Optional[Union[GenreCartoons, str]] = None, year: Optional[int] = None):
+    def find_best(
+        self,
+        *,
+        genre: Optional[Union[GenreCartoons, str]] = None,
+        year: Optional[int] = None,
+    ):
         return Best(self._name).select(genre=genre, year=year)
 
 
@@ -97,7 +115,12 @@ class Series(BaseMovieCategory):
     def selected_category(self, genre: Optional[Union[GenreSeries, str]]):
         return super().selected_category(genre)
 
-    def find_best(self, *, genre: Optional[Union[GenreSeries, str]] = None, year: Optional[int] = None):
+    def find_best(
+        self,
+        *,
+        genre: Optional[Union[GenreSeries, str]] = None,
+        year: Optional[int] = None,
+    ):
         return Best(self._name).select(genre=genre, year=year)
 
 
@@ -107,7 +130,12 @@ class Animation(BaseMovieCategory):
     def selected_category(self, genre: Optional[Union[GenreAnimation, str]]):
         return super().selected_category(genre)
 
-    def find_best(self, *, genre: Optional[Union[GenreAnimation, str]] = None, year: Optional[int] = None):
+    def find_best(
+        self,
+        *,
+        genre: Optional[Union[GenreAnimation, str]] = None,
+        year: Optional[int] = None,
+    ):
         return Best(self._name).select(genre=genre, year=year)
 
 
@@ -156,7 +184,7 @@ class Search(BaseSiteNavigation[List[Poster]]):
 
     def query(self, text: str):
         if not isinstance(text, str):
-            raise AttributeError("Attribute \"text\" must only be of type \"str\".")
+            raise AttributeError('Attribute "text" must only be of type "str".')
         process_text = quote_plus(text).replace("%2A", "*").replace("/", "%2F").replace("~", "%7E")
         self._search_text = f"?do=search&subaction=search&q={process_text}"
         return self
@@ -166,7 +194,7 @@ class Search(BaseSiteNavigation[List[Poster]]):
 
     def __str__(self):
         page = f"&page={self.current_page}" if self.current_page > 1 else ""
-        text = f"{self._search_text}" if self._search_text else ''
+        text = f"{self._search_text}" if self._search_text else ""
         return f"{self._connector.url}/{self._name}/{text}{page}"
 
 

@@ -62,13 +62,13 @@ class MovieCollection:
         return CollectionIterator(self.url)
 
     def __repr__(self):
-        return f"MovieCollection(\"{self.title}\")"
+        return f'MovieCollection("{self.title}")'
 
 
 class MovieCollectionBuilder(PageRepresentation):
     def extract_content(self):
         collection_info = []
-        for item in self.page.soup.find_all('div', class_="b-content__collections_item"):
+        for item in self.page.soup.find_all("div", class_="b-content__collections_item"):
             collection = MovieCollection()
             collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", item.get("data-url")).group(0))
             collection.title = item.find("a", class_="title").text

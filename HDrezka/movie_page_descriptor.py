@@ -58,7 +58,7 @@ class Episode:
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
     def __repr__(self):
-        title = ' - ' + self.localize_title if isinstance(self.localize_title, str) else ''
+        title = " - " + self.localize_title if isinstance(self.localize_title, str) else ""
         return f"<Episode({self.current_episode}{title})>"
 
 
@@ -131,9 +131,9 @@ class InfoTableBuilder(PageRepresentation):
                 table_info.rates = self.extract_rates(item[1])
             elif key == "Входит в списки:":
                 table_info.on_the_lists = self.extract_lists(item[1])
-            elif key == 'Слоган:':
+            elif key == "Слоган:":
                 table_info.tagline = item[1].text.strip()
-            elif key in ("Год:", 'Дата выхода:'):
+            elif key in ("Год:", "Дата выхода:"):
                 table_info.release = self.extract_date_release(item[1])
             elif key == "Страна:":
                 table_info.country = self.extract_country(item[1])
@@ -141,7 +141,7 @@ class InfoTableBuilder(PageRepresentation):
                 table_info.producer = self.extract_person(item[1])
             elif key == "Жанр:":
                 table_info.genre = self.extract_genre(item[1])
-            elif key == 'Возраст:':
+            elif key == "Возраст:":
                 table_info.age = item[1].span.text.strip()
             elif key == "Время:":
                 table_info.duration = item[1].text.strip().replace(".", "")
@@ -149,8 +149,8 @@ class InfoTableBuilder(PageRepresentation):
                 table_info.collections = self.extract_collections(item[1])
             elif key == "В качестве:":
                 table_info.quality = item[1].text.strip()
-            elif key == 'В переводе:':
-                table_info.translate = re.split(r', | и ', item[1].text.strip())
+            elif key == "В переводе:":
+                table_info.translate = re.split(r", | и ", item[1].text.strip())
             elif item[0].find("div", class_="persons-list-holder"):
                 table_info.cast = self.extract_person(item[0])
             else:
@@ -189,7 +189,7 @@ class InfoTableBuilder(PageRepresentation):
             rate = Rating()
             if blank.a is not None:
                 rate.name = blank.a.text.strip()
-                rate.source = unquote(base64.b64decode(blank.a.get("href").split("/")[-2]).decode('utf-8'))
+                rate.source = unquote(base64.b64decode(blank.a.get("href").split("/")[-2]).decode("utf-8"))
             else:
                 rate.name = blank.next.strip()[:-1]
             rate.rates = float(blank.span.text.strip())
@@ -225,17 +225,13 @@ class InfoTableBuilder(PageRepresentation):
                         name=person_obj.a.span.text.strip(),
                         url=person_obj.a.get("href").strip(),
                         img_url=img_url.strip() if img_url != "null" else None,
-                        job=person_obj.attrs.get("data-job").strip() if job != "null" else None
+                        job=person_obj.attrs.get("data-job").strip() if job != "null" else None,
                     )
                 )
             else:
                 if item.text == "и другие":
                     continue
-                result_lst.append(
-                    PersonBriefInfo(
-                        name=item.text.replace(",", "").strip()
-                    )
-                )
+                result_lst.append(PersonBriefInfo(name=item.text.replace(",", "").strip()))
         return result_lst
 
     @staticmethod
@@ -254,9 +250,9 @@ class InfoTableBuilder(PageRepresentation):
 class MovieDetailsBuilder(PageRepresentation):
     def extract_content(self):
         page = MovieDetails()
-        page.id = int(re.search(r"/(\d*)-", self.page.soup.find('meta', property='og:url').get("content")).group(1))
+        page.id = int(re.search(r"/(\d*)-", self.page.soup.find("meta", property="og:url").get("content")).group(1))
         page.title = self.page.soup.find("div", class_="b-post__title").text.strip()
-        page.url = self.page.soup.find('meta', property='og:url').get("content").strip()
+        page.url = self.page.soup.find("meta", property="og:url").get("content").strip()
         page.original_name = self.extract_original_name()
         page.status = self.extract_status()
         page.img_url = self.page.soup.find("div", class_="b-sidecover").a.get("href")
@@ -307,7 +303,7 @@ class MovieDetailsBuilder(PageRepresentation):
             rate.name = "HDrezka"
             rate.rates = float(self.page.soup.find("span", class_="num").text.strip())
             rate.votes = int(self.page.soup.find("span", class_="votes").span.text.strip())
-            rate.source = self.page.soup.find('meta', property='og:url').get("content").strip()
+            rate.source = self.page.soup.find("meta", property="og:url").get("content").strip()
             return rate
         except AttributeError:
             return None

@@ -26,15 +26,17 @@ class Connector(ABC):
             "Origin": f"https://{domain}",
             "Referer": f"https://{domain}",
             "User-Agent": self.user_agent,
-            "X-Requested-With": "XMLHttpRequest"
+            "X-Requested-With": "XMLHttpRequest",
         }
         return CaseInsensitiveDict(header)
 
     @abstractmethod
-    def get(self, url: Union[str, bytes], **kwargs: Any): ...
+    def get(self, url: Union[str, bytes], **kwargs: Any):
+        ...
 
     @abstractmethod
-    def post(self, url: Union[str, bytes], **kwargs: Any): ...
+    def post(self, url: Union[str, bytes], **kwargs: Any):
+        ...
 
 
 class Singleton(type):
@@ -48,10 +50,12 @@ class Singleton(type):
 
 
 class RequestConnector(Connector):
-    def __init__(self,
-                 domain='rezka.ag',
-                 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0',
-                 proxies=None):
+    def __init__(
+        self,
+        domain="rezka.ag",
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0",
+        proxies=None,
+    ):
         super().__init__(domain, user_agent, proxies)
 
     def get(self, url: Union[str, bytes], **kwargs: Any) -> Response:
@@ -66,21 +70,25 @@ class RequestConnector(Connector):
 
 
 class SessionConnector(requests.sessions.Session, Connector):
-    def __init__(self,
-                 domain='rezka.ag',
-                 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0',
-                 proxies=None):
+    def __init__(
+        self,
+        domain="rezka.ag",
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0",
+        proxies=None,
+    ):
         Connector.__init__(self, domain, user_agent, proxies)
         super().__init__()
         self.headers = self.get_headers(self.url)
 
 
 class NetworkClient(metaclass=Singleton):
-    def __init__(self,
-                 domain='rezka.ag',
-                 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0',
-                 proxies=None,
-                 connector: Type[Connector] = RequestConnector):
+    def __init__(
+        self,
+        domain="rezka.ag",
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/119.0",
+        proxies=None,
+        connector: Type[Connector] = RequestConnector,
+    ):
         self.session = connector(domain, user_agent, proxies)
 
     def __setattr__(self, key: str, value: Any):

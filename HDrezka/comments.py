@@ -47,8 +47,9 @@ class CommentsIterator(PageIterator[List[Comment]]):
 
     def get(self, number: Optional[int] = None):
         if self._last_page is not None and number is not None and number > self.last_page:
-            raise AttributeError(f"The value of \"number\"={number} is greater than "
-                                 f"the value of \"last_page\"={self.last_page}")
+            raise AttributeError(
+                f'The value of "number"={number} is greater than ' f'the value of "last_page"={self.last_page}'
+            )
 
         response = self._query(page=number if number is not None else self.current_page)
         soup = bs4.BeautifulSoup(response["comments"], "lxml")
@@ -80,7 +81,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
                 comment = Comment()
                 comment.id = int(comment_tree.get("data-id"))
                 comment.author = User()
-                if comment_tree.next.get("class", [None])[0] == 'b-comment__removed':  # pragma: NO COVER
+                if comment_tree.next.get("class", [None])[0] == "b-comment__removed":  # pragma: NO COVER
                     comment.author.name = "Администрация"
                     comment.author.img_url = "https://static.hdrezka.ac/templates/hdrezka/images/avatar.png"
                     comment.text = self._extract_text(comment_tree.find("div", class_="b-comment__removed"))
@@ -92,7 +93,8 @@ class CommentsIterator(PageIterator[List[Comment]]):
                     comment.text = self._extract_text(comment_tree.next.find("div", class_="text").next)
                     comment.replies = self.extreact_comments(comment_tree)
                     comment.likes_num = int(
-                        comment_tree.next.find("span", class_="b-comment__likes_count").i.text.strip())
+                        comment_tree.next.find("span", class_="b-comment__likes_count").i.text.strip()
+                    )
                     comment.edit = bool(comment_tree.next.find("span", class_="edited"))
                 result_lst.append(comment)
         return result_lst
@@ -130,12 +132,13 @@ class CommentsIterator(PageIterator[List[Comment]]):
         return str(tag)  # pragma: NO COVER
 
     def _process_inline_tag(self, tag: bs4.element.Tag) -> str:
-        if tag.name == "a" and 'youtu-link' in tag.get("class", []):
+        if tag.name == "a" and "youtu-link" in tag.get("class", []):
             return tag.get("href").strip()
 
         text_from_tag = self._extract_text(tag)
         if tag.name == "a" and (
-                tag.get("href") == text_from_tag or not re.search(r'https?://[^\s"]*', tag.get("href"))):
+            tag.get("href") == text_from_tag or not re.search(r'https?://[^\s"]*', tag.get("href"))
+        ):
             return text_from_tag
 
         new_tag = bs4.BeautifulSoup().new_tag(tag.name)
@@ -150,7 +153,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
             "cstart": self.current_page if page is None else page,
             "type": self.page_type,
             "comment_id": 0,
-            "skin": "hdrezka"
+            "skin": "hdrezka",
         }
         response = self._connector.get(f"{self._connector.url}/ajax/get_comments/", params=data)
         if response.status_code == 200:
@@ -158,4 +161,4 @@ class CommentsIterator(PageIterator[List[Comment]]):
         raise ServiceUnavailable("Service is temporarily unavailable")
 
     def __repr__(self):
-        return f"<{CommentsIterator.__name__}(film_id=\"{self.film_id}\")>"
+        return f'<{CommentsIterator.__name__}(film_id="{self.film_id}")>'

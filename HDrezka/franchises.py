@@ -31,13 +31,13 @@ class FranchisesBuilder(PageRepresentation):
         result_lst = []
         for item in self.page.soup.find_all("div", class_="b-post__partcontent_item"):
             url = item.find("div", class_="title").a
-            base_url = self.page.soup.find('meta', property='og:url').get("content").strip()
+            base_url = self.page.soup.find("meta", property="og:url").get("content").strip()
             result_lst.append(
                 Franchise(
                     title=item.find("div", class_="title").text.strip(),
                     url=url.get("href") if url else base_url,
                     year=item.find("div", class_="year").text.strip(),
-                    rating=item.find("div", class_="rating").text.strip()
+                    rating=item.find("div", class_="rating").text.strip(),
                 )
             )
         return result_lst

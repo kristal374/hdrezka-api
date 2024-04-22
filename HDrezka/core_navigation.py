@@ -4,10 +4,17 @@ from abc import ABC, abstractmethod
 from typing import Optional, Union, TypeVar, Generic
 
 from .connector import NetworkClient
-from .filters import Filters, ShowCategory, GenreFilm, GenreSeries, GenreCartoons, GenreAnimation
+from .filters import (
+    Filters,
+    ShowCategory,
+    GenreFilm,
+    GenreSeries,
+    GenreCartoons,
+    GenreAnimation,
+)
 from .html_representation import PageRepresentation
 
-IteratorResponse = TypeVar('IteratorResponse')
+IteratorResponse = TypeVar("IteratorResponse")
 
 
 class PageIterator(ABC, Generic[IteratorResponse]):
@@ -36,8 +43,8 @@ class PageIterator(ABC, Generic[IteratorResponse]):
     def last_page(self, value: int):
         if not isinstance(value, int) or value <= 0:
             raise AttributeError(
-                "Attribute last page must be of type \"int\" and greater than 0."
-                f"Received type \"{type(value).__name__}\" with value \"{value}\"."
+                'Attribute last page must be of type "int" and greater than 0.'
+                f'Received type "{type(value).__name__}" with value "{value}".'
             )
         self._last_page = value
 
@@ -56,8 +63,10 @@ class PageIterator(ABC, Generic[IteratorResponse]):
             if isinstance(num, str) and num.isdigit() and num != "0":
                 num = int(num)
             else:
-                raise AttributeError("Attribute \"num\" must be of type \"int\" and greater than 0. "
-                                     f"Received type \"{type(num).__name__}\", value: \"{num}\".")
+                raise AttributeError(
+                    'Attribute "num" must be of type "int" and greater than 0. '
+                    f'Received type "{type(num).__name__}", value: "{num}".'
+                )
         self._page = num
         return self
 
@@ -91,9 +100,7 @@ class Query:
         elif isinstance(pattern, str):
             self._params["filter"] = pattern
         else:
-            raise AttributeError(
-                "Attribute \"pattern\" must be of type \"str\". Use ready-made genres in filters.Filters"
-            )
+            raise AttributeError('Attribute "pattern" must be of type "str". Use ready-made genres in filters.Filters')
         return self
 
     def show_only(self, pattern: Optional[Union[ShowCategory, int]] = ShowCategory.ALL):
@@ -104,8 +111,10 @@ class Query:
         elif not isinstance(pattern, bool) and isinstance(pattern, int) and pattern >= 0:
             self._params["genre"] = pattern
         else:
-            raise AttributeError("Attribute \"pattern\" must be of type \"ShowCategory\" or \"int\". "
-                                 "Use ready-made pattern in filters.ShowCategory")
+            raise AttributeError(
+                'Attribute "pattern" must be of type "ShowCategory" or "int". '
+                "Use ready-made pattern in filters.ShowCategory"
+            )
         return self
 
     def __str__(self):
@@ -125,13 +134,16 @@ class Genre:
         return self._genre
 
     @genre.setter
-    def genre(self, value: Optional[Union[GenreFilm, GenreSeries, GenreCartoons, GenreAnimation, str]] = None):
+    def genre(
+        self,
+        value: Optional[Union[GenreFilm, GenreSeries, GenreCartoons, GenreAnimation, str]] = None,
+    ):
         if isinstance(value, (GenreFilm, GenreSeries, GenreCartoons, GenreAnimation)):
             self._genre = value.value
         elif value is None or isinstance(value, str):
             self._genre = value
         else:
-            raise AttributeError("Attribute \"value\" must be of type \"str\". Use ready-made genres filters.Genre*")
+            raise AttributeError('Attribute "value" must be of type "str". Use ready-made genres filters.Genre*')
 
     def __str__(self):
         return f"{self._genre}/" if self._genre is not None else ""
@@ -148,7 +160,7 @@ class Year:
     @year.setter
     def year(self, value: Optional[int] = None):
         if value is not None and (isinstance(value, bool) or not isinstance(value, int) or value < 1895):
-            raise AttributeError("Attribute \"year\" must be of type \"int\" and greater than or equal to 1895")
+            raise AttributeError('Attribute "year" must be of type "int" and greater than or equal to 1895')
         self._year = value
 
     def __str__(self):
@@ -166,7 +178,7 @@ class Country:
     @country.setter
     def country(self, value: Optional[int] = None):
         if value is None or not isinstance(value, str):
-            raise AttributeError("Attribute \"value\" must be of type \"str\".")
+            raise AttributeError('Attribute "value" must be of type "str".')
         self._country = value
 
     def __str__(self):

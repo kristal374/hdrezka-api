@@ -32,7 +32,7 @@ class PersonBriefInfo:
             raise PageNotFound("This person does not have an ID")
         connector = NetworkClient()
         url = f"{connector.url}/ajax/person_info/"
-        response = connector.post(url, data={'id': self.id, 'pid': self.film_id or 1})
+        response = connector.post(url, data={"id": self.id, "pid": self.film_id or 1})
         if response.status_code == 200:
             return PersonExtendedInfoBuilder(response.json()).extract_content()
         raise ServiceUnavailable("Service is temporarily unavailable")
@@ -90,7 +90,7 @@ class PersonExtendedInfoBuilder:
             gender=self._server_response.get("gender"),
             image_count=int(self._server_response.get("photos_count")),
             img_url=self._server_response.get("photo"),
-            url=self._server_response.get("link")
+            url=self._server_response.get("link"),
         )
 
 
@@ -120,7 +120,12 @@ class PersonBuilder(PageRepresentation):
     def extract_content(self) -> Person:
         info_table = self.extract_infotable()
         return Person(
-            id=int(re.search(r"/(\d*)-", self.page.soup.find('meta', property='og:url').get("content")).group(1)),
+            id=int(
+                re.search(
+                    r"/(\d*)-",
+                    self.page.soup.find("meta", property="og:url").get("content"),
+                ).group(1)
+            ),
             name=self.extract_localize_name(),
             original_name=self.extract_original_name(),
             person_height=info_table.get("person_height"),
@@ -134,7 +139,7 @@ class PersonBuilder(PageRepresentation):
             img_url=self.extract_image(),
             gallery=info_table.get("gallery"),
             stats=self.extract_stats(),
-            url=self.page.soup.find("meta", property="og:url").get("content")
+            url=self.page.soup.find("meta", property="og:url").get("content"),
         )
 
     def extract_localize_name(self):

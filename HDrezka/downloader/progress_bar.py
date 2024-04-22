@@ -9,18 +9,21 @@ from . import bufer
 
 
 class ProgressBar:
-    progress_element = ('', '▏', '▎', '▍', '▌', '▋', '▊', '▉', '█')
-    template = "|{progress}| {processed_chunks_count}/{chunks_count} [{percent:>3}%]" \
-               " in {time_since_start} ({speed:>6} {unit}/s, eta: {time_to_finish})"
+    progress_element = ("", "▏", "▎", "▍", "▌", "▋", "▊", "▉", "█")
+    template = (
+        "|{progress}| {processed_chunks_count}/{chunks_count} [{percent:>3}%]"
+        " in {time_since_start} ({speed:>6} {unit}/s, eta: {time_to_finish})"
+    )
 
-    def __init__(self,
-                 length_data: int,
-                 chunk_size: int = 2 ** 10 * 512,
-                 unit: Optional[str] = None,
-                 length_bar: int = 30,
-                 processed_chunks_count: int = 0,
-                 number_of_timestamps: int = 1000
-                 ):
+    def __init__(
+        self,
+        length_data: int,
+        chunk_size: int = 2**10 * 512,
+        unit: Optional[str] = None,
+        length_bar: int = 30,
+        processed_chunks_count: int = 0,
+        number_of_timestamps: int = 1000,
+    ):
         self._start_time = datetime.datetime.now()
         self._chunks_count = math.ceil(int(length_data) / int(chunk_size))
         self._bar_length = length_bar
@@ -69,7 +72,7 @@ class ProgressBar:
             self.normalize_value(
                 self._processed_chunks_count,
                 [0, self._chunks_count],
-                [0, self._bar_length * len(self.progress_element)]
+                [0, self._bar_length * len(self.progress_element)],
             )
         )
         finished, during = divmod(advance, len(self.progress_element))
@@ -86,10 +89,9 @@ class ProgressBar:
             return "inf"
 
     @staticmethod
-    def normalize_value(value: Union[int, float],
-                        from_range: List[Union[int, float]],
-                        to_range: List[Union[int, float]]
-                        ) -> float:
+    def normalize_value(
+        value: Union[int, float], from_range: List[Union[int, float]], to_range: List[Union[int, float]]
+    ) -> float:
         return to_range[0] + (value - from_range[0]) * (to_range[1] - to_range[0]) / (from_range[1] - from_range[0])
 
     @staticmethod
@@ -101,8 +103,17 @@ class ProgressBar:
 
     @staticmethod
     def convert(value: Union[int, float], custom_unit: Optional[str] = None) -> Tuple[float, str]:
-        units_list = {'B': 1 << 0, 'KB': 1 << 10, 'MB': 1 << 20, 'GB': 1 << 30, 'TB': 1 << 40,
-                      'PB': 1 << 50, 'EB': 1 << 60, 'ZB': 1 << 70, 'YB': 1 << 80}
+        units_list = {
+            "B": 1 << 0,
+            "KB": 1 << 10,
+            "MB": 1 << 20,
+            "GB": 1 << 30,
+            "TB": 1 << 40,
+            "PB": 1 << 50,
+            "EB": 1 << 60,
+            "ZB": 1 << 70,
+            "YB": 1 << 80,
+        }
         if custom_unit is not None:
             return round(value / units_list[custom_unit.upper()], 2), custom_unit
         for unit in list(units_list.keys())[::-1]:

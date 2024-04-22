@@ -19,7 +19,7 @@ class HTMLDocument:
         if isinstance(html, Response):
             return html.text
         if isinstance(html, bytes):
-            return html.decode('utf-8')
+            return html.decode("utf-8")
         if isinstance(html, str):
             return html
         if isinstance(html, Tag):

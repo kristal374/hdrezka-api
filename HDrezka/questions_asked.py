@@ -37,7 +37,7 @@ class Question:
 
 class QuestionsBuilder(PageRepresentation):
     def extract_content(self) -> Question:
-        current_url = self.page.soup.find('meta', property='og:url').get("content")
+        current_url = self.page.soup.find("meta", property="og:url").get("content")
         return Question(
             id=int(re.search(r"(\d+)\.html$", current_url).group(1)),
             title=self.page.soup.find("div", class_="b-content__htitle").text.strip(),

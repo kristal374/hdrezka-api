@@ -7,9 +7,22 @@ from typing import Optional, List, TYPE_CHECKING, Union
 from urllib.parse import urlsplit, urljoin
 
 from . import franchises
-from . import html_representation, movie_posters, movie_page_descriptor, questions_asked, person
+from . import (
+    html_representation,
+    movie_posters,
+    movie_page_descriptor,
+    questions_asked,
+    person,
+)
 from .core_navigation import BaseSiteNavigation, Query
-from .filters import GenreFilm, GenreSeries, GenreAnimation, GenreCartoons, Filters, ShowCategory
+from .filters import (
+    GenreFilm,
+    GenreSeries,
+    GenreAnimation,
+    GenreCartoons,
+    Filters,
+    ShowCategory,
+)
 from .movie_collections import MovieCollection, MovieCollectionBuilder
 from .site_navigation import Animation
 from .site_navigation import Announce
@@ -78,7 +91,7 @@ class MainPageBuilder(html_representation.PageRepresentation):
         return main_page
 
     def __extract_base_url(self):
-        page_url = urlsplit(self.page.soup.find('meta', property='og:url').get("content"))
+        page_url = urlsplit(self.page.soup.find("meta", property="og:url").get("content"))
         return f"{page_url.scheme}://{page_url.netloc}/"
 
     def extract_best_news(self):
@@ -116,17 +129,12 @@ class MainPageBuilder(html_representation.PageRepresentation):
                         season=item.find(class_="season").string.strip()[1:-1],
                         episode=cell.next.strip(),
                         translator=cell.i.string.strip()[1:-1] if cell.i else None,
-                        url=urljoin(base_url, item.a.get("href"))
+                        url=urljoin(base_url, item.a.get("href")),
                     )
                 )
             day_obj = day_block.find("div", class_="b-seriesupdate__block_date")
             date = day_obj.small.string.strip()[1:-1] if day_obj.small else day_obj.next.string.strip()
-            result_list.append(
-                DayReleases(
-                    date=convert_string_into_datetime(date),
-                    releases=release_list
-                )
-            )
+            result_list.append(DayReleases(date=convert_string_into_datetime(date), releases=release_list))
 
         return result_list
 
@@ -134,7 +142,7 @@ class MainPageBuilder(html_representation.PageRepresentation):
 class HDrezka(BaseSiteNavigation[List[Union[MainPage, movie_posters.Poster]]]):
     def __init__(self, mirror: Optional[str] = None):
         super().__init__()
-        assert isinstance(mirror, str) or mirror is None, "Attribute \"mirror\" must be of type \"str\" or None."
+        assert isinstance(mirror, str) or mirror is None, 'Attribute "mirror" must be of type "str" or None.'
         if isinstance(mirror, str):
             self._connector.domain = urlsplit(mirror)[1]
         self._query = Query()

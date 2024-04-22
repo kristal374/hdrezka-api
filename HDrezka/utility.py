@@ -27,11 +27,12 @@ URL_REGEX_DICT = {
     URLsType.franchises: r"/franchises/?(?:page/\d+/?)?$",
     URLsType.person_info: r"/person/\d+(?:-[^/]+)/?",
     URLsType.poster: r"^/(?:ua/)?(?:films|series|cartoons|animation|show|games|new|announce|collections/\d+"
-                     r"(?:-[^/]+)|search|country/(?:(?:%[A-F0-9+-]+)+|[А-я+-]+)|year/(?:\d+)|page/(?:(?!1\b)"
-                     r"\d+))/?(?:best/(?:[a-z\-_]+/\d+|[a-z-_]+|\d+)?/?)?(?:(?!page)[a-z-]+/?)?(?:page/\d+/?)?",
+    r"(?:-[^/]+)|search|country/(?:(?:%[A-F0-9+-]+)+|[А-я+-]+)|year/(?:\d+)|page/(?:(?!1\b)"
+    r"\d+))/?(?:best/(?:[a-z\-_]+/\d+|[a-z-_]+|\d+)?/?)?(?:(?!page)[a-z-]+/?)?(?:page/\d+/?)?",
 }
-REGEX_QUERY = r"(?:filter=(?:last|popular|soon|watching)(?:&genre=\d+)?|" \
-              r"do=(?:lostpassword|search&subaction=search&q=.*))"
+REGEX_QUERY = (
+    r"(?:filter=(?:last|popular|soon|watching)(?:&genre=\d+)?|" r"do=(?:lostpassword|search&subaction=search&q=.*))"
+)
 REGEX_FRAGMENT = r"(?:akter|aktrisa|hudozhnik|kompozitor|montazher|operator|prodyuser|rezhisser|scenarist)"
 REGEX_MOVIE_FRAGMENT = r"t:\d+-s:\d+-e:\d+"
 
@@ -66,10 +67,21 @@ def extract_datetime(datetime_string):
 def extract_date(datetime_string):
     day, month, year, _ = re.search(r"(\d+)?\s?([А-я]+)?\s?(\d{4})\s?(года?|-\s\.{3})?", datetime_string).groups()
 
-    month_name = (("",), ("январь", "января"), ("февраль", "февраля"), ("март", "марта"),
-                  ("апрель", "апреля"), ("май", "мая"), ("июнь", "июня"), ("июль", "июля"),
-                  ("август", "августа"), ("сентябрь", "сентября"), ("октябрь", "октября"),
-                  ("ноябрь", "ноября"), ("декабрь", "декабря"))
+    month_name = (
+        ("",),
+        ("январь", "января"),
+        ("февраль", "февраля"),
+        ("март", "марта"),
+        ("апрель", "апреля"),
+        ("май", "мая"),
+        ("июнь", "июня"),
+        ("июль", "июля"),
+        ("август", "августа"),
+        ("сентябрь", "сентября"),
+        ("октябрь", "октября"),
+        ("ноябрь", "ноября"),
+        ("декабрь", "декабря"),
+    )
 
     day = int(day) if day is not None else 1
     if month is not None:

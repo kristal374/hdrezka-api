@@ -28,7 +28,7 @@ class TrailerBuilder:
     def _get_trailer(self) -> Union[dict, bool]:
         connector = NetworkClient()
         url = f"{connector.url}/engine/ajax/gettrailervideo.php"
-        response = connector.post(url, data={'id': self.id})
+        response = connector.post(url, data={"id": self.id})
         if response.status_code == 200:
             return response.json()
         raise ServiceUnavailable("Service is temporarily unavailable")
@@ -36,19 +36,19 @@ class TrailerBuilder:
     def extract_content(self):
         response = self._get_trailer()
         if not response["success"]:
-            raise AJAXFail(response.get("message", "field \"success\" is False"))
+            raise AJAXFail(response.get("message", 'field "success" is False'))
         return Trailer(
             id=int(self.id),
-            title=self._regular_search('(?<=&laquo;)[^(&raquo;)]*', response.get('title')),
-            original_title=self._regular_search('(?<=")[^",]*', response.get('title')),
+            title=self._regular_search("(?<=&laquo;)[^(&raquo;)]*", response.get("title")),
+            original_title=self._regular_search('(?<=")[^",]*', response.get("title")),
             release_year=self.extract_release_year(response),
-            description=response.get('description'),
-            trailer_url=self._regular_search('(?<=src=")[^"]*', response.get('code')),
-            url=response.get('link'),
+            description=response.get("description"),
+            trailer_url=self._regular_search('(?<=src=")[^"]*', response.get("code")),
+            url=response.get("link"),
         )
 
     def extract_release_year(self, response):
-        release_year = self._regular_search('\\d\\d\\d\\d[^)]*', response.get('title'))
+        release_year = self._regular_search(r"\d\d\d\d[^)]*", response.get("title"))
         if release_year is None:
             return release_year
         return int(release_year)
@@ -59,4 +59,4 @@ class TrailerBuilder:
         return answer.group(0).strip() if answer else None
 
     def __repr__(self):
-        return f"<Trailer(\"{self.id}\")>"
+        return f'<Trailer("{self.id}")>'

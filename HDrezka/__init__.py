@@ -1,6 +1,12 @@
 from HDrezka.__version__ import (
-    __title__, __version__, __license__, __author__,
-    __contact__, __url__, __copyright__, __description__
+    __title__,
+    __version__,
+    __license__,
+    __author__,
+    __contact__,
+    __url__,
+    __copyright__,
+    __description__,
 )
 from . import comments
 from . import connector
@@ -21,11 +27,20 @@ from . import trailer
 from . import utility
 from .connector import NetworkClient
 from .exceptions import (
-    HDRezkaError, EmptyPage, AJAXFail,
-    PageNotFound, ServiceUnavailable
+    HDRezkaError,
+    EmptyPage,
+    AJAXFail,
+    PageNotFound,
+    ServiceUnavailable,
 )
 from .filters import (
-    all_genres, convert_genres, GenreCartoons, GenreFilm,
-    GenreSeries, GenreAnimation, Filters, ShowCategory
+    all_genres,
+    convert_genres,
+    GenreCartoons,
+    GenreFilm,
+    GenreSeries,
+    GenreAnimation,
+    Filters,
+    ShowCategory,
 )
 from .main_page import HDrezka
