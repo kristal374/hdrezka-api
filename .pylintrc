@@ -9,6 +9,7 @@ disable=
     R0902, # Too many instance attributes
     R0903, # Too few public methods
     R0912, # Too many branches
+    W1404, # Implicit string concatenation found in assignment
 
 
 ignore = venv, tests
