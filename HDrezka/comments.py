@@ -47,7 +47,8 @@ class CommentsIterator(PageIterator[List[Comment]]):
 
     def get(self, number: Optional[int] = None):
         if self._last_page is not None and number is not None and number > self.last_page:
-            raise EmptyPage("No comments found on the page")
+            raise AttributeError(f"The value of \"number\"={number} is greater than "
+                                 f"the value of \"last_page\"={self.last_page}")
 
         response = self._query(page=number if number is not None else self.current_page)
         soup = bs4.BeautifulSoup(response["comments"], "lxml")
@@ -79,7 +80,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
                 comment = Comment()
                 comment.id = int(comment_tree.get("data-id"))
                 comment.author = User()
-                if comment_tree.next.get("class", [None])[0] == 'b-comment__removed':
+                if comment_tree.next.get("class", [None])[0] == 'b-comment__removed':  # pragma: NO COVER
                     comment.author.name = "Администрация"
                     comment.author.image = "https://static.hdrezka.ac/templates/hdrezka/images/avatar.png"
                     comment.text = self._extract_text(comment_tree.find("div", class_="b-comment__removed"))

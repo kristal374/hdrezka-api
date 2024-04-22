@@ -51,6 +51,11 @@ class TestCommentsIterator(TestCase):
         with self.assertRaises(ServiceUnavailable):
             self.iterator.get(1)
 
+    def test_out_of_page_range(self):
+        self.iterator.last_page = 5
+        with self.assertRaises(AttributeError):
+            self.iterator.get(10)
+
     def test_extract_last_page_number(self):
         for number_pages in range(50):
             page_list = list(range(1, number_pages + 1))
