@@ -28,7 +28,7 @@ class Poster:
     title: str = None  # Названия фильма
     entity: str = None  # Тип видео(Фильм, Сериал и тд)
     rates: Optional[float] = None  # Рейтинг видео(присутствует в категории Best)
-    info: Optional[str] = None  # Если является сериалом, отображает информацию о вышедших сериях
+    status: Optional[str] = None  # Если является сериалом, отображает информацию о вышедших сериях
     year: str = None  # Дата выхода
     country: Optional[str] = None  # Страна производитель
     genre: str = None  # Жанр фильма
@@ -159,7 +159,7 @@ class PosterBuilder(PageRepresentation):
             poster.title = item.find("div", class_="b-content__inline_item-link").find('a').text
             poster.entity = item.find("i", class_="entity").next.text.strip() or None
             poster.rates = self.extract_rates(item)
-            poster.info = self.extract_info(item)
+            poster.status = self.extract_info(item)
             poster.year, poster.country, poster.genre = self.extract_misc(item)
             poster.trailer = self.extract_trailer(item)
             poster.img_url = item.find('img').get("src")

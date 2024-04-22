@@ -86,7 +86,7 @@ def read_reference_file(file_name: str) -> dict:
 def generate_poster_html(content: List[Dict[str, Any]]) -> str:
     data = ""
     for item in content:
-        info = re.sub(r'(\d+ сезон) (\d+ серия)', r'\1, \2', item["info"] if item["info"] else "")
+        info = re.sub(r'(\d+ сезон) (\d+ серия)', r'\1, \2', item["status"] if item["status"] else "")
         trailer = f'<i class="trailer show-trailer" data-id="{item["id"]}" data-full="1"><b>Смотреть трейлер</b></i>'
         rates = f'<i class="b-category-bestrating rating-green-string" style="display: inline;">({item["rates"]})</i>'
         metadata = (item["year"], item["country"], item["genre"])
@@ -146,8 +146,8 @@ def generate_comment(comments: List[Dict[str, Any]], indentation=0) -> str:
     for comment in comments:
         comment_content = {
             "id": comment["id"],
-            "img_url": comment["author"]["image"],
-            "alt_name": comment["author"]["name"] if comment["author"]["image"] != NO_AVATAR else "",
+            "img_url": comment["author"]["img_url"],
+            "alt_name": comment["author"]["name"] if comment["author"]["img_url"] != NO_AVATAR else "",
             "user_name": comment["author"]["name"],
             "timestamp": "оставлен " + convert_datetime_into_string(comment["timestamp"]),
             "url_postfix": "#comment" + str(comment["id"]),

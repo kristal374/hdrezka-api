@@ -57,7 +57,7 @@ class PersonExtendedInfo:
     careers: str  # Роли которые исполнял человек
     gender: str  # Пол человека
     image_count: int  # Количество фото с этим человеком на сайте
-    image: str  # Основное фото человека
+    img_url: str  # Основное фото человека
     url: str  # ссылка на основную страницу с информацией о человеке
 
     def get(self):
@@ -89,7 +89,7 @@ class PersonExtendedInfoBuilder:
             careers=self._server_response.get("careers"),
             gender=self._server_response.get("gender"),
             image_count=int(self._server_response.get("photos_count")),
-            image=self._server_response.get("photo"),
+            img_url=self._server_response.get("photo"),
             url=self._server_response.get("link")
         )
 
@@ -107,7 +107,7 @@ class Person:
     death_day: Optional[str]  # День смерти
     death_place: Optional[str]  # Место смерти
     age_full: Optional[str]  # Возраст в котором умер человек
-    image: str  # Основное фото человека
+    img_url: str  # Основное фото человека
     gallery: Optional[List[str]]  # Гелерия фото с этим человеком на сайте
     stats: Dict[str, List["Poster"]]  # Информация о должности и соответствующих ей фильмах
     url: str  # ссылка на основную страницу с информацией о человеке
@@ -131,7 +131,7 @@ class PersonBuilder(PageRepresentation):
             death_day=info_table.get("death_day"),
             death_place=info_table.get("death_place"),
             age_full=info_table.get("age_full"),
-            image=self.extract_image(),
+            img_url=self.extract_image(),
             gallery=info_table.get("gallery"),
             stats=self.extract_stats(),
             url=self.page.soup.find("meta", property="og:url").get("content")

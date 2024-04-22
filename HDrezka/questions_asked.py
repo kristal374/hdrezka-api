@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 class Question:
     id: int
     title: str
-    image: Optional[str]
+    img_url: Optional[str]
     text: str
     date: str
     recommendations: List
@@ -41,7 +41,7 @@ class QuestionsBuilder(PageRepresentation):
         return Question(
             id=int(re.search(r"(\d+)\.html$", current_url).group(1)),
             title=self.page.soup.find("div", class_="b-content__htitle").text.strip(),
-            image=self.extract_image(),
+            img_url=self.extract_image(),
             text=self.extract_text(),
             date=self.page.soup.find("div", class_="b-qa__entity_date").text.strip(),
             recommendations=self.extract_recommendations(),
@@ -82,7 +82,7 @@ class QuestionsBuilder(PageRepresentation):
 class QuestionBriefInfo:
     id: int = None
     title: str = None
-    image: str = None
+    img_url: str = None
     url: str = None
 
     def get(self):
@@ -100,7 +100,7 @@ class QuestionsBriefInfoBuilder(PageRepresentation):
             question.url = item.a.get("href").strip()
             question.id = int(re.search(r"(\d+)\.html$", question.url).group(1))
             question.title = item.find("div", class_="title").text.strip()
-            question.image = item.find("div", class_="cycle").img.get("src").strip()
+            question.img_url = item.find("div", class_="cycle").img.get("src").strip()
             result_list.append(question)
 
         if not result_list:

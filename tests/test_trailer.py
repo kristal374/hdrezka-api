@@ -8,11 +8,6 @@ from HDrezka.trailer import TrailerBuilder
 from tests.mock_html.html_construcror import generate_trailer_info
 
 
-def test(*args, **kwargs):
-    print(*args, **kwargs)
-    return True
-
-
 class TestTrailerBuilder(TestCase):
     url = 'https://rezka.ag/engine/ajax/gettrailervideo.php'
 

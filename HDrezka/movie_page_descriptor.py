@@ -102,13 +102,13 @@ class MovieDetails:
     url: str = None  # Ссылка на страницу
     original_name: Optional[str] = None  # Название фильма на английском(зачастую)
     status: Optional[str] = None  # Статус проекта(завершён или номер сезона и серии)
-    image: str = None  # Промо-постер
+    img_url: str = None  # Промо-постер
     trailer: Optional[TrailerBuilder] = None  # наличие трейлера
     info_table: InfoTable = None  # Таблица с краткой информацией по фильму
     description: Optional[str] = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     comments_count: Optional[int] = None
-    part_content: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
+    franchise: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
     questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
@@ -259,13 +259,13 @@ class MovieDetailsBuilder(PageRepresentation):
         page.url = self.page.soup.find('meta', property='og:url').get("content").strip()
         page.original_name = self.extract_original_name()
         page.status = self.extract_status()
-        page.image = self.page.soup.find("div", class_="b-sidecover").a.get("href")
+        page.img_url = self.page.soup.find("div", class_="b-sidecover").a.get("href")
         page.trailer = self.extract_trailer()
         page.info_table = InfoTableBuilder(self.page).extract_content()
         page.description = self.extract_description()
         page.player = PlayerBuilder(self.page).extract_content()
         page.comments_count = self.extract_comments_count()
-        page.part_content = franchises.FranchisesBuilder(self.page).extract_content()
+        page.franchise = franchises.FranchisesBuilder(self.page).extract_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
         page.questions_asked = self.extract_questions()
@@ -307,7 +307,7 @@ class MovieDetailsBuilder(PageRepresentation):
             rate.name = "HDrezka"
             rate.rates = float(self.page.soup.find("span", class_="num").text.strip())
             rate.votes = int(self.page.soup.find("span", class_="votes").span.text.strip())
-            rate.source = self.page.soup.find('meta', property='og:video').get("content").strip()
+            rate.source = self.page.soup.find('meta', property='og:url').get("content").strip()
             return rate
         except AttributeError:
             return None

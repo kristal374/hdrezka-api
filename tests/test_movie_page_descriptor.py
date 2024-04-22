@@ -80,9 +80,9 @@ class TestPartContent(TestCase):
         reference_html = read_reference_file("reference_movie_html.json")
         for key in list(reference_html.keys())[42:48]:
             movie_info = MovieDetailsBuilder(reference_html[key]).extract_content()
-            if len(movie_info.part_content) == 0:
+            if len(movie_info.franchise) == 0:
                 continue
-            for movie in movie_info.part_content:
+            for movie in movie_info.franchise:
                 m.get(movie.url, "")
                 with self.assertRaises(AttributeError) as cm:
                     movie.get()

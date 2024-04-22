@@ -16,7 +16,7 @@ from .utility import convert_string_into_datetime
 @dataclass
 class User:
     name: str = None  # Имя пользователя
-    image: str = None  # Ссылка на аватар-изображение пользователя
+    img_url: str = None  # Ссылка на аватар-изображение пользователя
 
     def __repr__(self):
         return f"<User({self.name})>"
@@ -82,12 +82,12 @@ class CommentsIterator(PageIterator[List[Comment]]):
                 comment.author = User()
                 if comment_tree.next.get("class", [None])[0] == 'b-comment__removed':  # pragma: NO COVER
                     comment.author.name = "Администрация"
-                    comment.author.image = "https://static.hdrezka.ac/templates/hdrezka/images/avatar.png"
+                    comment.author.img_url = "https://static.hdrezka.ac/templates/hdrezka/images/avatar.png"
                     comment.text = self._extract_text(comment_tree.find("div", class_="b-comment__removed"))
                     comment.replies = self.extreact_comments(comment_tree)
                 else:
                     comment.author.name = comment_tree.next.find("span", class_="name").text.strip()
-                    comment.author.image = comment_tree.next.find("div", class_="ava").img.get("src").strip()
+                    comment.author.img_url = comment_tree.next.find("div", class_="ava").img.get("src").strip()
                     comment.timestamp = self._extract_timestamp(comment_tree)
                     comment.text = self._extract_text(comment_tree.next.find("div", class_="text").next)
                     comment.replies = self.extreact_comments(comment_tree)
