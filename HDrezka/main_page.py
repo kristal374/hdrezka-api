@@ -132,10 +132,11 @@ class MainPageBuilder(html_representation.PageRepresentation):
 
 
 class HDrezka(BaseSiteNavigation[List[Union[MainPage, movie_posters.Poster]]]):
-    def __init__(self, mirror="https://rezka.ag"):
+    def __init__(self, mirror: Optional[str] = None):
         super().__init__()
-        assert isinstance(mirror, str), "Attribute \"mirror\" must be of type \"str\"."
-        self._connector.domain = urlsplit(mirror)[1] or "rezka.ag"
+        assert isinstance(mirror, str) or mirror is None, "Attribute \"mirror\" must be of type \"str\" or None."
+        if isinstance(mirror, str):
+            self._connector.domain = urlsplit(mirror)[1]
         self._query = Query()
 
     @staticmethod

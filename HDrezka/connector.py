@@ -12,9 +12,12 @@ from requests.structures import CaseInsensitiveDict
 class Connector(ABC):
     def __init__(self, domain, user_agent, proxies):
         self.domain = domain
-        self.url = f"https://{domain}"
         self.user_agent = user_agent
         self.proxies = proxies
+
+    @property
+    def url(self):
+        return f"https://{self.domain}"
 
     def get_headers(self, url):
         domain = urlsplit(str(url)).netloc
