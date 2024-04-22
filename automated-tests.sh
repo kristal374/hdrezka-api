@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./venv/Scripts/activate
+black HDrezka
 
 if ! python -m tests; then
   echo "unit tests failed"
