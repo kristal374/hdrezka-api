@@ -1,15 +1,19 @@
-import sys
+import re
 import os
 
-# Insert HDrezka path into the system.
-sys.path.insert(0, os.path.abspath(".."))
 
-import HDrezka
+about = {}
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, "..", "HDrezka", "__version__.py"), "r", encoding="utf-8") as f:
+    text = re.sub(r"[\"\']\s*?\\\n\s*?[\"\']", "", f.read())
+    for line in text.strip().split("\n"):
+        name, value = re.search(r"(.*?)\s*?=\s*?[\"\'](.*?)[\"\']$", line).groups()
+        about[name.strip()] = value.strip()
 
-project = HDrezka.__title__
-copyright = f"2024, {HDrezka.__author__}"
-author = HDrezka.__author__
-release = HDrezka.__version__
+project = about["__title__"]
+copyright = f"2024, {about['__author__']}"
+author = about["__author__"]
+release = about["__version__"]
 
 extensions = [
     "sphinx.ext.duration",

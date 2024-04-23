@@ -1,8 +1,9 @@
-========================
+=========================
 HDrezka-api documentation
-========================
+=========================
 
 .. code-block:: python
+
     from HDrezka import HDrezka
 
     hdrezka = HDrezka()
