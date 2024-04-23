@@ -100,7 +100,7 @@ class MovieDetails:
     id: int = None  # Идентификатор фильма
     title: str = None  # Название фильма
     url: str = None  # Ссылка на страницу
-    original_name: Optional[str] = None  # Название фильма на английском(зачастую)
+    original_title: Optional[str] = None  # Название фильма на английском(зачастую)
     status: Optional[str] = None  # Статус проекта(завершён или номер сезона и серии)
     img_url: str = None  # Промо-постер
     trailer: Optional[TrailerBuilder] = None  # наличие трейлера
@@ -253,7 +253,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.id = int(re.search(r"/(\d*)-", self.page.soup.find("meta", property="og:url").get("content")).group(1))
         page.title = self.page.soup.find("div", class_="b-post__title").text.strip()
         page.url = self.page.soup.find("meta", property="og:url").get("content").strip()
-        page.original_name = self.extract_original_name()
+        page.original_title = self.extract_original_name()
         page.status = self.extract_status()
         page.img_url = self.page.soup.find("div", class_="b-sidecover").a.get("href")
         page.trailer = self.extract_trailer()
