@@ -10,7 +10,7 @@ import bs4
 from .core_navigation import PageIterator
 from .exceptions import EmptyPage, ServiceUnavailable
 from .html_representation import PageRepresentation
-from .utility import convert_string_into_datetime
+from .utility import convert_string_into_datetime, get_count_messages
 
 
 @dataclass
@@ -42,9 +42,6 @@ class CommentsIterator(PageIterator[List[Comment]]):
         self.film_id = film_id
         self.page_type = page_type  # 0 - film page or 1 - question page
 
-    def __count_elements(self, data):
-        return sum(self.__count_elements(item.replies) for item in data) + 1
-
     def get(self, number: Optional[int] = None):
         if self._last_page is not None and number is not None and number > self.last_page:
             raise AttributeError(
@@ -59,7 +56,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
         result_list = self.extreact_comments(soup)
 
         number_comments = response["comments"].count(">оставлен ")
-        if number_comments != self.__count_elements(result_list) - 1:  # pragma: NO COVER
+        if number_comments != get_count_messages(result_list) - 1:  # pragma: NO COVER
             # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
             soup = bs4.BeautifulSoup(response["comments"], "html5lib")
             return self.extreact_comments(soup)
@@ -137,7 +134,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
 
         text_from_tag = self._extract_text(tag)
         if tag.name == "a" and (
-            tag.get("href") == text_from_tag or not re.search(r'https?://[^\s"]*', tag.get("href"))
+                tag.get("href") == text_from_tag or not re.search(r'https?://[^\s"]*', tag.get("href"))
         ):
             return text_from_tag
 

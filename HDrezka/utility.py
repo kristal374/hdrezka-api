@@ -105,3 +105,13 @@ def convert_string_into_datetime(datetime_string: str):
     if re.search(r"(\d{2}:\d{2})", datetime_string):
         return extract_datetime(datetime_string)
     return extract_date(datetime_string).date()
+
+
+def get_count_messages(data) -> int:
+    """
+    Calculate the total number of messages.
+
+    :param data: The list with messages.
+    :return: The total number of messages.
+    """
+    return sum(get_count_messages(item.replies) for item in data) + 1
