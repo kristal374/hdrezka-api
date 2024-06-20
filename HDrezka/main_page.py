@@ -3,7 +3,7 @@ from __future__ import annotations
 import dataclasses
 import re
 from datetime import datetime
-from typing import Optional, List, TYPE_CHECKING, Union
+from typing import Optional, List, TYPE_CHECKING, Union, overload
 from urllib.parse import urlsplit, urljoin
 
 from . import franchises
@@ -37,6 +37,10 @@ from .utility import get_url_type, URLsType
 
 if TYPE_CHECKING:
     from .movie_posters import Poster
+    from .franchises import Franchise, FranchiseBriefInfo
+    from .questions_asked import Question, QuestionBriefInfo
+    from .movie_page_descriptor import MovieDetails
+    from .person import Person
 
 __all__ = ["HDrezka", "MainPage"]
 
@@ -186,6 +190,26 @@ class HDrezka(BaseSiteNavigation[List[Union[MainPage, movie_posters.Poster]]]):
     def show_only(self, pattern: Optional[Union[ShowCategory, int]] = ShowCategory.ALL):
         self._query.show_only(pattern)
         return self
+
+    @overload
+    def get(self, url: None = None) -> Union[MainPage, List[Poster]]:
+        ...
+
+    @overload
+    def get(
+            self, url: str = None
+    ) -> Union[
+        MainPage,
+        MovieDetails,
+        List[MovieCollection],
+        Question,
+        List[QuestionBriefInfo],
+        List[Franchise],
+        List[FranchiseBriefInfo],
+        Person,
+        List[Poster],
+    ]:
+        ...
 
     def get(self, url: Optional[str] = None):  # pylint: disable = R0911
         if url is not None:
