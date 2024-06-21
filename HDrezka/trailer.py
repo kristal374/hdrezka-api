@@ -17,7 +17,7 @@ class Trailer:
     url: str  # Ссылка на фильм
 
     def __repr__(self):
-        return f"<Question({self.title})>"
+        return f"<Trailer({self.title})>"
 
 
 class TrailerBuilder:
@@ -39,7 +39,7 @@ class TrailerBuilder:
             raise AJAXFail(response.get("message", 'field "success" is False'))
         return Trailer(
             id=int(self.id),
-            title=self._regular_search("(?<=&laquo;)[^(&raquo;)]*", response.get("title")),
+            title=self._regular_search("(?<=&laquo;).*?(?=&raquo;)", response.get("title")),
             original_title=self._regular_search('(?<=")[^",]*', response.get("title")),
             release_year=self.extract_release_year(response),
             description=response.get("description"),
@@ -48,7 +48,7 @@ class TrailerBuilder:
         )
 
     def extract_release_year(self, response):
-        release_year = self._regular_search(r"\d\d\d\d[^)]*", response.get("title"))
+        release_year = self._regular_search(r"\d{4}(?=\)</small>$)", response.get("title"))
         if release_year is None:
             return release_year
         return int(release_year)
@@ -59,4 +59,4 @@ class TrailerBuilder:
         return answer.group(0).strip() if answer else None
 
     def __repr__(self):
-        return f'<Trailer("{self.id}")>'
+        return f'<TrailerBuilder("{self.id}")>'
