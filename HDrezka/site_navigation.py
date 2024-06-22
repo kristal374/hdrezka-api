@@ -32,7 +32,7 @@ class BaseMovieCategory(BaseSiteNavigation[List[Poster]], ABC):
         self._query = Query()
 
     @abstractmethod
-    def selected_category(self, genre: Optional[str]):
+    def selected_category(self, genre: Optional[Union[GenreFilm, GenreSeries, GenreCartoons, GenreAnimation, str]]):
         self._genre.genre = genre
         return self
 
@@ -82,7 +82,7 @@ class Best(BaseSiteNavigation[List[Poster]]):
 class Films(BaseMovieCategory):
     _name = "films"
 
-    def selected_category(self, genre: Optional[Union[GenreFilm, str]]):
+    def selected_category(self, genre: Optional[Union[GenreFilm, str]]):  # type: ignore[override]
         return super().selected_category(genre)
 
     def find_best(
@@ -97,7 +97,7 @@ class Films(BaseMovieCategory):
 class Cartoons(BaseMovieCategory):
     _name = "cartoons"
 
-    def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):
+    def selected_category(self, genre: Optional[Union[GenreCartoons, str]]):  # type: ignore[override]
         return super().selected_category(genre)
 
     def find_best(
@@ -112,7 +112,7 @@ class Cartoons(BaseMovieCategory):
 class Series(BaseMovieCategory):
     _name = "series"
 
-    def selected_category(self, genre: Optional[Union[GenreSeries, str]]):
+    def selected_category(self, genre: Optional[Union[GenreSeries, str]]):  # type: ignore[override]
         return super().selected_category(genre)
 
     def find_best(
@@ -127,7 +127,7 @@ class Series(BaseMovieCategory):
 class Animation(BaseMovieCategory):
     _name = "animation"
 
-    def selected_category(self, genre: Optional[Union[GenreAnimation, str]]):
+    def selected_category(self, genre: Optional[Union[GenreAnimation, str]]):  # type: ignore[override]
         return super().selected_category(genre)
 
     def find_best(

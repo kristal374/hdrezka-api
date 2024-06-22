@@ -143,7 +143,7 @@ class MainPageBuilder(html_representation.PageRepresentation):
         return result_list
 
 
-class HDrezka(BaseSiteNavigation[List[Union[MainPage, movie_posters.Poster]]]):
+class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
     def __init__(self, mirror: Optional[str] = None):
         super().__init__()
         assert isinstance(mirror, str) or mirror is None, 'Attribute "mirror" must be of type "str" or None.'

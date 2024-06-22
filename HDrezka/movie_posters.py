@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from typing import Union, Optional, List, TYPE_CHECKING
 
-from bs4.element import NavigableString
+from bs4.element import NavigableString, PageElement
 
 from . import movie_page_descriptor
 from . import person
@@ -57,8 +57,8 @@ class PosterExtendedInfo:
     description: Optional[str] = None
     age_restrictions: Optional[str] = None
     genre: List[CustomString] = None
-    directors: List[PersonBriefInfo] = None
-    actors: List[PersonBriefInfo] = None
+    directors: List[Union[PersonBriefInfo, str]] = None
+    actors: List[Union[PersonBriefInfo, str]] = None
     rates: List[Rating] = None
     url: str = None
 
@@ -109,7 +109,8 @@ class PosterExtendedInfoBuilder(PageRepresentation):
 
     def extract_person(self, string) -> List[Union[PersonBriefInfo, str]]:
         person_obj = self.page.soup.find("span", string=string).parent
-        process_person = list(filter(lambda x: str(x) not in ("\n", " ", "", ", ", ",", " и "), person_obj))
+        process_person = [i for i in person_obj if str(i) not in ("\n", " ", "", ", ", ",", " и ")]
+        iterable_obj: Union[List[PageElement], List[str]]  # TODO: перепроверить
         if isinstance(process_person[1], NavigableString):
             iterable_obj = re.split(", | и ", process_person[1].strip())
         else:

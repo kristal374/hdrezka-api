@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from typing import Optional, Union, List
+from typing import Optional, Union, List, Iterator
 
 from .connector import NetworkClient
 from .core_navigation import Query, PageIterator, BaseSiteNavigation
@@ -39,7 +39,7 @@ class CollectionBriefInfo:
         filter_param = Query().filter(custom_filter)
         return PosterBuilder(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
-    def __iter__(self) -> CollectionIterator[List[Poster]]:
+    def __iter__(self) -> Iterator[List[Poster]]:
         return CollectionIterator(self.url)
 
     def __repr__(self):
@@ -58,7 +58,7 @@ class MovieCollection:
         filter_param = Query().filter(custom_filter)
         return PosterBuilder(NetworkClient().get(f"{self.url}{filter_param}").text).extract_content()
 
-    def __iter__(self) -> CollectionIterator[List[Poster]]:
+    def __iter__(self) -> Iterator[List[Poster]]:
         return CollectionIterator(self.url)
 
     def __repr__(self):

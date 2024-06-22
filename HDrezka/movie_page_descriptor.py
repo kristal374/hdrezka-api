@@ -109,7 +109,7 @@ class MovieDetails:
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     comments_count: Optional[int] = None
     franchise: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
-    recommendations: List = None  # Список рекомендованных к просмотру фильмов
+    recommendations: List[Poster] = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[Episode]] = None  # Список выхода серий
     questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
     comment: CommentsIterator = None  # Комментарии к данному фильму

@@ -92,7 +92,7 @@ class Query:
     def __init__(self):
         self._params = {"filter": Filters.LAST.value, "genre": ShowCategory.ALL.value}
 
-    def filter(self, pattern: Optional[Union[Filters, str]] = ShowCategory.ALL):
+    def filter(self, pattern: Optional[Union[Filters, str]] = Filters.LAST):
         if pattern is None:
             self._params["filter"] = Filters.LAST.value
         elif isinstance(pattern, Filters):
@@ -126,7 +126,7 @@ class Query:
 
 
 class Genre:
-    def __init__(self):
+    def __init__(self) -> None:
         self._genre: Optional[str] = None
 
     @property
@@ -150,7 +150,7 @@ class Genre:
 
 
 class Year:
-    def __init__(self):
+    def __init__(self) -> None:
         self._year: Optional[int] = None
 
     @property
@@ -168,7 +168,7 @@ class Year:
 
 
 class Country:
-    def __init__(self):
+    def __init__(self) -> None:
         self._country: Optional[str] = None
 
     @property
