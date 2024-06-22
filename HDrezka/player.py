@@ -24,15 +24,15 @@ class InfoByEpisode:
 
 class Film:
     def __init__(
-        self,
-        metadata,
-        url_dict,
-        translators_dict: Dict[str, str],
-        subtitle_dict: Optional[Dict[str, str]] = None,
+            self,
+            metadata,
+            url_dict,
+            translators_dict: Dict[str, int],
+            subtitle_dict: Optional[Dict[str, str]] = None,
     ):
         self.metadata: Dict[str, Union[str, int]] = metadata
         self.url_dict: Dict[str, str] = url_dict
-        self.translators_dict: Dict[str, str] = translators_dict
+        self.translators_dict: Dict[str, int] = translators_dict
         self.subtitle_dict: Optional[Dict[str, str]] = subtitle_dict
 
     def set_translate(self, translator_id: int):
@@ -102,11 +102,11 @@ class Film:
         return response
 
     def load_video(
-        self,
-        file_name,
-        quality="1080p",
-        create_dump_file=False,
-        chunk_size=2**10 * 512,
+            self,
+            file_name,
+            quality="1080p",
+            create_dump_file=False,
+            chunk_size=2 ** 10 * 512,
     ):
         media_loader.load_from_player(self, file_name, quality, create_dump_file, chunk_size)
 
@@ -116,12 +116,12 @@ class Film:
 
 class Serial(Film):
     def __init__(
-        self,
-        metadata,
-        url_dict,
-        translators_dict: Dict[str, str],
-        episode_info_by_season: Dict[int, List[InfoByEpisode]],
-        subtitle_dict: Optional[Dict[str, str]] = None,
+            self,
+            metadata,
+            url_dict,
+            translators_dict: Dict[str, int],
+            episode_info_by_season: Dict[int, List[InfoByEpisode]],
+            subtitle_dict: Optional[Dict[str, str]] = None,
     ):
         super().__init__(metadata, url_dict, translators_dict, subtitle_dict)
         self.episode_info_by_season = episode_info_by_season
@@ -191,11 +191,11 @@ class Serial(Film):
         self.episode_info_by_season = self.extract_episode_info_by_season(soup)
 
     def load_all_series(
-        self,
-        file_name,
-        quality="1080p",
-        create_dump_file=False,
-        chunk_size=2**10 * 512,
+            self,
+            file_name,
+            quality="1080p",
+            create_dump_file=False,
+            chunk_size=2 ** 10 * 512,
     ):
         for season in self.episode_info_by_season:
             self.set_season(season)
@@ -240,7 +240,7 @@ class PlayerBuilder(PageRepresentation):
         return Film(
             metadata=metadata,
             url_dict=Film.extract_video_urls(player_config["streams"]),
-            translators_dict=self.get_all_translators(match[3]),
+            translators_dict=self.get_all_translators(int(match[3])),
             subtitle_dict=Film.extract_subtitle_urls(player_config),
         )
 
@@ -259,7 +259,7 @@ class PlayerBuilder(PageRepresentation):
             metadata=metadata,
             episode_info_by_season=self.get_episode_info_by_season(),
             url_dict=Serial.extract_video_urls(player_config["streams"]),
-            translators_dict=self.get_all_translators(match[3]),
+            translators_dict=self.get_all_translators(int(match[3])),
             subtitle_dict=Serial.extract_subtitle_urls(player_config),
         )
 
@@ -267,7 +267,7 @@ class PlayerBuilder(PageRepresentation):
         seasons_tabs = self.page.soup.find("div", id="simple-episodes-tabs")
         return Serial.extract_episode_info_by_season(seasons_tabs)
 
-    def get_all_translators(self, default_translator_id):
+    def get_all_translators(self, default_translator_id: int):
         voice_overs = {}
         for item in self.page.soup.find_all("li", class_="b-translator__item"):
             # 376 is the translator ID of "HDrezka Studio (ua)"

@@ -163,7 +163,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/379848e83e63e3964e12d0db843bdde6:2024020310:84d71211-c18a-4a57-8cb7-c94779aa50d2/8/2/4/7/2/9/pe8uc.mp4"
       },
       "translators_dict": {
-        "\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b (+\u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b)": "238"
+        "\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b (+\u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b)": 238
       },
       "subtitle_dict": {
         "ru": "https://static.voidboost.com/view/7bspU15R_Yprvug3vQ8u1w/1706946803/8/2/4/7/2/9/38e5tr563qe8.vtt",
@@ -1124,7 +1124,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/96db407d814b3725704896c651237374:2024020310:3ae48c8a-6a3e-49fa-9188-329b1f44090a/8/3/3/9/4/8/lvejs.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -1391,7 +1391,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/91722f361f235a6e912b1dd5c93c179f:2024020310:6d890de0-381d-4ff5-900a-42e0fe5d747a/8/1/6/3/2/6/ycbbw.mp4"
       },
       "translators_dict": {
-        "\u041c\u043d\u043e\u0433\u043e\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": "59"
+        "\u041c\u043d\u043e\u0433\u043e\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": 59
       },
       "subtitle_dict": null
     },
@@ -1733,7 +1733,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/64e8f3f3ce0fe39ac2731126c9a32c61:2024020311:22527919-6b33-4aff-9637-ad07b9116695/9/0/1/7/6/0/9pkph.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -2207,7 +2207,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/f0602d361091e6b944c6a9e189e7fece:2024020311:4f86b578-c91b-4d47-ab5f-48c89ec6755b/8/2/8/5/4/6/38cvo.mp4"
       },
       "translators_dict": {
-        "\u0411\u0435\u0437 \u0446\u0435\u043d\u0437\u0443\u0440\u044b (18+)": "417"
+        "\u0411\u0435\u0437 \u0446\u0435\u043d\u0437\u0443\u0440\u044b (18+)": 417
       },
       "subtitle_dict": null
     },
@@ -2529,7 +2529,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/e943b6ce33ba5807e92ae32dae0f2e7d:2024020311:a70e00f4-ac73-4947-a805-200f11ea4cdc/8/2/4/7/3/5/rlwz4.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -2899,7 +2899,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/de87dc35a63420d17ded63a678d4df0d:2024020311:fef25b28-7652-431a-bb85-b33eaa55efe7/8/2/4/0/1/7/yuzjs.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -3213,7 +3213,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/e5707f9591e81213d724d62176735771:2024020311:24e173f3-3c6b-48a9-93f1-7144ce320876/7/9/8/0/9/8/glg45.mp4"
       },
       "translators_dict": {
-        "SDI Media": "88"
+        "SDI Media": 88
       },
       "subtitle_dict": null
     },
@@ -3538,7 +3538,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/1f0cc11afa35f1ab20cda27093d32542:2024020311:cd853f7f-c10e-4ef6-86c4-fa5a4e790108/8/1/5/4/5/9/i34ts.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -3999,7 +3999,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/ac8d712fdbd25cac681eee4569cda156:2024020311:e2297f2c-d9a7-4f3b-889e-7d871657c369/7/9/4/6/2/2/kh4p3.mp4"
       },
       "translators_dict": {
-        "AlphaProject": "374"
+        "AlphaProject": 374
       },
       "subtitle_dict": null
     },
@@ -4338,7 +4338,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/6f7b6ed807422d946979dd294c87fd19:2024020311:85b62af7-49b4-402e-82ee-fb0cbbbb8a11/8/1/1/6/3/8/w172l.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -4704,7 +4704,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/029c6b8d0af086435e1e72e28fb3afa4:2024020311:8c95ff80-5712-4919-bc7c-fef1f2dddce8/8/0/2/5/1/8/s1odm.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -4996,7 +4996,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/a4fb6ace3c836846cac507fd41ab8dbf:2024020311:716b0dda-c724-42bb-b621-e97d40e72bb2/8/0/2/8/3/7/zms2w.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -5631,7 +5631,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/14730a357936fb69a8636c8d6327c59d:2024020311:759df509-09bd-447c-b8be-269d59fa43bb/7/7/5/9/8/1/oqon1.mp4"
       },
       "translators_dict": {
-        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": "356"
+        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": 356
       },
       "subtitle_dict": null
     },
@@ -6620,7 +6620,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/f13accedb8019edff8202a844f1ea0be:2024020311:7dceaaa7-07d7-43ef-b5be-0a8f5953c669/7/7/1/4/6/6/ouv08.mp4"
       },
       "translators_dict": {
-        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": "356"
+        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": 356
       },
       "subtitle_dict": null
     },
@@ -6940,7 +6940,7 @@
         "4K": "https://stream.voidboost.cc/34802e810f985c4fb99a5f77b56d381a:2024020311:5f76920b-822e-4d58-b432-45138672bdb8/7/5/2/9/8/2/u5d2h.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -7406,7 +7406,7 @@
         "4K": "https://stream.voidboost.cc/0dd9354ebe95787f06400e892f870d99:2024020311:f767d607-a120-4a46-a003-9a3ab3cb637c/7/4/9/2/8/0/bz1fw.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -7840,7 +7840,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/843cb34390713666e6dee6aaabfaccdd:2024020311:2723d90c-7b7a-4d79-b9af-4eb7b887983f/7/7/1/4/1/2/f7qox.mp4"
       },
       "translators_dict": {
-        "\u0414\u0432\u0443\u0445\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": "55"
+        "\u0414\u0432\u0443\u0445\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": 55
       },
       "subtitle_dict": null
     },
@@ -8143,7 +8143,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/e20d1d4a5bbf5be7e81907c012b08656:2024020311:b16a97fc-eb14-44b8-946e-662dae25cd5d/7/7/0/4/1/1/f70i0.mp4"
       },
       "translators_dict": {
-        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": "356"
+        "\u041b\u044e\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439": 356
       },
       "subtitle_dict": null
     },
@@ -8747,7 +8747,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/a3680dba80fe78c0208565fb9a63c8f8:2024020311:7b593651-5a3c-4253-b1d7-c50694b5c09d/9/4/8/3/5/5/dlhg6.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -9315,7 +9315,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/be4a4f080f3deff102fe80a3ec847da4:2024020311:b5d8b79c-9112-47ec-9ce7-129a82805f1e/7/6/8/9/3/3/782rv.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -9650,7 +9650,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/3671efea2c3c9cbc1faeb3b180a60bf3:2024020311:132ba7e7-14bc-4fdb-941a-ea02fcdb0d78/9/0/0/7/5/0/emo4q.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -9973,7 +9973,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/2a67256a4c93740435666bf665422b23:2024020311:ee67a42e-b599-43df-8be8-a6f9a4f86c3a/7/8/6/2/0/0/8ehj3.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -10671,7 +10671,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/042c3ca039db1ec5981afd35927d2f6a:2024020311:b5089e3b-5ab5-4181-9174-5226bc9e0cb1/7/9/2/2/4/7/53ijb.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -11265,7 +11265,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/fe5a3674d07f3f956fab265160c0d653:2024020311:01c233b9-57ea-427f-baf1-e9bb4a517c7c/7/9/0/3/2/8/lzh5x.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -12742,7 +12742,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/f2815c900fb64c5f3699363da118aa89:2024020311:b9ee7e12-92fd-4dcd-b726-b8f133a4d667/7/3/3/4/1/3/lp8hc.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -13059,7 +13059,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/4b3c5394f79fb4eebd0c62346d695b92:2024020311:e3b512c5-8c29-4dbf-ad57-3dbe733c8035/7/3/5/7/0/1/o9t2p.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -13423,7 +13423,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/808f330ce0f72423b8a86d0f885e41e9:2024020311:3581d25e-b293-4b0b-9585-af8f88cde79e/7/3/4/2/6/3/bkmf0.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -14768,7 +14768,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/00862112d07eb6eea205f5fbc47a219d:2024020308:03326387-74a8-4ca3-a457-78f5f1f6228a/9/5/0/5/6/3/mdmpy.mp4"
       },
       "translators_dict": {
-        "SoftBox": "114"
+        "SoftBox": 114
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -15190,7 +15190,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/c19502cb519aa939701612ca10727b68:2024020308:c46ad5d0-e22a-46cc-88b3-2a72038da30a/9/4/6/7/8/6/ytnrx.mp4"
       },
       "translators_dict": {
-        "\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0434\u0443\u0431\u043b\u044f\u0436": "443"
+        "\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0434\u0443\u0431\u043b\u044f\u0436": 443
       },
       "subtitle_dict": null
     },
@@ -15509,7 +15509,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/f4e2bf0f5d77285073fb89230a9a5ade:2024020308:de702a69-f560-4f93-8633-1aed15a1d8bd/9/6/4/1/1/3/lxnjh.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -16458,7 +16458,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/3d9f6cd9620898ab56a8077741d519fe:2024020309:e8b801ce-ffcf-4e65-a6a6-0dbc3117105a/9/2/5/4/6/0/ugb63.mp4"
       },
       "translators_dict": {
-        "\u041c\u043d\u043e\u0433\u043e\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": "565"
+        "\u041c\u043d\u043e\u0433\u043e\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": 565
       },
       "subtitle_dict": null
     },
@@ -16776,7 +16776,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/f56026d43776824d07b3fbea1abdfeac:2024020309:71269407-266b-404d-a50c-34f035fd0ce2/9/4/3/5/8/2/tgmq8.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null
     },
@@ -17431,7 +17431,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/6449d29f2cd8e728f99e8b8b40b5491b:2024020309:32815131-3202-417e-845e-dd7bee82f690/9/3/0/8/2/4/z6ejp.mp4"
       },
       "translators_dict": {
-        "Unknown translate": "110"
+        "Unknown translate": 110
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -18331,7 +18331,7 @@
         "4K": "https://stream.voidboost.cc/e7da9df2a86a158e2fecd201125f95ba:2024020309:18e1ff91-e913-43e5-bfc9-460c08ef4e1c/8/7/4/5/3/8/s3vpg.mp4"
       },
       "translators_dict": {
-        "DublikTV": "506"
+        "DublikTV": 506
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -19149,7 +19149,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/10cbf0970009bee4b42eac3fb79dda0e:2024020309:a05b23bf-546a-43d6-918f-6c058ca3380b/8/7/4/4/3/5/vk8m7.mp4"
       },
       "translators_dict": {
-        "\u0414\u0432\u0443\u0445\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": "55"
+        "\u0414\u0432\u0443\u0445\u0433\u043e\u043b\u043e\u0441\u044b\u0439 \u0437\u0430\u043a\u0430\u0434\u0440\u043e\u0432\u044b\u0439": 55
       },
       "subtitle_dict": null,
       "episode_info_by_season": {
@@ -20972,7 +20972,7 @@
         "1080p Ultra": "https://stream.voidboost.cc/069c50bbf65c4fd90e8cd9cd99db9d8b:2024020222:0a382f8a-3abb-495e-9b18-372769130c57/1/0/0/6/8/5/4/jnv94.mp4"
       },
       "translators_dict": {
-        "DublikTV": "506"
+        "DublikTV": 506
       },
       "subtitle_dict": null
     },
