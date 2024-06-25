@@ -289,7 +289,10 @@ class MovieDetailsBuilder(PageRepresentation):
         trailer = self.page.soup.find("a", class_="b-sidelinks__link")
         if trailer is None:
             return trailer
-        return TrailerBuilder(film_id=int(trailer.get("data-id")))
+        trailer_id = trailer.get("data-id")
+        if isinstance(trailer_id, str) and trailer_id.isdigit():
+            return TrailerBuilder(film_id=int(trailer_id))
+        return None
 
     def extract_description(self) -> Optional[str]:
         description = self.page.soup.find("div", class_="b-post__description_text")
@@ -343,3 +346,6 @@ class MovieDetailsBuilder(PageRepresentation):
         if faq_block is None:
             return None
         return QuestionsBriefInfoBuilder(str(faq_block)).extract_content()
+
+    def __repr__(self):
+        return f"<{MovieDetailsBuilder.__name__}>"
