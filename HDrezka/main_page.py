@@ -75,6 +75,7 @@ class MainPage:
     posters: List[Poster] = None  # список постеров с
     recommended_collections: List[MovieCollection] = None
     updates: List[DayReleases] = None
+    url: str = None
 
     def __iter__(self):
         return iter(self.posters)
@@ -92,15 +93,16 @@ class MainPageBuilder(html_representation.PageRepresentation):
         main_page.posters = movie_posters.PosterBuilder(poster_block).extract_content()
         main_page.recommended_collections = self.extract_collections()
         main_page.updates = self.extract_updates()
+        main_page.url = self.extract_base_url()
         return main_page
 
-    def __extract_base_url(self):
+    def extract_base_url(self):
         page_url = urlsplit(self.page.soup.find("meta", property="og:url").get("content"))
         return f"{page_url.scheme}://{page_url.netloc}/"
 
     def extract_best_news(self):
         best_news_block = self.page.soup.find("div", id="newest-slider")
-        base_url = self.__extract_base_url()
+        base_url = self.extract_base_url()
         posters_list = movie_posters.PosterBuilder(best_news_block).extract_content()
         for poster in posters_list:
             poster.url = urljoin(base_url, poster.url)
@@ -109,7 +111,7 @@ class MainPageBuilder(html_representation.PageRepresentation):
     def extract_collections(self):
         result_list = []
         collections = self.page.soup.find("div", class_="b-collections__newest")
-        base_url = self.__extract_base_url()
+        base_url = self.extract_base_url()
         for collection_obj in collections.find_all("a"):
             collection = MovieCollection()
             collection.id = int(re.search(r"(?<=collections/)[^\-]\d*", collection_obj.get("href")).group(0))
@@ -121,16 +123,17 @@ class MainPageBuilder(html_representation.PageRepresentation):
 
     def extract_updates(self):
         result_list = []
-        base_url = self.__extract_base_url()
+        base_url = self.extract_base_url()
         updates_block = self.page.soup.find("div", class_="b-content__inline_sidebar")
         for day_block in updates_block.find_all("div", class_="b-seriesupdate__block"):
             release_list = []
             for item in day_block.find("ul", class_="b-seriesupdate__block_list"):
                 cell = item.find(class_="cell-2")
+                season = item.find(class_="season")
                 release_list.append(
                     Release(
                         title=item.a.string.strip(),
-                        season=item.find(class_="season").string.strip()[1:-1],
+                        season=season.string.strip()[1:-1] if season is not None else 1,
                         episode=cell.next.strip(),
                         translator=cell.i.string.strip()[1:-1] if cell.i else None,
                         url=urljoin(base_url, item.a.get("href")),
