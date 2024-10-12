@@ -10,15 +10,13 @@ jobs:
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
         python-version: [ "3.7", "3.8", "3.9", "3.10" ]
-        architecture: [ x64 ]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
-      - name: ${{ matrix.python-version }} on ${{ matrix.os }} ${{ matrix.architecture }}
-        uses: actions/setup-python@v3
+      - uses: actions/checkout@v4
+      - name: ${{ matrix.python-version }} on ${{ matrix.os }}
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          architecture: ${{ matrix.architecture }}
 
       - name: Install dependencies
         run: |
