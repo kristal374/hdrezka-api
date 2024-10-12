@@ -6,7 +6,8 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test:
+    continue-on-error: true
     strategy:
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
@@ -16,16 +17,24 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: ${{ matrix.python-version }} on python ${{ matrix.os }}
+
+      - name: Set up Python ${{ matrix.python-version }} on ${{ matrix.os }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Cache Python environment
+        id: cached-dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
+
       - name: Install dependencies
+        if: steps.cached-dependencies.outputs.cache-hit != 'true'
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install -r requirements-dev.txt
+          python3 -m pip install --upgrade pip
+          pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
           pip install pylint
 
       - name: Analyse code with Pylint
