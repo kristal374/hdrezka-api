@@ -86,7 +86,7 @@ class InfoTable:
     genre: List[CustomString] = None  # Жанры
     quality: str = None  # В качестве
     translate: Optional[List[str]] = None  # В переводе
-    age: Optional[str] = None  # Возрастное ограничение
+    age_restrictions: Optional[str] = None  # Возрастное ограничение
     duration: str = None  # Продолжительность
     collections: List[CollectionBriefInfo] = None  # Из серии
     cast: Optional[List[PersonBriefInfo]] = None  # В ролях
@@ -142,7 +142,7 @@ class InfoTableBuilder(PageRepresentation):
             elif key == "Жанр:":
                 table_info.genre = self.extract_genre(item[1])
             elif key == "Возраст:":
-                table_info.age = item[1].span.text.strip()
+                table_info.age_restrictions = item[1].span.text.strip()
             elif key == "Время:":
                 table_info.duration = item[1].text.strip().replace(".", "")
             elif key == "Из серии:":

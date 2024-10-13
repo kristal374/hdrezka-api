@@ -148,7 +148,7 @@ def create_info_table_html(info_table: dict, url: str) -> str:
             result_string += ITEM_TABLE.format(title="Режиссер", data=PERSON_LIST.format(data=data))
         elif key == "genre":
             result_string += __gen_genre(value, entity)
-        elif key == "age":
+        elif key == "age_restrictions":
             result_string += __gen_age_restrictions(value)
         elif key == "duration":
             result_string += DURATION_WRAPPER.format(duration=value)
