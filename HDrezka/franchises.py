@@ -14,6 +14,7 @@ if TYPE_CHECKING:
 
 @dataclass
 class Franchise:
+    id: int  # идентификатор
     title: str  # Название фильма
     year: str  # год выпуска фильма
     rating: str  # рейтинг фильма
@@ -34,6 +35,7 @@ class FranchisesBuilder(PageRepresentation):
             base_url = self.page.soup.find("meta", property="og:url").get("content").strip()
             result_lst.append(
                 Franchise(
+                    id=int(re.search(r"/(\d*)-", url.get("href") if url else base_url).group(1)),
                     title=item.find("div", class_="title").text.strip(),
                     url=url.get("href") if url else base_url,
                     year=item.find("div", class_="year").text.strip(),
