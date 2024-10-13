@@ -99,7 +99,7 @@ class Person:
     id: int  # ID персоны
     name: str  # Имя Фамилия
     original_name: Optional[str]  # Имя в оригинале
-    person_height: Optional[str]  # Рост человека
+    height: Optional[str]  # Рост человека
     careers: str  # Роли которые исполнял человек
     birthday: Optional[str]  # День рождения
     birthplace: Optional[str]  # Место рождения
@@ -128,7 +128,7 @@ class PersonBuilder(PageRepresentation):
             ),
             name=self.extract_localize_name(),
             original_name=self.extract_original_name(),
-            person_height=info_table.get("person_height"),
+            height=info_table.get("person_height"),
             careers=info_table.get("careers"),
             birthday=info_table.get("birthday"),
             birthplace=info_table.get("birthplace"),
