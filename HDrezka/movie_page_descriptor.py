@@ -50,7 +50,7 @@ class TopLists:
 
 
 @dataclass
-class Episode:
+class EpisodeOverview:
     current_episode: str = None  # Номер сезона и серии текущего эпизода
     localize_title: Optional[str] = None  # Локализированное название эпизода
     original_title: Optional[str] = None  # Название в оригинале
@@ -59,7 +59,7 @@ class Episode:
 
     def __repr__(self):
         title = " - " + self.localize_title if isinstance(self.localize_title, str) else ""
-        return f"<Episode({self.current_episode}{title})>"
+        return f"<{EpisodeOverview.__name__}({self.current_episode}{title})>"
 
 
 class CustomString(str):
@@ -110,7 +110,7 @@ class MovieDetails:
     comments_count: Optional[int] = None
     franchise: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List[Poster] = None  # Список рекомендованных к просмотру фильмов
-    schedule_block: Optional[List[Episode]] = None  # Список выхода серий
+    schedule_block: Optional[List[EpisodeOverview]] = None  # Список выхода серий
     questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
     comment: CommentsIterator = None  # Комментарии к данному фильму
 
@@ -321,7 +321,7 @@ class MovieDetailsBuilder(PageRepresentation):
             return comments_count
         return int(comments_count.string.strip())
 
-    def extract_schedule_block(self) -> Optional[List[Episode]]:
+    def extract_schedule_block(self) -> Optional[List[EpisodeOverview]]:
         lst_seasons = self.page.soup.find_all("div", class_="b-post__schedule_list")
         result_lst = []
         for s in lst_seasons:
@@ -329,7 +329,7 @@ class MovieDetailsBuilder(PageRepresentation):
                 try:
                     original_title = e.find(class_="td-2").span.text.strip() or None
                     localize_title = e.find(class_="td-2").b.text.strip() or None
-                    episode = Episode()
+                    episode = EpisodeOverview()
                     episode.current_episode = e.find(class_="td-1").text.strip()
                     episode.original_title = original_title if original_title else localize_title
                     episode.localize_title = localize_title if original_title else None
