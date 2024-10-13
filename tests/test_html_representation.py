@@ -36,5 +36,5 @@ class TestPageRepresentation(TestCase):
         self.assertIsNotNone(content.page.soup.find("div", class_="message-title"))
 
     def test_negative_html_content(self):
-        with self.assertRaises(AttributeError):
+        with self.assertRaises(TypeError):
             PageRepresentation(1234567890)  # noqa

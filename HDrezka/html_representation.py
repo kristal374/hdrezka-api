@@ -24,7 +24,7 @@ class HTMLDocument:
             return html
         if isinstance(html, Tag):
             return str(html)
-        raise AttributeError(f"HTML document cannot be of type {type(html)}")
+        raise TypeError(f"HTML document cannot be of type {type(html).__name__}")
 
 
 class PageRepresentation:
