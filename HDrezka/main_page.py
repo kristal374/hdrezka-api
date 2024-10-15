@@ -225,7 +225,7 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
                 fragment = urlsplit(url).fragment  # t:1-s:1-e:5
                 if fragment != "":
                     translate, season, episode = [int(i.split(":")[1]) for i in fragment.split("-")]
-                    movie.player.set_params(season_id=season, episode_id=episode, translator_id=translate)
+                    movie.player.set_params(season_id=season, episode_id=episode, translate=translate)
                 return movie
             if url_type == URLsType.collections:
                 return MovieCollectionBuilder(response).extract_content()
