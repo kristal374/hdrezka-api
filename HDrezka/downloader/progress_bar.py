@@ -5,7 +5,7 @@ import math
 from collections import deque
 from typing import Dict, Union, List, Tuple, Optional
 
-from . import bufer
+from . import buffer
 
 
 class ProgressBar:
@@ -16,13 +16,13 @@ class ProgressBar:
     )
 
     def __init__(
-        self,
-        length_data: int,
-        chunk_size: int = 2**10 * 512,
-        unit: Optional[str] = None,
-        length_bar: int = 30,
-        processed_chunks_count: int = 0,
-        number_of_timestamps: int = 1000,
+            self,
+            length_data: int,
+            chunk_size: int = 2 ** 10 * 512,
+            unit: Optional[str] = None,
+            length_bar: int = 30,
+            processed_chunks_count: int = 0,
+            number_of_timestamps: int = 1000,
     ):
         self._start_time = datetime.datetime.now()
         self._chunks_count = math.ceil(int(length_data) / int(chunk_size))
@@ -31,7 +31,7 @@ class ProgressBar:
         self._unit = unit
         self._processed_chunks_count = processed_chunks_count
         self._timestamps_list: deque = deque(maxlen=number_of_timestamps)
-        self._buffer = bufer.ModifiedBuffer(function=self.__custom_print)
+        self._buffer = buffer.ModifiedBuffer(function=self.__custom_print)
 
     @property
     def chunk_size(self):
@@ -90,7 +90,7 @@ class ProgressBar:
 
     @staticmethod
     def normalize_value(
-        value: Union[int, float], from_range: List[Union[int, float]], to_range: List[Union[int, float]]
+            value: Union[int, float], from_range: List[Union[int, float]], to_range: List[Union[int, float]]
     ) -> float:
         return to_range[0] + (value - from_range[0]) * (to_range[1] - to_range[0]) / (from_range[1] - from_range[0])
 

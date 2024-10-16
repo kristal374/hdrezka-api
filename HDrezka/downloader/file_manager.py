@@ -47,4 +47,4 @@ class SafeFileLoader:
             }
 
             with open(file_name, "w", encoding="utf-8") as dump_file:
-                json.dump(dump, dump_file)
+                json.dump(dump, dump_file, indent=2)
