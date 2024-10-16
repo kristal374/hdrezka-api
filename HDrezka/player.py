@@ -89,14 +89,14 @@ class Actions(str, Enum):
 
 
 class Quality(str, Enum):
-    Q360p = '360p'
-    Q480p = '480p'
-    Q720p = '720p'
-    Q1080p = '1080p'
-    Q1080p_Ultra = '1080p Ultra'
-    Q2K = '2K'
-    Q4K = '4K'
-    MaximumAvailable = 'QualityBest'
+    Q360p = "360p"
+    Q480p = "480p"
+    Q720p = "720p"
+    Q1080p = "1080p"
+    Q1080p_Ultra = "1080p Ultra"
+    Q2K = "2K"
+    Q4K = "4K"
+    MaximumAvailable = "QualityBest"
 
     def __str__(self):
         return self.value
@@ -201,8 +201,7 @@ class BaseMovie:
             raise KeyError("Quality is unavailable.")
         if self._url_dict.get(quality, False):
             raise ValueError(
-                f"This 'quality' attribute ({quality}) is not "
-                f"in the quality list {list(self._url_dict.keys())}."
+                f"This 'quality' attribute ({quality}) is not " f"in the quality list {list(self._url_dict.keys())}."
             )
         return self._url_dict[quality]
 
@@ -219,10 +218,7 @@ class BaseMovie:
         ...
 
     def get_subtitle_url(
-            self,
-            lang: Optional[str] = None,
-            *,
-            code_lang: Optional[str] = None
+            self, lang: Optional[str] = None, *, code_lang: Optional[str] = None
     ) -> Union[str, List[Subtitle]]:
         if lang is not None and isinstance(lang, str):
             subtitle = [i for i in self._subtitle_list if i.lang == lang]
@@ -233,8 +229,7 @@ class BaseMovie:
         else:
             if lang is not None:
                 raise TypeError(
-                    f"Attribute 'lang' ({lang}) must be of type 'str', "
-                    f"but not of type '{type(lang).__name__}'."
+                    f"Attribute 'lang' ({lang}) must be of type 'str', " f"but not of type '{type(lang).__name__}'."
                 )
             raise TypeError(
                 f"Attribute 'code_lang' ({code_lang}) must be of type 'str', "
@@ -544,13 +539,7 @@ class Serial(BaseMovie):
             if season.id == season_to:
                 sliced_episodes = [e for e in sliced_episodes if e.id <= episode_to]
 
-            result_list.append(
-                Season(
-                    season.id,
-                    season.title,
-                    sliced_episodes
-                )
-            )
+            result_list.append(Season(season.id, season.title, sliced_episodes))
 
         return result_list
 
@@ -572,17 +561,19 @@ class Serial(BaseMovie):
             for episode in season.episodes:
                 n += 1
                 self.set_episode(episode.id)
-                full_path = file_name.format(**{
-                    "n": n,
-                    "id": self._metadata.id,
-                    "S": season.title,
-                    "s": season.id,
-                    "E": episode.title,
-                    "e": episode.id,
-                    "T": [t.title for t in self.translate_list if t.id == self._metadata.translator_id][0],
-                    "t": self._metadata.translator_id,
-                    "Q": quality
-                })
+                full_path = file_name.format(
+                    **{
+                        "n": n,
+                        "id": self._metadata.id,
+                        "S": season.title,
+                        "s": season.id,
+                        "E": episode.title,
+                        "e": episode.id,
+                        "T": [t.title for t in self.translate_list if t.id == self._metadata.translator_id][0],
+                        "t": self._metadata.translator_id,
+                        "Q": quality,
+                    }
+                )
                 subtitle_url = self.get_subtitle_url(subtitle) if subtitle is not None else None
 
                 media_loader.load_from_player(self, f"{full_path}.mp4", quality, create_dump_file, chunk_size)
@@ -601,10 +592,7 @@ class Serial(BaseMovie):
         finally:
             self._metadata.action = Actions.get_stream
 
-        if not (
-                self._metadata.season == old_season and
-                self._metadata.episode == old_episode
-        ):
+        if not (self._metadata.season == old_season and self._metadata.episode == old_episode):
             self.set_params(season_id=old_season, episode_id=old_episode)
         return self
 
@@ -794,7 +782,7 @@ class PlayerBuilder(PageRepresentation):
         for line in decoded_string.split(","):
             quality_name = re.search(r"\[.*?]", line)[0]
             quality_urls = line[len(quality_name):]
-            filtered_urls = [url for url in re.split(r'\sor\s', quality_urls) if re.match(r'https?://.*\.mp4$', url)]
+            filtered_urls = [url for url in re.split(r"\sor\s", quality_urls) if re.match(r"https?://.*\.mp4$", url)]
             urls_container[quality_name[1:-1]] = filtered_urls
         return urls_container
 

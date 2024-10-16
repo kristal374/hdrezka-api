@@ -85,7 +85,7 @@ def load_from_player(
         "quality": quality,
         "chunk_size": chunk_size,
     }
-    print(f"Load start file: \"{file_name}\"")
+    print(f'Load start file: "{file_name}"')
     load_file(
         file_name=file_name,
         length_data=int(response.headers["Content-Length"]),
