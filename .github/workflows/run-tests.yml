@@ -39,7 +39,7 @@ jobs:
 
       - name: Analyse code with Pylint
         run: |
-          pylint HDrezka --fail-under=9
+          python3 -m pylint HDrezka --fail-under=9
 
       - name: Run tests
         run: |
