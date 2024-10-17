@@ -6,7 +6,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  run-tests:
     continue-on-error: true
     strategy:
       matrix:
