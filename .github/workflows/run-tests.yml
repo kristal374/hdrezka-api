@@ -28,7 +28,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ env.pythonLocation }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
+          key: ${{ runner.os }}-python-${{ env.pythonLocation }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
+
+      - name: Debug Python environment
+        run: |
+          echo "Python location: ${{ env.pythonLocation }}"
+          ls -alh ${{ env.pythonLocation }}
+          python3 -m site
 
       - name: Install dependencies
         if: steps.cached-dependencies.outputs.cache-hit != 'true'
