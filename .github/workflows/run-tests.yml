@@ -28,14 +28,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
+          key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ env.pythonLocation }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
 
       - name: Install dependencies
         if: steps.cached-dependencies.outputs.cache-hit != 'true'
         run: |
           python3 -m pip install --upgrade pip
-          pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
-          pip install pylint
+          python3 -m pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
+          python3 -m pip install pylint
 
       - name: Analyse code with Pylint
         run: |
