@@ -107,11 +107,11 @@ def convert_string_into_datetime(datetime_string: str):
     return extract_date(datetime_string).date()
 
 
-def get_count_messages(data) -> int:
+def calculate_count_messages(data) -> int:
     """
     Calculate the total number of messages.
 
     :param data: The list with messages.
     :return: The total number of messages.
     """
-    return sum(get_count_messages(item.replies) for item in data) + 1
+    return sum(calculate_count_messages(item.replies) for item in data) + 1

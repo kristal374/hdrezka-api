@@ -10,7 +10,7 @@ import bs4
 from .core_navigation import PageIterator
 from .exceptions import EmptyPage, ServiceUnavailable
 from .html_representation import PageRepresentation
-from .utility import convert_string_into_datetime, get_count_messages
+from .utility import convert_string_into_datetime, calculate_count_messages
 
 
 @dataclass
@@ -56,7 +56,7 @@ class CommentsIterator(PageIterator[List[Comment]]):
         result_list = self.extreact_comments(soup)
 
         number_comments = response["comments"].count(">оставлен ")
-        if number_comments != get_count_messages(result_list) - 1:  # pragma: NO COVER
+        if number_comments != calculate_count_messages(result_list) - 1:  # pragma: NO COVER
             # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
             soup = bs4.BeautifulSoup(response["comments"], "html5lib")
             return self.extreact_comments(soup)
