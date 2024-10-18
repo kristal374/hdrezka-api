@@ -37,7 +37,7 @@ REGEX_FRAGMENT = r"(?:akter|aktrisa|hudozhnik|kompozitor|montazher|operator|prod
 REGEX_MOVIE_FRAGMENT = r"t:\d+-s:\d+-e:\d+"
 
 
-def get_url_type(url: str) -> URLsType:
+def determine_url_type(url: str) -> URLsType:
     """
     Позволяет определить на какую страницу ведёт url исходя из его пути.
     Необходимо если заранее неизвестно с помощью какого класса обрабатывать ответ сервера.

@@ -33,7 +33,7 @@ from .site_navigation import New
 from .site_navigation import Search
 from .site_navigation import Series
 from .utility import convert_string_into_datetime
-from .utility import get_url_type, URLsType
+from .utility import determine_url_type, URLsType
 
 if TYPE_CHECKING:
     from .movie_posters import Poster
@@ -217,7 +217,7 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
     def get(self, url: Optional[str] = None):  # pylint: disable = R0911
         if url is not None:
             response = self._connector.get(url).text
-            url_type = get_url_type(url)
+            url_type = determine_url_type(url)
             if url_type == URLsType.main:
                 return MainPageBuilder(response).extract_content()
             if url_type == URLsType.movie:
