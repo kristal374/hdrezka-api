@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import datetime
 import re
 from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
@@ -51,15 +52,16 @@ class TopLists:
 
 @dataclass
 class EpisodeOverview:
-    current_episode: str = None  # Номер сезона и серии текущего эпизода
+    season: int = None  # Номер сезона и серии текущего эпизода
+    episode: int = None  # Номер сезона и серии текущего эпизода
     localize_title: Optional[str] = None  # Локализированное название эпизода
     original_title: Optional[str] = None  # Название в оригинале
-    release_date: Optional[str] = None  # Дата выхода эпизода
+    release_date: Union[datetime.datetime, datetime.date, None] = None  # Дата выхода эпизода
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
     def __repr__(self):
-        title = " - " + self.localize_title if isinstance(self.localize_title, str) else ""
-        return f"<{EpisodeOverview.__name__}({self.current_episode}{title})>"
+        title = self.localize_title if isinstance(self.localize_title, str) else ""
+        return f'<{EpisodeOverview.__name__}({self.season} Season {self.episode} Episode - "{title}")>'
 
 
 class CustomString(str):
@@ -107,7 +109,7 @@ class MovieDetails:
     info_table: InfoTable = None  # Таблица с краткой информацией по фильму
     description: Optional[str] = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
-    comments_count: Optional[int] = None
+    comments_count: Optional[int] = None  # TODO check
     franchise: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List[Poster] = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[EpisodeOverview]] = None  # Список выхода серий
@@ -329,8 +331,12 @@ class MovieDetailsBuilder(PageRepresentation):
                 try:
                     original_title = e.find(class_="td-2").span.text.strip() or None
                     localize_title = e.find(class_="td-2").b.text.strip() or None
+                    current_episode = e.find(class_="td-1").text.strip()
+
                     episode = EpisodeOverview()
-                    episode.current_episode = e.find(class_="td-1").text.strip()
+                    episode.season, episode.episode = map(
+                        int, re.search(r"(?:(\d+) сезон)?\s?(?:(\d+) серия)?", current_episode).groups()
+                    )
                     episode.original_title = original_title if original_title else localize_title
                     episode.localize_title = localize_title if original_title else None
                     episode.release_date = convert_string_into_datetime(e.find(class_="td-4").text.strip()) or None
