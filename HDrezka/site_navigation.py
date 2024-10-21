@@ -184,7 +184,7 @@ class Search(BaseSiteNavigation[List[Poster]]):
 
     def query(self, text: str):
         if not isinstance(text, str):
-            raise AttributeError('Attribute "text" must only be of type "str".')
+            raise TypeError('Attribute "text" must only be of type "str".')
         process_text = quote_plus(text).replace("%2A", "*").replace("/", "%2F").replace("~", "%7E")
         self._search_text = f"?do=search&subaction=search&q={process_text}"
         return self
