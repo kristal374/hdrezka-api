@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import re
 from dataclasses import dataclass
 from typing import Dict, Optional, List, TYPE_CHECKING, Union
@@ -8,6 +9,7 @@ from . import movie_posters
 from .connector import NetworkClient
 from .exceptions import ServiceUnavailable, PageNotFound
 from .html_representation import PageRepresentation
+from .utility import convert_string_into_datetime
 
 if TYPE_CHECKING:
     from .movie_posters import Poster
@@ -47,10 +49,10 @@ class PersonExtendedInfo:
     name: str  # Имя Фамилия
     original_name: Optional[str]  # Имя в оригинале
     person_height: Optional[str]  # Рост человека(Может быть всегда None)
-    birthday: Optional[str]  # День рождения
+    birthday: Optional[datetime.date]  # День рождения
     birthplace: Optional[str]  # Место рождения
     age: Optional[str]  # Текущий возраст(если человек умер равно None)
-    death_day: Optional[str]  # День смерти
+    death_day: Optional[datetime.date]  # День смерти
     death_place: Optional[str]  # Место смерти
     age_full: Optional[str]  # Возраст в котором умер человек
     stats: Optional[str]  # Информация о количестве фильмов/сериалов/МФ/аниме с участием этого человека на сайте
@@ -70,8 +72,8 @@ class PersonExtendedInfo:
 
 
 class PersonExtendedInfoBuilder:
-    def __init__(self, server_response: Dict[str, Union[str, int, None]]):
-        self._server_response = server_response
+    def __init__(self, server_response: Dict[str, Dict[str, Union[str, int, None]]]):
+        self._server_response = server_response.get("person")
 
     def extract_content(self) -> PersonExtendedInfo:
         return PersonExtendedInfo(
@@ -79,10 +81,10 @@ class PersonExtendedInfoBuilder:
             name=self._server_response.get("name"),
             original_name=self._server_response.get("name_alt") or None,
             person_height=self._server_response.get("person_height") or None,
-            birthday=self._server_response.get("birthday") or None,
+            birthday=convert_string_into_datetime(self._server_response.get("birthday")),
             birthplace=self._server_response.get("birthplace") or None,
             age=self._server_response.get("age") or None,
-            death_day=self._server_response.get("deathday") or None,
+            death_day=convert_string_into_datetime(self._server_response.get("deathday")),
             death_place=self._server_response.get("deathplace") or None,
             age_full=self._server_response.get("agefull") or None,
             stats=self._server_response.get("stats") or None,
@@ -101,10 +103,10 @@ class Person:
     original_name: Optional[str]  # Имя в оригинале
     height: Optional[str]  # Рост человека
     careers: str  # Роли которые исполнял человек
-    birthday: Optional[str]  # День рождения
+    birthday: Optional[datetime.datetime]  # День рождения
     birthplace: Optional[str]  # Место рождения
     age: Optional[str]  # Текущий возраст(если человек умер равно None)
-    death_day: Optional[str]  # День смерти
+    death_day: Optional[datetime.datetime]  # День смерти
     death_place: Optional[str]  # Место смерти
     age_full: Optional[str]  # Возраст в котором умер человек
     img_url: str  # Основное фото человека
@@ -193,5 +195,6 @@ class PersonBuilder(PageRepresentation):
 
     @staticmethod
     def extract_date_and_age(data):
-        age = re.search(r"\(.*?\)", data.text)
-        return data.find("time").get("datetime"), age[0].strip()[1:-1] if age else None
+        age = re.search(r"\((.*?)\)", data.text)
+        birthday = data.find("time").text
+        return convert_string_into_datetime(birthday), age[1].strip() if age else None
