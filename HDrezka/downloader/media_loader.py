@@ -14,19 +14,19 @@ if TYPE_CHECKING:
     from HDrezka.player import BaseMovie
 
 
-def _get_request_obj(urls_list: List[str], headers=None):
+def _get_request_stream_obj(urls_list: List[str], headers: Optional[Dict[str, Any]] = None):
     client = connector.NetworkClient()
     if headers is None:
         headers = {}
     for url in urls_list:
         try:
-            response = client.get(url=url, headers=headers, stream=True, timeout=60)
+            response = client.get(url=url, headers=headers, stream=True, timeout=30)
             if 200 < response.status_code >= 400:
                 raise exceptions.LoadingError(f"Status code = {response.status_code}, {response.reason}")
             return response
         except requests.exceptions.ReadTimeout:
             continue
-    raise ConnectionError
+    raise ConnectionError("Not a single url returned a positive code status.")  # TODO Change error
 
 
 def load_file(  # pylint: disable=R0913
@@ -54,7 +54,7 @@ def load_file(  # pylint: disable=R0913
 
 
 def load_from_url(url, file_name, chunk_size=2 ** 10 * 512):
-    response = connector.NetworkClient().get(url=url, headers={}, stream=True, timeout=60)
+    response = _get_request_stream_obj([url])
     load_file(
         file_name=file_name,
         length_data=int(response.headers["Content-Length"]),
@@ -70,7 +70,7 @@ def load_from_url(url, file_name, chunk_size=2 ** 10 * 512):
 def load_from_player(
         video_player: BaseMovie,
         file_name,
-        quality="1080p",
+        quality: player.Quality = player.Quality.MaximumAvailable,
         create_dump_file=False,
         chunk_size=2 ** 10 * 512,
 ):
@@ -78,7 +78,7 @@ def load_from_player(
         raise TypeError("Attribute 'player' is NoneType.")
 
     urls_list = video_player.get_video_url(quality)
-    response = _get_request_obj(urls_list)
+    response = _get_request_stream_obj(urls_list)
 
     data_to_recover = {
         "metadata": dict(video_player.__dict__.get("_metadata")),
@@ -119,7 +119,7 @@ def reload_file(path_json_file):
 
     headers = {"Range": f"bytes={bytes_loaded}-"}
     urls_list = movie.get_video_url(quality)
-    response = _get_request_obj(urls_list, headers)
+    response = _get_request_stream_obj(urls_list, headers)
 
     load_file(
         file_name=file_name,

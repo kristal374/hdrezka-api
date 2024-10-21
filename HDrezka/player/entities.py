@@ -269,7 +269,7 @@ class Serial(BaseMovie[SerialQueryData]):
             episode_start: int = 1,
             season_end: int = -1,
             episode_end: int = 1,
-            quality: Union[Quality, str] = Quality.Q1080p,
+            quality: Union[Quality, str] = Quality.MaximumAvailable,
             subtitle: Optional[str] = None,
             create_dump_file: bool = False,
             chunk_size: int = 2 ** 10 * 512,
@@ -329,3 +329,4 @@ class Serial(BaseMovie[SerialQueryData]):
             self._metadata.season = self.seasons_tabs[0].id
             self._metadata.episode = self.seasons_tabs[0].episodes[0].id
             self._metadata_hash = zlib.adler32(str(dict(self._metadata)).encode("utf-8"))
+        return response

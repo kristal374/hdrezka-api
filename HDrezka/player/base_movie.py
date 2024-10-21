@@ -206,7 +206,7 @@ class BaseMovie(Generic[QueryData], ABC):
     def load(
             self,
             file_name: str,
-            quality: Union[Quality, str] = Quality.Q1080p,
+            quality: Union[Quality, str] = Quality.MaximumAvailable,
             subtitle: Optional[str] = None,
             create_dump_file: bool = False,
             chunk_size: int = 2 ** 10 * 512,
