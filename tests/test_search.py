@@ -84,7 +84,7 @@ class TestSearch(TestCase):
 
     def test_negative_query(self):
         for element in self.data:
-            with self.assertRaises(AttributeError, msg=element):
+            with self.assertRaises(TypeError, msg=element):
                 self.movie.query(element)  # noqa
 
     @requests_mock.Mocker()

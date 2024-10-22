@@ -394,73 +394,83 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "10 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 10",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "9 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 9",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "8 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 8",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "7 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 7",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "6 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 6",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "5 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 5",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "4 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 4",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "3 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 3",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "2 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 2",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "1 \u0433\u043b\u0430\u0432\u0430",
         "original_title": "Luku 1",
-        "release_date": "2023-05-11",
+        "release_date": "2023-05-11 00:00:00",
         "exists_episode": true
       }
     ],
@@ -870,157 +880,179 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 22 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 22,
         "localize_title": "\u041f\u0440\u0438\u0447\u0438\u043d\u0430 \u043f\u043e\u043b\u044e\u0431\u0438\u0442\u044c \u0435\u0435",
         "original_title": "Reasons to fall in love with her",
-        "release_date": "2023-06-30",
+        "release_date": "2023-06-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 21 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 21,
         "localize_title": "\u0414\u0436\u0443-\u0414\u0436\u0443",
         "original_title": "Juer",
-        "release_date": "2023-06-30",
+        "release_date": "2023-06-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 20 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 20,
         "localize_title": "\u041c\u043e\u043b\u043e\u0434\u043e\u0441\u0442\u044c \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u043a \u043a\u043e\u043d\u0446\u0443",
         "original_title": "The ending of youth",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 19 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 19,
         "localize_title": "\u041b\u0438\u0448\u0438\u044f",
         "original_title": "Li Shiya",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 18 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 18,
         "localize_title": "\u0412\u043b\u044e\u0431\u043b\u044f\u044e\u0441\u044c \u0432 \u0442\u0435\u0431\u044f",
         "original_title": "Fall",
-        "release_date": "2023-06-16",
+        "release_date": "2023-06-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 17 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 17,
         "localize_title": "\u0414\u0436\u043e\u043d\u0438",
         "original_title": "Ruoni",
-        "release_date": "2023-06-16",
+        "release_date": "2023-06-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": "\u041d\u043e\u0432\u043e\u0435 \u043d\u0430\u0447\u0430\u043b\u043e",
         "original_title": "New start",
-        "release_date": "2023-06-09",
+        "release_date": "2023-06-09 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u041e\u043d\u0430 \u0432\u0437\u043e\u0440\u0432\u0430\u043b\u0430\u0441\u044c",
         "original_title": "Break out",
-        "release_date": "2023-06-09",
+        "release_date": "2023-06-09 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u041e\u043d\u0430 \u0440\u0443\u0445\u043d\u0443\u043b\u0430",
         "original_title": "Collapse",
-        "release_date": "2023-06-02",
+        "release_date": "2023-06-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0427\u0435\u043b\u043e\u0432\u0435\u043a \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043c\u043d\u0435 \u043d\u0440\u0430\u0432\u0438\u0442\u0441\u044f",
         "original_title": "Like people",
-        "release_date": "2023-06-02",
+        "release_date": "2023-06-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u041a\u043e\u0433\u0434\u0430 \u043e\u043d\u0430 \u043d\u0430 \u0441\u0446\u0435\u043d\u0435",
         "original_title": "She on stage",
-        "release_date": "2023-05-26",
+        "release_date": "2023-05-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0432\u0438\u0434\u0430\u043d\u0438\u0435",
         "original_title": "Appointment",
-        "release_date": "2023-05-26",
+        "release_date": "2023-05-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u041f\u0435\u0440\u0435\u043c\u0435\u043d\u044b",
         "original_title": "Variety",
-        "release_date": "2023-05-19",
+        "release_date": "2023-05-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u041f\u0440\u0438\u0437\u043d\u0430\u043d\u0438\u0435 \u0432 \u043b\u044e\u0431\u0432\u0438 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438",
         "original_title": "Confession",
-        "release_date": "2023-05-19",
+        "release_date": "2023-05-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u0435\u0449\u0438 \u043d\u0435 \u043c\u0435\u043d\u044f\u044e\u0442\u0441\u044f",
         "original_title": "Unchanging Heart",
-        "release_date": "2023-05-12",
+        "release_date": "2023-05-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u041f\u0440\u0438\u043c\u0438\u0440\u0435\u043d\u0438\u0435",
         "original_title": "Reconcile",
-        "release_date": "2023-05-12",
+        "release_date": "2023-05-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u041f\u0435\u0440\u0432\u044b\u0439 \u043f\u043e\u0446\u0435\u043b\u0443\u0439",
         "original_title": "First kiss",
-        "release_date": "2023-05-05",
+        "release_date": "2023-05-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0417\u0430 \u0434\u0440\u0443\u0436\u0431\u0443",
         "original_title": "Hand over a glass of wine",
-        "release_date": "2023-05-05",
+        "release_date": "2023-05-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0427\u0443\u0432\u0441\u0442\u0432\u0430 \u043f\u043e\u0434 \u043b\u0435\u043f\u0435\u0441\u0442\u043a\u0430\u043c\u0438 \u0441\u0430\u043a\u0443\u0440\u044b",
         "original_title": "Emotion under cherry blossoms",
-        "release_date": "2023-04-28",
+        "release_date": "2023-04-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u042f \u0445\u043e\u0447\u0443 \u043f\u043e \u0441\u043a\u043e\u0440\u0435\u0435 \u043b\u0443\u0447\u0448\u0435 \u0435\u0435 \u0443\u0437\u043d\u0430\u0442\u044c",
         "original_title": "She wants to know more",
-        "release_date": "2023-04-28",
+        "release_date": "2023-04-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0414\u0435\u0432\u043e\u0447\u043a\u0430 \u043a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c \u0447\u0435\u0440\u0435\u043f\u043e\u0432",
         "original_title": "Miss Headshot",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u041f\u0435\u0440\u0432\u0430\u044f \u0432\u0441\u0442\u0440\u0435\u0447\u0430",
         "original_title": "First Encounter",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       }
     ],
@@ -2106,115 +2138,131 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #16",
-        "release_date": "2023-08-24",
+        "release_date": "2023-08-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #15",
-        "release_date": "2023-08-17",
+        "release_date": "2023-08-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #14",
-        "release_date": "2023-08-10",
+        "release_date": "2023-08-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #13",
-        "release_date": "2023-08-03",
+        "release_date": "2023-08-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #12",
-        "release_date": "2023-07-27",
+        "release_date": "2023-07-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #11",
-        "release_date": "2023-07-20",
+        "release_date": "2023-07-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #10",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #9",
-        "release_date": "2023-07-06",
+        "release_date": "2023-07-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #8",
-        "release_date": "2023-06-29",
+        "release_date": "2023-06-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #7",
-        "release_date": "2023-06-22",
+        "release_date": "2023-06-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #6",
-        "release_date": "2023-06-15",
+        "release_date": "2023-06-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #5",
-        "release_date": "2023-06-08",
+        "release_date": "2023-06-08 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #4",
-        "release_date": "2023-06-01",
+        "release_date": "2023-06-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #3",
-        "release_date": "2023-05-25",
+        "release_date": "2023-05-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #2",
-        "release_date": "2023-05-18",
+        "release_date": "2023-05-18 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #1",
-        "release_date": "2023-05-18",
+        "release_date": "2023-05-18 00:00:00",
         "exists_episode": true
       }
     ],
@@ -3985,115 +4033,131 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #16",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #15",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #14",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #13",
-        "release_date": "2023-12-03",
+        "release_date": "2023-12-03 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #12",
-        "release_date": "2023-12-03",
+        "release_date": "2023-12-03 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #11",
-        "release_date": "2023-12-03",
+        "release_date": "2023-12-03 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #10",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #9",
-        "release_date": "2023-12-03",
+        "release_date": "2023-12-03 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #8",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #7",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #6",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #5",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #4",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #3",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #2",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0420\u044d\u043c\u0431\u041e. \u0421\u043e\u0431\u0430\u0447\u0438\u0439 \u0441\u043f\u0435\u0446\u043d\u0430\u0437.",
-        "release_date": "2023-04-23",
+        "release_date": "2023-04-23 00:00:00",
         "exists_episode": true
       }
     ],
@@ -4834,59 +4898,67 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #8",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #7",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #6",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #5",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #4",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #3",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #2",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u042d\u043f\u0438\u0437\u043e\u0434 #1",
-        "release_date": "2023-04-16",
+        "release_date": "2023-04-16 00:00:00",
         "exists_episode": true
       }
     ],
@@ -5521,31 +5593,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-04-01",
+        "release_date": "2023-04-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-04-01",
+        "release_date": "2023-04-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-04-01",
+        "release_date": "2023-04-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-04-01",
+        "release_date": "2023-04-01 00:00:00",
         "exists_episode": true
       }
     ],
@@ -5843,24 +5919,27 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "The Billionaire Bookie",
-        "release_date": "2022-10-07",
+        "release_date": "2022-10-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "Trojan Horse",
-        "release_date": "2022-09-30",
+        "release_date": "2022-09-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "Thoroughbred",
-        "release_date": "2022-09-23",
+        "release_date": "2022-09-23 00:00:00",
         "exists_episode": true
       }
     ],
@@ -7749,31 +7828,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "9 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 9,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0413\u0430\u043b\u0430\u0442\u0435\u044f 4",
-        "release_date": "2022-11-03",
+        "release_date": "2022-11-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "9 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 9,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0413\u0430\u043b\u0430\u0442\u0435\u044f 3",
-        "release_date": "2022-11-03",
+        "release_date": "2022-11-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "9 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 9,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0413\u0430\u043b\u0430\u0442\u0435\u044f 2",
-        "release_date": "2022-11-03",
+        "release_date": "2022-11-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "9 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 9,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0413\u0430\u043b\u0430\u0442\u0435\u044f 1",
-        "release_date": "2022-11-03",
+        "release_date": "2022-11-03 00:00:00",
         "exists_episode": true
       }
     ],
@@ -8253,31 +8336,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "8 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 8,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c 4",
-        "release_date": "2022-11-02",
+        "release_date": "2022-11-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "8 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 8,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c 3",
-        "release_date": "2022-11-02",
+        "release_date": "2022-11-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "8 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 8,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c 2",
-        "release_date": "2022-11-02",
+        "release_date": "2022-11-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "8 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 8,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c 1",
-        "release_date": "2022-11-02",
+        "release_date": "2022-11-02 00:00:00",
         "exists_episode": true
       }
     ],
@@ -9722,150 +9809,171 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 21. \u0421\u0435\u0440\u0433\u0435\u0439 \u0421\u0430\u0444\u0440\u043e\u043d\u043e\u0432",
-        "release_date": "2023-11-10",
+        "release_date": "2023-11-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 20. \u0412\u0430\u043b\u044f \u041a\u0430\u0440\u043d\u0430\u0432\u0430\u043b",
-        "release_date": "2023-11-03",
+        "release_date": "2023-11-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 19. \u0420\u043e\u043c\u0430\u043d \u041f\u043e\u0441\u0442\u043e\u0432\u0430\u043b\u043e\u0432",
-        "release_date": "2023-10-27",
+        "release_date": "2023-10-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 18. ST",
-        "release_date": "2023-10-20",
+        "release_date": "2023-10-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 17. \u041c\u0430\u0440\u0438\u044f \u041a\u0438\u0441\u0435\u043b\u0451\u0432\u0430",
-        "release_date": "2023-10-13",
+        "release_date": "2023-10-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 16. \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0411\u0435\u043b\u044c\u043a\u043e\u0432\u0438\u0447",
-        "release_date": "2023-10-06",
+        "release_date": "2023-10-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 15. \u041b\u0435\u043e\u043d\u0438\u0434 \u0421\u043b\u0443\u0446\u043a\u0438\u0439",
-        "release_date": "2023-09-29",
+        "release_date": "2023-09-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 14. \u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430 \u0412\u043e\u043b\u043a\u043e\u0432\u0430",
-        "release_date": "2023-09-22",
+        "release_date": "2023-09-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "2 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 2,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 13. \u0410\u043d\u0434\u0440\u0435\u0439 \u0420\u043e\u0436\u043a\u043e\u0432",
-        "release_date": "2023-09-15",
+        "release_date": "2023-09-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 12. \u042e\u043b\u0438\u0430\u043d\u043d\u0430 \u041a\u0430\u0440\u0430\u0443\u043b\u043e\u0432\u0430",
-        "release_date": "2023-06-02",
+        "release_date": "2023-06-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 11. \u0418\u043b\u044c\u044f \u041c\u0430\u043a\u0430\u0440\u043e\u0432",
-        "release_date": "2023-05-26",
+        "release_date": "2023-05-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 10. \u041b\u044e\u0441\u044f \u0427\u0435\u0431\u043e\u0442\u0438\u043d\u0430",
-        "release_date": "2023-05-19",
+        "release_date": "2023-05-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 09. \u041c\u0438\u0442\u044f \u0424\u043e\u043c\u0438\u043d",
-        "release_date": "2023-05-12",
+        "release_date": "2023-05-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 08. \u041a\u0441\u0435\u043d\u0438\u044f \u041a\u043e\u0440\u043d\u0435\u0432\u0430",
-        "release_date": "2023-05-05",
+        "release_date": "2023-05-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 07. \u0414\u0430\u0432\u0430",
-        "release_date": "2023-04-28",
+        "release_date": "2023-04-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 06. \u0418\u0434\u0430 \u0413\u0430\u043b\u0438\u0447",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 05. \u0410\u0439\u0434\u0430\u0440 \u0413\u0430\u0440\u0430\u0435\u0432",
-        "release_date": "2023-04-14",
+        "release_date": "2023-04-14 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 04. \u0414\u0438\u043c\u0430 \u041c\u0430\u0441\u043b\u0435\u043d\u043d\u0438\u043a\u043e\u0432",
-        "release_date": "2023-04-06",
+        "release_date": "2023-04-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 03. \u0425\u0430\u0431\u0438\u0431",
-        "release_date": "2023-03-30",
+        "release_date": "2023-03-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 02. \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0420\u043e\u0433\u043e\u0432",
-        "release_date": "2023-03-23",
+        "release_date": "2023-03-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0412\u044b\u043f\u0443\u0441\u043a 01. \u0420\u0435\u0433\u0438\u043d\u0430 \u0422\u043e\u0434\u043e\u0440\u0435\u043d\u043a\u043e",
-        "release_date": "2023-03-16",
+        "release_date": "2023-03-16 00:00:00",
         "exists_episode": true
       }
     ],
@@ -10618,59 +10726,67 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 8",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 7",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 6",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 5",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 4",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 3",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 2",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 1",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       }
     ],
@@ -10951,31 +11067,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 4",
-        "release_date": "2022-10-15",
+        "release_date": "2022-10-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 3",
-        "release_date": "2022-10-08",
+        "release_date": "2022-10-08 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 2",
-        "release_date": "2022-10-01",
+        "release_date": "2022-10-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 1",
-        "release_date": "2022-09-24",
+        "release_date": "2022-09-24 00:00:00",
         "exists_episode": true
       }
     ],
@@ -11787,171 +11907,195 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 24 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 24,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 24",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 23 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 23,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 23",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 22 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 22,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 22",
-        "release_date": "2023-03-14",
+        "release_date": "2023-03-14 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 21 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 21,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 21",
-        "release_date": "2023-03-14",
+        "release_date": "2023-03-14 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 20 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 20,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 20",
-        "release_date": "2023-03-13",
+        "release_date": "2023-03-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 19 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 19,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 19",
-        "release_date": "2023-03-13",
+        "release_date": "2023-03-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 18 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 18,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 18",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 17 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 17,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 17",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 16",
-        "release_date": "2023-03-09",
+        "release_date": "2023-03-09 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 15",
-        "release_date": "2023-03-09",
+        "release_date": "2023-03-09 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 14",
-        "release_date": "2023-03-07",
+        "release_date": "2023-03-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 13",
-        "release_date": "2023-03-07",
+        "release_date": "2023-03-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 12",
-        "release_date": "2023-03-06",
+        "release_date": "2023-03-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 11",
-        "release_date": "2023-03-06",
+        "release_date": "2023-03-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 10",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 9",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 8",
-        "release_date": "2023-03-02",
+        "release_date": "2023-03-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 7",
-        "release_date": "2023-03-02",
+        "release_date": "2023-03-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 6",
-        "release_date": "2023-03-01",
+        "release_date": "2023-03-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 5",
-        "release_date": "2023-03-01",
+        "release_date": "2023-03-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 4",
-        "release_date": "2023-02-28",
+        "release_date": "2023-02-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 3",
-        "release_date": "2023-02-28",
+        "release_date": "2023-02-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 2",
-        "release_date": "2023-02-27",
+        "release_date": "2023-02-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 1",
-        "release_date": "2023-02-27",
+        "release_date": "2023-02-27 00:00:00",
         "exists_episode": true
       }
     ],
@@ -12393,150 +12537,171 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 21 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 21,
         "localize_title": null,
         "original_title": "\u0414\u0435\u043d\u044c\u0433\u0438",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 20 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 20,
         "localize_title": null,
         "original_title": "\u0414\u0435\u043d\u044c \u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u0420\u043e\u043c\u0430\u043d\u0430",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 19 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 19,
         "localize_title": null,
         "original_title": "\u041c\u0430\u043b\u0435\u043d\u044c\u043a\u0430\u044f \u043b\u043e\u0436\u044c",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 18 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 18,
         "localize_title": null,
         "original_title": "\u041e\u0434\u0438\u043d-\u043e\u0434\u0438\u043d",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 17 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 17,
         "localize_title": null,
         "original_title": "\u041a\u0440\u0438\u0437\u0438\u0441",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": null,
         "original_title": "\u041a\u043e\u0442",
-        "release_date": "2023-03-10",
+        "release_date": "2023-03-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": null,
         "original_title": "\u0414\u0435\u0442\u0435\u043a\u0442\u0438\u0432",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": null,
         "original_title": "\u0411\u0430\u0441\u0441\u0435\u0439\u043d",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": null,
         "original_title": "\u0426\u0432\u0435\u0442\u044b",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u0414\u0440\u0443\u0436\u0431\u0430",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u0410\u0443\u043a\u0446\u0438\u043e\u043d",
-        "release_date": "2023-03-03",
+        "release_date": "2023-03-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u0420\u0430\u0431\u043e\u0442\u0430",
-        "release_date": "2023-02-24",
+        "release_date": "2023-02-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u0414\u0443\u0440\u0434\u043e\u043c\u0438\u043a \u043d\u0430 \u0434\u0435\u0440\u0435\u0432\u0435",
-        "release_date": "2023-02-24",
+        "release_date": "2023-02-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0413\u0430\u0440\u0430\u0436",
-        "release_date": "2023-02-24",
+        "release_date": "2023-02-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0421\u0430\u043c\u043e\u043a\u0430\u0442",
-        "release_date": "2023-02-24",
+        "release_date": "2023-02-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u041e\u0442\u0446\u044b \u0438 \u0434\u0435\u0442\u0438",
-        "release_date": "2023-02-24",
+        "release_date": "2023-02-24 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0421\u0435\u043a\u0440\u0435\u0442\u044b",
-        "release_date": "2023-02-17",
+        "release_date": "2023-02-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u041a\u043e\u043c\u043d\u0430\u0442\u0430",
-        "release_date": "2023-02-17",
+        "release_date": "2023-02-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u043c\u0435\u0440\u0442\u044c \u041c\u0430\u0440\u0433\u043e",
-        "release_date": "2023-02-17",
+        "release_date": "2023-02-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0442\u0430\u0442\u0443\u044f",
-        "release_date": "2023-02-17",
+        "release_date": "2023-02-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u041f\u0438\u043b\u043e\u0442",
-        "release_date": "2023-02-17",
+        "release_date": "2023-02-17 00:00:00",
         "exists_episode": true
       }
     ],
@@ -12900,87 +13065,99 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "Their Night Together and the Morning Spring Came",
-        "release_date": "2023-03-22",
+        "release_date": "2023-03-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "Catch Me & Touch Me",
-        "release_date": "2023-03-15",
+        "release_date": "2023-03-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "Sleepover in the Storm!!",
-        "release_date": "2023-03-08",
+        "release_date": "2023-03-08 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "Lost Again in First Shrine Visit",
-        "release_date": "2023-03-01",
+        "release_date": "2023-03-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "The Little Sister Appears! Christmas on the Slopes",
-        "release_date": "2023-02-22",
+        "release_date": "2023-02-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "Excitement! The Halloween Costume Contest",
-        "release_date": "2023-02-15",
+        "release_date": "2023-02-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "Lost in Amusement Park",
-        "release_date": "2023-02-08",
+        "release_date": "2023-02-08 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "The Fox Girl and the Phoenix Boy",
-        "release_date": "2023-02-01",
+        "release_date": "2023-02-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "A Day-Off Date and a Shared Game",
-        "release_date": "2023-01-25",
+        "release_date": "2023-01-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "A First Meal and a Secret Photo",
-        "release_date": "2023-01-18",
+        "release_date": "2023-01-18 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "The Okinawan Sea and Melting Feelings",
-        "release_date": "2023-01-11",
+        "release_date": "2023-01-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "A Cherry Blossom Meeting and a Coming Blizzard",
-        "release_date": "2023-01-04",
+        "release_date": "2023-01-04 00:00:00",
         "exists_episode": true
       }
     ],
@@ -13440,115 +13617,131 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 16",
         "original_title": "Episode 16",
-        "release_date": "2023-03-01",
+        "release_date": "2023-03-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 15",
         "original_title": "Episode 15",
-        "release_date": "2023-02-28",
+        "release_date": "2023-02-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-02-22",
+        "release_date": "2023-02-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-02-21",
+        "release_date": "2023-02-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-02-15",
+        "release_date": "2023-02-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-02-14",
+        "release_date": "2023-02-14 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-02-08",
+        "release_date": "2023-02-08 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-02-07",
+        "release_date": "2023-02-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-02-01",
+        "release_date": "2023-02-01 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-01-31",
+        "release_date": "2023-01-31 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-01-18",
+        "release_date": "2023-01-18 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-01-17",
+        "release_date": "2023-01-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-01-11",
+        "release_date": "2023-01-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-01-04",
+        "release_date": "2023-01-04 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-01-03",
+        "release_date": "2023-01-03 00:00:00",
         "exists_episode": true
       }
     ],
@@ -14695,115 +14888,131 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 16",
-        "release_date": "2022-12-29",
+        "release_date": "2022-12-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 15",
-        "release_date": "2022-12-29",
+        "release_date": "2022-12-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 14",
-        "release_date": "2022-12-28",
+        "release_date": "2022-12-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 13",
-        "release_date": "2022-12-28",
+        "release_date": "2022-12-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 12",
-        "release_date": "2022-12-27",
+        "release_date": "2022-12-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 11",
-        "release_date": "2022-12-27",
+        "release_date": "2022-12-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 10",
-        "release_date": "2022-12-26",
+        "release_date": "2022-12-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 9",
-        "release_date": "2022-12-26",
+        "release_date": "2022-12-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 8",
-        "release_date": "2022-12-22",
+        "release_date": "2022-12-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 7",
-        "release_date": "2022-12-22",
+        "release_date": "2022-12-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 6",
-        "release_date": "2022-12-21",
+        "release_date": "2022-12-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 5",
-        "release_date": "2022-12-21",
+        "release_date": "2022-12-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 4",
-        "release_date": "2022-12-20",
+        "release_date": "2022-12-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 3",
-        "release_date": "2022-12-20",
+        "release_date": "2022-12-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 2",
-        "release_date": "2022-12-19",
+        "release_date": "2022-12-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 1",
-        "release_date": "2022-12-19",
+        "release_date": "2022-12-19 00:00:00",
         "exists_episode": true
       }
     ],
@@ -15390,59 +15599,67 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2024-02-26",
+        "release_date": "2024-02-26 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2024-02-19",
+        "release_date": "2024-02-19 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2024-02-12",
+        "release_date": "2024-02-12 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "\u904b\u547d",
-        "release_date": "2024-02-05",
+        "release_date": "2024-02-05 00:00:00",
         "exists_episode": "\u0447\u0435\u0440\u0435\u0437 2 \u0434\u043d\u044f"
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "\u5185\u901a\u8005",
-        "release_date": "2024-01-29",
+        "release_date": "2024-01-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "\u6b63\u5341\u5b57\u5b66\u5712\u796d",
-        "release_date": "2024-01-22",
+        "release_date": "2024-01-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "\u79d8\u5bc6\u306e\u5728\u308a\u51e6",
-        "release_date": "2024-01-15",
+        "release_date": "2024-01-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "\u3056\u308f\u3081\u304f\u4e16\u754c",
-        "release_date": "2024-01-08",
+        "release_date": "2024-01-08 00:00:00",
         "exists_episode": true
       }
     ],
@@ -16166,87 +16383,99 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-12-04",
+        "release_date": "2023-12-04 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-12-03",
+        "release_date": "2023-12-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-11-27",
+        "release_date": "2023-11-27 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-11-26",
+        "release_date": "2023-11-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-11-20",
+        "release_date": "2023-11-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-11-19",
+        "release_date": "2023-11-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-11-13",
+        "release_date": "2023-11-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-11-12",
+        "release_date": "2023-11-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-11-06",
+        "release_date": "2023-11-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-11-05",
+        "release_date": "2023-11-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-10-29",
+        "release_date": "2023-10-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-10-29",
+        "release_date": "2023-10-29 00:00:00",
         "exists_episode": true
       }
     ],
@@ -17353,24 +17582,27 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "Part 3",
-        "release_date": "2023-11-02",
+        "release_date": "2023-11-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "Part 2",
-        "release_date": "2023-11-02",
+        "release_date": "2023-11-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "Part 1",
-        "release_date": "2023-11-02",
+        "release_date": "2023-11-02 00:00:00",
         "exists_episode": true
       }
     ],
@@ -17674,24 +17906,27 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-09-22",
+        "release_date": "2023-09-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-09-22",
+        "release_date": "2023-09-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-09-22",
+        "release_date": "2023-09-22 00:00:00",
         "exists_episode": true
       }
     ],
@@ -18663,31 +18898,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "Where Our Lads Belong",
-        "release_date": "2023-09-02",
+        "release_date": "2023-09-02 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "Changing The Toon",
-        "release_date": "2023-08-26",
+        "release_date": "2023-08-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "Tell Me Ma, Me Ma",
-        "release_date": "2023-08-19",
+        "release_date": "2023-08-19 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "Howay The Revolution",
-        "release_date": "2023-08-12",
+        "release_date": "2023-08-12 00:00:00",
         "exists_episode": true
       }
     ],
@@ -19100,31 +19339,35 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "6 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 6,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0423\u0434\u0430\u0440 4",
-        "release_date": "2023-09-09",
+        "release_date": "2023-09-09 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "6 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 6,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0423\u0434\u0430\u0440 3",
-        "release_date": "2023-09-09",
+        "release_date": "2023-09-09 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "6 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 6,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0423\u0434\u0430\u0440 2",
-        "release_date": "2023-09-09",
+        "release_date": "2023-09-09 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "6 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 6,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0423\u0434\u0430\u0440 1",
-        "release_date": "2023-09-09",
+        "release_date": "2023-09-09 00:00:00",
         "exists_episode": false
       }
     ],
@@ -19540,157 +19783,179 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 22 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 22,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 22",
         "original_title": "Episode 22",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 21 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 21,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 21",
         "original_title": "Episode 21",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 20 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 20,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 20",
         "original_title": "Episode 20",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 19 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 19,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 19",
         "original_title": "Episode 19",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 18 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 18,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 18",
         "original_title": "Episode 18",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 17 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 17,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 17",
         "original_title": "Episode 17",
-        "release_date": "2023-07-25",
+        "release_date": "2023-07-25 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 16",
         "original_title": "Episode 16",
-        "release_date": "2023-07-22",
+        "release_date": "2023-07-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 15",
         "original_title": "Episode 15",
-        "release_date": "2023-07-22",
+        "release_date": "2023-07-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-07-22",
+        "release_date": "2023-07-22 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-07-21",
+        "release_date": "2023-07-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-07-20",
+        "release_date": "2023-07-20 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-07-17",
+        "release_date": "2023-07-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-07-17",
+        "release_date": "2023-07-17 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-07-16",
+        "release_date": "2023-07-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-07-16",
+        "release_date": "2023-07-16 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-07-15",
+        "release_date": "2023-07-15 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-07-14",
+        "release_date": "2023-07-14 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       }
     ],
@@ -20067,143 +20332,163 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 20 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 20,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 20",
         "original_title": "Episode 20",
-        "release_date": "2023-06-16",
+        "release_date": "2023-06-16 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 19 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 19,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 19",
         "original_title": "Episode 19",
-        "release_date": "2023-06-16",
+        "release_date": "2023-06-16 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 18 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 18,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 18",
         "original_title": "Episode 18",
-        "release_date": "2023-06-15",
+        "release_date": "2023-06-15 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 17 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 17,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 17",
         "original_title": "Episode 17",
-        "release_date": "2023-06-15",
+        "release_date": "2023-06-15 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 16",
         "original_title": "Episode 16",
-        "release_date": "2023-06-14",
+        "release_date": "2023-06-14 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 15",
         "original_title": "Episode 15",
-        "release_date": "2023-06-14",
+        "release_date": "2023-06-14 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-06-13",
+        "release_date": "2023-06-13 00:00:00",
         "exists_episode": false
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-06-13",
+        "release_date": "2023-06-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-06-12",
+        "release_date": "2023-06-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-06-12",
+        "release_date": "2023-06-12 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-06-11",
+        "release_date": "2023-06-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-06-11",
+        "release_date": "2023-06-11 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-06-10",
+        "release_date": "2023-06-10 00:00:00",
         "exists_episode": true
       }
     ],
@@ -20535,45 +20820,51 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 6",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 5",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 4",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 3",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 2",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": null,
         "original_title": "\u0421\u0435\u0440\u0438\u044f 1",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       }
     ],
@@ -20953,101 +21244,115 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-07-13",
+        "release_date": "2023-07-13 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-07-07",
+        "release_date": "2023-07-07 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-07-06",
+        "release_date": "2023-07-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-07-06",
+        "release_date": "2023-07-06 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-06-30",
+        "release_date": "2023-06-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-06-30",
+        "release_date": "2023-06-30 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-06-29",
+        "release_date": "2023-06-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-06-29",
+        "release_date": "2023-06-29 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-06-23",
+        "release_date": "2023-06-23 00:00:00",
         "exists_episode": true
       }
     ],
@@ -21414,108 +21719,123 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 15",
         "original_title": "Episode 15",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-01-10",
+        "release_date": "2023-01-10 00:00:00",
         "exists_episode": true
       }
     ],
@@ -22008,115 +22328,131 @@
     ],
     "schedule_block": [
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 16 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 16,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 16",
         "original_title": "Episode 16",
-        "release_date": "2023-05-10",
+        "release_date": "2023-05-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 15 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 15,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 15",
         "original_title": "Episode 15",
-        "release_date": "2023-05-10",
+        "release_date": "2023-05-10 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 14 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 14,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 14",
         "original_title": "Episode 14",
-        "release_date": "2023-05-05",
+        "release_date": "2023-05-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 13 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 13,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 13",
         "original_title": "Episode 13",
-        "release_date": "2023-05-05",
+        "release_date": "2023-05-05 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 12 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 12,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 12",
         "original_title": "Episode 12",
-        "release_date": "2023-05-03",
+        "release_date": "2023-05-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 11 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 11,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 11",
         "original_title": "Episode 11",
-        "release_date": "2023-05-03",
+        "release_date": "2023-05-03 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 10 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 10,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 10",
         "original_title": "Episode 10",
-        "release_date": "2023-04-28",
+        "release_date": "2023-04-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 9 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 9,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 9",
         "original_title": "Episode 9",
-        "release_date": "2023-04-28",
+        "release_date": "2023-04-28 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 8 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 8,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 8",
         "original_title": "Episode 8",
-        "release_date": "2023-04-26",
+        "release_date": "2023-04-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 7 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 7,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 7",
         "original_title": "Episode 7",
-        "release_date": "2023-04-26",
+        "release_date": "2023-04-26 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 6 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 6,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 6",
         "original_title": "Episode 6",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 5 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 5,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 5",
         "original_title": "Episode 5",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 4 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 4,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 4",
         "original_title": "Episode 4",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 3 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 3,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 3",
         "original_title": "Episode 3",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 2 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 2,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 2",
         "original_title": "Episode 2",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       },
       {
-        "current_episode": "1 \u0441\u0435\u0437\u043e\u043d 1 \u0441\u0435\u0440\u0438\u044f",
+        "season": 1,
+        "episode": 1,
         "localize_title": "\u0421\u0435\u0440\u0438\u044f 1",
         "original_title": "Episode 1",
-        "release_date": "2023-04-21",
+        "release_date": "2023-04-21 00:00:00",
         "exists_episode": true
       }
     ],

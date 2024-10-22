@@ -49,10 +49,10 @@ class PersonExtendedInfo:
     name: str  # Имя Фамилия
     original_name: Optional[str]  # Имя в оригинале
     person_height: Optional[str]  # Рост человека(Может быть всегда None)
-    birthday: Optional[datetime.date]  # День рождения
+    birthday: Optional[datetime.datetime]  # День рождения
     birthplace: Optional[str]  # Место рождения
     age: Optional[str]  # Текущий возраст(если человек умер равно None)
-    death_day: Optional[datetime.date]  # День смерти
+    death_day: Optional[datetime.datetime]  # День смерти
     death_place: Optional[str]  # Место смерти
     age_full: Optional[str]  # Возраст в котором умер человек
     stats: Optional[str]  # Информация о количестве фильмов/сериалов/МФ/аниме с участием этого человека на сайте
