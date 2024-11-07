@@ -55,14 +55,14 @@ class FranchiseBuilder(PageRepresentation):
         )
 
     @staticmethod
-    def extract_franchise_item(item) -> FranchiseItem:
+    def extract_franchise_item(item, url=None) -> FranchiseItem:
         rating = item.find("div", class_="rating").text.strip()
         return FranchiseItem(
             num=int(item.find("div", class_="num").text.strip()),
             title=item.find("div", class_="title").text.strip(),
             year=convert_string_into_datetime(item.find("div", class_="year").text.strip()),
             rating=float(rating) if rating != '—' else None,
-            url=item.get("data-url"),
+            url=item.get("data-url") or url,
         )
 
 
@@ -82,13 +82,14 @@ class FranchiseBriefInfo:
 
 class FranchiseBriefInfoBuilder(PageRepresentation):
     def extract_content(self) -> Optional[FranchiseBriefInfo]:
+        page_url = self.page.soup.find("meta", property="og:url").get("content")
         url = self.page.soup.find(class_="b-post__franchise_link_title")
         if url is None:
             return None
         return FranchiseBriefInfo(
             id=int(re.search(r"/(\d*)-", url.get("href").strip()).group(1)),
             title=self.page.soup.find(class_="b-post__franchise_link_title").text.strip(),
-            items_list=[FranchiseBuilder.extract_franchise_item(item)
+            items_list=[FranchiseBuilder.extract_franchise_item(item, url=page_url)
                         for item in self.page.soup.find_all("div", class_="b-post__partcontent_item")[::-1]],
             url=url.get("href").strip(),
         )
