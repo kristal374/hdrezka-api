@@ -152,7 +152,7 @@ class InfoTableBuilder(PageRepresentation):
             elif key == "В качестве:":
                 table_info.quality = item[1].text.strip()
             elif key == "В переводе:":
-                table_info.translate = re.split(r", | и ", item[1].text.strip())
+                table_info.translate = [i.strip() for i in re.split(r", | и ", item[1].text) if i.strip()]
             elif item[0].find("div", class_="persons-list-holder"):
                 table_info.cast = self.extract_person(item[0])
             else:
