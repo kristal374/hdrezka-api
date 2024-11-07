@@ -60,7 +60,7 @@ class EpisodeOverview:
     exists_episode: Union[bool, str] = None  # Вышел ли эпизод или время до его выхода
 
     def __repr__(self):
-        title = self.localize_title if isinstance(self.localize_title, str) else ""
+        title = self.localize_title if self.localize_title else self.original_title
         return f'<{EpisodeOverview.__name__}({self.season} Season {self.episode} Episode - "{title}")>'
 
 
