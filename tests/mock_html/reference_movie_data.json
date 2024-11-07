@@ -254,7 +254,7 @@
       "popularity_translate": {}
     },
     "comments_count": 1,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 34980,
@@ -474,7 +474,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -742,7 +742,7 @@
       }
     },
     "comments_count": 363,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 20564,
@@ -1056,7 +1056,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -1278,7 +1278,7 @@
       ]
     },
     "comments_count": 91,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 3774,
@@ -1415,7 +1415,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -1566,7 +1566,7 @@
       ]
     },
     "comments_count": 8,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 20462,
@@ -1705,7 +1705,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -2002,7 +2002,7 @@
       "popularity_translate": {}
     },
     "comments_count": 162,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 30434,
@@ -2266,7 +2266,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -2445,7 +2445,7 @@
       ]
     },
     "comments_count": 5,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 15493,
@@ -2584,7 +2584,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -2790,36 +2790,41 @@
       "popularity_translate": {}
     },
     "comments_count": 19,
-    "franchise": [
-      {
-        "id": 57365,
-        "title": "\u0422\u043e\u043f\u043e\u0440. 1945 / \u0422\u043e\u043f\u043e\u0440 4",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "6.40",
-        "url": "https://rezka.ag/films/drama/57365-topor-1945-2023.html"
-      },
-      {
-        "id": 57364,
-        "title": "\u0422\u043e\u043f\u043e\u0440. 1944 / \u0422\u043e\u043f\u043e\u0440 3",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.52",
-        "url": "https://rezka.ag/films/drama/57364-topor-1944-2022.html"
-      },
-      {
-        "id": 39473,
-        "title": "\u0422\u043e\u043f\u043e\u0440.1943 / \u0422\u043e\u043f\u043e\u0440-2",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/films/drama/39473-topor1943-2021.html"
-      },
-      {
-        "id": 33668,
-        "title": "\u0422\u043e\u043f\u043e\u0440",
-        "year": "2018 \u0433\u043e\u0434",
-        "rating": "6.58",
-        "url": "https://rezka.ag/films/drama/33668-topor-2018.html"
-      }
-    ],
+    "franchise": {
+      "id": 1644,
+      "title": "\u0412\u0441\u0435 \u0444\u0438\u043b\u044c\u043c\u044b \"\u0422\u043e\u043f\u043e\u0440\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u0422\u043e\u043f\u043e\u0440",
+          "year": "2018-01-01 00:00:00",
+          "rating": 6.58,
+          "url": "https://rezka.ag/films/drama/33668-topor-2018.html"
+        },
+        {
+          "num": 2,
+          "title": "\u0422\u043e\u043f\u043e\u0440.1943 / \u0422\u043e\u043f\u043e\u0440-2",
+          "year": "2021-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/films/drama/39473-topor1943-2021.html"
+        },
+        {
+          "num": 3,
+          "title": "\u0422\u043e\u043f\u043e\u0440. 1944 / \u0422\u043e\u043f\u043e\u0440 3",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.52,
+          "url": "https://rezka.ag/films/drama/57364-topor-1944-2022.html"
+        },
+        {
+          "num": 4,
+          "title": "\u0422\u043e\u043f\u043e\u0440. 1945 / \u0422\u043e\u043f\u043e\u0440 4",
+          "year": "2023-01-01 00:00:00",
+          "rating": 6.4,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/1644-vse-filmy-topor/"
+    },
     "recommendations": [
       {
         "id": 18997,
@@ -2958,7 +2963,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -3173,7 +3178,7 @@
       ]
     },
     "comments_count": 26,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 55123,
@@ -3312,7 +3317,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -3508,7 +3513,7 @@
       ]
     },
     "comments_count": 12,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 23943,
@@ -3647,7 +3652,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -3895,7 +3900,7 @@
       "popularity_translate": {}
     },
     "comments_count": 12,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 36681,
@@ -4161,7 +4166,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -4357,7 +4362,7 @@
       ]
     },
     "comments_count": 22,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 6020,
@@ -4496,7 +4501,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -4758,7 +4763,7 @@
       "popularity_translate": {}
     },
     "comments_count": 40,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 43009,
@@ -4962,7 +4967,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -5117,7 +5122,7 @@
       ]
     },
     "comments_count": 8,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 21331,
@@ -5256,7 +5261,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -5455,7 +5460,7 @@
       "popularity_translate": {}
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 25904,
@@ -5625,7 +5630,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -5779,7 +5784,7 @@
       }
     },
     "comments_count": 6,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 32157,
@@ -5943,7 +5948,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -6136,7 +6141,7 @@
       ]
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 37535,
@@ -6275,7 +6280,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -6507,7 +6512,7 @@
       ]
     },
     "comments_count": 21,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 4924,
@@ -6646,7 +6651,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -6893,7 +6898,7 @@
       ]
     },
     "comments_count": 33,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 19674,
@@ -7032,7 +7037,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -7233,7 +7238,7 @@
       ]
     },
     "comments_count": 8,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 23843,
@@ -7372,7 +7377,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -7603,92 +7608,97 @@
       "popularity_translate": {}
     },
     "comments_count": 1,
-    "franchise": [
-      {
-        "id": 64671,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 12. \u041a\u0443\u043a\u0443\u0448\u043a\u0430",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/detective/64671-ya-znayu-tvoi-sekrety-12-kukushka-2023.html"
-      },
-      {
-        "id": 64670,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 11. \u041c\u0435\u0440\u0442\u0432\u044b\u0435 \u0434\u0443\u0448\u0438",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/detective/64670-ya-znayu-tvoi-sekrety-11-mertvye-dushi-2023.html"
-      },
-      {
-        "id": 57583,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 10. \u0420\u0435\u0431\u0443\u0441 \u0434\u043b\u044f \u041d\u0438\u043d\u044b",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "6.84",
-        "url": "https://rezka.ag/series/detective/57583-ya-znayu-tvoi-sekrety-10-rebus-dlya-niny-2023.html"
-      },
-      {
-        "id": 56015,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u0430\u043b\u0430\u0442\u0435\u044f",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.79",
-        "url": "https://rezka.ag/series/detective/56015-ya-znayu-tvoi-sekrety-galateya-2022.html"
-      },
-      {
-        "id": 56014,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.80",
-        "url": "https://rezka.ag/series/detective/56014-ya-znayu-tvoi-sekrety-belyy-rycar-2022.html"
-      },
-      {
-        "id": 52759,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.95",
-        "url": "https://rezka.ag/series/detective/52759-ya-znayu-tvoi-sekrety-dyhanie-smerti-2022.html"
-      },
-      {
-        "id": 43913,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0410\u0432\u0442\u043e\u043b\u0435\u0434\u0438",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.98",
-        "url": "https://rezka.ag/series/detective/43913-ya-znayu-tvoi-sekrety-avtoledi-2021.html"
-      },
-      {
-        "id": 43912,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.89",
-        "url": "https://rezka.ag/series/detective/43912-ya-znayu-tvoi-sekrety-gladiator-2021.html"
-      },
-      {
-        "id": 43915,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0420\u0438\u043c\u0441\u043a\u0438\u0439 \u043f\u0430\u043b\u0430\u0447",
-        "year": "2020 \u0433\u043e\u0434",
-        "rating": "6.87",
-        "url": "https://rezka.ag/series/detective/43915-ya-znayu-tvoi-sekrety-rimskiy-palach-2020.html"
-      },
-      {
-        "id": 43914,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0425\u0430\u043c\u0435\u043b\u0435\u043e\u043d",
-        "year": "2020 \u0433\u043e\u0434",
-        "rating": "6.94",
-        "url": "https://rezka.ag/series/detective/43914-ya-znayu-tvoi-sekrety-hameleon-2020.html"
-      },
-      {
-        "id": 36605,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 2",
-        "year": "2019 \u0433\u043e\u0434",
-        "rating": "6.74",
-        "url": "https://rezka.ag/series/melodrama/36605-ya-znayu-tvoi-sekrety-2-2019.html"
-      },
-      {
-        "id": 13168,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b",
-        "year": "2015 \u0433\u043e\u0434",
-        "rating": "6.74",
-        "url": "https://rezka.ag/series/detective/13168-ya-znayu-tvoi-sekrety-2015.html"
-      }
-    ],
+    "franchise": {
+      "id": 1461,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0441\u0435\u0440\u0438\u0430\u043b\u0430 \"\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b",
+          "year": "2015-01-01 00:00:00",
+          "rating": 6.74,
+          "url": "https://rezka.ag/series/detective/13168-ya-znayu-tvoi-sekrety-2015.html"
+        },
+        {
+          "num": 2,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 2",
+          "year": "2019-01-01 00:00:00",
+          "rating": 6.74,
+          "url": "https://rezka.ag/series/melodrama/36605-ya-znayu-tvoi-sekrety-2-2019.html"
+        },
+        {
+          "num": 3,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0425\u0430\u043c\u0435\u043b\u0435\u043e\u043d",
+          "year": "2020-01-01 00:00:00",
+          "rating": 6.94,
+          "url": "https://rezka.ag/series/detective/43914-ya-znayu-tvoi-sekrety-hameleon-2020.html"
+        },
+        {
+          "num": 4,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0420\u0438\u043c\u0441\u043a\u0438\u0439 \u043f\u0430\u043b\u0430\u0447",
+          "year": "2020-01-01 00:00:00",
+          "rating": 6.87,
+          "url": "https://rezka.ag/series/detective/43915-ya-znayu-tvoi-sekrety-rimskiy-palach-2020.html"
+        },
+        {
+          "num": 5,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.89,
+          "url": "https://rezka.ag/series/detective/43912-ya-znayu-tvoi-sekrety-gladiator-2021.html"
+        },
+        {
+          "num": 6,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0410\u0432\u0442\u043e\u043b\u0435\u0434\u0438",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.98,
+          "url": "https://rezka.ag/series/detective/43913-ya-znayu-tvoi-sekrety-avtoledi-2021.html"
+        },
+        {
+          "num": 7,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.95,
+          "url": "https://rezka.ag/series/detective/52759-ya-znayu-tvoi-sekrety-dyhanie-smerti-2022.html"
+        },
+        {
+          "num": 8,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.8,
+          "url": "https://rezka.ag/series/detective/56014-ya-znayu-tvoi-sekrety-belyy-rycar-2022.html"
+        },
+        {
+          "num": 9,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u0430\u043b\u0430\u0442\u0435\u044f",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.79,
+          "url": null
+        },
+        {
+          "num": 10,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 10. \u0420\u0435\u0431\u0443\u0441 \u0434\u043b\u044f \u041d\u0438\u043d\u044b",
+          "year": "2023-01-01 00:00:00",
+          "rating": 6.84,
+          "url": "https://rezka.ag/series/detective/57583-ya-znayu-tvoi-sekrety-10-rebus-dlya-niny-2023.html"
+        },
+        {
+          "num": 11,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 11. \u041c\u0435\u0440\u0442\u0432\u044b\u0435 \u0434\u0443\u0448\u0438",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/detective/64670-ya-znayu-tvoi-sekrety-11-mertvye-dushi-2023.html"
+        },
+        {
+          "num": 12,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 12. \u041a\u0443\u043a\u0443\u0448\u043a\u0430",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/detective/64671-ya-znayu-tvoi-sekrety-12-kukushka-2023.html"
+        }
+      ],
+      "url": "https://rezka.ag/franchises/1461-vse-chasti-seriala-ya-znayu-tvoi-sekrety/"
+    },
     "recommendations": [
       {
         "id": 19367,
@@ -7860,7 +7870,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -8115,92 +8125,97 @@
       "popularity_translate": {}
     },
     "comments_count": 2,
-    "franchise": [
-      {
-        "id": 64671,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 12. \u041a\u0443\u043a\u0443\u0448\u043a\u0430",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/detective/64671-ya-znayu-tvoi-sekrety-12-kukushka-2023.html"
-      },
-      {
-        "id": 64670,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 11. \u041c\u0435\u0440\u0442\u0432\u044b\u0435 \u0434\u0443\u0448\u0438",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/detective/64670-ya-znayu-tvoi-sekrety-11-mertvye-dushi-2023.html"
-      },
-      {
-        "id": 57583,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 10. \u0420\u0435\u0431\u0443\u0441 \u0434\u043b\u044f \u041d\u0438\u043d\u044b",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "6.84",
-        "url": "https://rezka.ag/series/detective/57583-ya-znayu-tvoi-sekrety-10-rebus-dlya-niny-2023.html"
-      },
-      {
-        "id": 56015,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u0430\u043b\u0430\u0442\u0435\u044f",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.79",
-        "url": "https://rezka.ag/series/detective/56015-ya-znayu-tvoi-sekrety-galateya-2022.html"
-      },
-      {
-        "id": 56014,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.80",
-        "url": "https://rezka.ag/series/detective/56014-ya-znayu-tvoi-sekrety-belyy-rycar-2022.html"
-      },
-      {
-        "id": 52759,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.95",
-        "url": "https://rezka.ag/series/detective/52759-ya-znayu-tvoi-sekrety-dyhanie-smerti-2022.html"
-      },
-      {
-        "id": 43913,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0410\u0432\u0442\u043e\u043b\u0435\u0434\u0438",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.98",
-        "url": "https://rezka.ag/series/detective/43913-ya-znayu-tvoi-sekrety-avtoledi-2021.html"
-      },
-      {
-        "id": 43912,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.89",
-        "url": "https://rezka.ag/series/detective/43912-ya-znayu-tvoi-sekrety-gladiator-2021.html"
-      },
-      {
-        "id": 43915,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0420\u0438\u043c\u0441\u043a\u0438\u0439 \u043f\u0430\u043b\u0430\u0447",
-        "year": "2020 \u0433\u043e\u0434",
-        "rating": "6.87",
-        "url": "https://rezka.ag/series/detective/43915-ya-znayu-tvoi-sekrety-rimskiy-palach-2020.html"
-      },
-      {
-        "id": 43914,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0425\u0430\u043c\u0435\u043b\u0435\u043e\u043d",
-        "year": "2020 \u0433\u043e\u0434",
-        "rating": "6.94",
-        "url": "https://rezka.ag/series/detective/43914-ya-znayu-tvoi-sekrety-hameleon-2020.html"
-      },
-      {
-        "id": 36605,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 2",
-        "year": "2019 \u0433\u043e\u0434",
-        "rating": "6.74",
-        "url": "https://rezka.ag/series/melodrama/36605-ya-znayu-tvoi-sekrety-2-2019.html"
-      },
-      {
-        "id": 13168,
-        "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b",
-        "year": "2015 \u0433\u043e\u0434",
-        "rating": "6.74",
-        "url": "https://rezka.ag/series/detective/13168-ya-znayu-tvoi-sekrety-2015.html"
-      }
-    ],
+    "franchise": {
+      "id": 1461,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0441\u0435\u0440\u0438\u0430\u043b\u0430 \"\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b",
+          "year": "2015-01-01 00:00:00",
+          "rating": 6.74,
+          "url": "https://rezka.ag/series/detective/13168-ya-znayu-tvoi-sekrety-2015.html"
+        },
+        {
+          "num": 2,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 2",
+          "year": "2019-01-01 00:00:00",
+          "rating": 6.74,
+          "url": "https://rezka.ag/series/melodrama/36605-ya-znayu-tvoi-sekrety-2-2019.html"
+        },
+        {
+          "num": 3,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0425\u0430\u043c\u0435\u043b\u0435\u043e\u043d",
+          "year": "2020-01-01 00:00:00",
+          "rating": 6.94,
+          "url": "https://rezka.ag/series/detective/43914-ya-znayu-tvoi-sekrety-hameleon-2020.html"
+        },
+        {
+          "num": 4,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0420\u0438\u043c\u0441\u043a\u0438\u0439 \u043f\u0430\u043b\u0430\u0447",
+          "year": "2020-01-01 00:00:00",
+          "rating": 6.87,
+          "url": "https://rezka.ag/series/detective/43915-ya-znayu-tvoi-sekrety-rimskiy-palach-2020.html"
+        },
+        {
+          "num": 5,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.89,
+          "url": "https://rezka.ag/series/detective/43912-ya-znayu-tvoi-sekrety-gladiator-2021.html"
+        },
+        {
+          "num": 6,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0410\u0432\u0442\u043e\u043b\u0435\u0434\u0438",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.98,
+          "url": "https://rezka.ag/series/detective/43913-ya-znayu-tvoi-sekrety-avtoledi-2021.html"
+        },
+        {
+          "num": 7,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.95,
+          "url": "https://rezka.ag/series/detective/52759-ya-znayu-tvoi-sekrety-dyhanie-smerti-2022.html"
+        },
+        {
+          "num": 8,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0411\u0435\u043b\u044b\u0439 \u0440\u044b\u0446\u0430\u0440\u044c",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.8,
+          "url": null
+        },
+        {
+          "num": 9,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b. \u0413\u0430\u043b\u0430\u0442\u0435\u044f",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.79,
+          "url": "https://rezka.ag/series/detective/56015-ya-znayu-tvoi-sekrety-galateya-2022.html"
+        },
+        {
+          "num": 10,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 10. \u0420\u0435\u0431\u0443\u0441 \u0434\u043b\u044f \u041d\u0438\u043d\u044b",
+          "year": "2023-01-01 00:00:00",
+          "rating": 6.84,
+          "url": "https://rezka.ag/series/detective/57583-ya-znayu-tvoi-sekrety-10-rebus-dlya-niny-2023.html"
+        },
+        {
+          "num": 11,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 11. \u041c\u0435\u0440\u0442\u0432\u044b\u0435 \u0434\u0443\u0448\u0438",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/detective/64670-ya-znayu-tvoi-sekrety-11-mertvye-dushi-2023.html"
+        },
+        {
+          "num": 12,
+          "title": "\u042f \u0437\u043d\u0430\u044e \u0442\u0432\u043e\u0438 \u0441\u0435\u043a\u0440\u0435\u0442\u044b 12. \u041a\u0443\u043a\u0443\u0448\u043a\u0430",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/detective/64671-ya-znayu-tvoi-sekrety-12-kukushka-2023.html"
+        }
+      ],
+      "url": "https://rezka.ag/franchises/1461-vse-chasti-seriala-ya-znayu-tvoi-sekrety/"
+    },
     "recommendations": [
       {
         "id": 13443,
@@ -8368,7 +8383,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -8566,7 +8581,7 @@
       ]
     },
     "comments_count": 12,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 16423,
@@ -8703,7 +8718,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -8890,7 +8905,7 @@
       ]
     },
     "comments_count": 203,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 3913,
@@ -9029,7 +9044,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -9238,7 +9253,7 @@
       ]
     },
     "comments_count": 76,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 42566,
@@ -9377,7 +9392,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -9671,7 +9686,7 @@
       "popularity_translate": {}
     },
     "comments_count": 80,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 15803,
@@ -9977,7 +9992,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -10191,7 +10206,7 @@
       ]
     },
     "comments_count": 28,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 17641,
@@ -10330,7 +10345,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -10588,7 +10603,7 @@
       "popularity_translate": {}
     },
     "comments_count": 42,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 11327,
@@ -10790,7 +10805,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -10929,7 +10944,7 @@
       "popularity_translate": {}
     },
     "comments_count": 2,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 24015,
@@ -11099,7 +11114,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -11310,7 +11325,7 @@
       ]
     },
     "comments_count": 8,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 3267,
@@ -11449,7 +11464,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -11767,7 +11782,7 @@
       "popularity_translate": {}
     },
     "comments_count": 71,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 14775,
@@ -12099,7 +12114,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -12399,7 +12414,7 @@
       "popularity_translate": {}
     },
     "comments_count": 44,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 40617,
@@ -12705,7 +12720,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -12925,7 +12940,7 @@
       }
     },
     "comments_count": 38,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 23266,
@@ -13161,7 +13176,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -13477,7 +13492,7 @@
       }
     },
     "comments_count": 15,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 31321,
@@ -13745,7 +13760,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -13954,7 +13969,7 @@
       ]
     },
     "comments_count": 16,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 5160,
@@ -14093,7 +14108,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -14292,7 +14307,7 @@
       ]
     },
     "comments_count": 42,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 25978,
@@ -14431,7 +14446,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -14750,7 +14765,7 @@
       "popularity_translate": {}
     },
     "comments_count": 29,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 39834,
@@ -15016,7 +15031,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -15126,7 +15141,7 @@
       ]
     },
     "comments_count": 2,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 23577,
@@ -15263,7 +15278,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -15430,36 +15445,41 @@
       }
     },
     "comments_count": 25,
-    "franchise": [
-      {
-        "id": 65870,
-        "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442: \u0418\u043b\u043b\u044e\u043c\u0438\u043d\u0430\u0442\u044b \u0421\u0438\u043c\u0430\u043d\u044d [\u0422\u0412-3]",
-        "year": "2024 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/animation/adventures/65870-siniy-ekzorcist-illyuminaty-simane-tv-3-2024.html"
-      },
-      {
-        "id": 23213,
-        "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442: \u041d\u0435\u0447\u0435\u0441\u0442\u0438\u0432\u044b\u0439 \u043a\u043e\u0440\u043e\u043b\u044c \u041a\u0438\u043e\u0442\u043e [\u0422\u0412-2]",
-        "year": "2017 \u0433\u043e\u0434",
-        "rating": "6.78",
-        "url": "https://rezka.ag/animation/adventures/23213-siniy-ekzorcist-nechestivyy-korol-kioto-tv-2-2017.html"
-      },
-      {
-        "id": 10000,
-        "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442",
-        "year": "2012 \u0433\u043e\u0434",
-        "rating": "7.45",
-        "url": "https://rezka.ag/animation/adventures/10000-siniy-ekzorcist.html"
-      },
-      {
-        "id": 20735,
-        "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442 [\u0422\u0412-1]",
-        "year": "2011 \u0433\u043e\u0434",
-        "rating": "7.64",
-        "url": "https://rezka.ag/animation/adventures/20735-siniy-ekzorcist-tv-1-2011.html"
-      }
-    ],
+    "franchise": {
+      "id": 575,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0430\u043d\u0438\u043c\u0435 \"\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442 [\u0422\u0412-1]",
+          "year": "2011-01-01 00:00:00",
+          "rating": 7.64,
+          "url": "https://rezka.ag/animation/adventures/20735-siniy-ekzorcist-tv-1-2011.html"
+        },
+        {
+          "num": 2,
+          "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442",
+          "year": "2012-01-01 00:00:00",
+          "rating": 7.45,
+          "url": "https://rezka.ag/animation/adventures/10000-siniy-ekzorcist.html"
+        },
+        {
+          "num": 3,
+          "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442: \u041d\u0435\u0447\u0435\u0441\u0442\u0438\u0432\u044b\u0439 \u043a\u043e\u0440\u043e\u043b\u044c \u041a\u0438\u043e\u0442\u043e [\u0422\u0412-2]",
+          "year": "2017-01-01 00:00:00",
+          "rating": 6.78,
+          "url": "https://rezka.ag/animation/adventures/23213-siniy-ekzorcist-nechestivyy-korol-kioto-tv-2-2017.html"
+        },
+        {
+          "num": 4,
+          "title": "\u0421\u0438\u043d\u0438\u0439 \u044d\u043a\u0437\u043e\u0440\u0446\u0438\u0441\u0442: \u0418\u043b\u043b\u044e\u043c\u0438\u043d\u0430\u0442\u044b \u0421\u0438\u043c\u0430\u043d\u044d [\u0422\u0412-3]",
+          "year": "2024-01-01 00:00:00",
+          "rating": null,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/575-vse-chasti-sinego-ekzorcista/"
+    },
     "recommendations": [
       {
         "id": 22387,
@@ -15663,7 +15683,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -15823,7 +15843,7 @@
       ]
     },
     "comments_count": 33,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 24535,
@@ -15962,7 +15982,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -16243,7 +16263,7 @@
       "popularity_translate": {}
     },
     "comments_count": 38,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 39942,
@@ -16479,7 +16499,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -16646,7 +16666,7 @@
       ]
     },
     "comments_count": 2,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 18033,
@@ -16783,7 +16803,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -16986,7 +17006,7 @@
       ]
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 25487,
@@ -17125,7 +17145,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -17408,43 +17428,48 @@
       }
     },
     "comments_count": 56,
-    "franchise": [
-      {
-        "id": 63524,
-        "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0413\u0440\u0451\u0437\u044b \u041a\u043e\u043b\u0435\u044f [OVA]",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "7.60",
-        "url": "https://rezka.ag/animation/adventures/63524-o-moem-pererozhdenii-v-sliz-grezy-koleya-ova-2023.html"
-      },
-      {
-        "id": 56337,
-        "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0410\u043b\u044b\u0435 \u0443\u0437\u044b (\u0444\u0438\u043b\u044c\u043c)",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "7.21",
-        "url": "https://rezka.ag/animation/adventures/56337-o-moem-pererozhdenii-v-sliz-alye-uzy-film-2022.html"
-      },
-      {
-        "id": 41147,
-        "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0441\u043b\u0438\u0437\u0438",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.76",
-        "url": "https://rezka.ag/animation/adventures/41147-o-moem-pererozhdenii-v-sliz-dnevnik-slizi-2021.html"
-      },
-      {
-        "id": 36949,
-        "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c [\u0422\u0412-2]",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "7.59",
-        "url": "https://rezka.ag/animation/adventures/36949-o-moem-pererozhdenii-v-sliz-tv-2-2021.html"
-      },
-      {
-        "id": 29454,
-        "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c [\u0422\u0412-1]",
-        "year": "2018 \u0433\u043e\u0434",
-        "rating": "7.58",
-        "url": "https://rezka.ag/animation/adventures/29454-o-moem-pererozhdenii-v-sliz-tv-1-2018.html"
-      }
-    ],
+    "franchise": {
+      "id": 1490,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0430\u043d\u0438\u043c\u0435 \"\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c [\u0422\u0412-1]",
+          "year": "2018-01-01 00:00:00",
+          "rating": 7.58,
+          "url": "https://rezka.ag/animation/adventures/29454-o-moem-pererozhdenii-v-sliz-tv-1-2018.html"
+        },
+        {
+          "num": 2,
+          "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c [\u0422\u0412-2]",
+          "year": "2021-01-01 00:00:00",
+          "rating": 7.59,
+          "url": "https://rezka.ag/animation/adventures/36949-o-moem-pererozhdenii-v-sliz-tv-2-2021.html"
+        },
+        {
+          "num": 3,
+          "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0441\u043b\u0438\u0437\u0438",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.76,
+          "url": "https://rezka.ag/animation/adventures/41147-o-moem-pererozhdenii-v-sliz-dnevnik-slizi-2021.html"
+        },
+        {
+          "num": 4,
+          "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0410\u043b\u044b\u0435 \u0443\u0437\u044b (\u0444\u0438\u043b\u044c\u043c)",
+          "year": "2022-01-01 00:00:00",
+          "rating": 7.21,
+          "url": "https://rezka.ag/animation/adventures/56337-o-moem-pererozhdenii-v-sliz-alye-uzy-film-2022.html"
+        },
+        {
+          "num": 5,
+          "title": "\u041e \u043c\u043e\u0451\u043c \u043f\u0435\u0440\u0435\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0438 \u0432 \u0441\u043b\u0438\u0437\u044c: \u0413\u0440\u0451\u0437\u044b \u041a\u043e\u043b\u0435\u044f [OVA]",
+          "year": "2023-01-01 00:00:00",
+          "rating": 7.6,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/1490-vse-chasti-anime-o-moem-pererozhdenii-v-sliz/"
+    },
     "recommendations": [
       {
         "id": 49447,
@@ -17606,7 +17631,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -17768,7 +17793,7 @@
       }
     },
     "comments_count": 1,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 26389,
@@ -17930,7 +17955,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -18057,7 +18082,7 @@
       ]
     },
     "comments_count": 5,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 29605,
@@ -18196,7 +18221,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -18396,7 +18421,7 @@
       ]
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 16523,
@@ -18533,7 +18558,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -18708,57 +18733,62 @@
       }
     },
     "comments_count": 21,
-    "franchise": [
-      {
-        "id": 60640,
-        "title": "\u041c\u044b \u2013 \u041d\u044c\u044e\u043a\u0430\u0441\u043b \u042e\u043d\u0430\u0439\u0442\u0435\u0434",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/documentary/60640-my-nyukasl-yunayted-2023.html"
-      },
-      {
-        "id": 50581,
-        "title": "\u0412\u0441\u0435 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0410\u0440\u0441\u0435\u043d\u0430\u043b",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "8.40",
-        "url": "https://rezka.ag/series/documentary/50581-vse-ili-nichego-arsenal-2022.html"
-      },
-      {
-        "id": 44278,
-        "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u042e\u0432\u0435\u043d\u0442\u0443\u0441",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/documentary/44278-vse-ili-nichego-yuventus-2021.html"
-      },
-      {
-        "id": 43062,
-        "title": "\u0412\u0441\u0435 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0422\u043e\u0440\u043e\u043d\u0442\u043e \u041c\u0435\u0439\u043f\u043b \u041b\u0438\u0444\u0441",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/documentary/43062-vse-ili-nichego-toronto-meypl-lifs-2021.html"
-      },
-      {
-        "id": 35528,
-        "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0422\u043e\u0442\u0442\u0435\u043d\u0445\u044d\u043c \u0425\u043e\u0442\u0441\u043f\u0443\u0440",
-        "year": "2020 \u0433\u043e\u0434",
-        "rating": "7.85",
-        "url": "https://rezka.ag/series/documentary/35528-vse-ili-nichego-tottenhem-hotspur-2020.html"
-      },
-      {
-        "id": 28367,
-        "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u041c\u0430\u043d\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438",
-        "year": "2018 \u0433\u043e\u0434",
-        "rating": "7.92",
-        "url": "https://rezka.ag/series/realtv/28367-vse-ili-nichego-manchester-siti-2018.html"
-      },
-      {
-        "id": 43260,
-        "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0421\u0435\u0437\u043e\u043d \u0441 \u0410\u0440\u0438\u0437\u043e\u043d\u0441\u043a\u0438\u043c\u0438 \"\u041a\u0430\u0440\u0434\u0438\u043d\u0430\u043b\u0430\u043c\u0438\"",
-        "year": "2016 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/documentary/43260-vse-ili-nichego-sezon-s-arizonskimi-kardinalami-2016.html"
-      }
-    ],
+    "franchise": {
+      "id": 1913,
+      "title": "\u0412\u0441\u0435 \u0441\u0435\u0440\u0438\u0430\u043b\u044b \u0444\u0440\u0430\u043d\u0448\u0438\u0437\u044b \"\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0421\u0435\u0437\u043e\u043d \u0441 \u0410\u0440\u0438\u0437\u043e\u043d\u0441\u043a\u0438\u043c\u0438 \"\u041a\u0430\u0440\u0434\u0438\u043d\u0430\u043b\u0430\u043c\u0438\"",
+          "year": "2016-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/documentary/43260-vse-ili-nichego-sezon-s-arizonskimi-kardinalami-2016.html"
+        },
+        {
+          "num": 2,
+          "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u041c\u0430\u043d\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438",
+          "year": "2018-01-01 00:00:00",
+          "rating": 7.92,
+          "url": "https://rezka.ag/series/realtv/28367-vse-ili-nichego-manchester-siti-2018.html"
+        },
+        {
+          "num": 3,
+          "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0422\u043e\u0442\u0442\u0435\u043d\u0445\u044d\u043c \u0425\u043e\u0442\u0441\u043f\u0443\u0440",
+          "year": "2020-01-01 00:00:00",
+          "rating": 7.85,
+          "url": "https://rezka.ag/series/documentary/35528-vse-ili-nichego-tottenhem-hotspur-2020.html"
+        },
+        {
+          "num": 4,
+          "title": "\u0412\u0441\u0435 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0422\u043e\u0440\u043e\u043d\u0442\u043e \u041c\u0435\u0439\u043f\u043b \u041b\u0438\u0444\u0441",
+          "year": "2021-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/documentary/43062-vse-ili-nichego-toronto-meypl-lifs-2021.html"
+        },
+        {
+          "num": 5,
+          "title": "\u0412\u0441\u0451 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u042e\u0432\u0435\u043d\u0442\u0443\u0441",
+          "year": "2021-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/documentary/44278-vse-ili-nichego-yuventus-2021.html"
+        },
+        {
+          "num": 6,
+          "title": "\u0412\u0441\u0435 \u0438\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e: \u0410\u0440\u0441\u0435\u043d\u0430\u043b",
+          "year": "2022-01-01 00:00:00",
+          "rating": 8.4,
+          "url": "https://rezka.ag/series/documentary/50581-vse-ili-nichego-arsenal-2022.html"
+        },
+        {
+          "num": 7,
+          "title": "\u041c\u044b \u2013 \u041d\u044c\u044e\u043a\u0430\u0441\u043b \u042e\u043d\u0430\u0439\u0442\u0435\u0434",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/1913-vse-serialy-franshizy-vse-ili-nichego/"
+    },
     "recommendations": [
       {
         "id": 27000,
@@ -18930,7 +18960,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -19156,50 +19186,55 @@
       "popularity_translate": {}
     },
     "comments_count": 4,
-    "franchise": [
-      {
-        "id": 61475,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 6. \u0423\u0434\u0430\u0440",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/melodrama/61475-doktor-ivanov-6-udar-2023.html"
-      },
-      {
-        "id": 54241,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 5. \u0420\u043e\u0434\u043d\u0430\u044f \u043a\u0440\u043e\u0432\u044c",
-        "year": "2023 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/series/melodrama/54241-doktor-ivanov-5-rodnaya-krov-2023.html"
-      },
-      {
-        "id": 48858,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 4. \u041c\u0430\u0442\u044c \u0438 \u0441\u044b\u043d",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.49",
-        "url": "https://rezka.ag/series/melodrama/48858-doktor-ivanov-4-mat-i-syn-2022.html"
-      },
-      {
-        "id": 48830,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 3. \u0427\u0443\u0436\u0430\u044f \u043f\u0440\u0430\u0432\u0434\u0430",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.50",
-        "url": "https://rezka.ag/series/melodrama/48830-doktor-ivanov-3-chuzhaya-pravda-2022.html"
-      },
-      {
-        "id": 48814,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 2. \u0416\u0438\u0437\u043d\u044c \u043f\u043e\u0441\u043b\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.72",
-        "url": "https://rezka.ag/series/melodrama/48814-doktor-ivanov-2-zhizn-posle-smerti-2022.html"
-      },
-      {
-        "id": 44570,
-        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432. \u0421\u0432\u043e\u044f \u0437\u0435\u043c\u043b\u044f",
-        "year": "2021 \u0433\u043e\u0434",
-        "rating": "6.54",
-        "url": "https://rezka.ag/series/drama/44570-doktor-ivanov-svoya-zemlya-2021.html"
-      }
-    ],
+    "franchise": {
+      "id": 2410,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0441\u0435\u0440\u0438\u0430\u043b\u0430 \"\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432. \u0421\u0432\u043e\u044f \u0437\u0435\u043c\u043b\u044f",
+          "year": "2021-01-01 00:00:00",
+          "rating": 6.54,
+          "url": "https://rezka.ag/series/drama/44570-doktor-ivanov-svoya-zemlya-2021.html"
+        },
+        {
+          "num": 2,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 2. \u0416\u0438\u0437\u043d\u044c \u043f\u043e\u0441\u043b\u0435 \u0441\u043c\u0435\u0440\u0442\u0438",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.72,
+          "url": "https://rezka.ag/series/melodrama/48814-doktor-ivanov-2-zhizn-posle-smerti-2022.html"
+        },
+        {
+          "num": 3,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 3. \u0427\u0443\u0436\u0430\u044f \u043f\u0440\u0430\u0432\u0434\u0430",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.5,
+          "url": "https://rezka.ag/series/melodrama/48830-doktor-ivanov-3-chuzhaya-pravda-2022.html"
+        },
+        {
+          "num": 4,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 4. \u041c\u0430\u0442\u044c \u0438 \u0441\u044b\u043d",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.49,
+          "url": "https://rezka.ag/series/melodrama/48858-doktor-ivanov-4-mat-i-syn-2022.html"
+        },
+        {
+          "num": 5,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 5. \u0420\u043e\u0434\u043d\u0430\u044f \u043a\u0440\u043e\u0432\u044c",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": "https://rezka.ag/series/melodrama/54241-doktor-ivanov-5-rodnaya-krov-2023.html"
+        },
+        {
+          "num": 6,
+          "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0418\u0432\u0430\u043d\u043e\u0432 6. \u0423\u0434\u0430\u0440",
+          "year": "2023-01-01 00:00:00",
+          "rating": null,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/2410-vse-chasti-seriala-doktor-ivanov/"
+    },
     "recommendations": [
       {
         "id": 58518,
@@ -19371,7 +19406,7 @@
         "exists_episode": false
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -19645,7 +19680,7 @@
       }
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 41888,
@@ -19959,7 +19994,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -20192,7 +20227,7 @@
       "popularity_translate": {}
     },
     "comments_count": 5,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 47297,
@@ -20492,7 +20527,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -20680,7 +20715,7 @@
       }
     },
     "comments_count": 1,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 55524,
@@ -20868,7 +20903,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -21104,7 +21139,7 @@
       "popularity_translate": {}
     },
     "comments_count": 3,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 53395,
@@ -21356,7 +21391,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -21581,7 +21616,7 @@
       }
     },
     "comments_count": null,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 49600,
@@ -21839,7 +21874,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -22188,7 +22223,7 @@
       }
     },
     "comments_count": 4,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 39445,
@@ -22456,7 +22491,7 @@
         "exists_episode": true
       }
     ],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -22650,85 +22685,90 @@
       "url": "https://rezka.ag/cartoons/fantasy/66771-kung-fu-panda-4-2024.html"
     },
     "comments_count": 4,
-    "franchise": [
-      {
-        "id": 66771,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 4",
-        "year": "2024 \u0433\u043e\u0434",
-        "rating": "\u2014",
-        "url": "https://rezka.ag/cartoons/fantasy/66771-kung-fu-panda-4-2024.html"
-      },
-      {
-        "id": 49880,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u043c\u0438\u0441\u0441\u0438\u044f \u0420\u044b\u0446\u0430\u0440\u044c \u0434\u0440\u0430\u043a\u043e\u043d\u0430",
-        "year": "2022 \u0433\u043e\u0434",
-        "rating": "6.12",
-        "url": "https://rezka.ag/cartoons/fantasy/49880-kung-fu-panda-missiya-rycar-drakona-2022.html"
-      },
-      {
-        "id": 29139,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u043f\u0430\u043d\u0434\u0430: \u041b\u0430\u043f\u043a\u0438 \u0441\u0443\u0434\u044c\u0431\u044b",
-        "year": "2018 \u0433\u043e\u0434",
-        "rating": "6.46",
-        "url": "https://rezka.ag/cartoons/fantasy/29139-kung-fu-panda-lapki-sudby-2018.html"
-      },
-      {
-        "id": 12948,
-        "title": "\u041a\u0443\u043d\u0433-\u0424\u0443 \u041f\u0430\u043d\u0434\u0430: \u0417\u0430\u0433\u0430\u0434\u043a\u0438 \u0441\u0432\u0438\u0442\u043a\u0430",
-        "year": "2016 \u0433\u043e\u0434",
-        "rating": "7.04",
-        "url": "https://rezka.ag/cartoons/action/12948-kung-fu-panda-zagadki-svitka-2016.html"
-      },
-      {
-        "id": 11520,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 3",
-        "year": "2016 \u0433\u043e\u0434",
-        "rating": "7.26",
-        "url": "https://rezka.ag/cartoons/fantasy/11520-kung-fu-panda-3-2016.html"
-      },
-      {
-        "id": 17414,
-        "title": "\u041a\u0443\u043d\u0433-\u0424\u0443 \u041f\u0430\u043d\u0434\u0430: \u0421\u0435\u043a\u0440\u0435\u0442\u044b \u043c\u0430\u0441\u0442\u0435\u0440\u043e\u0432",
-        "year": "2011 \u0433\u043e\u0434",
-        "rating": "7.01",
-        "url": "https://rezka.ag/cartoons/action/17414-kung-fu-panda-sekrety-masterov-2011.html"
-      },
-      {
-        "id": 1403,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u0423\u0434\u0438\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043b\u0435\u0433\u0435\u043d\u0434\u044b",
-        "year": "2011 \u0433\u043e\u0434",
-        "rating": "6.72",
-        "url": "https://rezka.ag/cartoons/fantasy/1403-kung-fu-panda-udivitelnye-legendy-2011.html"
-      },
-      {
-        "id": 292,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 2",
-        "year": "2011 \u0433\u043e\u0434",
-        "rating": "7.39",
-        "url": "https://rezka.ag/cartoons/fantasy/292-kung-fu-panda-2-2011.html"
-      },
-      {
-        "id": 887,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u041f\u0440\u0430\u0437\u0434\u043d\u0438\u0447\u043d\u044b\u0439 \u0432\u044b\u043f\u0443\u0441\u043a",
-        "year": "2010 \u0433\u043e\u0434",
-        "rating": "7.05",
-        "url": "https://rezka.ag/cartoons/action/887-kung-fu-panda-prazdnichnyy-vypusk-2010.html"
-      },
-      {
-        "id": 19118,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u0421\u0435\u043a\u0440\u0435\u0442\u044b \u043d\u0435\u0438\u0441\u0442\u043e\u0432\u043e\u0439 \u043f\u044f\u0442\u0435\u0440\u043a\u0438",
-        "year": "2008 \u0433\u043e\u0434",
-        "rating": "7.21",
-        "url": "https://rezka.ag/cartoons/action/19118-kung-fu-panda-sekrety-neistovoy-pyaterki-2008.html"
-      },
-      {
-        "id": 293,
-        "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430",
-        "year": "2008 \u0433\u043e\u0434",
-        "rating": "7.81",
-        "url": "https://rezka.ag/cartoons/action/293-kung-fu-panda-2008.html"
-      }
-    ],
+    "franchise": {
+      "id": 294,
+      "title": "\u0412\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c\u0430 \"\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430\"",
+      "items_list": [
+        {
+          "num": 1,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430",
+          "year": "2008-01-01 00:00:00",
+          "rating": 7.81,
+          "url": "https://rezka.ag/cartoons/action/293-kung-fu-panda-2008.html"
+        },
+        {
+          "num": 2,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u0421\u0435\u043a\u0440\u0435\u0442\u044b \u043d\u0435\u0438\u0441\u0442\u043e\u0432\u043e\u0439 \u043f\u044f\u0442\u0435\u0440\u043a\u0438",
+          "year": "2008-01-01 00:00:00",
+          "rating": 7.21,
+          "url": "https://rezka.ag/cartoons/action/19118-kung-fu-panda-sekrety-neistovoy-pyaterki-2008.html"
+        },
+        {
+          "num": 3,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u041f\u0440\u0430\u0437\u0434\u043d\u0438\u0447\u043d\u044b\u0439 \u0432\u044b\u043f\u0443\u0441\u043a",
+          "year": "2010-01-01 00:00:00",
+          "rating": 7.05,
+          "url": "https://rezka.ag/cartoons/action/887-kung-fu-panda-prazdnichnyy-vypusk-2010.html"
+        },
+        {
+          "num": 4,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 2",
+          "year": "2011-01-01 00:00:00",
+          "rating": 7.39,
+          "url": "https://rezka.ag/cartoons/fantasy/292-kung-fu-panda-2-2011.html"
+        },
+        {
+          "num": 5,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u0423\u0434\u0438\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043b\u0435\u0433\u0435\u043d\u0434\u044b",
+          "year": "2011-01-01 00:00:00",
+          "rating": 6.72,
+          "url": "https://rezka.ag/cartoons/fantasy/1403-kung-fu-panda-udivitelnye-legendy-2011.html"
+        },
+        {
+          "num": 6,
+          "title": "\u041a\u0443\u043d\u0433-\u0424\u0443 \u041f\u0430\u043d\u0434\u0430: \u0421\u0435\u043a\u0440\u0435\u0442\u044b \u043c\u0430\u0441\u0442\u0435\u0440\u043e\u0432",
+          "year": "2011-01-01 00:00:00",
+          "rating": 7.01,
+          "url": "https://rezka.ag/cartoons/action/17414-kung-fu-panda-sekrety-masterov-2011.html"
+        },
+        {
+          "num": 7,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 3",
+          "year": "2016-01-01 00:00:00",
+          "rating": 7.26,
+          "url": "https://rezka.ag/cartoons/fantasy/11520-kung-fu-panda-3-2016.html"
+        },
+        {
+          "num": 8,
+          "title": "\u041a\u0443\u043d\u0433-\u0424\u0443 \u041f\u0430\u043d\u0434\u0430: \u0417\u0430\u0433\u0430\u0434\u043a\u0438 \u0441\u0432\u0438\u0442\u043a\u0430",
+          "year": "2016-01-01 00:00:00",
+          "rating": 7.04,
+          "url": "https://rezka.ag/cartoons/action/12948-kung-fu-panda-zagadki-svitka-2016.html"
+        },
+        {
+          "num": 9,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u043f\u0430\u043d\u0434\u0430: \u041b\u0430\u043f\u043a\u0438 \u0441\u0443\u0434\u044c\u0431\u044b",
+          "year": "2018-01-01 00:00:00",
+          "rating": 6.46,
+          "url": "https://rezka.ag/cartoons/fantasy/29139-kung-fu-panda-lapki-sudby-2018.html"
+        },
+        {
+          "num": 10,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430: \u043c\u0438\u0441\u0441\u0438\u044f \u0420\u044b\u0446\u0430\u0440\u044c \u0434\u0440\u0430\u043a\u043e\u043d\u0430",
+          "year": "2022-01-01 00:00:00",
+          "rating": 6.12,
+          "url": "https://rezka.ag/cartoons/fantasy/49880-kung-fu-panda-missiya-rycar-drakona-2022.html"
+        },
+        {
+          "num": 11,
+          "title": "\u041a\u0443\u043d\u0433-\u0444\u0443 \u041f\u0430\u043d\u0434\u0430 4",
+          "year": "2024-01-01 00:00:00",
+          "rating": null,
+          "url": null
+        }
+      ],
+      "url": "https://rezka.ag/franchises/294-vse-chasti-multfilma-kung-fu-panda/"
+    },
     "recommendations": [
       {
         "id": 11018,
@@ -22867,7 +22907,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,
@@ -23068,7 +23108,7 @@
       ]
     },
     "comments_count": null,
-    "franchise": [],
+    "franchise": null,
     "recommendations": [
       {
         "id": 5457,
@@ -23207,7 +23247,7 @@
       }
     ],
     "schedule_block": [],
-    "questions_asked": null,
+    "questions_asked": [],
     "comment": {
       "_page": 1,
       "_last_page": null,

@@ -80,13 +80,10 @@ class TestPartContent(TestCase):
         reference_html = read_reference_file("reference_movie_html.json")
         for key in list(reference_html.keys())[42:48]:
             movie_info = MovieDetailsBuilder(reference_html[key]).extract_content()
-            if len(movie_info.franchise) == 0:
+            if movie_info.franchise is None:
                 continue
-            for movie in movie_info.franchise:
+            for movie in movie_info.franchise.items_list:
                 m.get(movie.url, "")
-                with self.assertRaises(AttributeError) as cm:
-                    movie.get()
-                self.assertEqual(cm.exception.args[0], "'NoneType' object has no attribute 'get'")
 
 
 class TestCustomString(TestCase):
