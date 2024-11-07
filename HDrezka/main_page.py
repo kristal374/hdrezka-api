@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import Optional, List, TYPE_CHECKING, Union, overload
 from urllib.parse import urlsplit, urljoin
 
-from . import franchises
+from . import franchise
 from . import (
     html_representation,
     movie_posters,
@@ -37,8 +37,8 @@ from .utility import determine_url_type, URLsType
 
 if TYPE_CHECKING:
     from .movie_posters import Poster
-    from .franchises import Franchise, FranchiseBriefInfo
-    from .questions_asked import Question, QuestionBriefInfo
+    from .franchise import Franchise, FranchiseBanner
+    from .questions_asked import Question, QuestionBanner
     from .movie_page_descriptor import MovieDetails
     from .person import Person
 
@@ -206,9 +206,9 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
         MovieDetails,
         List[MovieCollection],
         Question,
-        List[QuestionBriefInfo],
-        List[Franchise],
-        List[FranchiseBriefInfo],
+        List[QuestionBanner],
+        Franchise,
+        List[FranchiseBanner],
         Person,
         List[Poster],
     ]:
@@ -232,11 +232,11 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
             if url_type == URLsType.qa_info:
                 return questions_asked.QuestionsBuilder(response).extract_content()
             if url_type == URLsType.qa:
-                return questions_asked.QuestionsBriefInfoBuilder(response).extract_content()
+                return questions_asked.QuestionsBannerBuilder(response).extract_content()
             if url_type == URLsType.franchises_info:
-                return franchises.FranchisesBuilder(response).extract_content()
+                return franchise.FranchiseBuilder(response).extract_content()
             if url_type == URLsType.franchises:
-                return franchises.FranchisesBriefInfoBuilder(response).extract_content()
+                return franchise.FranchiseBannerBuilder(response).extract_content()
             if url_type == URLsType.person_info:
                 return person.PersonBuilder(response).extract_content()
             if url_type == URLsType.poster:

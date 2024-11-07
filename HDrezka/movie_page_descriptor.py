@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union, TYPE_CHECKING
 from urllib.parse import unquote
 
-from . import franchises
+from . import franchise
 from . import movie_collections
 from . import movie_posters
 from .comments import CommentsIterator
@@ -15,14 +15,14 @@ from .connector import NetworkClient
 from .html_representation import PageRepresentation
 from .person import PersonBriefInfo
 from .player import PlayerBuilder, Serial, Film
-from .questions_asked import QuestionsBriefInfoBuilder
+from .questions_asked import QuestionsBannerBuilder
 from .trailer import TrailerBuilder
 from .utility import convert_string_into_datetime
 
 if TYPE_CHECKING:
     from .movie_posters import Poster
-    from .franchises import Franchise
-    from .questions_asked import QuestionBriefInfo
+    from .franchise import FranchiseBriefInfo
+    from .questions_asked import QuestionBanner
     from .movie_collections import CollectionBriefInfo
 
 
@@ -110,10 +110,10 @@ class MovieDetails:
     description: Optional[str] = None  # Описание фильма
     player: Optional[Union[Serial, Film]] = None  # Объект либо фильма, либо сериала
     comments_count: Optional[int] = None  # TODO check
-    franchise: Optional[List[Franchise]] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
+    franchise: Optional[FranchiseBriefInfo] = None  # Фильмы из того же цикла(Приквелы, Сиквелы и тд)
     recommendations: List[Poster] = None  # Список рекомендованных к просмотру фильмов
     schedule_block: Optional[List[EpisodeOverview]] = None  # Список выхода серий
-    questions_asked: Optional[List[QuestionBriefInfo]] = None  # Часто задаваемые вопросы
+    questions_asked: List[QuestionBanner] = None  # Часто задаваемые вопросы
     comment: CommentsIterator = None  # Комментарии к данному фильму
 
     def __repr__(self):
@@ -263,7 +263,7 @@ class MovieDetailsBuilder(PageRepresentation):
         page.description = self.extract_description()
         page.player = PlayerBuilder(self.page).extract_content()
         page.comments_count = self.extract_comments_count()
-        page.franchise = franchises.FranchisesBuilder(self.page).extract_content()
+        page.franchise = franchise.FranchiseBriefInfoBuilder(self.page).extract_content()
         page.recommendations = self.extract_recommendations()
         page.schedule_block = self.extract_schedule_block()
         page.questions_asked = self.extract_questions()
@@ -347,11 +347,11 @@ class MovieDetailsBuilder(PageRepresentation):
                     continue
         return result_lst
 
-    def extract_questions(self) -> Optional[List[QuestionBriefInfo]]:
+    def extract_questions(self) -> List[QuestionBanner]:
         faq_block = self.page.soup.find("div", class_="b-post__qa_list_block")
         if faq_block is None:
-            return None
-        return QuestionsBriefInfoBuilder(str(faq_block)).extract_content()
+            return []
+        return QuestionsBannerBuilder(str(faq_block)).extract_content()
 
     def __repr__(self):
         return f"<{MovieDetailsBuilder.__name__}>"

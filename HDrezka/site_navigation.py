@@ -13,10 +13,10 @@ from .filters import (
     GenreCartoons,
     GenreSeries,
 )
-from .franchises import FranchisesBriefInfoBuilder, FranchiseBriefInfo
+from .franchise import FranchiseBanner, FranchiseBannerBuilder
 from .movie_collections import MovieCollectionBuilder, MovieCollection
 from .movie_posters import PosterBuilder, Poster
-from .questions_asked import QuestionsBriefInfoBuilder, QuestionBriefInfo
+from .questions_asked import QuestionsBannerBuilder, QuestionBanner
 
 
 class BaseMovieCategory(BaseSiteNavigation[List[Poster]], ABC):
@@ -198,15 +198,15 @@ class Search(BaseSiteNavigation[List[Poster]]):
         return f"{self._connector.url}/{self._name}/{text}{page}"
 
 
-class QuestionsAsked(BaseSiteNavigation[List[QuestionBriefInfo]]):
+class QuestionsAsked(BaseSiteNavigation[List[QuestionBanner]]):
     _name = "qa"
 
-    def get(self) -> List[QuestionBriefInfo]:
-        return QuestionsBriefInfoBuilder(super().get()).extract_content()
+    def get(self) -> List[QuestionBanner]:
+        return QuestionsBannerBuilder(super().get()).extract_content()
 
 
-class Franchises(BaseSiteNavigation[List[FranchiseBriefInfo]]):
+class Franchises(BaseSiteNavigation[List[FranchiseBanner]]):
     _name = "franchises"
 
-    def get(self) -> List[FranchiseBriefInfo]:
-        return FranchisesBriefInfoBuilder(super().get()).extract_content()
+    def get(self) -> List[FranchiseBanner]:
+        return FranchiseBannerBuilder(super().get()).extract_content()

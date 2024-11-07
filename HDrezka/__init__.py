@@ -13,7 +13,7 @@ from . import connector
 from . import core_navigation
 from . import downloader
 from . import filters
-from . import franchises
+from . import franchise
 from . import html_representation
 from . import main_page
 from . import movie_collections

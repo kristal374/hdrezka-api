@@ -79,7 +79,7 @@ class QuestionsBuilder(PageRepresentation):
 
 
 @dataclass
-class QuestionBriefInfo:
+class QuestionBanner:
     id: int = None
     title: str = None
     img_url: str = None
@@ -92,11 +92,11 @@ class QuestionBriefInfo:
         return f"<QuestionBriefInfo({self.title})>"
 
 
-class QuestionsBriefInfoBuilder(PageRepresentation):
-    def extract_content(self) -> List[QuestionBriefInfo]:
+class QuestionsBannerBuilder(PageRepresentation):
+    def extract_content(self) -> List[QuestionBanner]:
         result_list = []
         for item in self.page.soup.find_all("li", class_="b-post__qa_list_item"):
-            question = QuestionBriefInfo()
+            question = QuestionBanner()
             question.url = item.a.get("href").strip()
             question.id = int(re.search(r"(\d+)\.html$", question.url).group(1))
             question.title = item.find("div", class_="title").text.strip()
