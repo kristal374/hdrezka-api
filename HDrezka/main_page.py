@@ -4,7 +4,7 @@ import dataclasses
 import re
 from datetime import datetime
 from typing import Optional, List, TYPE_CHECKING, Union, overload
-from urllib.parse import urlsplit, urljoin
+from urllib.parse import urlsplit, urljoin, urlunsplit
 
 from . import franchise
 from . import (
@@ -216,7 +216,8 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
 
     def get(self, url: Optional[str] = None):  # pylint: disable = R0911
         if url is not None:
-            response = self._connector.get(url).text
+            pure_url = urlunsplit(tuple(urlsplit(url))[:-1] + ("",))  # Removing the "fragment" from the URL
+            response = self._connector.get(pure_url).text
             url_type = determine_url_type(url)
             if url_type == URLsType.main:
                 return MainPageBuilder(response).extract_content()
@@ -241,7 +242,7 @@ class HDrezka(BaseSiteNavigation[Union[MainPage, List[movie_posters.Poster]]]):
                 return person.PersonBuilder(response).extract_content()
             if url_type == URLsType.poster:
                 return movie_posters.PosterBuilder(response).extract_content()
-            raise AttributeError("Incorrect url")
+            raise ValueError(f"Unknown URL type: {url}")
         if self.current_page == 1 and str(self._query) == "":
             return MainPageBuilder(super().get()).extract_content()
         return movie_posters.PosterBuilder(super().get()).extract_content()
