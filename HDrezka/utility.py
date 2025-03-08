@@ -149,13 +149,14 @@ def extract_date(datetime_string: str) -> datetime:
     if datetime_string == "вчера":
         return datetime.combine(datetime.now(), datetime.min.time()) - timedelta(days=1)
 
-    match = re.search(r"(\d+)?\s?([А-я]+)?,?\s?(\d{4})\s?(года?|-\s\.{3})?", datetime_string)
+    match = re.search(r"^(\d{1,2})?\s?([А-я]+?)?,?\s?(\d{4})?\s?(года?|-\s\.{3}|-\s\d{4})?$", datetime_string)
 
-    if not match:
+    if not match or all(x is None for x in match.groups()):
         raise ValueError(f"No match found for string: {datetime_string}")
 
     day, month, year, _ = match.groups()
 
+    year = 1 if year is None else int(year)
     month_name = (
         ("",),
         ("январь", "января"),
@@ -171,8 +172,6 @@ def extract_date(datetime_string: str) -> datetime:
         ("ноябрь", "ноября"),
         ("декабрь", "декабря"),
     )
-
-    day = int(day) if day is not None else 1
     if month is not None:
         month_num = [month_name.index(m) for m in month_name if month in m]
         if len(month_num) != 1:
@@ -180,8 +179,9 @@ def extract_date(datetime_string: str) -> datetime:
         month = month_num[0]
     else:
         month = 1
+    day = int(day) if day is not None else 1
 
-    return datetime(year=int(year), month=month, day=day)
+    return datetime(year=year, month=month, day=day)
 
 
 def convert_string_into_datetime(datetime_string: str) -> Optional[datetime]:
@@ -219,7 +219,7 @@ def calculate_count_comments(comments_list: List[Comment]) -> int:
     :return:
         The total number of messages.
     """
-    return sum(calculate_count_comments(item.replies) for item in comments_list) + 1
+    return sum(calculate_count_comments(item.replies) for item in comments_list) + len(comments_list)
 
 
 def make_filename_from_movie_title(title: str, separator="_"):
@@ -242,6 +242,6 @@ def make_filename_from_movie_title(title: str, separator="_"):
         >>> filename = make_filename_from_movie_title(movie.title)
         >>> movie.player.load(filename)
         >>> print(filename)
-        "Драконы Гонка на грани"
+        "Драконы_Гонка_на_грани"
     """
     return re.sub(r"[\\/:;*?&^#%!$\"`<>|]", "", title.split("/")[0]).strip().replace(" ", separator)

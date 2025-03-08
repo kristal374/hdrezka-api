@@ -55,8 +55,8 @@ class CommentsIterator(PageIterator[List[Comment]]):
             self._fetch_last_page(response)
         result_list = self.extreact_comments(soup)
 
-        number_comments = response["comments"].count(">оставлен ")
-        if number_comments != calculate_count_comments(result_list) - 1:  # pragma: NO COVER
+        number_comments = response["comments"].count(">оставлен ")  # TODO
+        if number_comments != calculate_count_comments(result_list):  # pragma: NO COVER
             # Sometimes the server sends incorrect html code, in this case you need to use another stricter parser
             soup = bs4.BeautifulSoup(response["comments"], "html5lib")
             return self.extreact_comments(soup)
