@@ -3,7 +3,7 @@ from __future__ import annotations
 import zlib
 from typing import Optional, Union, List, Dict, overload
 
-from HDrezka.downloader import media_loader
+from ..downloader import media_loader
 from . import movie_player_builder
 from .base_movie import BaseMovie
 from .construct_types import (

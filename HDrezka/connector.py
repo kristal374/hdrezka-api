@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from abc import abstractmethod, ABC
-from typing import Union, Any, Type, Dict, TypeVar
+from abc import ABC, abstractmethod
+from typing import Any, Dict, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
 import requests
@@ -52,8 +52,8 @@ class Connector(ABC):
         header = {
             "Host": domain,
             "Origin": f"https://{domain}",
-            "Referer": f"https://{domain}",
             "User-Agent": self.user_agent,
+            "Referer": f"https://{domain}",
             "X-Requested-With": "XMLHttpRequest",
         }
         return CaseInsensitiveDict(header)

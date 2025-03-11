@@ -48,8 +48,8 @@ URL_REGEX_DICT = {
     URLsType.franchises: r"/franchises/?(?:page/\d+/?)?$",
     URLsType.person_info: r"/person/\d+(?:-[^/]+)/?",
     URLsType.poster: r"^/(?:ua/)?(?:films|series|cartoons|animation|show|games|new|announce|collections/\d+"
-    r"(?:-[^/]+)|search|country/(?:(?:%[A-F0-9+-]+)+|[А-я+-]+)|year/(?:\d+)|page/(?:(?!1\b)"
-    r"\d+))/?(?:best/(?:[a-z\-_]+/\d+|[a-z-_]+|\d+)?/?)?(?:(?!page)[a-z-]+/?)?(?:page/\d+/?)?",
+                     r"(?:-[^/]+)|search|country/(?:(?:%[A-F0-9+-]+)+|[А-я+-]+)|year/(?:\d+)|page/(?:(?!1\b)"
+                     r"\d+))/?(?:best/(?:[a-z\-_]+/\d+|[a-z-_]+|\d+)?/?)?(?:(?!page)[a-z-]+/?)?(?:page/\d+/?)?",
 }
 REGEX_QUERY = (
     r"(?:filter=(?:last|popular|soon|watching)(?:&genre=\d+)?|" r"do=(?:lostpassword|search&subaction=search&q=.*))"
@@ -68,7 +68,7 @@ def determine_url_type(url: str) -> URLsType:
 
     Usage::
 
-        >>> from HDrezka.utility import determine_url_type
+        >>> from HDrezka import determine_url_type
         >>>
         >>> url_type = determine_url_type("https://rezka.ag/")
         >>> if url_type == URLsType.main:
@@ -108,7 +108,7 @@ def extract_datetime(datetime_string: str) -> datetime:
 
     Usage::
 
-        >>> from HDrezka.utility import extract_datetime
+        >>> from HDrezka import extract_datetime
         >>> raw_datetime_string = "сегодня, 10:30"
         >>> result = extract_datetime(raw_datetime_string)
         >>> print(result)
@@ -138,7 +138,7 @@ def extract_date(datetime_string: str) -> datetime:
 
     Usage::
 
-        >>> from HDrezka.utility import extract_date
+        >>> from HDrezka import extract_date
         >>> raw_datetime_string = "сегодня, 10:30"
         >>> result = extract_date(raw_datetime_string)
         >>> print(result)
@@ -198,7 +198,7 @@ def convert_string_into_datetime(datetime_string: str) -> Optional[datetime]:
 
     Usage::
 
-        >>> from HDrezka.utility import convert_string_into_datetime
+        >>> from HDrezka import convert_string_into_datetime
         >>> raw_datetime_string = "сегодня, 10:30"
         >>> result = convert_string_into_datetime(raw_datetime_string)
         >>> print(result)
@@ -236,7 +236,7 @@ def make_filename_from_movie_title(title: str, separator="_"):
     Usage::
 
         >>> from HDrezka import HDrezka
-        >>> from HDrezka.utility import make_filename_from_movie_title
+        >>> from HDrezka import make_filename_from_movie_title
         >>>
         >>> movie = HDrezka.get(url="https://rezka.ag/cartoons/fantasy/30073-drakony-gonka-na-grani-2015.html")
         >>> filename = make_filename_from_movie_title(movie.title)

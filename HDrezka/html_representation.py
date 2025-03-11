@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from io import IOBase
-from typing import Union, IO
+from typing import IO, Union
 
 from bs4 import BeautifulSoup, Tag
 from requests.models import Response

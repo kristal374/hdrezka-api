@@ -5,12 +5,12 @@ import warnings
 import zlib
 from abc import ABC, abstractmethod
 from contextlib import contextmanager
-from typing import Optional, Union, List, Dict, overload, Generic
+from typing import Dict, Generic, List, Optional, Union, overload
 
-from HDrezka.connector import NetworkClient
-from HDrezka.downloader import media_loader
-from HDrezka.exceptions import AJAXFail, LoadingError
-from .construct_types import QueryData, Subtitle, Translator, Quality, Actions
+from .construct_types import Actions, Quality, QueryData, Subtitle, Translator
+from ..connector import NetworkClient
+from ..downloader import media_loader
+from ..exceptions import AJAXFail, LoadingError
 
 
 class BaseMovie(Generic[QueryData], ABC):
@@ -64,7 +64,8 @@ class BaseMovie(Generic[QueryData], ABC):
             raise KeyError("Quality is unavailable.")
         if not self._url_dict.get(quality, False):
             raise ValueError(
-                f"This 'quality' attribute ({quality}) is not " f"in the quality list {list(self._url_dict.keys())}."
+                f"This 'quality' attribute ({quality}) is not "
+                f"in the quality list {list(self._url_dict.keys())}."
             )
         return self._url_dict[quality]
 
@@ -92,7 +93,8 @@ class BaseMovie(Generic[QueryData], ABC):
         else:
             if lang is not None:
                 raise TypeError(
-                    f"Attribute 'lang' ({lang}) must be of type 'str', " f"but not of type '{type(lang).__name__}'."
+                    f"Attribute 'lang' ({lang}) must be of type 'str', "
+                    f"but not of type '{type(lang).__name__}'."
                 )
             raise TypeError(
                 f"Attribute 'code_lang' ({code_lang}) must be of type 'str', "

@@ -5,13 +5,14 @@ from typing import Optional, Dict, Any, TYPE_CHECKING, List
 
 import requests
 
-from HDrezka import connector, exceptions
-from HDrezka import player
 from .file_manager import SafeFileLoader
 from .progress_bar import ProgressBar
+from .. import connector
+from .. import exceptions
+from .. import player
 
 if TYPE_CHECKING:
-    from HDrezka.player import BaseMovie
+    from ..player import BaseMovie
 
 
 def _get_request_stream_obj(urls_list: List[str], headers: Optional[Dict[str, Any]] = None):

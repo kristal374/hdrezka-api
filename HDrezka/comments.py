@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import re
 import time
 from dataclasses import dataclass
@@ -10,7 +11,7 @@ import bs4
 from .core_navigation import PageIterator
 from .exceptions import EmptyPage, ServiceUnavailable
 from .html_representation import PageRepresentation
-from .utility import convert_string_into_datetime, calculate_count_comments
+from .utility import calculate_count_comments, convert_string_into_datetime
 
 
 @dataclass
@@ -26,7 +27,7 @@ class User:
 class Comment:
     id: int = None  # идентификатор комментария
     author: User = None  # автор комментария
-    timestamp: str = None  # дата и время когда был оставлен комментарий
+    timestamp: datetime.datetime = None  # дата и время когда был оставлен комментарий
     text: str = None  # текст комментария
     replies: List[Comment] = None  # комментарии-ответы на данный комментарий
     likes_num: int = None  # количество отметок "нравиться"

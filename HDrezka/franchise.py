@@ -16,6 +16,7 @@ if TYPE_CHECKING:
 
 @dataclass
 class FranchiseItem:
+    id: int
     num: int  # номер во франшизе
     title: str  # Название фильма
     year: datetime.datetime  # год выпуска фильма
@@ -58,6 +59,7 @@ class FranchiseBuilder(PageRepresentation):
     def extract_franchise_item(item, url=None) -> FranchiseItem:
         rating = item.find("div", class_="rating").text.strip()
         return FranchiseItem(
+            id=int(re.search(r"/(\d*)-", item.get("data-url") or url).group(1)),
             num=int(item.find("div", class_="num").text.strip()),
             title=item.find("div", class_="title").text.strip(),
             year=convert_string_into_datetime(item.find("div", class_="year").text.strip()),

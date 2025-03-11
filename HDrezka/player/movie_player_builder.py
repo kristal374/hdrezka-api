@@ -7,8 +7,8 @@ from typing import Union, List, Dict, Tuple, TYPE_CHECKING
 
 from bs4 import BeautifulSoup
 
-from HDrezka.html_representation import PageRepresentation
-from HDrezka.trailer import Trailer
+from ..html_representation import PageRepresentation
+from ..trailer import Trailer
 from . import entities
 from .construct_types import (
     MovieQueryData,
