@@ -1,7 +1,6 @@
 import re
 import os
 
-
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, "..", "HDrezka", "__version__.py"), "r", encoding="utf-8") as f:
@@ -15,25 +14,24 @@ copyright = f"2024, {about['__author__']}"
 author = about["__author__"]
 release = about["__version__"]
 
+# -- General configuration ---------------------------------------------------
 extensions = [
-    "sphinx.ext.duration",
-    "sphinx.ext.doctest",
     "sphinx.ext.autodoc",
-    "sphinx.ext.autosummary",
-    "sphinx.ext.intersphinx",
+    "sphinx.ext.duration",
 ]
 
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3/", None),
-    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
-}
-templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+templates_path = ["_templates"]
+
+# -- Options for internationalization ----------------------------------------
+language = "ru"
+locale_dirs = ["locale"]
+gettext_compact = False
+gettext_uuid = True
 
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
-# -- Options for EPUB output
+# -- Options for EPUB output -------------------------------------------------
 epub_show_urls = "footnote"
